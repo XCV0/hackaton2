@@ -1,0 +1,66 @@
+# Domain 2: Retrieval-Augmented Generation.
+# Table layouts are NOT defined here: they are read at runtime from the official
+# submission_template/*.csv headers and schema.json so the export cannot drift.
+id: rag
+title: "Retrieval-Augmented Generation"
+template_dir: submission_template
+official_checker: tools/check_submission.py
+quote_norm: rag            # official RAG normalisation (NFKC, whitespace, end-of-line hyphenation)
+result_table: results
+entity_tables: [configurations, datasets, tasks, experiments]
+result_links:              # result field -> entity table
+  experiment_id: experiments
+  config_id: configurations
+  dataset_id: datasets
+  task_id: tasks
+closed_enums:
+  publications.in_scope: [true, false]
+  results.result_origin: [primary, cited]
+  results.extraction_status: [extracted, present_not_extractable, absent]
+recommended_enums:
+  results.metric_direction: [higher_is_better, lower_is_better, target]
+scope_rule: >-
+  In scope: a system retrieves information from an external document collection and uses
+  the retrieved context when generating an answer; the paper describes a RAG configuration
+  and evaluation results. Decide by content, not by the word RAG in the title.
+
+# Canonical metric names (for comparison/matching only; raw names are always kept).
+metrics:
+  EM: {aliases: ["exact match", "em", "exact-match"], scale: bounded, direction: higher_is_better}
+  F1: {aliases: ["f1", "f1 score", "token f1", "f1-score"], scale: bounded, direction: higher_is_better}
+  Accuracy: {aliases: ["acc", "accuracy", "acc."], scale: bounded, direction: higher_is_better}
+  Precision: {aliases: ["precision", "prec"], scale: bounded, direction: higher_is_better}
+  Recall: {aliases: ["recall", "rec"], scale: bounded, direction: higher_is_better}
+  MRR: {aliases: ["mrr"], scale: bounded, direction: higher_is_better}
+  nDCG: {aliases: ["ndcg", "n dcg"], scale: bounded, direction: higher_is_better}
+  Hit: {aliases: ["hit", "hits", "hit rate", "hitrate"], scale: bounded, direction: higher_is_better}
+  MAP: {aliases: ["map"], scale: bounded, direction: higher_is_better}
+  ROUGE-L: {aliases: ["rouge-l", "rougel", "rouge l"], scale: bounded, direction: higher_is_better}
+  ROUGE-1: {aliases: ["rouge-1", "rouge1"], scale: bounded, direction: higher_is_better}
+  ROUGE-2: {aliases: ["rouge-2", "rouge2"], scale: bounded, direction: higher_is_better}
+  BLEU: {aliases: ["bleu"], scale: bounded, direction: higher_is_better}
+  BERTScore: {aliases: ["bertscore", "bert score"], scale: bounded, direction: higher_is_better}
+  Faithfulness: {aliases: ["faithfulness"], scale: bounded, direction: higher_is_better}
+  Answer Relevancy: {aliases: ["answer relevancy", "answer relevance"], scale: bounded, direction: higher_is_better}
+  Context Precision: {aliases: ["context precision"], scale: bounded, direction: higher_is_better}
+  Context Recall: {aliases: ["context recall"], scale: bounded, direction: higher_is_better}
+  Latency: {aliases: ["latency", "time", "inference time", "runtime"], scale: unbounded, direction: lower_is_better}
+  Tokens: {aliases: ["tokens", "token cost", "#tokens"], scale: unbounded, direction: lower_is_better}
+
+# Normalisation: only explicit, established conversions. Proportions/percent/BLEU are
+# never rescaled by metric name alone.
+units:
+  "%": {canonical: "%"}
+  "fraction": {canonical: "fraction"}
+  "ms": {canonical: "ms", factor: 1}
+  "s": {canonical: "ms", factor: 1000, note: "seconds -> ms (explicit unit)"}
+  "sec": {canonical: "ms", factor: 1000}
+  "min": {canonical: "ms", factor: 60000}
+
+rules:
+  bounded_scale: {check: metric_scale}
+  at_k_requires_k: {check: metric_k}
+  topk_vs_metric_k: {check: metric_k}
+  duplicate_cycles: {check: duplicate_of}
+  duplicate_value_mismatch: {check: contradiction}
+  baseline_comparability: {check: protocol_mismatch}

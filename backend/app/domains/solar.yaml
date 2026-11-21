@@ -1,0 +1,76 @@
+# Domain 1: thin-film solar cells (perovskite, CIGS, CdTe, kesterite, Sb2Se3, thin-film Si).
+# Column layouts are read at runtime from the official submission_template/*.csv headers.
+id: solar
+title: "Тонкоплёночные солнечные элементы"
+template_dir: submission_template
+official_checker: tools/check_submission.py
+quote_norm: rag            # we verify with the strict RAG-style normalisation AND report the
+                           # looser official domain-1 normalisation separately
+result_table: results
+entity_tables: [materials, devices, layers, measurements]
+result_links:
+  device_id: devices
+  measurement_id: measurements
+  material_id: materials
+closed_enums:
+  materials.material_class: [perovskite, CIGS, CdTe, kesterite, Sb2Se3, thin-film Si, other]
+  materials.dimensionality: [3D, 2D, 2D-3D]
+  materials.bandgap_method: [Tauc, EQE, PL, cited]
+  devices.device_role: [control, target, record]
+  devices.device_type: [cell, minimodule, module]
+  devices.architecture: [n-i-p, p-i-n, substrate, superstrate]
+  devices.substrate_type: [rigid, flexible]
+  devices.area_definition: [designated illumination, aperture, total]
+  layers.layer_function: [front_contact, ETL, absorber, passivation, HTL, interlayer, recombination, back_contact]
+  measurements.measurement_type: [J-V, MPP tracking, EQE, stability]
+  measurements.scan_direction: [reverse, forward, average]
+  measurements.stability_protocol: [ISOS-D, ISOS-L, ISOS-T, other]
+  measurements.mask_used: [true, false]
+  measurements.certified: [true, false]
+  publications.in_scope: [true, false]
+  results.aggregation: [champion, mean, median]
+  results.result_origin: [primary, cited]
+  results.extraction_status: [extracted, present_not_extractable, absent]
+scope_rule: >-
+  In scope: experimental single-junction thin-film solar cells (perovskite, chalcogenide:
+  CIGS, CdTe, kesterite, Sb2Se3; thin-film Si) with a fabricated device and its photovoltaic
+  characteristics. Excluded: tandems, purely computational/simulation papers without samples.
+
+metrics:
+  PCE: {aliases: ["pce", "efficiency", "η", "eta", "power conversion efficiency"], unit: "%"}
+  Voc: {aliases: ["voc", "v oc", "open-circuit voltage", "open circuit voltage"], unit: "V"}
+  Jsc: {aliases: ["jsc", "j sc", "short-circuit current density", "isc"], unit: "mA/cm2"}
+  FF: {aliases: ["ff", "fill factor"], unit: "%"}
+  Rs: {aliases: ["rs", "series resistance"], unit: "Ohm*cm2"}
+  Rsh: {aliases: ["rsh", "shunt resistance"], unit: "Ohm*cm2"}
+  HI: {aliases: ["hi", "hysteresis index"], unit: "%"}
+  Jsc_EQE: {aliases: ["integrated jsc", "jsc from eqe", "integrated current"], unit: "mA/cm2"}
+  stabilized_PCE: {aliases: ["stabilized pce", "spo", "steady-state pce"], unit: "%"}
+  T80: {aliases: ["t80"], unit: "h"}
+  retained_PCE: {aliases: ["retained", "retention"], unit: "%"}
+
+# unit conversions to the official normalized units
+units:
+  PCE: {"%": 1, "fraction": 100}
+  FF: {"%": 1, "fraction": 100}
+  HI: {"%": 1, "fraction": 100}
+  retained_PCE: {"%": 1, "fraction": 100}
+  stabilized_PCE: {"%": 1, "fraction": 100}
+  Voc: {"V": 1, "mV": 0.001}
+  Jsc: {"mA/cm2": 1, "A/cm2": 1000, "A/m2": 0.1, "mA cm-2": 1}
+  Jsc_EQE: {"mA/cm2": 1, "A/cm2": 1000, "A/m2": 0.1}
+  Rs: {"Ohm*cm2": 1, "Ω cm2": 1, "kOhm*cm2": 1000, "mOhm*cm2": 0.001}
+  Rsh: {"Ohm*cm2": 1, "Ω cm2": 1, "kOhm*cm2": 1000, "MOhm*cm2": 1000000}
+  T80: {"h": 1, "min": 0.0166666667, "days": 24, "d": 24}
+  bandgap: {"eV": 1, "meV": 0.001}
+  thickness: {"nm": 1, "µm": 1000, "um": 1000, "μm": 1000, "Å": 0.1}
+  area: {"cm2": 1, "mm2": 0.01, "m2": 10000}
+  time: {"h": 1, "min": 0.0166666667, "s": 0.000277777778, "days": 24, "d": 24}
+
+rules:
+  pce_consistency: {check: jv_consistency, threshold_rel: 0.03, default_pin_mw_cm2: 100}
+  voc_below_bandgap: {check: voc_limit}
+  jsc_eqe_vs_jv: {check: eqe_consistency, threshold_rel: 0.05}
+  champion_vs_mean: {check: champion_vs_mean}
+  ranges: {check: range, PCE: [0, 35], FF: [0, 92], Voc: [0, 2.0], Jsc: [0, 50]}
+comparability_keys: [material_class, device_type, spectrum, light_intensity, area_bin, aggregation, scan_direction, certified, measurement_type]
