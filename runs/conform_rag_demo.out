@@ -1,0 +1,31 @@
+{
+ "verdict": "структура валидна; обработано публикаций: 4 (в области 4, исключено 0), извлечено результатов: 101",
+ "structure_valid": true,
+ "header_only": false,
+ "content": {
+  "pdfs_in_set": 4,
+  "publications": 4,
+  "in_scope": 4,
+  "excluded": 0,
+  "publications_with_results": 4,
+  "results": 103,
+  "extracted": 101,
+  "duplicates": 7,
+  "cited": 5,
+  "issues": 36,
+  "rows_by_table": {
+   "configurations": 22,
+   "datasets": 9,
+   "experiments": 24,
+   "issues": 36,
+   "publications": 4,
+   "results": 103,
+   "tasks": 12
+  }
+ },
+ "counts": {
+  "errors": 0,
+  "warnings": 0,
+  "by_rule": {}
+ }
+}

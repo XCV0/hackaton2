@@ -10,11 +10,11 @@ import threading
 import time
 import traceback
 
-from . import db, llm
+from . import canon, db, llm
 from . import domain as D
 from . import extract_llm, extract_rules, normalize, rules, segment
 from .pdftext import extract_document, find_doi, sha256_file
-from .quotes import now, verify_quote
+from .quotes import extend_fragment, now, verify_quote
 from ..settings import DOMAINS, SPLITS, list_pdfs, pdf_path
 
 ACTOR = "pipeline"
@@ -297,6 +297,9 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
                         row["note"] = (row["note"] + "; " if row["note"] else "") + f"{col} as printed: {row[col]}"
                     row[col] = ""
 
+    if domain == "solar":
+        stats["unit_conversions"] = _solar_entity_units(ents)
+
     # ---- results: normalise, verify
     results = []
     for i, r in enumerate(primary["results"]):
@@ -310,8 +313,18 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
             r["value"] = None
             r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + f"printed range «{r.get('raw_value')}»: no single normalized value"
         r["_node_index"] = i
+        if isinstance(r.get("source_fragment"), str):
+            r["source_fragment"] = r["source_fragment"].strip()
         normalize.normalize_result(domain, r)
         results.append(r)
+    # ---- publication-level canonicalisation: OCR-misread metric names, then one entity per real-world entity
+    for r in results:
+        fx = canon.ocr_metric_fix(domain, r, doc)
+        if fx:
+            r["_evidence"] = {**(r.get("_evidence") or {}), "ocr_metric_fix": fx}
+            r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + f"metric_name OCR-read as «{fx['from']}», set to {fx['to']} ({fx['detail']})"
+            r["metric_name"] = fx["to"]
+    stats["canonicalization"] = canon.canonicalize(domain, ents, results, doc)
     ids = {t: {e[cfg["keys"][t]] for e in ents[t]} for t in ents}
     for r in results:
         for field, tbl in cfg["result_links"].items():
@@ -341,15 +354,22 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
         md = (r.get("metric_direction") or "").strip()
         if md:
             low = md.lower().replace("-", " ").replace("_", " ")
-            canon = ("higher_is_better" if low in ("higher", "higher is better", "higher better", "↑", "up", "max", "maximize")
+            cdir = ("higher_is_better" if low in ("higher", "higher is better", "higher better", "↑", "up", "max", "maximize")
                      else "lower_is_better" if low in ("lower", "lower is better", "lower better", "↓", "down", "min", "minimize")
                      else "target" if low in ("target",) else md if md in ("higher_is_better", "lower_is_better", "target") else "")
-            if canon != md:
-                if not canon:
+            if cdir != md:
+                if not cdir:
                     r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + f"metric_direction as printed: {md}"
-                r["metric_direction"] = canon
+                r["metric_direction"] = cdir
         if r.get("result_origin") not in ("primary", "cited"):
             r["result_origin"] = "cited" if r.get("cited_publication_id") else "primary"
+        if r["result_origin"] == "cited" and not (r.get("cited_publication_id") or "").strip():
+            ref = _citation_marker(doc, r)
+            if ref:
+                r["cited_publication_id"] = ref
+                r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + f"cited_publication_id taken from the citation marker «{ref}» in the same sentence"
+            else:
+                r["_cited_without_ref"] = True
         if r["result_origin"] == "primary":
             r["cited_publication_id"] = ""
         if r.get("extraction_status") not in ("extracted", "present_not_extractable", "absent"):
@@ -359,6 +379,9 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
             r["aggregation"] = ""
         if domain == "solar" and r["result_origin"] == "cited":
             r["device_id"] = r["measurement_id"] = ""
+
+    if domain == "rag":
+        _rag_result_conventions(cfg, results, ents, doc, stats)
 
     for r in results:
         checks = []
@@ -375,6 +398,15 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
             r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + f"page pointer corrected by verifier from {pg} to {newp}"
             r["source_page"] = newp
             q = verify_quote(doc, newp, r.get("source_fragment", ""), r.get("raw_value", ""))
+        if q.get("outcome") == "matched" and q.get("value_in_fragment") is False and pg:
+            ext = extend_fragment(doc, pg, r.get("source_fragment", ""), r.get("raw_value", ""))
+            if ext:
+                checks.append({**q, "check": "quote_initial", "action": "quote widened to include the value"})
+                checks.append({"check": "quote_extension", "ts": now(), "outcome": "extended", "engine": ext["engine"],
+                               "from": r.get("source_fragment"), "to": ext["fragment"],
+                               "detail": "the number is printed after the quoted text in the same sentence; quote widened on the same page and engine and re-verified"})
+                r["source_fragment"] = ext["fragment"]
+                q = ext["check"]
         if q["outcome"] in ("not_found", "no_text_layer", "bad_page") and r.get("source_fragment"):
             r["_quote_failed_fragment"] = r["source_fragment"]
         checks.append(q)
@@ -464,6 +496,9 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
                 reasons.append("ocr_page")
                 if ver == "verified":
                     ver = "needs_review"
+            if r.get("_cited_without_ref"):
+                ver = "needs_review"
+                reasons.append("cited_without_reference")
             qo = (r.get("_quorum") or {}).get("outcome")
             if qo in ("disagree", "unresolved"):
                 ver = "needs_review"
@@ -484,8 +519,10 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
                            "description": f"Значение с рисунка {r.get('source_figure')}: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка",
                            "source_page": str(r.get("source_page") or ""), "source_fragment": loc_frag, "_kind": "source_figure_review"})
         if "ocr_uncertainty" in reasons or ("ocr_page" in reasons and ver == "needs_review" and "citation_not_found" not in reasons):
+            fx = ev.get("ocr_metric_fix")
             issues.append({"check_name": "ocr_uncertainty", "record_ids": r["result_id"],
-                           "description": "Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы",
+                           "description": "Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы"
+                                          + (f"; название метрики OCR прочитал как «{fx['from']}», принято {fx['to']} по тексту статьи (с. {', '.join(map(str, fx['pages']))})" if fx else ""),
                            "source_page": str(r.get("source_page") or ""), "source_fragment": "", "_kind": "ocr_uncertainty"})
         if "node_disagreement" in reasons:
             qq = r["_quorum"]
@@ -532,6 +569,135 @@ def process(domain: str, split: str, pid: str, mode: str = "default", log=print,
     c.commit()
     log(f"{domain}/{split}/{pid}: {len(results)} results, {len(issues)} issues, primary={primary_name}, {stats['seconds']}s")
     return stats
+
+
+CITE_RE = re.compile(r"\[\s*\d+(?:\s*[-–,]\s*\d+)*\s*\]|\b[A-Z][A-Za-z'-]+(?: and [A-Z][A-Za-z'-]+| et al\.?)?,?\s*\(?(?:19|20)\d\d[a-z]?\)?")
+
+
+def _citation_marker(doc, r):
+    """A cited value needs a reference; look for «[12]» / «Smith et al., 2020» in the sentence of the quote on the same page."""
+    frag = (r.get("source_fragment") or "").strip()
+    try:
+        pg = int(r.get("source_page") or 0)
+    except (TypeError, ValueError):
+        return ""
+    if not frag or not 1 <= pg <= doc["page_count"]:
+        return ""
+    m = CITE_RE.search(frag)
+    if m:
+        return m.group(0).strip()
+    p = doc["pages"][pg - 1]
+    for t in (p.get("pymupdf"), p.get("pypdf"), p.get("ocr")):
+        flat = re.sub(r"\s+", " ", t or "")
+        i = flat.find(re.sub(r"\s+", " ", frag))
+        if i < 0:
+            continue
+        s0 = max(flat.rfind(". ", 0, i) + 2, 0)
+        e = flat.find(". ", i + len(frag))
+        m = CITE_RE.search(flat[s0:(e if e > 0 else len(flat))])
+        if m:
+            return m.group(0).strip()
+    return ""
+
+
+UNIT_TO_CM2 = {"cm2": 1, "cm^2": 1, "cm²": 1, "cm 2": 1, "mm2": 0.01, "mm^2": 0.01, "mm²": 0.01, "m2": 1e4, "m^2": 1e4, "m²": 1e4}
+UNIT_TO_NM = {"nm": 1, "µm": 1000, "μm": 1000, "um": 1000, "micron": 1000, "microns": 1000, "mm": 1e6, "å": 0.1, "a": 0.1, "angstrom": 0.1, "pm": 0.001}
+UNIT_TO_EV = {"ev": 1, "mev": 0.001}
+
+
+def _convert(row, vcol, ucol, table, target, label):
+    """Bring an entity value to the template unit when the printed unit is explicit; otherwise keep the print in note."""
+    u = (row.get(ucol) or "").strip()
+    if not u or u == target:
+        return None
+    f = table.get(u.lower(), table.get(u.lower().replace(" ", "")))
+    v = (row.get(vcol) or "").strip()
+    if f is None:
+        if "note" in row:
+            row["note"] = (row["note"] + "; " if row.get("note") else "") + f"{label} as printed: {v} {u} (unit is not a {target} quantity)"
+        row[vcol], row[ucol] = "", ""
+        return f"{label}: «{v} {u}» moved to note"
+    try:
+        x = float(v)
+    except ValueError:
+        row[ucol] = target if not v else u
+        return None
+    nv = normalize.fmt(x * f)
+    if "note" in row and f != 1:
+        row["note"] = (row["note"] + "; " if row.get("note") else "") + f"{label} as printed: {v} {u}"
+    row[vcol], row[ucol] = nv, target
+    return f"{label}: {v} {u} -> {nv} {target}"
+
+
+def _solar_entity_units(ents):
+    """Template units (solar README): area_unit cm2, thickness_unit nm («толщины в мкм переводятся в нм»), bandgap_unit eV."""
+    log = []
+    for row in ents.get("devices", []):
+        x = _convert(row, "active_area", "area_unit", UNIT_TO_CM2, "cm2", "active_area")
+        if x:
+            log.append(f"{row.get('device_id')}: {x}")
+    for row in ents.get("layers", []):
+        x = _convert(row, "layer_thickness", "thickness_unit", UNIT_TO_NM, "nm", "layer_thickness")
+        if x:
+            log.append(f"{row.get('layer_id')}: {x}")
+    for row in ents.get("materials", []):
+        x = _convert(row, "bandgap_value", "bandgap_unit", UNIT_TO_EV, "eV", "bandgap")
+        if x:
+            log.append(f"{row.get('material_id')}: {x}")
+    return log
+
+
+def _addnote(r, text):
+    r["note"] = (r.get("note", "") + "; " if r.get("note") else "") + text
+
+
+def _rag_result_conventions(cfg, results, ents, doc, stats):
+    """One documented convention per field across the publication:
+    deltas are differences (named «<metric> delta», linked to the baseline configuration), never scores;
+    a bounded metric with no printed unit gets unit «fraction» only when the paper states the 0-1 scale;
+    metric_direction follows the metric definition; one spelling per metric within a publication."""
+    scale = canon.stated_scale(doc)
+    configs = ents.get("configurations") or []
+    for r in results:
+        cm, _ = D.canonical_metric("rag", r.get("metric_name", ""))
+        spec = (cfg.get("metrics") or {}).get(cm) or {}
+        if canon.is_delta(r) and not re.search(r"\bdelta\b", r.get("metric_name", ""), re.I):
+            bid, label = canon.delta_baseline(r, configs)
+            _addnote(r, f"metric_name as printed: {r.get('metric_name')}; the value is a difference, not an absolute {cm or 'score'}"
+                        + (f"; baseline configuration {bid} («{label}»)" if bid else (f"; baseline «{label}» not resolved to one configuration" if label else "")))
+            r["metric_name"] = f"{cm or r.get('metric_name')} delta"
+            r["metric_variant"] = f"difference vs {label}" if label else (r.get("metric_variant") or "difference")
+            r["metric_direction"] = ""
+            r["_delta"] = {"metric": cm, "baseline_config_id": bid, "baseline_label": label}
+            continue
+        u = normalize.canon_unit(r.get("raw_unit") or "")
+        if u != (r.get("raw_unit") or "") and u in ("fraction", "%"):
+            r["unit"] = u
+            normalize.normalize_result("rag", r)
+        if (spec.get("scale") == "bounded" and not (r.get("metric_unit") or r.get("raw_unit")) and scale
+                and r.get("value") is not None and 0 <= float(r["value"]) <= 1):
+            r["unit"] = "fraction"
+            normalize.normalize_result("rag", r)
+            r["_norm"]["rule"] = f"unit fraction: the paper states «{scale[0]}» (p. {scale[1]}); value not rescaled"
+        if not r.get("metric_direction") and spec.get("direction"):
+            r["metric_direction"] = spec["direction"]
+    # one spelling per metric (needed for duplicate_of, which the official checker compares literally)
+    groups = collections.defaultdict(list)
+    for r in results:
+        nm = (r.get("metric_name") or "").strip()
+        cm, _ = D.canonical_metric("rag", nm)
+        if nm and "@" not in nm and cm in (cfg.get("metrics") or {}) and not r.get("_delta"):
+            groups[cm].append(r)
+    for cm, rs in groups.items():
+        spellings = collections.Counter(r["metric_name"].strip() for r in rs)
+        if len(spellings) < 2:
+            continue
+        best = max(spellings, key=lambda s_: (spellings[s_], len(s_)))
+        for r in rs:
+            if r["metric_name"].strip() != best:
+                _addnote(r, f"metric_name as printed: {r['metric_name']} (same metric as «{best}»)")
+                r["metric_name"] = best
+        stats.setdefault("canonicalization", []).append(f"metric spellings unified: {dict(spellings)} -> {best}")
 
 
 def _row_check(doc, pdf_path, page, fragment, raw_value):

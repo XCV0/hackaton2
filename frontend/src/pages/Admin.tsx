@@ -29,6 +29,7 @@ export default function Admin() {
 
 function ReviewQueue() {
   const { domain, split } = useScope();
+  const nav = useNavigate();
   const [f, set] = useUrlState({ verification: "flagged,needs_review", review: "pending", issue: "", kind: "", scan: "", sel: "" });
   const { data, error, loading, reload } = useAsync(() => api(`/api/results${qs({ domain, split, verification: f.verification, review: f.review, issue: f.issue, kind: f.kind, scan: f.scan, limit: 200 })}`),
     [domain, split, f.verification, f.review, f.issue, f.kind, f.scan]);
@@ -49,6 +50,19 @@ function ReviewQueue() {
       reload();
     } catch (e: any) { setToast(e.message); }
   };
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (!cur || (t && ["INPUT", "TEXTAREA", "SELECT"].includes(t.tagName)) || e.metaKey || e.ctrlKey || e.altKey) return;
+      const k = e.key.toLowerCase();
+      if (k === "j" || e.key === "ArrowDown") { e.preventDefault(); const n = rows[idx + 1]; if (n) set({ sel: String(n.id) }); }
+      else if (k === "k" || e.key === "ArrowUp") { e.preventDefault(); const n = rows[idx - 1]; if (n) set({ sel: String(n.id) }); }
+      else if (k === "a" || k === "ф") act("confirm");
+      else if (k === "r" || k === "к") { if (comment.trim()) act("reject"); else { (document.getElementById("rq-comment") as HTMLTextAreaElement | null)?.focus(); setToast("Напишите причину и нажмите «Отклонить»"); } }
+      else if (k === "e" || k === "у") nav(`/record/${cur.id}`);
+    };
+    window.addEventListener("keydown", h); return () => window.removeEventListener("keydown", h);
+  });
   return (
     <div className="stack">
       <div className="card"><div className="filters">
@@ -85,9 +99,10 @@ function ReviewQueue() {
             {cur.data.source_fragment && <div className="quote">«{cur.data.source_fragment}»</div>}
             <SourceViewer domain={cur.domain} split={cur.split} pid={cur.pub_id} page={Number(cur.data.source_page) || 1} fragment={cur.data.source_fragment} value={cur.data.raw_value}
               cell={cur.evidence?.cell_bbox || cur.evidence?.row_bbox || null} figure={cur.data.source_figure && !cur.data.source_table ? cur.data.source_figure : undefined} />
-            <textarea className="input" rows={2} placeholder="Комментарий (обязателен для отклонения)" value={comment} onChange={(e) => setComment(e.target.value)} aria-label="Комментарий проверяющего" />
+            <textarea id="rq-comment" className="input" rows={2} placeholder="Комментарий (обязателен для отклонения)" value={comment} onChange={(e) => setComment(e.target.value)} aria-label="Комментарий проверяющего" />
             <div className="row"><button className="btn teal" onClick={() => act("confirm")}>✓ Подтвердить и дальше</button><button className="btn danger" onClick={() => act("reject")}>✕ Отклонить</button>
               <button className="btn ghost" disabled={idx < 0 || idx + 1 >= rows.length} onClick={() => set({ sel: String(rows[idx + 1].id) })}>Пропустить →</button></div>
+            <div className="small faint kbd-hint">Клавиши: <kbd>J</kbd>/<kbd>↓</kbd> следующая · <kbd>K</kbd>/<kbd>↑</kbd> предыдущая · <kbd>A</kbd> подтвердить · <kbd>R</kbd> отклонить · <kbd>E</kbd> открыть карточку</div>
           </div>
         </div>
       )}

@@ -1,0 +1,230 @@
+{
+ "domain": "solar",
+ "folder": "runs/conform/solar_dev",
+ "pdf_dir": "/Users/artemshelkunov/hackaton2/data/domain1_solar/dev",
+ "template": {
+  "dir": "/Users/artemshelkunov/hackaton2/data/domain1_solar/submission_template",
+  "official": true,
+  "schema_version": null,
+  "sources": {
+   "headers": "submission_template/*.csv (заголовки пустых таблиц)",
+   "enums": "submission_template/README.md, таблицы раздела «Поля» (schema.json в солнечном комплекте нет)",
+   "rules": "submission_template/README.md солнечного комплекта"
+  }
+ },
+ "structure_valid": false,
+ "header_only": false,
+ "verdict": "СТРУКТУРА НЕ ВАЛИДНА: 30 ошибок",
+ "content": {
+  "pdfs_in_set": 21,
+  "publications": 21,
+  "in_scope": 19,
+  "excluded": 2,
+  "publications_with_results": 19,
+  "results": 1083,
+  "extracted": 1082,
+  "duplicates": 0,
+  "cited": 86,
+  "issues": 106,
+  "rows_by_table": {
+   "devices": 210,
+   "issues": 106,
+   "layers": 325,
+   "materials": 150,
+   "measurements": 100,
+   "publications": 21,
+   "results": 1083
+  }
+ },
+ "counts": {
+  "errors": 30,
+  "warnings": 0,
+  "by_rule": {
+   "error:enum": 20,
+   "error:empty_cells": 8,
+   "error:cited": 2
+  }
+ },
+ "findings": [
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:29",
+   "message": "area_unit = «mm» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:30",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:87",
+   "message": "area_unit = «cm^2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:88",
+   "message": "area_unit = «cm^2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:111",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:112",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:113",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:180",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:181",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:188",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:189",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "devices.csv:199",
+   "message": "area_unit = «mm2» нет в словаре ['cm2']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:165",
+   "message": "thickness_unit = «mg mL-1» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:178",
+   "message": "thickness_unit = «µm» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:180",
+   "message": "thickness_unit = «µm» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:181",
+   "message": "thickness_unit = «µm» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:193",
+   "message": "thickness_unit = «um» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:243",
+   "message": "thickness_unit = «mm» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:251",
+   "message": "thickness_unit = «um» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "enum",
+   "where": "layers.csv:305",
+   "message": "thickness_unit = «um» нет в словаре ['nm']"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "materials.csv:96",
+   "message": "additives = «Na»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "materials.csv:97",
+   "message": "additives = «Na»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:138",
+   "message": "metric_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:138",
+   "message": "raw_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:138",
+   "message": "normalized_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:139",
+   "message": "metric_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:139",
+   "message": "raw_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "results.csv:139",
+   "message": "normalized_unit = «nA»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "cited",
+   "where": "results.csv:201",
+   "message": "cited без cited_publication_id"
+  },
+  {
+   "severity": "error",
+   "rule": "cited",
+   "where": "results.csv:302",
+   "message": "cited без cited_publication_id"
+  }
+ ]
+}

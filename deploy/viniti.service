@@ -1,0 +1,22 @@
+[Unit]
+Description=Evidence Extractor (VINITI x SFedU) web service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=viniti
+Group=viniti
+WorkingDirectory=/opt/viniti
+# HOME/PATH let the claude-cli provider find the user's own Claude Code login (~/.claude) and binary (~/.local/bin)
+Environment=HOME=/home/viniti
+Environment=PATH=/home/viniti/.local/bin:/opt/viniti-venv/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/viniti-venv/bin/uvicorn backend.app.api:app --host 127.0.0.1 --port 8077 --timeout-keep-alive 75
+Restart=always
+RestartSec=3
+# keep the 2 GB box responsive during OCR / large PDFs
+MemoryHigh=1500M
+MemoryMax=1800M
+
+[Install]
+WantedBy=multi-user.target

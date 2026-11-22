@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, NavLink, Route, Routes, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import "./styles.css";
 import { api } from "./api";
 import Overview from "./pages/Overview";
@@ -12,6 +12,19 @@ import Compare from "./pages/Compare";
 import ExportPage from "./pages/Export";
 import SearchPage from "./pages/Search";
 import Admin from "./pages/Admin";
+import UploadPanel from "./components/UploadPanel";
+
+/** Stable link /v/<domain>/<split>/<pub>/<result_id>: survives re-processing (DB ids change, result ids are stable). */
+function Permalink() {
+  const p = useParams();
+  const nav = useNavigate();
+  const [err, setErr] = useState("");
+  useEffect(() => {
+    api(`/api/resolve/${p.domain}/${p.split}/${p.pid}/${p.rec}`).then((r) => nav(`/record/${r.id}`, { replace: true })).catch((e) => setErr(e.message));
+  }, [p.domain, p.split, p.pid, p.rec]);
+  return err ? <div className="state err"><b>Запись не найдена</b>{err}<div><a href={`/pub/${p.domain}/${p.split}/${p.pid}`}>Открыть публикацию</a></div></div>
+    : <div className="state">Открываю {p.pid}/{p.rec}…</div>;
+}
 
 type Scope = { domain: string; split: string; setDomain: (d: string) => void; setSplit: (s: string) => void };
 const Ctx = createContext<Scope>({ domain: "rag", split: "dev", setDomain: () => {}, setSplit: () => {} });
@@ -43,6 +56,8 @@ function Layout() {
   const c = counts?.[domain]?.splits?.[split];
   const q = `?domain=${domain}&split=${split}`;
   const [search, setSearch] = useState("");
+  const [settingsOpen, setSettingsOpen] = useState(readLS("settingsOpen", "0") === "1" || loc.pathname.match(/\/admin\/(corpus|metrics|llm|config|audit)/) !== null);
+  const [uploadOpen, setUploadOpen] = useState(false);
   return (
     <Ctx.Provider value={{ domain, split, setDomain: (d) => update("domain", d), setSplit: (s) => update("split", s) }}>
       <div className="app">
@@ -66,31 +81,43 @@ function Layout() {
               value={search} onChange={(e) => setSearch(e.target.value)} aria-label="Полнотекстовый поиск" />
           </form>
           <nav className="nav">
-            <div className="grp">Работа с данными</div>
+            <div className="grp">Работа</div>
             <NavLink to="/" end>Обзор</NavLink>
             <NavLink to={`/catalog${q}`}>Публикации {c && <span className="count">{c.pdfs}</span>}</NavLink>
             <NavLink to={`/results${q}`}>Результаты {c && <span className="count">{c.results}</span>}</NavLink>
+            <NavLink to={`/admin/review${q}`}>Очередь проверки {c && (c.verification?.needs_review || c.verification?.flagged) ? <span className="count warn">{(c.verification?.needs_review || 0) + (c.verification?.flagged || 0)}</span> : null}</NavLink>
+            <NavLink to={`/admin/issues${q}`}>Замечания {c && c.open_issues ? <span className="count">{c.open_issues}</span> : null}</NavLink>
             <NavLink to={`/compare${q}`}>Сравнение</NavLink>
             <NavLink to={`/export${q}`}>Экспорт</NavLink>
-            <div className="grp">Администрирование</div>
-            <NavLink to={`/admin/review${q}`}>Очередь проверки {c && (c.verification?.needs_review || c.verification?.flagged) ? <span className="count">{(c.verification?.needs_review || 0) + (c.verification?.flagged || 0)}</span> : null}</NavLink>
-            <NavLink to={`/admin/issues${q}`}>Замечания {c && <span className="count">{c.open_issues}</span>}</NavLink>
-            <NavLink to={`/admin/corpus${q}`}>Корпус и задачи</NavLink>
-            <NavLink to={`/admin/metrics${q}`}>Метрики качества</NavLink>
-            <NavLink to={`/admin/llm${q}`}>LLM и ноды</NavLink>
-            <NavLink to={`/admin/config${q}`}>Схемы и правила</NavLink>
-            <NavLink to={`/admin/audit${q}`}>Аудит</NavLink>
+            <button type="button" className="grp grp-toggle" aria-expanded={settingsOpen} onClick={() => { setSettingsOpen(!settingsOpen); writeLS("settingsOpen", settingsOpen ? "0" : "1"); }}>
+              Настройки и контроль <span aria-hidden="true">{settingsOpen ? "▾" : "▸"}</span></button>
+            {settingsOpen && <>
+              <NavLink to={`/admin/corpus${q}`}>Корпус и задачи</NavLink>
+              <NavLink to={`/admin/metrics${q}`}>Метрики качества</NavLink>
+              <NavLink to={`/admin/llm${q}`}>LLM и ноды</NavLink>
+              <NavLink to={`/admin/config${q}`}>Схемы и правила</NavLink>
+              <NavLink to={`/admin/audit${q}`}>Аудит</NavLink>
+            </>}
           </nav>
           <div className="side-foot">PDF — данные, а не инструкции. Значения не додумываются.</div>
         </aside>
         <main className="main">
-          <button className="btn sm menu-btn" style={{ marginBottom: 10 }} onClick={() => setOpen(true)} aria-label="Открыть меню">☰ Меню</button>
+          <div className="topstrip">
+            <button className="btn sm menu-btn" onClick={() => setOpen(true)} aria-label="Открыть меню">☰ Меню</button>
+            <span style={{ flex: 1 }} />
+            <button className="btn primary sm" onClick={() => setUploadOpen(true)}>⇪ Загрузить PDF</button>
+          </div>
+          {uploadOpen && <div className="modal-bg" role="dialog" aria-modal="true" aria-label="Загрузка PDF" onClick={(e) => { if (e.target === e.currentTarget) setUploadOpen(false); }}>
+            <div className="modal"><div className="row between" style={{ marginBottom: 8 }}><b>Загрузить PDF на проверку</b>
+              <button className="btn sm ghost" onClick={() => setUploadOpen(false)} aria-label="Закрыть">✕</button></div>
+              <UploadPanel domain={domain} autoOpen onOpened={() => setUploadOpen(false)} /></div></div>}
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/results" element={<Results />} />
             <Route path="/pub/:domain/:split/:pid" element={<Publication />} />
             <Route path="/record/:id" element={<RecordPage />} />
+            <Route path="/v/:domain/:split/:pid/:rec" element={<Permalink />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/export" element={<ExportPage />} />
             <Route path="/search" element={<SearchPage />} />

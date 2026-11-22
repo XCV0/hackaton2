@@ -122,9 +122,24 @@ def _cached(model, domain, split, pid, node, user):
     return (db.lj(r["parsed"]), r["id"]) if r else (None, None)
 
 
+REPLAY_ONLY = False  # set by `cli process --replay`: never call a live model
+
+
+def _cached_any(domain, split, pid, node, user):
+    """Replay: the most recent real (non-cached) successful reply to exactly this prompt, whatever model produced it."""
+    r = db.conn().execute("SELECT id, parsed FROM node_runs WHERE domain=? AND split=? AND pub_id=? AND node=? AND error IS NULL "
+                          "AND parsed IS NOT NULL AND prompt=? AND purpose NOT LIKE '%cached%' ORDER BY id DESC LIMIT 1",
+                          (domain, split, pid, node, user)).fetchone()
+    return (db.lj(r["parsed"]), r["id"]) if r else (None, None)
+
+
 def _call(model, domain, split, pid, node, purpose, user, input_ref, max_tokens):
     t0 = time.time()
     hit, hid = _cached(model, domain, split, pid, node, user)
+    if hit is None and REPLAY_ONLY:
+        hit, hid = _cached_any(domain, split, pid, node, user)
+        if hit is None:
+            return None, "replay: no logged reply for this prompt (live calls are disabled in replay)"
     if hit is not None:
         _log(domain, split, pid, node, purpose + " (cached)", model, {"cached_from_run": hid}, "", input_ref, None, {"cached_from_run": hid}, None, t0)
         return hit, None
@@ -297,6 +312,8 @@ def reread(model: str, domain: str, split: str, pid: str, doc: dict, page: int, 
             "\"source_fragment\": \"<exact verbatim substring>\", \"confident\": true/false, \"reason\": \"\"}.\n\n" + text)
     t0 = time.time()
     try:
+        if REPLAY_ONLY:
+            return None  # replay: node C never calls a live model
         r = llm.chat(model, SYSTEM, user, max_tokens=800)
         parsed = llm.parse_json(r["text"])
         _log(domain, split, pid, "C", "targeted re-read", r["model"], r["params"], user, f"page {page}", r["text"], parsed, None, t0,

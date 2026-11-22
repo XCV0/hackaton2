@@ -39,9 +39,15 @@ def build_tables(domain: str, split: str, pub_ids=None, result_ids: set | None =
             flt = lambda r: (r["pub_id"], r["rec_id"]) in result_ids
         out[tbl] = [{c: (r["data"].get(c, "") or "") for c in cfg["tables"][tbl]} for r in _rows(domain, split, tbl, pub_ids, flt)]
     # a result without metric_name cannot be submitted (official checker error); it stays in the DB review queue
-    withheld = [r for r in out["results"] if not (r.get("metric_name") or "").strip()]
-    out["results"] = [r for r in out["results"] if (r.get("metric_name") or "").strip()]
-    out["_withheld"] = [f"{r['publication_id']}/{r['result_id']}: empty metric_name" for r in withheld]
+    def why_not(r):
+        if not (r.get("metric_name") or "").strip():
+            return "empty metric_name"
+        if r.get("result_origin") == "cited" and not (r.get("cited_publication_id") or "").strip():
+            return "cited value without a reference marker on the page (cited_publication_id would be invented)"
+        return ""
+    withheld = [(r, why_not(r)) for r in out["results"] if why_not(r)]
+    out["results"] = [r for r in out["results"] if not why_not(r)]
+    out["_withheld"] = [f"{r['publication_id']}/{r['result_id']}: {w} — kept in the service review queue" for r, w in withheld]
     # keep the relational export consistent: issues only reference exported results, duplicate_of only existing
     present = {(r["publication_id"], r["result_id"]) for r in out["results"]}
     for r in out["results"]:
@@ -119,7 +125,12 @@ def run_official_checker(domain: str, split: str, folder: str, ocr: bool = False
         report = None
         cmd = [py, str(script), folder, str(split_dir(domain, split))]
     p = subprocess.run(cmd, capture_output=True, text=True, timeout=7200)
-    out = {"cmd": " ".join(cmd), "exit_code": p.returncode, "stdout_tail": p.stdout[-6000:], "stderr_tail": p.stderr[-2000:]}
+    out = {"cmd": " ".join(cmd), "exit_code": p.returncode, "stdout_tail": p.stdout[-6000:], "stderr_tail": p.stderr[-2000:],
+           "official": domain == "solar",
+           "checker_kind": "официальный проверщик кейса (область 1)" if domain == "solar" else
+                           "проверщик рекомендуемого формата RAG (schema.json: official_rag_template=false; «not an official VINITI scorer»)"}
+    if domain == "solar":
+        out["stdout"] = p.stdout  # the solar checker prints text only (no JSON option): its full output is kept verbatim
     if report and report.exists():
         rep = json.loads(report.read_text())
         out["report"] = {k: v for k, v in rep.items() if k not in ("errors", "warnings")}

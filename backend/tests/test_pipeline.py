@@ -360,3 +360,218 @@ def test_variants_in_one_sentence_are_linking_not_contradiction():
     issues, _ = rules.rag_rules(res, {"datasets": [{"dataset_id": "DS1", "dataset_name": "PubMedQA"}]}, page)
     kinds = [i["check_name"] for i in issues]
     assert "extraction_linking" in kinds and "contradiction" not in kinds
+
+
+# ------------------------------------------------------------------ canonicalisation / quote boundaries (TEST_RAG_ERRORS_01, TEST_RAG_CLEAN_01)
+def _doc(pages):
+    """pages: list of (pymupdf_text, pypdf_text, has_text_layer, ocr_text)"""
+    out = []
+    for i, (a, b, tl, ocr) in enumerate(pages, 1):
+        out.append({"page": i, "pymupdf": a, "pypdf": b, "has_text_layer": tl, "ocr": ocr})
+    return {"page_count": len(out), "pages": out}
+
+
+def test_quote_extended_when_value_on_next_line():
+    from backend.app.core.quotes import extend_fragment
+    text = ("For context, it is cited from [1].\nWith 3 passages, a sensitivity variant obtains Recall@3 = 0.728; with 10 passages, "
+            "another variant obtains Recall@10 =\n0.735. These are different configurations.")
+    doc = _doc([("Other page obtains Recall@10 = 0.999.", "", True, ""), (text, text, True, "")])
+    q = verify_quote(doc, 2, "obtains Recall@10 =", "0.735")
+    assert q["outcome"] == "matched" and q["value_in_fragment"] is False
+    ext = extend_fragment(doc, 2, "obtains Recall@10 =", "0.735")
+    assert ext and ext["fragment"] == ("With 3 passages, a sensitivity variant obtains Recall@3 = 0.728; with 10 passages, "
+                                       "another variant obtains Recall@10 = 0.735.")
+    assert ext["check"]["outcome"] == "matched" and ext["check"]["value_in_fragment"] is True
+    # the number only in the next sentence: no widening across sentences (stays needs_review)
+    doc2 = _doc([("It obtains Recall@10 = on the set. The value 0.735 is elsewhere.",) * 2 + (True, "")])
+    assert extend_fragment(doc2, 1, "obtains Recall@10 =", "0.735") is None
+    # never taken from another page
+    doc3 = _doc([("A obtains Recall@10 =\n0.735.",) * 2 + (True, ""), ("B obtains Recall@10 =\nnothing.",) * 2 + (True, "")])
+    assert extend_fragment(doc3, 2, "obtains Recall@10 =", "0.735") is None
+
+
+def test_ocr_metric_name_fix_needs_text_layer_evidence():
+    from backend.app.core.canon import ocr_metric_fix
+    with_f1 = _doc([("Protocol: Exact Match and token-level F1.", "", True, ""), ("", "", False, "FA 0.651")])
+    r = {"metric_name": "FA", "_evidence": {"ocr": True}}
+    fx = ocr_metric_fix("rag", r, with_f1)
+    assert fx and fx["to"] == "F1" and fx["pages"] == [1]
+    no_f1 = _doc([("Protocol: Exact Match only.", "", True, ""), ("", "", False, "FA 0.651")])
+    assert ocr_metric_fix("rag", r, no_f1) is None
+    assert ocr_metric_fix("rag", {"metric_name": "FA", "_evidence": {"ocr": False}}, with_f1) is None  # text layer: kept as printed
+
+
+def _ents_errors01():
+    C = lambda **k: {"config_id": "", "rag_variant": "", "retrieval_method": "", "retriever_model": "", "top_k": "", "note": "", **k}
+    return {
+        "configurations": [C(config_id="C1", rag_variant="BM25 configuration", retrieval_method="BM25"),
+                           C(config_id="C3", rag_variant="BM25 baseline", retrieval_method="BM25", retriever_model="BM25", top_k="10",
+                             note="Table 1 column LexRetrieve-BM25"),
+                           C(config_id="C4", rag_variant="Dense + rerank", retrieval_method="dense", retriever_model="D-2", top_k="20",
+                             note="Table 1 column LexRetrieve-Dense"),
+                           C(config_id="C5", rag_variant="Ablation", retrieval_method="dense", retriever_model="D-2", top_k="20",
+                             note="Table 1 column 'Dense w/o reranker'"),
+                           C(config_id="C7", rag_variant="LexRetrieve-BM25", retrieval_method="BM25"),
+                           C(config_id="C8", rag_variant="LexRetrieve-Dense", retrieval_method="dense"),
+                           C(config_id="C9", rag_variant="Dense w/o reranker")],
+        "datasets": [{"dataset_id": "DS1", "dataset_name": "SyntheticLegalQA", "dataset_version": "v1.0", "data_split": "test (250 evaluated)", "note": ""},
+                     {"dataset_id": "DS2", "dataset_name": "SyntheticLegalQA", "dataset_version": "v1.0", "data_split": "test", "note": ""},
+                     {"dataset_id": "DS3", "dataset_name": "Synthetic evaluation set", "dataset_version": "", "data_split": "", "note": "from header"}],
+        "tasks": [{"task_id": "T1", "task_type": "question answering", "note": ""},
+                  {"task_id": "T2", "task_type": "single-hop extractive question answering", "note": ""},
+                  {"task_id": "T3", "task_type": "", "note": "not printed"}],
+        "experiments": [{"experiment_id": "E1", "evaluation_protocol": "250 questions", "sample_size": "250", "note": ""},
+                        {"experiment_id": "E3", "evaluation_protocol": "", "sample_size": "250", "note": ""},
+                        {"experiment_id": "E5", "evaluation_protocol": "", "sample_size": "", "note": "cited"}],
+    }
+
+
+def test_canonicalization_merges_mentions_and_drops_noise():
+    from backend.app.core.canon import canonicalize
+    header = "TEST_RAG | Synthetic evaluation set | Page {}\n"
+    body = ["We evaluate on SyntheticLegalQA v1.0.", "Retrieval uses BM25 and a dense model.", "Chunks are fixed tokens.",
+            "Results are in Table 2.", "The dense model is best.", "Errors are analysed below.", "References follow."]
+    doc = _doc([(header.format(i) + "\n".join(body[i - 1:i + 5]), "", True, "") for i in (1, 2)])
+    ents = _ents_errors01()
+    R = lambda rid, cfg, m, v, **k: {"result_id": rid, "config_id": cfg, "dataset_id": "DS3", "task_id": "T3", "experiment_id": "E3",
+                                     "metric_name": m, "value": v, "result_origin": "primary", "metric_k": "", "note": "", **k}
+    results = [R("R001", "C1", "Exact Match", 0.584, dataset_id="DS1", task_id="T1", experiment_id="E1"),
+               R("R005", "C7", "EM", 0.584), R("R009", "C8", "EM", 0.612), R("R013", "C9", "EM", 0.590),
+               R("R019", "", "F1", 0.640, result_origin="cited", experiment_id="E5")]
+    log = canonicalize("rag", ents, results, doc)
+    assert {c["config_id"] for c in ents["configurations"]} == {"C3", "C4", "C5"}
+    assert [d["dataset_id"] for d in ents["datasets"]] == ["DS1"]
+    assert [t["task_type"] for t in ents["tasks"]] == ["single-hop extractive question answering"]
+    assert {r["result_id"]: r["config_id"] for r in results} == {"R001": "C3", "R005": "C3", "R009": "C4", "R013": "C5", "R019": ""}
+    assert all(r["dataset_id"] == "DS1" and r["task_id"] == ents["tasks"][0]["task_id"] for r in results)
+    assert {e["experiment_id"] for e in ents["experiments"]} == {"E1", "E5"}  # cited experiment stays separate
+    assert any("running-header" in x for x in log) and any("T3" in x for x in log)
+
+
+def test_canonicalization_is_conservative():
+    from backend.app.core.canon import canonicalize
+    doc = _doc([("Body.", "", True, "")])
+    ents = _ents_errors01()
+    for c in ents["configurations"]:
+        c["note"] = ""  # no label evidence
+    ents["configurations"] = [c for c in ents["configurations"] if c["config_id"] in ("C4", "C5", "C8")]
+    ents["datasets"][1]["dataset_version"] = "v2.0"  # different version: never merged
+    results = [{"result_id": "R1", "config_id": "C8", "dataset_id": "DS1", "task_id": "", "experiment_id": "", "metric_name": "EM",
+                "value": 0.7, "result_origin": "primary", "metric_k": "", "note": ""}]
+    canonicalize("rag", ents, results, doc)
+    assert {c["config_id"] for c in ents["configurations"]} == {"C4", "C5", "C8"}  # two dense candidates: ambiguous, kept apart
+    assert {d["dataset_id"] for d in ents["datasets"]} >= {"DS1", "DS2"}
+
+
+def test_aliases_duplicates_and_contradiction_after_canonicalisation():
+    base = {"experiment_id": "E1", "config_id": "C4", "dataset_id": "DS1", "task_id": "T1", "metric_variant": "", "metric_k": "",
+            "metric_unit": "fraction", "aggregation": "", "sample_size": "250", "result_origin": "primary", "cited_publication_id": "",
+            "extraction_status": "extracted", "duplicate_of": "", "note": ""}
+    table = {**base, "result_id": "R010", "metric_name": "F1", "metric_value": "0.684", "raw_value": "0.684", "source_page": 3, "source_table": "Table 2"}
+    text = {**base, "result_id": "R018", "metric_name": "F1", "metric_variant": "token-level", "sample_size": "", "metric_value": "0.668",
+            "raw_value": "0.668", "source_page": 4, "source_fragment": "token-level F1 = 0.668"}
+    em_t = {**base, "result_id": "R009", "metric_name": "Exact Match", "metric_value": "0.612", "raw_value": "0.612", "source_page": 3, "source_table": "Table 2"}
+    em_f = {**base, "result_id": "R022", "metric_name": "Exact Match", "sample_size": "", "metric_value": "0.612", "raw_value": "0.612",
+            "source_page": 4, "source_figure": "Figure 1"}
+    ents = {"datasets": [{"dataset_id": "DS1", "dataset_name": "X"}], "experiments": [{"evaluation_protocol": "Exact Match and token-level F1"}]}
+    issues, _ = rules.rag_rules([table, text, em_t, em_f], ents)
+    assert any(i["check_name"] == "contradiction" and set(i["record_ids"].split(";")) == {"R010", "R018"} for i in issues)
+    assert em_f["duplicate_of"] == "R009" and em_f["sample_size"] == "250" and not text["duplicate_of"]
+    assert D.canonical_metric("rag", "EM")[0] == D.canonical_metric("rag", "Exact Match")[0]
+
+
+def test_delta_is_not_a_score():
+    from backend.app.core.canon import delta_baseline, is_delta
+    r = {"raw_value": "3.3", "raw_unit": "points", "metric_name": "F1", "config_id": "C4",
+         "source_fragment": "the dense model improves F1 by 3.3 points relative to BM25"}
+    assert is_delta(r)
+    cfgs = [{"config_id": "C3", "rag_variant": "BM25 baseline", "note": ""}, {"config_id": "C4", "rag_variant": "Dense + rerank", "note": ""}]
+    assert delta_baseline(r, cfgs) == ("C3", "BM25")
+    assert not is_delta({"raw_value": "0.684", "metric_name": "F1", "source_fragment": "Dense improves to F1 0.684 overall"})
+
+
+# ------------------------------------------------------------------ template conformance (independent of the kit scripts)
+def _write_set(folder, domain, rows):
+    from backend.app.core import conformance as CF
+    hdr = CF.contract(domain)["headers"]
+    folder.mkdir(parents=True, exist_ok=True)
+    for t, cols in hdr.items():
+        with open(folder / f"{t}.csv", "w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=cols, lineterminator="\n")
+            w.writeheader()
+            for r in rows.get(t, []):
+                w.writerow({c: r.get(c, "") for c in cols})
+
+
+def _rag_ok():
+    res = lambda rid, **k: {"publication_id": "X1", "result_id": rid, "experiment_id": "E1", "config_id": "C1", "dataset_id": "DS1",
+                            "task_id": "T1", "metric_name": "EM", "metric_value": "0.5", "normalized_value": "0.5", "metric_unit": "fraction",
+                            "normalized_unit": "fraction", "raw_value": "0.5", "result_origin": "primary", "source_page": "2",
+                            "source_fragment": "EM 0.5", "extraction_status": "extracted", **k}
+    return {"publications": [{"publication_id": "X1", "title": "t", "in_scope": "true"}, {"publication_id": "X2", "title": "u", "in_scope": "false",
+                                                                                         "exclusion_reason": "not RAG"}],
+            "configurations": [{"publication_id": "X1", "config_id": "C1"}], "datasets": [{"publication_id": "X1", "dataset_id": "DS1"}],
+            "tasks": [{"publication_id": "X1", "task_id": "T1"}], "experiments": [{"publication_id": "X1", "experiment_id": "E1"}],
+            "results": [res("R1"), res("R2", source_page="1", source_fragment="abstract EM 0.5", duplicate_of="R1")],
+            "issues": [{"publication_id": "X1", "issue_id": "I1", "record_ids": "R1", "check_name": "metric_scale", "description": "d"}]}
+
+
+def test_conformance_empty_template_is_not_success():
+    from backend.app.core import conformance as CF
+    for d in ("rag", "solar"):
+        r = CF.check_template_itself(d)
+        assert r["header_only"] and not r["structure_valid"] and r["counts"]["errors"] == 0
+    assert CF.contract("rag")["official"] is False and CF.contract("solar")["official"] is True
+
+
+def test_conformance_valid_set_and_each_negative(tmp_path):
+    import copy
+    from backend.app.core import conformance as CF
+    base = _rag_ok()
+    _write_set(tmp_path / "ok", "rag", base)
+    ok = CF.check_folder("rag", tmp_path / "ok")
+    assert ok["structure_valid"], ok["findings"]
+    assert ok["content"]["publications"] == 2 and ok["content"]["extracted"] == 2 and ok["content"]["duplicates"] == 1
+    cases = {
+        "empty_cells": lambda d: d["results"][0].update(metric_k="NaN"),
+        "enum": lambda d: d["results"][0].update(result_origin="own"),
+        "keys": lambda d: d["results"][1].update(result_id="R1", duplicate_of=""),
+        "links": lambda d: d["results"][0].update(config_id="C9"),
+        "provenance": lambda d: d["results"][0].update(source_page="0"),
+        "duplicate_of": lambda d: d["results"][1].update(duplicate_of="R7"),
+        "issues": lambda d: d["issues"][0].update(record_ids="R1;R9"),
+        "normalization": lambda d: d["results"][0].update(normalized_unit="%"),
+        "cited": lambda d: d["results"][0].update(result_origin="cited"),
+        "scope": lambda d: d["configurations"].append({"publication_id": "X2", "config_id": "C1"}),
+    }
+    for rule, mutate in cases.items():
+        d = copy.deepcopy(base)
+        mutate(d)
+        _write_set(tmp_path / rule, "rag", d)
+        rep = CF.check_folder("rag", tmp_path / rule)
+        assert not rep["structure_valid"] and any(f["rule"] == rule and f["severity"] == "error" for f in rep["findings"]), (rule, rep["findings"])
+    # header order is part of the contract
+    _write_set(tmp_path / "hdr", "rag", base)
+    p = tmp_path / "hdr" / "tasks.csv"
+    p.write_text(p.read_text().replace("publication_id,task_id,task_type,note", "task_id,publication_id,task_type,note", 1))
+    assert any(f["rule"] == "headers" for f in CF.check_folder("rag", tmp_path / "hdr")["findings"])
+    # case-exact placeholders: sodium «Na» / nanoampere «nA» are not «n/a»
+    d = copy.deepcopy(base)
+    d["results"][0].update(raw_unit="nA")
+    _write_set(tmp_path / "na", "rag", d)
+    assert not any(f["rule"] == "empty_cells" for f in CF.check_folder("rag", tmp_path / "na")["findings"])
+
+
+def test_solar_entity_units_to_template():
+    from backend.app.core.pipeline import _solar_entity_units
+    ents = {"devices": [{"device_id": "DV1", "active_area": "9", "area_unit": "mm2", "note": ""},
+                        {"device_id": "DV2", "active_area": "0.1", "area_unit": "cm^2", "note": ""}],
+            "layers": [{"layer_id": "L1", "layer_thickness": "1.5", "thickness_unit": "µm", "note": ""},
+                       {"layer_id": "L2", "layer_thickness": "10", "thickness_unit": "mg mL-1", "note": ""}],
+            "materials": [{"material_id": "M1", "bandgap_value": "1550", "bandgap_unit": "meV", "note": ""}]}
+    _solar_entity_units(ents)
+    assert (ents["devices"][0]["active_area"], ents["devices"][0]["area_unit"]) == ("0.09", "cm2")
+    assert ents["devices"][1]["area_unit"] == "cm2" and ents["devices"][1]["active_area"] == "0.1"
+    assert (ents["layers"][0]["layer_thickness"], ents["layers"][0]["thickness_unit"]) == ("1500", "nm")
+    assert ents["layers"][1]["layer_thickness"] == "" and "mg mL-1" in ents["layers"][1]["note"]
+    assert (ents["materials"][0]["bandgap_value"], ents["materials"][0]["bandgap_unit"]) == ("1.55", "eV")

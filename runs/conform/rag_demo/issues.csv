@@ -1,0 +1,43 @@
+publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+DEMO_RAG1,I1,R026,metric_scale,"Recall = 104 % вне шкалы [0, 100]",2,w/o reranker
+DEMO_RAG1,I2,R027;R030,contradiction,em: 47.9 (с. 3) vs 48.2 (с. 3) для одной конфигурации/набора,3,"48.2
+Hybrid"
+DEMO_RAG1,I3,R004;R027,contradiction,"EM: в тексте 47.9 (с. 3), в Table 1 48.2 (с. 2) для одной конфигурации/набора",3,HybridRet-RAG reaches 47.9 EM on HotpotQA
+DEMO_RAG1,I4,R028,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,3,"EM
+21.4
+No-Ret."
+DEMO_RAG1,I5,R029,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,3,"BM25-RAG
+48.2
+Hybrid"
+DEMO_RAG1,I6,R030,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,3,"48.2
+Hybrid"
+DEMO_RAG1,I7,R031,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,4,
+DEMO_RAG1,I8,R032,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,4,
+DEMO_RAG1,I9,R033,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,4,
+DEMO_RAG1,I10,R034,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,4,
+DEMO_RAG1,I11,R035,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,4,
+TEST_RAG_ERRORS_01,I1,R017,metric_scale,"Recall = 104 % вне шкалы [0, 100]",3,Scale trap config - - 104.0% @10 -
+TEST_RAG_ERRORS_01,I2,R010;R018,contradiction,"F1: в тексте 0.668 (с. 4), в Table 2 0.684 (с. 3) для одной конфигурации/набора",4,token-level F1 = 0.668 for the same configuration
+TEST_RAG_ERRORS_01,I3,R005,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I4,R006,ocr_uncertainty,"Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы; название метрики OCR прочитал как «FA», принято F1 по тексту статьи (с. 2, 4)",3,
+TEST_RAG_ERRORS_01,I5,R007,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I6,R008,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I7,R009,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I8,R010,ocr_uncertainty,"Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы; название метрики OCR прочитал как «FA», принято F1 по тексту статьи (с. 2, 4)",3,
+TEST_RAG_ERRORS_01,I9,R011,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I10,R012,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I11,R013,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I12,R014,ocr_uncertainty,"Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы; название метрики OCR прочитал как «FA», принято F1 по тексту статьи (с. 2, 4)",3,
+TEST_RAG_ERRORS_01,I13,R015,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I14,R016,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I15,R017,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_ERRORS_01,I16,R021,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,4,Figure 1: Exact Match by configuration. Values printed above bars are fractions on the 0-1 scale. 0.584 BM25 0.612 Dense 0.590 No reranker Figure 2: Retrieval latency across synthetic load levels.
+TEST_RAG_ERRORS_01,I17,R022,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,4,Figure 1: Exact Match by configuration. Values printed above bars are fractions on the 0-1 scale. 0.584 BM25 0.612 Dense 0.590 No reranker Figure 2: Retrieval latency across synthetic load levels.
+TEST_RAG_ERRORS_01,I18,R023,source_figure_review,Значение с рисунка Figure 1: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,4,Figure 1: Exact Match by configuration. Values printed above bars are fractions on the 0-1 scale. 0.584 BM25 0.612 Dense 0.590 No reranker Figure 2: Retrieval latency across synthetic load levels.
+TEST_RAG_MedRerank,I1,R016,metric_scale,"accuracy = 1.07 fraction вне шкалы [0, 1]",2,MedRerank-RAG + GPT-4o generator
+TEST_RAG_MedRerank,I2,R022;R023,extraction_linking,"accuracy: 0.728 и 0.735 в одном предложении (с. 3) привязаны к одной конфигурации/набору — вероятно, нода слила разные варианты. Ошибка извлечения, а не статьи.",3,
+TEST_RAG_MedRerank,I3,R012;R025,contradiction,"accuracy: в тексте 0.724 (с. 3), в Table 1 0.742 (с. 2) для одной конфигурации/набора",3,MedRerank-RAG reaches 0.724 accuracy on PubMedQA
+TEST_RAG_MedRerank,I4,R022,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_MedRerank,I5,R023,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_MedRerank,I6,R024,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,
+TEST_RAG_MedRerank,I7,R025,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,3,

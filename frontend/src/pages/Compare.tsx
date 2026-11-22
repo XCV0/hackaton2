@@ -42,6 +42,11 @@ export default function Compare() {
                 <tbody>{g.items.map((it: any, j: number) => <tr key={it.id}><td className="num">{j + 1}</td><td><Link className="mono" to={`/pub/${domain}/${split}/${it.pub_id}`}>{it.pub_id}</Link></td>
                   <td><Link to={`/record/${it.id}`}><div className="clip">{it.label || it.rec_id}</div></Link></td><td className="num">{it.raw_value}</td><td className="num">{it.value} {it.unit}</td><td className="num">{it.page}</td><td><VerBadge v={it.verification} /></td></tr>)}</tbody></table></div>
             </div>))}
+          {data && data.total_considered > 0 && (
+            <div className="notice info small">
+              Рассмотрено значений: <b>{data.total_considered}</b>, сравнимо: <b>{data.total_considered - data.excluded_total}</b>, исключено: <b>{data.excluded_total}</b>.
+              {(data.reason_counts || []).length > 0 && <> Чаще всего мешает: {(data.reason_counts || []).slice(0, 4).map(([r, n]: [string, number]) => <span key={r} className="tag">{r} — {n}</span>)}</>}
+            </div>)}
           {data && data.excluded_total > 0 && (
             <details className="more"><summary>Исключено из автоматического сравнения: {data.excluded_total}</summary>
               <div className="tbl-wrap" style={{ maxHeight: 360 }}><table className="tbl"><thead><tr><th>Публ.</th><th>Запись</th><th>Значение</th><th>Почему несопоставимо</th></tr></thead>

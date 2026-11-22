@@ -1,0 +1,6 @@
+publication_id,layer_id,device_id,layer_order,layer_function,layer_material,layer_thickness,thickness_unit,deposition_method,annealing_temperature,annealing_time,atmosphere,note
+DEMO_SOLAR1,L1,DV1,1,front_contact,FTO,,,,,,,
+DEMO_SOLAR1,L2,DV1,2,ETL,SnO2,30,nm,,,,,
+DEMO_SOLAR1,L3,DV1,3,absorber,MAPbI3,500,nm,,,,,
+DEMO_SOLAR1,L4,DV1,4,HTL,Spiro-OMeTAD,200,nm,,,,,
+DEMO_SOLAR1,L5,DV1,5,back_contact,Au,80,nm,,,,,

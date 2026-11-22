@@ -1,0 +1,5 @@
+publication_id,title,year,DOI,authors,in_scope,exclusion_reason
+DEMO_RAG1,HybridRet-RAG: Hybrid Sparse-Dense Retrieval for Multi-Hop Question Answering,2026,10.5555/demo.rag.2026.001,Testova A.;Proverkin B.;Demo C.,true,
+TEST_RAG_CLEAN_01,Evidence-Guided Retrieval for Synthetic Legal Question Answering,2026,10.5555/demo.rag.2026.001,Quill M.;Peverell J.;Voss A.,true,
+TEST_RAG_ERRORS_01,Evidence-Guided Retrieval for Synthetic Legal Question Answering,2026,10.5555/demo.rag.2026.001,Quill M.;Peverell J.;Voss A.,true,
+TEST_RAG_MedRerank,MedRerank-RAG: Cross-Encoder Reranking for Biomedical Question Answering,2025,10.5555/demo.rag.2025.007,Testov I.;Proverkina O.,true,

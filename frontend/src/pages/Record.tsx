@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { api, DOMAIN_LONG, post } from "../api";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { api, DOMAIN_LONG, post, quoteOutcome } from "../api";
 import SourceViewer from "../components/SourceViewer";
-import { Badge, ErrorState, IssueTag, Loading, OriginBadge, QuoteBadge, ReviewBadge, Toast, useAsync, VerBadge } from "../components/ui";
+import { Badge, ErrorState, IssueTag, Loading, OriginBadge, QuoteBadge, ReviewBadge, StatusBadge, Term, Toast, useAsync, VerBadge } from "../components/ui";
 
 const LINK_TITLE: Record<string, string> = { experiment_id: "Эксперимент", config_id: "Конфигурация", dataset_id: "Набор данных", task_id: "Задача",
   device_id: "Прибор", measurement_id: "Измерение", material_id: "Материал" };
@@ -13,13 +13,15 @@ function Chain({ r }: { r: any }) {
   const qo = r.quorum?.outcome;
   const ev = r.evidence || {};
   const st = (ok: boolean | null, warn = false) => (ok === null ? "" : ok ? "ok" : warn ? "warn" : "err");
+  const cellOk = (r.checks || []).some((c: any) => c.check === "table_cell" || (c.check === "table_row" && c.outcome === "value_in_row"));
   return (
     <div className="chain" aria-label="Цепочка обработки">
       <span className="step ok">PDF {r.pub_id}{r.is_scan ? " (скан)" : ""}</span><span className="arr">→</span>
       <span className={`step ${r.is_scan ? "warn" : "ok"}`}>{r.is_scan ? "OCR Tesseract" : "текстовый слой"}</span><span className="arr">→</span>
       <span className="step ok">нода {r.node} · {ev.kind || "?"}</span><span className="arr">→</span>
       <span className={`step ${st(!!ev.norm?.output?.[0], true)}`}>нормализация</span><span className="arr">→</span>
-      <span className={`step ${st(q.outcome === "matched", q.outcome === "matched_ocr_only" || q.outcome === "no_fragment")}`}>источник: {q.outcome || "—"}</span><span className="arr">→</span>
+      <span className={`step ${st(q.outcome === "matched", q.outcome === "matched_ocr_only" || q.outcome === "no_fragment")}`}>фрагмент: {q.outcome === "matched" ? "найден" : q.outcome === "matched_ocr_only" ? "найден в OCR" : q.outcome || "—"}</span><span className="arr">→</span>
+      {q.value_in_fragment !== undefined && <><span className={`step ${q.value_in_fragment || cellOk ? "ok" : "warn"}`}>{q.value_in_fragment ? "число во фрагменте" : cellOk ? "число в ячейке/строке таблицы" : "число не подтверждено"}</span><span className="arr">→</span></>}
       <span className={`step ${qo === "agree" || qo === "resolved_by_C" ? "ok" : qo === "disagree" || qo === "unresolved" ? "err" : ""}`}>кворум: {qo || "—"}</span><span className="arr">→</span>
       <span className={`step ${rules.some((x: any) => x.outcome === "fail") ? "err" : rules.length ? "ok" : ""}`}>правила: {rules.length ? (rules.some((x: any) => x.outcome === "fail") ? "нарушение" : "пройдены") : "не применимы"}</span><span className="arr">→</span>
       <span className={`step ${r.verification_status === "verified" ? "ok" : r.verification_status === "flagged" ? "err" : "warn"}`}>{r.verification_status}</span>
@@ -32,6 +34,31 @@ export default function RecordPage() {
   const { id = "" } = useParams();
   const { data, error, loading, reload } = useAsync(() => api(`/api/records/${id}`), [id]);
   const [toast, setToast] = useState("");
+  const nav = useNavigate();
+  const [sib, setSib] = useState<{ prev?: number; next?: number; pos?: number; total?: number }>({});
+  const pubKey = data ? `${data.domain}/${data.split}/${data.pub_id}` : "";
+  const [order, setOrder] = useState<{ key: string; ids: number[] }>({ key: "", ids: [] });
+  useEffect(() => {
+    if (!pubKey || order.key === pubKey) return;
+    api(`/api/publications/${pubKey}`).then((pd: any) => {
+      const ids = [...pd.results].sort((a: any, b: any) => (Number(a.data.source_page) || 0) - (Number(b.data.source_page) || 0) || String(a.rec_id).localeCompare(String(b.rec_id)))
+        .map((x: any) => x.id);
+      setOrder({ key: pubKey, ids });
+    }).catch(() => {});
+  }, [pubKey]);
+  useEffect(() => {
+    const i = order.ids.indexOf(Number(id));
+    setSib(i < 0 ? {} : { prev: order.ids[i - 1], next: order.ids[i + 1], pos: i + 1, total: order.ids.length });
+  }, [order, id]);
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement;
+      if (t && ["INPUT", "TEXTAREA", "SELECT"].includes(t.tagName)) return;
+      if (e.key === "ArrowLeft" && sib.prev) nav(`/record/${sib.prev}`);
+      if (e.key === "ArrowRight" && sib.next) nav(`/record/${sib.next}`);
+    };
+    window.addEventListener("keydown", h); return () => window.removeEventListener("keydown", h);
+  }, [sib]);
   if (loading && !data) return <Loading rows={12} />;
   if (error) return <ErrorState error={error} retry={reload} />;
   const r = data;
@@ -47,17 +74,18 @@ export default function RecordPage() {
           <div className="crumbs"><Link to={`/catalog?domain=${r.domain}&split=${r.split}`}>{DOMAIN_LONG[r.domain]} · {r.split}</Link> / <Link to={`/pub/${r.domain}/${r.split}/${r.pub_id}`}>{r.pub_id}</Link> / {r.rec_id}</div>
           <h1>{isResult ? <>{d.metric_name || "Показатель"} <span className="mono" style={{ fontWeight: 500 }}>= {d.raw_value} {d.raw_unit}</span></> : `${r.tbl} ${r.rec_id}`}</h1>
           <div className="muted small wrap-any">{r.publication?.title}</div>
-          {isResult && <div className="row" style={{ marginTop: 8 }}><VerBadge v={r.verification_status} /><QuoteBadge v={q.outcome} /><ReviewBadge v={r.review_status} /><OriginBadge o={d.result_origin} />
+          {isResult && <div className="row" style={{ marginTop: 8 }}><VerBadge v={r.verification_status} /><QuoteBadge v={quoteOutcome(r.checks)} /><ReviewBadge v={r.review_status} /><OriginBadge o={d.result_origin} />
             {d.extraction_status && <Badge cls="b-plain">извлечение: {d.extraction_status}</Badge>}
             {d.duplicate_of && <Link className="tag" to={r.duplicate_record ? `/record/${r.duplicate_record}` : "#"}>повтор записи {d.duplicate_of}</Link>}</div>}
         </div>
       </div>
+      {isResult && <ActionBar r={r} sib={sib} onNav={(x) => nav(`/record/${x}`)} onDone={(m) => { setToast(m); reload(); }} />}
       {isResult && <Chain r={r} />}
       <div className="split">
         <div className="stack" style={{ gap: 14, minWidth: 0 }}>
           {isResult && (
             <section className="card card-b stack">
-              <h3>Значение: опубликовано · нормализовано · проверено</h3>
+              <h3>Значение: опубликовано (<Term k="raw">raw</Term>) · <Term k="нормализация">нормализовано</Term> · проверено</h3>
               <div className="triple">
                 <div><div className="t">Опубликовано (raw)</div><div className="v">{d.raw_value || "—"}</div><div className="small muted">{d.raw_unit || "единица не указана"}</div></div>
                 <div><div className="t">Нормализовано</div><div className="v">{d.normalized_value || "—"}</div><div className="small muted">{d.normalized_unit || "без пересчёта"}</div>
@@ -89,9 +117,11 @@ export default function RecordPage() {
               {d.source_fragment ? <div className={`quote ${q.outcome === "matched" ? "" : "bad"}`}>«{d.source_fragment}»</div> : <div className="notice">Дословной цитаты нет — только указатель на таблицу/рисунок; нужна визуальная проверка.</div>}
               {r.evidence?.failed_fragment && <div className="small muted">Цитата, предложенная нодой и не найденная: «{r.evidence.failed_fragment}»</div>}
               <div className="row small">
+                <Badge cls={q.outcome === "matched" ? "b-ok" : q.outcome === "matched_ocr_only" ? "b-warn" : "b-err"}>1. фрагмент {q.outcome === "matched" ? "найден на странице" : q.outcome === "matched_ocr_only" ? "найден только в OCR" : "не найден"}</Badge>
+                {q.value_in_fragment === true && <Badge cls="b-ok">2. число есть во фрагменте</Badge>}
+                {q.value_in_fragment === false && <Badge cls={cell ? "b-ok" : "b-warn"}>2. числа нет во фрагменте{cell ? " — подтверждено ячейкой/строкой таблицы" : " — не подтверждено"}</Badge>}
+                {(r.checks || []).some((c: any) => c.check === "quote_extension") && <Badge cls="b-info" title={(r.checks || []).find((c: any) => c.check === "quote_extension")?.from}>цитата расширена до числа</Badge>}
                 {q.engines?.length ? <span>Найдена движками: {q.engines.map((e: string) => <span key={e} className="tag">{e}</span>)}</span> : null}
-                {q.value_in_fragment === true && <Badge cls="b-ok">число есть в цитате</Badge>}
-                {q.value_in_fragment === false && <Badge cls="b-warn">числа нет в цитате{cell ? " — подтверждено ячейкой таблицы" : ""}</Badge>}
                 {q.other_pages?.length ? <Badge cls="b-err">найдена на с. {q.other_pages.join(", ")}</Badge> : null}
                 {q.paraphrase_suspect && <Badge cls="b-err">похоже на пересказ, а не цитату</Badge>}
               </div>
@@ -117,7 +147,7 @@ export default function RecordPage() {
             </section>
           )}
           {isResult && (
-            <section className="card card-b stack"><h3>Кворум нод</h3>
+            <section className="card card-b stack"><h3><Term k="кворум">Кворум нод</Term></h3>
               <dl className="kv">
                 <dt>Режим</dt><dd>{r.quorum?.mode || "—"} · ноды: {(r.quorum?.nodes || []).join(", ") || "—"}</dd>
                 <dt>Исход</dt><dd><Badge cls={r.quorum?.outcome === "agree" ? "b-ok" : r.quorum?.outcome === "disagree" || r.quorum?.outcome === "unresolved" ? "b-err" : "b-plain"}>{({ agree: "ноды совпали", disagree: "ноды разошлись", single: "значение нашла одна нода", single_node: "работала одна нода", resolved_by_C: "C перечитала и поддержала одну версию", unresolved: "не разрешено — к человеку" } as any)[r.quorum?.outcome] || "—"}</Badge></dd>
@@ -137,7 +167,7 @@ export default function RecordPage() {
         </div>
         <div className="sticky-col card card-b">
           {isResult ? <SourceViewer domain={r.domain} split={r.split} pid={r.pub_id} page={page} fragment={d.source_fragment} value={d.raw_value}
-            cell={cell} pageCount={r.page_count} figure={d.source_figure && !d.source_table ? d.source_figure : undefined} /> :
+            cell={cell} pageCount={r.page_count} figure={d.source_figure && !d.source_table ? d.source_figure : undefined} currentId={r.id} /> :
             <SourceViewer domain={r.domain} split={r.split} pid={r.pub_id} page={1} pageCount={r.page_count} />}
         </div>
       </div>
@@ -167,7 +197,7 @@ function ReviewPanel({ r, onDone }: { r: any; onDone: (m: string) => void }) {
   };
   const rawChanged = edit.raw_value !== undefined && edit.raw_value !== r.data.raw_value;
   return (
-    <section className="card card-b stack">
+    <section className="card card-b stack" id="review-panel">
       <h3>Решение проверяющего</h3>
       <div className="row">
         <label className="small muted" style={{ display: "grid", gap: 3 }}>Кто проверяет<input className="input" value={actor} onChange={(e) => setActor(e.target.value)} placeholder="имя/логин" /></label>
@@ -192,5 +222,34 @@ function ReviewPanel({ r, onDone }: { r: any; onDone: (m: string) => void }) {
         {r.review_status !== "none" && r.review_status !== "pending" && <button className="btn ghost" disabled={busy} onClick={() => send("reopen")}>Вернуть в очередь</button>}
       </div>
     </section>
+  );
+}
+
+function ActionBar({ r, sib, onNav, onDone }: { r: any; sib: any; onNav: (id: number) => void; onDone: (m: string) => void }) {
+  const [busy, setBusy] = useState(false);
+  const link = `${location.origin}/v/${r.domain}/${r.split}/${r.pub_id}/${r.rec_id}`;
+  const confirm = async () => {
+    setBusy(true);
+    try {
+      await post(`/api/records/${r.id}/review`, { action: "confirm", comment: "", actor: (() => { try { return localStorage.getItem("actor") || "reviewer"; } catch { return "reviewer"; } })() });
+      onDone("Запись подтверждена");
+      if (sib.next) onNav(sib.next);
+    } catch (e: any) { onDone(e.message); } finally { setBusy(false); }
+  };
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(link); onDone("Ссылка на значение скопирована"); } catch { window.prompt("Ссылка на значение", link); }
+  };
+  const toPanel = () => document.getElementById("review-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  return (
+    <div className="actionbar" role="toolbar" aria-label="Действия со значением">
+      <StatusBadge r={{ ...r, quote_outcome: quoteOutcome(r.checks), issue_types: (r.issues || []).map((i: any) => i.data.check_name) }} />
+      <button className="btn sm teal" disabled={busy} onClick={confirm} title="Подтвердить и перейти к следующему">✓ Подтвердить</button>
+      <button className="btn sm" onClick={toPanel}>✎ Исправить / ✕ Отклонить</button>
+      <span className="grow" />
+      <button className="btn sm ghost" onClick={copy} title={link}>🔗 Ссылка</button>
+      <button className="btn sm" disabled={!sib.prev} onClick={() => sib.prev && onNav(sib.prev)} aria-label="Предыдущее значение" title="Предыдущее (←)">←</button>
+      {sib.total ? <span className="small muted">{sib.pos} / {sib.total}</span> : null}
+      <button className="btn sm" disabled={!sib.next} onClick={() => sib.next && onNav(sib.next)} aria-label="Следующее значение" title="Следующее (→)">→</button>
+    </div>
   );
 }

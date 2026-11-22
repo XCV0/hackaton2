@@ -1,0 +1,13 @@
+publication_id,task_id,task_type,note
+DEMO_RAG1,T1,multi-hop question answering,Exact match (EM) reported on HotpotQA.
+DEMO_RAG1,T2,question answering,EM and F1 reported; the paper frames the work as multi-hop QA.
+DEMO_RAG1,T3,retrieval,Recall@k reported as retrieval quality.
+DEMO_RAG1,T4,open-domain question answering,Section 4 Open-Domain Results
+TEST_RAG_CLEAN_01,T2,single-hop extractive question answering,merged mentions T1; also referred to as: question answering
+TEST_RAG_ERRORS_01,T2,single-hop extractive question answering,Evaluation protocol: Exact Match and token-level F1 on 0-1 scale; Recall@k and nDCG@k also on 0-1 scale unless a table states percent.; merged mentions T1; also referred to as: question answering
+TEST_RAG_MedRerank,T1,biomedical question answering,Answer accuracy on PubMedQA.
+TEST_RAG_MedRerank,T2,open-domain question answering,Cited EM result on Natural Questions.
+TEST_RAG_MedRerank,T3,question answering,PubMedQA accuracy (fraction)
+TEST_RAG_MedRerank,T4,factoid question answering,BioASQ strict accuracy (%)
+TEST_RAG_MedRerank,T5,retrieval evaluation,nDCG@10; dataset for this column not stated
+TEST_RAG_MedRerank,T6,answer generation evaluation,BLEU column; dataset not stated

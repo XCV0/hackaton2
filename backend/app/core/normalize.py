@@ -16,7 +16,7 @@ def fmt(v: float | None) -> str:
 
 UNIT_CANON = [
     (r"^%$|^percent$", "%"),
-    (r"^fraction$|^frac$", "fraction"),
+    (r"^fraction\b|^frac$|^fractions\b", "fraction"),
     (r"^m\s*v$", "mV"), (r"^v$", "V"),
     (r"^m\s*a\s*(/|·|\s)?\s*cm\s*(\^|-|−|–)?\s*-?2$|^ma\s*cm\s*[-−–]\s*2$|^ma/cm2$|^ma cm-2$", "mA/cm2"),
     (r"^a\s*/\s*m2$|^a m-2$", "A/m2"),

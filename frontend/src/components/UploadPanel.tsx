@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../api";
 import { Badge } from "./ui";
 
 /** Upload a user PDF into the separate «demo» set and follow its processing job. */
-export default function UploadPanel({ domain, onDone }: { domain: string; onDone?: () => void }) {
+export default function UploadPanel({ domain, onDone, autoOpen, onOpened }: { domain: string; onDone?: () => void; autoOpen?: boolean; onOpened?: () => void }) {
+  const nav = useNavigate();
   const [dom, setDom] = useState(domain);
   const [mode, setMode] = useState("default");
   const [file, setFile] = useState<File | null>(null);
@@ -21,7 +22,13 @@ export default function UploadPanel({ domain, onDone }: { domain: string; onDone
       try {
         const j = await api(`/api/jobs/${res.job_id}`);
         setJob(j);
-        if (!["queued", "running"].includes(j.status)) onDone?.();
+        if (!["queued", "running"].includes(j.status)) {
+          onDone?.();
+          if (autoOpen && j.status === "done") {  // straight to the results when processing is finished
+            nav(`/pub/${res.domain}/demo/${res.pub_id}?domain=${res.domain}&split=demo`);
+            onOpened?.();
+          }
+        }
       } catch { /* keep polling */ }
     }, 3000);
     return () => clearInterval(t);
@@ -73,7 +80,7 @@ export default function UploadPanel({ domain, onDone }: { domain: string; onDone
             <span>Файл сохранён как <b className="mono">{res.pub_id}</b> ({res.pages} стр.).</span>
             {running ? <Badge cls="b-warn">обработка… {job?.done ?? 0}/{job?.total || 1}</Badge> : job?.status === "done" ? <Badge cls="b-ok">готово</Badge> : <Badge cls="b-err">{job?.status}</Badge>}
           </div>
-          {running && <div className="small">Сканы проходят OCR, затем LLM-ноды читают страницы — обычно 1–5 минут. Страницу можно не закрывать.</div>}
+          {running && <div className="small">Сканы проходят OCR, затем LLM-ноды читают страницы — обычно 1–5 минут.{autoOpen ? " Когда будет готово, результаты откроются сами." : " Страницу можно не закрывать."}</div>}
           {!running && job?.status && <div className="row" style={{ marginTop: 6 }}>
             <Link className="btn sm primary" to={`/pub/${res.domain}/demo/${res.pub_id}`}>Открыть результаты</Link>
             <Link className="btn sm" to={`/admin/issues?domain=${res.domain}&split=demo&pub=${res.pub_id}`}>Замечания</Link></div>}

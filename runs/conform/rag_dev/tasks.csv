@@ -1,0 +1,231 @@
+publication_id,task_id,task_type,note
+D001,T1,multi-hop question answering,Failure-mode analysis of incorrect predictions.
+D001,T3,answer synthesis,Input: question q; Output: linearized context C; final answer a
+D001,T4,open-domain multi-hop QA,merged mentions T2; also referred to as: multi-hop QA
+D001,T5,complex multi-hop reasoning,Exact Match (EM) is the reported evaluation metric.; merged mentions T6; also referred to as: multi-hop reasoning
+D001,T7,Semantic Node Partitioning,Teacher models split texts along natural narrative breaks to generate binary boundary supervision signals.
+D001,T8,semantic boundary prediction,
+D002,T1,cybersecurity question answering,
+D002,T2,Question and Answering tasks,Cybersecurity question answering.
+D002,T3,Ground truth validation,Two-expert validation of the questions’ ground truth.
+D002,T4,Query Handling Process,Input: A user query q on a specific cybersecurity topic. Output: A series of refined queries Q’ for in-depth analysis.
+D002,T5,answering cybersecurity questions,
+D002,T6,General Cybersecurity Questions,Generation of answers to simple cybersecurity questions.
+D002,T7,Multi-Hop Cybersecurity Questions,Generation of answers to complex multi-hop cybersecurity queries.
+D002,T8,Common Vulnerability Exposure (CVE) questions,Questions concerning specific security vulnerabilities.; merged mentions T18; also referred to as: CVE Questions
+D002,T9,CVE vulnerability identification,Accuracy is based on whether the model correctly identified the vulnerability.
+D002,T10,Relevant-information retrieval,Measures the frequency with which a retriever successfully retrieves relevant information.
+D002,T11,General Cybersecurity Question,
+D002,T12,Agreement with human judgment,
+D002,T14,LLM as Judge with Five-Level Judgment Criteria Based on Top-Scoring References,
+D002,T15,Analysis of the performance of Structured Retrievers,
+D002,T16,Analysis of the Performances of Unstructured RAG Components,merged mentions T22; also referred to as: Unstructured RAG Components
+D002,T17,Complete Cybersecurity Questions,Printed as Complete Cyber. Questions in TABLE V.; merged mentions T13; also referred to as: Complete Questions
+D002,T19,retrieval of relevant text data,
+D002,T20,Named Entity Recognition (NER),"Cybersecurity entity recognition, including cybersecurity neologisms."
+D002,T21,Structured RAG Retrievers,
+D002,T23,identifying malicious scripts,
+D002,T24,"convert over 29k cybersecurity reports into 113,543 actionable Cyber Threat Intelligence (CTI) points",
+D002,T25,answering cybersecurity queries,
+D002,T26,feature classification,cybersecurity tasks
+D003,T1,long-document reading comprehension,Requires the acquisition of new knowledge.
+D003,T3,accuracy evaluation across three benchmarks,"Evaluation across QuaLITY, LongHealth, and FinanceBench."
+D003,T5,question answering,The page reports QuaLITY Accuracy and refers to synthetic QAs.
+D003,T6,MCQA,Evaluation type for QuaLITY and LongHealth.
+D003,T7,Free-form,Evaluation type for FinanceBench.
+D003,T8,QuaLITY Accuracy,Figure 7 y-axis is “QuaLITY Accuracy (%)”.
+D003,T9,Estimating compute for synthetic training,
+D003,T10,open-ended generation,FinanceBench Accuracy (%)
+D003,T11,setups beating RAG,Aggregate comparison across the six Figure 8 setups.
+D003,T12,intra- and inter-set gradient-embedding similarity,
+D003,T13,Gradient Similarity Between Datasets,
+D003,T14,multiple-choice QA evaluation,"merged mentions T2, T4; also referred to as: multiple-choice QA; QA"
+D003,T15,synthetic document generation,
+D004,T1,opinion synthesis,
+D004,T2,RAG benchmark survey,
+D004,T3,categorical perspective presence,is viewpoint X retrieved?
+D004,T4,coverage,"Coverage evaluation using Entity Match, Sentiment-Intensity σ, Business Impact σ, Emotional Markers, and Empirical W1."
+D004,T5,fairness,"Demographic Coverage for Revenue Band, Tenure, and Evidence Type."
+D004,T6,fidelity,Human evaluation via blind pairwise comparison.
+D004,T7,RAG retrieval,
+D004,T8,Business Impact queries,
+D004,T9,Emotional queries,
+D004,T10,Experience queries,
+D004,T11,human evaluation of responses,
+D004,T12,retrieval diversity,
+D004,T13,blind pairwise preference,Fidelity evaluation of question-response pairs.
+D004,T14,opinion labeling,Opinion labels used to measure inter-annotator agreement.
+D004,T15,opinion extraction,Opinion-extraction prompts and metric definitions are provided in the appendix.
+D004,T16,Response generation from the retrieved context,
+D004,T17,retrieval diversity evaluation,
+D004,T18,manual annotation labeling,
+D004,T19,inference cost accounting,
+D004,T20,Diversity metrics at different retrieval depths (k),
+D004,T21,Question Type Ablation,
+D004,T22,Retrieval Method Comparison,
+D004,T23,Entity-Matched Document Analysis,Diversity metrics on entity-matched documents only.
+D005,T1,open-book RAG QA,merged mentions T3; also referred to as: RAG QA
+D005,T2,factual question answering (QA),
+D005,T4,RAG summarization,Also described on the page as RAG answer generation.
+D005,T5,Train Data Composition,Composition of synthetic CoT training data.
+D005,T6,factual quality of generated answers,
+D005,T7,producing the final synthetic train data,
+D005,T8,SFT training,
+D005,T9,open-book question answering,
+D005,T10,factuality benchmark,
+D005,T11,closed-book factuality QA,
+D006,T1,retrieval reranking,evaluated with NDCG@5
+D006,T2,reranking,document reranking within RAG
+D006,T3,question answering,illustrative example: 'Who is the President of the U.S.?'
+D006,T4,passage ranking,"Graded relevance annotations, out-of-domain generalization assessment"
+D006,T5,document reranking,NDCG@5 as primary metric
+D006,T6,document retrieval / reranking,NDCG@5 ranking evaluation
+D006,T7,retrieval ranking (NDCG@5),
+D006,T8,ranking / reranking,NDCG@5 evaluation
+D006,T9,document reranking / retrieval,NDCG@5 improvement
+D006,T10,retrieval,BEIR/TREC retrieval benchmarks
+D007,T3,question answering,EM/F1/Acc metrics
+D007,T4,query complexity classification,"Classifier accuracy for All, No, One, Multi labels"
+D007,T5,Open-domain QA (single-hop and multi-hop),"Task illustrated in Table 5 case study; merged mentions T1, T2; also referred to as: single-hop QA; multi-hop QA"
+D008,T1,contextual faithfulness evaluation,ConR metric
+D008,T2,hallucination mitigation comparison (pairwise win/tie/loss judged by GPT-4o),
+D008,T3,memory reliance (MemR) comparison,
+D008,T4,inference latency measurement,end-to-end single-sample latency with and without CoDA; merged mentions T6; also referred to as: inference latency
+D008,T5,context recall under noisy context,"ConR and ΔConRdrop; only described in text/Figure 7, no printed numbers"
+D009,T1,question answering,EM and F1 via FlashRAG evaluation framework
+D009,T2,open-domain question answering,token-level F1 and EM evaluation
+D009,T3,multi-hop QA,EM/F1 evaluation
+D009,T4,multi-hop question answering,step-level PRM labeling (GOOD/BAD)
+D009,T5,downstream QA evaluation,two metrics reported per cell as a / b
+D010,T1,federated search,
+D010,T2,source selection,
+D010,T3,federated search in RAG systems,
+D010,T4,data source relevance analysis,The analysis uses medical multiple-choice questions from the MIRAGE benchmark.
+D010,T5,medical question answering,Task associated with MIRAGE.
+D010,T6,tasks ranging from elementary mathematics to legal reasoning,Tasks associated with the selected MMLU subsets.
+D010,T7,predicting whether the corpus is relevant to the given query,Binary relevance-prediction task performed by the router.
+D010,T8,federated search methods for RAG systems,
+D010,T9,LLM answer generation,
+D010,T10,binary data-source relevance classification,
+D010,T11,federated retrieval,document retrieval
+D010,T12,End-to-end RAG accuracy,
+D010,T13,answering a user query,
+D010,T14,router relevance prediction,
+D010,T15,routing inference,
+D011,T1,RAG knowledge base watermarking,
+D011,T2,watermark recovery,
+D011,T3,main RAG tasks,
+D011,T4,watermark text filtering,
+D011,T5,watermark information encoding,
+D011,T6,Watermark Verification,
+D011,T7,Watermarked Knowledge Quality,"The rationality score range is [-10,10]."
+D011,T8,Impact on Main Task,
+D011,T10,Validity Metrics,
+D011,T11,Quality Metrics,
+D011,T12,Task Metrics,
+D011,T13,Time Overhead of Watermarking,merged mentions T9; also referred to as: Overhead
+D011,T14,Knowledge Selection Attacks,
+D011,T15,Knowledge Alteration Attacks,
+D011,T16,Knowledge Expansion Attacks,
+D011,T17,RAG Setting Restrictions,
+D011,T18,watermark detection,
+D011,T19,Duplicate Content Removal Attack,
+D011,T20,Text Perplexity Filtering,
+D011,T21,Human Identification,
+D011,T22,watermark-text retrieval,
+D011,T23,medical information retrieval,NFCorpus is tailored for medical information retrieval.; merged mentions T24; also referred to as: information retrieval
+D011,T26,discrete reasoning over paragraphs,DROP is designed to evaluate discrete reasoning over paragraphs.
+D011,T27,machine reading comprehension,MS MARCO is described as a machine reading comprehension dataset.; merged mentions T25; also referred to as: reading comprehension
+D011,T28,open-domain question answering,MS MARCO is described as a representative benchmark for open-domain question answering.
+D011,T29,passage ranking,MS MARCO is described as a representative benchmark for passage ranking.
+D011,T30,text quality evaluation,"Fluency, correctness, and rationality."
+D011,T31,Watermark text generation,
+D011,T32,Robustness Verification,
+D012,T1,compliance-oriented question answering,"Evaluates unauthorized leakage, stale citation, and unsupported answers."
+D012,T2,compliance-oriented QA,"Response states: ANSWER, REFUSAL, and CONFLICTREPORT."
+D012,T3,final-response generation,Each main instance includes a query and a ground-truth governed response.
+D012,T4,Main failure rates and strong baseline comparisons,
+D012,T5,Ablation and adversarial stress-test,
+D012,T6,final-response performance,
+D012,T7,Robustness checks,
+D012,T8,Utility diagnostics,
+D012,T9,Judge reliability,
+D012,T10,Final-response,
+D012,T11,Ablations and Adversarial Stress Tests,
+D012,T12,routing-level risk diagnostics,
+D012,T13,aerospace QA,Aerospace compliance QA using retrieved document context and metadata-governance rules.
+D012,T14,routing behavior,Multi-Version and Conflict Stress Tests
+D012,T15,Large Candidate-Pool Error Analysis,
+D012,T16,Retrieval-miss boundary for explicit supersession,
+D012,T17,Governance on SOURCE,
+D012,T18,Retrieval on TEMPLATE,
+D012,T19,Access-filter ablation,
+D012,T20,Supersession-filter ablation,
+D012,T21,Conflict-reporting ablation,
+D012,T22,Prompt-injection stress,
+D012,T23,Multi-version and conflict routing diagnostics,
+D012,T24,Routing-level risks under 30% metadata noise,
+D012,T25,Retrieval-recall boundary behavior after BM25 top-k retrieval,
+D012,T26,Human-audit details,
+D013,T1,knowledge-intensive question answering (exact match),
+D013,T2,search-tool question answering,search-tool PPO tasks
+D013,T3,question answering,exact-match evaluation
+D013,T4,open-domain QA,exact-match scoring; merged mentions T8; also referred to as: QA
+D013,T5,fact verification,three-way label accuracy
+D013,T6,open-domain factoid question answering,"NQ, TriviaQA"
+D013,T7,multi-hop open-domain question answering,HotpotQA
+D014,T2,answer generation,HotpotQA
+D014,T3,question answering,answer F1 reported
+D014,T4,response generation / answer F1 evaluation,"knowledge precision, recall, F1 vs response/answer F1; merged mentions T1; also referred to as: response generation"
+D014,T5,Knowledge-grounded answer generation (RAG simulation),"Answer F1 and knowledge precision/recall are discussed. Values appear only in figures on this page, so none are extracted."
+D015,T1,cross-lingual open-domain question answering,XRAG benchmark QA
+D015,T3,monolingual retrieval setting,"LLMs rely on English articles to generate an answer; Language(q) in {de, es, zh, ar}, Language(D+)=Language(D-)=en (Eq. 2)."
+D015,T4,multilingual retrieval setting,"LLMs use articles in both the question language and other languages; Language(q) in {de, es, zh, ar}, Language(D+)=Language(D-)={en, Language(q)} (Eq. 3)."
+D015,T5,aggregation question,
+D015,T6,comparison question,
+D015,T7,multi-hop question,
+D015,T8,set question,
+D015,T9,question answering,"XRAG QA, LLM-as-a-Judge accuracy"
+D015,T10,cross-lingual question answering (LLM QA accuracy),Table 5
+D015,T11,retrieval relevance assessment,whether retrieved results contain sufficient information for a satisfactory answer
+D015,T12,cross-document question answering,"Four types of cross-document questions defined in Table 8: aggregation, comparison, multi-hop, and set questions; generation prompts in Figures 12-15, answer generation prompt in Figure 16."
+D015,T13,cross-lingual RAG question answering,accuracy by LLM judge panel; merged mentions T2; also referred to as: cross-lingual RAG
+D016,T1,research question answering,answering research questions with and without RAG
+D016,T2,document metadata question answering,"document-specific questions (citations, references, authors, year, publisher, scopus categories, title)"
+D016,T3,topic-specific question answering,topic questions with year variations
+D016,T4,question answering with DOI citation selection,SME-posed complex questions requiring thorough searches through various retrieval methods; responses judged on correctness and DOI attribution.
+D017,T2,long-document multimodal question answering,"merged mentions T1, T4; also referred to as: multimodal document question answering; document question answering"
+D017,T3,retrieval,
+D017,T5,question answering,multimodal document QA
+D017,T6,chart question answering,"Question: what percent did ""Smartphone Penetration"" grow between 2013 and 2015? Ground truth 26%"
+D017,T7,multi-hop numerical tabular reasoning,Figure 6
+D017,T8,fine-grained visual-textual alignment in stacked bar charts,Figure 7
+D017,T9,information enumeration from infographics,Figure 8
+D017,T10,QA,LLM Generation (QA) module
+D018,T1,Extracting,the ability to extract information from given retrieved documents
+D018,T2,reasoning using the extracted information,simply extracting information from the relevant parts of a document is not sufficient to derive the correct answer; merged mentions T4; also referred to as: Reasoning
+D018,T3,QA,QA pairs that require referencing information within the documents to answer.
+D018,T5,Computing,Question type.
+D018,T6,Information Integrating,Question type.
+D018,T7,open-ended question answering,merged mentions T9; also referred to as: Question answering
+D018,T8,Overall,
+D019,T1,open-domain question answering,Evaluated in general and domain-specific scenarios.
+D019,T2,medical open-domain QA,
+D019,T3,knowledge base construction,
+D019,T4,context recall,
+D019,T5,recall of retrieved contexts,
+D019,T6,response accuracy,
+D019,T7,context classification,
+D020,T1,retrieval robustness,"Queries cover factual recall, reasoning, comparison, and procedural understanding."
+D020,T2,Descriptive,Factual descriptions or definitions
+D020,T3,Analytical,"Analysis, interpretation, or inference"
+D020,T4,Comparative,Comparison between entities or concepts
+D020,T5,Boolean,Yes/no factual questions
+D020,T6,Temporal,Time-based or sequence-oriented questions
+D020,T7,Procedural,Process-oriented or how-to questions
+D020,T8,Open-Ended,Multi-hop synthesis across sources
+D020,T9,Token and Runtime Metrics by Organization,document ingestion pipeline
+D020,T10,complete chunking pipeline,
+D020,T11,Retrieval,
+D020,T12,Retrieval Performance,
+D020,T13,document chunking,

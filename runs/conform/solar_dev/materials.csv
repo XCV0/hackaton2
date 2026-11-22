@@ -1,0 +1,151 @@
+publication_id,material_id,material_name_raw,formula_normalized,material_class,dimensionality,additives,bandgap_value,bandgap_unit,bandgap_method,note
+D001,M1,0.01 M SrCl2–doped CsPbI2Br ﬁlm,CsPbI2Br,perovskite,,0.01 M SrCl2,,,,
+D001,M2,all-inorganic cesium lead halide perovskites,"CsPbX3 (X = Cl, Br, I)",perovskite,,,,,,
+D001,M3,CsPbI3 perovskite,CsPbI3,perovskite,,,,eV,cited,bandgap_value as printed: ∼1.73
+D001,M4,CsPbI2Br perovskite,CsPbI2Br,perovskite,,SrCl2 dopants,,eV,cited,The SrCl2 concentration of the best device is not stated on this page.; bandgap_value as printed: ∼1.9
+D001,M5,pristine ﬁlm,CsPbI2Br,perovskite,,,,,,
+D001,M6,CsPbI2Br ﬁlms,CsPbI2Br,perovskite,,0.005 M SrCl2,,,,
+D001,M7,ﬁlm with 0.01 M SrCl2,CsPbI2Br,perovskite,,0.01 M SrCl2,,,,
+D001,M8,0.05 M SrCl2–doped ﬁlms,CsPbI2Br,perovskite,,0.05 M SrCl2,,,,
+D001,M9,Sr2+,Sr2+,other,,,,,,
+D001,M10,Pb2+,Pb2+,other,,,,,,
+D001,M11,CsPbI2Br perovskite ﬁlms,CsPbI2Br,perovskite,,,,,,
+D001,M12,SrCl2-doped perovskite ﬁlms,CsPbI2Br,perovskite,,SrCl2,,,,
+D001,M13,NiCl2-doped perovskite ﬁlms,CsPbI2Br,perovskite,,NiCl2,,,,"The concentration of NiCl2 is 0.01 M for all samples, which corresponds to 0.83% of the molar ratio with Pb ions."
+D001,M14,pristine CsPbI2Br,CsPbI2Br,perovskite,,,,,,
+D001,M15,0.01 M SrCl2–doped CsPbI2Br,CsPbI2Br,perovskite,,0.01 M SrCl2,,,,
+D001,M16,0.01 M NiCl2–doped CsPbI2Br,CsPbI2Br,perovskite,,0.01 M NiCl2,,,,
+D001,M17,SrCl2-doped CsPbI2Br,CsPbI2Br,perovskite,,SrCl2,,,,
+D001,M18,Pristine,CsPbI2Br,perovskite,,,,,,
+D001,M19,0.001 M SrCl2,CsPbI2Br,perovskite,,0.001 M SrCl2,,,,
+D001,M20,0.005 M SrCl2,CsPbI2Br,perovskite,,0.005 M SrCl2,,,,
+D001,M21,0.05 M SrCl2,CsPbI2Br,perovskite,,0.05 M SrCl2,,,,
+D001,M22,NiCl2-doped,CsPbI2Br,perovskite,,NiCl2,,,,
+D002,M1,perovskite,,perovskite,,,,,,
+D002,M2,perovskite CH3NH3PbI3,CH3NH3PbI3,perovskite,,,,,,CH3NH3 solution was prepared from 90 mg methylammonium iodide in 2 mL isopropanol; PbI2 solution was prepared from 900 mg PbI2 in 2 mL dimethylformamide and stirred for 24 hours at 70 °C.
+D002,M3,Nickel Oxide (NiO),NiO,other,,,,,,Nickel acetate tetrahydrate and monoethanolamine were mixed in ethanol at 0.1 M and stirred for 4 hours at 70 °C.
+D002,M4,Graphene Oxide (GO),,other,,,,,,"Prepared using the modified Hummer method from 2 g graphite powder and 2 g NaNO3 in 100 mL H2SO4, yielding a 100 mg/mL GO solution."
+D002,M5,ZnO nanoparticles,ZnO,other,,,,,,Prepared using zinc acetate dihydrate (2.95 g; 13.4 mmol) and KOH (1.48 g; 23 mmol); the mixed solutions were stirred at 65 °C for 2.5 hours and filtered using a 0.45 µm PVDF syringe filter.
+D002,M6,Fluorine doped Tin Oxide (FTO),,other,,,,,,
+D002,M7,Ag electrode,Ag,other,,,,,,
+D002,M8,NiO,NiO,other,,,,,,hole transport layer
+D002,M9,NiO/GO,,other,,,,,,double hole transport layer
+D002,M10,Lead iodide perovskite,,perovskite,,,,,,
+D003,M1,Sn3O4,Sn3O4,other,2D,,3.69,eV,Tauc,Mixed-valence tin oxide electron transport material.
+D003,M2,Y-Sn3O4,Sn3O4,other,2D,Y,3.61,eV,Tauc,Yttrium-doped Sn3O4 electron transport material.
+D003,M3,perovskite,,perovskite,,PbCl2,,,,PbCl2 addition is mentioned in the perovskite-film XRD discussion.
+D003,M4,SnS2,SnS2,other,,,,,,ETL material in the cited work.
+D003,M5,perovskites,,perovskite,,,,,,
+D003,M6,TiO2,TiO2,other,,B,,,,Initial material in the B-doping conductivity comparison.
+D003,M7,doped Sn3O4,Sn3O4,other,,N,,,,Balgude et al. used N to dope Sn3O4.
+D003,M8,pristine Sn3O4,Sn3O4,other,2D,,,,,Comparator for the reported photocatalytic activity.
+D003,M9,Y3+,,other,,,,,,
+D003,M10,Sn2+,,other,,,,,,
+D003,M11,Sn4+,,other,,,,,,
+D003,M12,1% Y-Sn3O4,Sn3O4,other,,1% Y,,,,
+D003,M13,5% Y-Sn3O4,Sn3O4,other,,5% Y,,,,
+D003,M14,10% Y-Sn3O4,Sn3O4,other,,10% Y,,,,
+D003,M15,bare ITO,,other,,,,,,
+D003,M16,ITO with Sn3O4,,other,,,,,,
+D003,M17,ITO with Y-Sn3O4,,other,,,,,,
+D003,M18,ITO substrate with ETLs,,other,,,,,,
+D003,M19,undoped Sn3O4,Sn3O4,other,,,,,,ETL material.
+D003,M20,5% Y-doped Sn3O4,,other,,5% Y,,,,Y-Sn3O4 ETL material.
+D004,M1,perovskite absorber,,perovskite,,,,,,
+D004,M2,MoS2 NPs,MoS2,other,,,,,,Produced from few-layer MoS2 by prolonged ultrasonication at 60–80 ◦C and repeated washing with DMF; C-ED was used for further NP production.
+D004,M3,MoS2,MoS2,other,2D,,,eV,cited,Discussed as layered two-dimensional MoS2 nanosheets; semiconducting 2H and metallic 1T phases are mentioned.; bandgap_value as printed: ~1.8
+D004,M4,perovskite,CsFAMAPbI3−xBrx,perovskite,,,,,,"CsI (0.087 M), FAI (1.47 M), MABr (0.23 M), PbI2 (1.47 M), and PbBr2 (0.23 M) were used in the precursor solution."
+D004,M5,Bis-Cholesteryl Appended Curcumin (BCC),,other,,,,,,"BCC was synthesized as described in our earlier report and characterized spectroscopically [17]. About 1 g of curcumin (2.74 mmol), dichloromethane (50 mL), 0.66 g (5.429 mmol) DMAP, and cholesteryl chloroformate (3.65 g; 8.14 mmol) were used; addition was over 30 min."
+D004,M6,bis-cholesteryl-appended curcumin derivative (BCC),,other,,,,,,
+D004,M7,BCC-ED,,other,,,,,,"The curcumin-based BCC-ED template was prepared by mixing 0.3 g of BCC with 10 mL of ethylene diamine (ED), heating to obtain a clear solution, and cooling to form BCC-ED gel."
+D004,M8,BCC-SS gels,,other,,,,,,"Prepared by adding 0.2 g of sodium stearate to 10 mL of dimethyl formamide (DMF), followed by heating and cooling."
+D004,M9,CsFAMAPbI3−xBrx,CsFAMAPbI3−xBrx,perovskite,,,,,,Identified as the perovskite layer.
+D004,M10,PbI2,PbI2,other,,,,,,Observed as a coexisting phase in the perovskite layers.
+D004,M11,CH3NH3PbI3,CH3NH3PbI3,perovskite,,,,,,Observed as a coexisting phase with PbI2.
+D004,M12,C-ED-treated MoS2,MoS2,other,,,,,,
+D004,M13,MAPbI3,MAPbI3,perovskite,,,,,,
+D004,M14,PTB7-TH:PC71BM,,other,,,,,,Organic absorber blend in the cited [35] device.
+D004,M15,C-ED-2-treated MoS2 nanoparticles,MoS2,other,,,,,,Repeated washing with DMF under ultrasonication is identified as C-ED-2.
+D004,M16,perovskite layers,,perovskite,,,,,,
+D005,M1,perovskite,,perovskite,,,,,,organic–inorganic halide perovskite
+D005,M2,Spiro-OMeTAD,spiro-MeOTAD,other,,,2.94,eV,cited,HTM reference compound; Eg opt from 1240/λonset
+D005,M3,SF-MPA-MCz,,other,,,2.88,eV,cited,HTM; Eg opt from 1240/λonset
+D005,M4,Spiro-OMeTAD,"2,2',7,7'-Tetrakis(N,N-di-p-methoxyphenyl)-amine-9,9'-spirobifluorene",perovskite,,,,,,reference/state-of-the-art HTM; not the absorber
+D005,RM1,perovskite,,perovskite,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 6, 'CIGS': 0, 'CdTe': 0, 'kesterite': 0, 'Sb2Se3': 0, 'thin-film Si': 0}"
+D007,M1,perovskite,,perovskite,,,,,,
+D007,M2,Spiro-OMeTAD,,other,,,3.0,eV,,Organic hole-transporting semiconductor; bandgap reported as approx. 3.0 eV.
+D007,M3,V1553,,other,,,2.87,eV,PL,Diphenylamine-based hole transporting material and p-type organic semiconductor.
+D007,M4,V1565,,other,,,2.87,eV,PL,Described as an HTM.
+D007,M5,"3,6-diaminocarbazole",,other,,,,,,
+D007,M6,"2,7-diaminofluorene",,other,,,,,,
+D007,M7,"4,4 0-diaminodiphenyl amine sulfate hydrate",,other,,,,,,
+D008,M1,perovskite (PVK),,perovskite,,,,,,sequentially vacuum-deposited perovskite; PbCl2 trace added in one variant
+D008,M2,Cs0.15FA0.85PbI2.85Br0.15,Cs0.15FA0.85PbI2.85Br0.15,perovskite,3D,PbCl2,,,,films fabricated by sequential thermal evaporation; champion device uses PbCl2 and 150 °C annealing
+D008,M3,PVK,,perovskite,3D,PbCl2,,,,cubic PVK; peaks at 14.05° (100) and 28.16° (200); samples w/o and w/ PbCl2
+D008,M4,PVK w/o PbCl2,,perovskite,,,,,,reference perovskite film without PbCl2
+D008,M5,PVK w/ PbCl2,,perovskite,,,,,,perovskite film with PbCl2 additive
+D009,M1,caesium-incorporated tin halide perovskite (2D/3D heterostructured THP),,perovskite,2D-3D,caesium cations (partial replacement of bulky organic cations),,,,lead-free tin halide perovskite; formula not printed on page 1
+D009,M2,Cs-incorporated 2D/3D tin halide perovskite (CsI)x/100(PEA0.15FA0.85SnI2.85Br0.15)1-x/100,(CsI)x(PEA0.15FA0.85SnI2.85Br0.15)1-x,perovskite,2D-3D,Cs (optimal x = 5 mol%),,,,Tin-based (THP); bandgap not printed on this page
+D009,M3,2D/3D THP,,perovskite,2D-3D,"Cs+ (0-20 mol%, optimal 5%)",,,,"Sn-based 2D/3D perovskite (PEA-FA-Cs, [SnX6] octahedra, SnI2 residual); formula not printed on this page; bandgap not printed"
+D009,M4,THP (Cs0),,perovskite,2D-3D,,1.435,eV,,"Cs molar ratio 0%; bandgap printed in text, method not stated (Supplementary Fig. 17)"
+D009,M5,Cs0 THP film,,perovskite,2D-3D,,,,,Tin halide perovskite (THP) film with 0 mol% Cs; formula not printed on this page
+D009,M6,Cs5 THP film,,perovskite,2D-3D,,,,,Tin halide perovskite (THP) film with 5 mol% Cs (homogeneous 2D/3D heterostructure); formula not printed on this page
+D009,M7,PEA2(Cs0.05FA0.95)Sn2I7,PEA2(Cs0.05FA0.95)Sn2I7,perovskite,2D-3D,SnF2 (8 mol%); NH4SCN (5 mol%); excess Sn powder (10 mg ml-1),,,,Tin-based 2D/3D perovskite; pristine 2D/3D films described in Methods (page 9)
+D009,RM1,perovskite,,perovskite,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 40, 'CIGS': 0, 'CdTe': 0, 'kesterite': 0, 'Sb2Se3': 0, 'thin-film Si': 0}"
+D010,M1,"Na-doped Cu2ZnSn(S,Se)4","(Na0.1Cu0.9)2ZnSn(S,Se)4",kesterite,3D,Na doping,,eV,Tauc,"Printed in the abstract as tuned from 1.03 to 1 eV as selenization temperature rose from 520 to 560 °C. No single bandgap value is attributed to the best device, so bandgap_value is left empty. Bandgap method is not stated on this page, so bandgap_method is also left empty.; bandgap_value as printed: 1.03 to 1"
+D010,M2,"Na-doped Cu2ZnSn(S,Se)4","Cu2ZnSn(S,Se)4",kesterite,,Na,,,,"Selenized films annealed at 520, 540 and 560 °C (samples T520, T540, T560); characterized by XRD, Raman and XPS on page 4"
+D010,M3,"Na-doped Cu2ZnSn(S,Se)4 film","Cu2ZnSn(S,Se)4:Na",kesterite,,Na,,,,"Selenized at 520, 540 and 560 °C (samples T520, T540, T560); EDS atomic percentages from Table 1"
+D010,M4,"Na-doped Cu2ZnSn(S,Se)4","Cu2ZnSn(S,Se)4:Na",kesterite,3D,,,,,Na-doped CZTSSe thin film; p-type conduction
+D010,M5,CZTSSe,"Cu2ZnSn(S,Se)4",kesterite,,,,,,"Control absorber (no Na doping), as labelled in Table 3"
+D010,M6,"(Na0.1Cu0.9)2ZnSn(S,Se)4","(Na0.1Cu0.9)2ZnSn(S,Se)4",kesterite,,,,,,"Na-doped Cu2ZnSn(S,Se)4 absorber; films selenized at 520, 540 and 560 °C in Table 2; 540 °C film used for the cell"
+D012,M1,Cu2ZnSnS4 (CZTS),Cu2ZnSnS4,kesterite,3D,"1,8-diiodooctane (DIO)",,eV,,"band gap between 1.62 eV and 1.51 eV; DIO concentrations 5, 10, 15, 20 mg/mL; bandgap_value as printed: 1.62-1.51"
+D012,M2,CZTS,Cu2ZnSnS4,kesterite,3D,DIO,1.62,eV,Tauc,"p-type absorber; direct energy gap values between 1.0 eV and 1.6 eV in the visible light spectrum (range cited from literature, not a measured value for this work)"
+D012,M3,Mo,Mo,other,,,,,,"back contact layer, 1 µm Mo/glass on soda–lime glass substrate"
+D012,M4,"DIO (1,8-diiodooctane)",C8H16I2,other,,,,,,"additive; concentrations of 5, 10, 15, and 20 mg/mL used in the electrolyte"
+D012,RM1,kesterite,,kesterite,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 0, 'CIGS': 0, 'CdTe': 0, 'kesterite': 42, 'Sb2Se3': 0, 'thin-film Si': 0}"
+D013,M1,"Ag,Gealloyed kesterite","(Ag,Cu)2Zn(Sn,Ge)(S,Se)4",kesterite,,,,,,Ge content varied from 0 to 100 %; bandgap 1.15 to 1.5 eV
+D013,M2,ACZTGSSe,AgCuZnSnGeSSe,kesterite,3D,,,,,"Ag-alloyed (Ag,Cu)2Zn(Sn,Ge)(S,Se)4 kesterite; bandgap tunable 1.15-1.5 eV for 0-100% Ge"
+D013,M3,ACZTGSSe,Ag-Cu-Zn-Sn-Ge-S-Se,kesterite,3D,,,,,"Ag-containing kesterite absorber with varying Ge content (0Ge, 40Ge, 60Ge, 80Ge, 100Ge)"
+D013,M4,ACZTGSSe,"AgCuZnSnGe(S,Se)4",kesterite,3D,,,,,"Ag-alloyed Cu2ZnSn(S,Se)4 with Ge alloying; S-poor, Se-rich; Ge/(Sn+Ge) varied 0-1"
+D013,M5,0Ge,ACZTGSSe,kesterite,,,1.15,eV,PL,"Ge concentration 0Ge; Eg,EQE 1.14 eV"
+D013,M6,40Ge,ACZTGSSe,kesterite,,,1.21,eV,PL,"Ge concentration 40Ge; Eg,EQE 1.19 eV"
+D013,M7,60Ge,ACZTGSSe,kesterite,,,1.26,eV,PL,"Ge concentration 60Ge; Eg,EQE 1.24 eV"
+D013,M8,80Ge,ACZTGSSe,kesterite,,,1.43,eV,PL,"Ge concentration 80Ge; Eg,EQE 1.40 eV"
+D013,M9,100Ge,ACZTGSSe,kesterite,,,1.48,eV,PL,"Ge concentration 100Ge; Eg,EQE 1.49 eV"
+D013,RM1,kesterite,,kesterite,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 0, 'CIGS': 1, 'CdTe': 1, 'kesterite': 43, 'Sb2Se3': 0, 'thin-film Si': 0}"
+D014,M1,CdTe nanocrystals,CdTe,CdTe,3D,,,,,"ultrathin, sintered CdTe nanocrystal absorber"
+D014,M2,CdTe NCs,CdTe,other,3D,pyridine; 1-PA; pyr-CdCl3,,,,"oleate-capped CdTe nanocrystals, ligand-exchanged to pyridine and pyr-CdCl3 capping"
+D015,M1,CdTe,CdTe,CdTe,3D,,,,,"absorber, thickness in the range of 3.5 μm"
+D015,M2,CuxCryOz,CuxCryOz,other,,,,,,solution-processed back-buffer layer
+D015,M3,CuCrOx,CuCrOx,other,,,3.2,eV,cited,literature value; electron affinity 2.1 eV cited
+D015,M4,CdS,CdS,other,,,,,,
+D015,RM1,CdTe,,CdTe,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 5, 'CIGS': 0, 'CdTe': 39, 'kesterite': 0, 'Sb2Se3': 0, 'thin-film Si': 0}"
+D017,M1,"Cu(In,Ga)Se2","Cu(In,Ga)Se2",CIGS,,,,,,CIGS absorber; GGI grading discussed
+D017,M2,CIGS,"Cu(In,Ga)Se2",CIGS,3D,NaF; RbF,,,EQE,co-evaporated multi-stage low-temperature (~450 C) absorber on Mo-coated soda-lime glass
+D018,M1,"Cu(In,Ga)Se2","Cu(In,Ga)Se2",CIGS,,,,,,
+D018,M2,CIGS,"Cu(In,Ga)Se2",CIGS,,,,,,absorber deposited by pulsed hybrid reactive magnetron sputtering (PHRMS) on Mo-coated glass
+D018,M3,CsCO3,Cs2CO3,other,,,,,,"purity 99.99%, Sigma Aldrich; 0.01 g in 10 ml deionized water, spin-coated at 1000 rpm for 60 s"
+D019,M1,Sb2Se3,Sb2Se3,Sb2Se3,3D,,,,,nanorod array absorber
+D019,M2,MoSe2,MoSe2,other,,,,,,interlayer / seed layer
+D019,M3,CdS,CdS,other,,,,,,buffer layer
+D019,RM1,Sb2Se3,,Sb2Se3,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 0, 'CIGS': 0, 'CdTe': 0, 'kesterite': 0, 'Sb2Se3': 99, 'thin-film Si': 0}"
+D020,M1,"Sb2(S, Se)3","Sb2(S,Se)3",other,,,,eV,cited,optimal bandgap range stated in introduction; bandgap_value as printed: 1.1~1.7
+D020,M2,P3HT,P3HT,other,,,,,,"polymer HTM inserted between Sb2(S,Se)3 and carbon electrode"
+D020,M3,Sb2S3,Sb2S3,Sb2Se3,,,1.72,eV,Tauc,Eg from Tauc plots (Figure 3f)
+D020,M4,"Sb2S3/Sb2(S, Se)3","Sb2S3/Sb2(S,Se)3",Sb2Se3,,,1.62,eV,Tauc,bilayer film
+D020,M5,"Sb2(S, Se)3",Sb2S2.4Se0.6,Sb2Se3,,,,,,"Sb2(S,Se)3 absorber, Eg value not printed on this page; formula_normalized is a placeholder for the S/Se mixed phase, the composition ratio is not printed on this page"
+D021,M1,Sb2Se3,Sb2Se3,Sb2Se3,3D,Cu (5 at.% Cu:Sb2Se3 target),1.2,eV,cited,"optimal optical bandgap of around 1.2 eV; orthorhombic Pbnm, JCPDS 15-0861"
+D021,M2,NaF,NaF,other,,,,,,"Na doping source at back interface, grown by PED"
+D021,M3,Cu:Sb2Se3,Sb2Se3,Sb2Se3,3D,Cu,,,,PED-grown Cu-doped Sb2Se3
+D021,M4,Cu:Sb2Se3,Cu:Sb2Se3,Sb2Se3,,Cu,,,,Cu-doped Sb2Se3 absorber layer deposited via PED.
+D021,M5,CdS,CdS,other,,,,,,Buffer/ETL layer in the device stack.
+D021,M6,FTO,FTO,other,,,,,,Front transparent conducting oxide on glass.
+D021,M7,AZO,AZO,other,,,,,,Back contact layer.
+D021,M8,UZO,UZO,other,,,,,,Back contact layer.
+D021,M9,Cu:Sb2Se3,Cu-doped Sb2Se3,Sb2Se3,,Cu,,,,PED-grown Cu-doped layer
+D021,RM1,Sb2Se3,,Sb2Se3,,,,,,"absorber class by keyword frequency on pages 1-4 (rule-based): {'perovskite': 0, 'CIGS': 5, 'CdTe': 1, 'kesterite': 0, 'Sb2Se3': 38, 'thin-film Si': 0}"
+D022,M1,intrinsic hydrogenated amorphous silicon,a-Si:H,thin-film Si,,,,,,ultrathin (<30 nm) intrinsic a-Si:H absorber; wide-bandgap
+D022,M2,a-Si:H,a-Si:H,thin-film Si,3D,,,eV,cited,"direct bandgap of a-Si:H, range printed in text; bandgap_value as printed: 1.8 to 2.1"
+D022,M3,ZnO,ZnO,other,,,,,,"ETL, UV absorber in cited works"
+D022,M4,MoO3,MoO3,other,,,3.2,eV,cited,HTL
+D022,M5,AZO,ZnO:Al,other,,Al,,,,"Al-doped ZnO ETL, optimized device"

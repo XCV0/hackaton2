@@ -1,0 +1,45 @@
+{
+ "domain": "solar",
+ "folder": "runs/conform/solar_demo",
+ "pdf_dir": "/Users/artemshelkunov/hackaton2/data_demo/solar",
+ "template": {
+  "dir": "/Users/artemshelkunov/hackaton2/data/domain1_solar/submission_template",
+  "official": true,
+  "schema_version": null,
+  "sources": {
+   "headers": "submission_template/*.csv (заголовки пустых таблиц)",
+   "enums": "submission_template/README.md, таблицы раздела «Поля» (schema.json в солнечном комплекте нет)",
+   "rules": "submission_template/README.md солнечного комплекта"
+  }
+ },
+ "structure_valid": true,
+ "header_only": false,
+ "verdict": "структура валидна; обработано публикаций: 1 (в области 1, исключено 0), извлечено результатов: 27",
+ "content": {
+  "pdfs_in_set": 1,
+  "publications": 1,
+  "in_scope": 1,
+  "excluded": 0,
+  "publications_with_results": 1,
+  "results": 27,
+  "extracted": 27,
+  "duplicates": 0,
+  "cited": 1,
+  "issues": 4,
+  "rows_by_table": {
+   "devices": 4,
+   "issues": 4,
+   "layers": 5,
+   "materials": 1,
+   "measurements": 3,
+   "publications": 1,
+   "results": 27
+  }
+ },
+ "counts": {
+  "errors": 0,
+  "warnings": 0,
+  "by_rule": {}
+ },
+ "findings": []
+}

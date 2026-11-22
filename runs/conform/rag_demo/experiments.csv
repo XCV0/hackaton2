@@ -1,0 +1,25 @@
+publication_id,experiment_id,evaluation_protocol,baseline_name,hardware,latency_ms,tokens_per_query,sample_size,note
+DEMO_RAG1,E1,,,,,,,Abstract result for HybridRet-RAG on HotpotQA; evaluation protocol not described on this page.
+DEMO_RAG1,E2,,Self-RAG,,,,,Cited number from [12] in the introduction.
+DEMO_RAG1,E3,EM/F1 on 500 sampled HotpotQA dev and 500 sampled MuSiQue dev questions; Recall@5,No-Retrieval; BM25-RAG,,,,500,Table 1 main results; sample size is 500 per dataset.
+DEMO_RAG1,E4,average latency per query,,one NVIDIA A100 GPU,850,,,"Efficiency paragraph, HybridRet-RAG (C1)."
+DEMO_RAG1,E5,ablation on HotpotQA (EM) and Recall@10,,,,,,Table 2 ablation.
+DEMO_RAG1,E6,HotpotQA EM comparison of compared systems (Figure 1 and text),,,,,,Figure 1 values are printed above the bars
+DEMO_RAG1,E7,"NQ test split, 1,000 questions",BM25-RAG,,,,1000,Table 3 caption
+TEST_RAG_CLEAN_01,E1,Evaluated test subset of 250 English questions sampled from the 1000-question test split; Exact Match and token-level F1 are fractions on the 0-1 scale; Recall@k and nDCG@k are also reported on the 0-1 scale unless a table explicitly states percent; Primary results on 250 evaluated questions; all metric values are fractions on the 0-1 scale,,,,,250,"Synthetic test document, not a real publication and must not be cited as one.; merged mentions E2, E4"
+TEST_RAG_CLEAN_01,E3,,,,146,1510,,Latency and token usage measured only for LexRetrieve-Dense (C2)
+TEST_RAG_CLEAN_01,E5,,,,,,,Cited value only: Quill et al. (2024) [1] reported F1 = 0.640 on SyntheticLegalQA v1.0. Not reproduced by the authors.
+TEST_RAG_ERRORS_01,E1,Evaluation on 250 English questions sampled from the 1000-question test split; token-level F1; Exact Match,,,,,250,"Synthetic test document; not a real publication.; merged mentions E3, E4"
+TEST_RAG_ERRORS_01,E2,Exact Match and token-level F1 (0-1 scale); Recall@k and nDCG@k (0-1 scale unless a table states percent),,,146,1510,,Latency and token usage measured only for LexRetrieve-Dense (C2); not reported for other configurations.
+TEST_RAG_ERRORS_01,E5,,,,,,,Cited result from Quill et al. (2024) [1]; evaluation protocol not described on this page.
+TEST_RAG_MedRerank,E1,,same pipeline without reranking,,,,,PubMedQA accuracy with vs without cross-encoder reranking.
+TEST_RAG_MedRerank,E2,,prior biomedical systems [3],,,,,Values cited from [3].
+TEST_RAG_MedRerank,E3,,"original RAG model (Lewis et al., 2020)",,,,,"Value cited from Lewis et al., 2020."
+TEST_RAG_MedRerank,E4,accuracy on 250 sampled PubMedQA test questions,,,,,250,
+TEST_RAG_MedRerank,E5,strict accuracy on BioASQ 11b factoid test set,,,,,500,
+TEST_RAG_MedRerank,E6,nDCG@10 retrieval quality,,,,,,Dataset and sample size not stated for this column.
+TEST_RAG_MedRerank,E7,BLEU,,,,,,Dataset and sample size not stated for this column.
+TEST_RAG_MedRerank,E8,average tokens per query (prompt and context),,,,1850,,Stated for MedRerank-RAG.
+TEST_RAG_MedRerank,E9,"reranking-depth analysis (kept passages), reported in text",,,,,,accuracy with 3 and 10 kept passages
+TEST_RAG_MedRerank,E10,"conclusion restatement of PubMedQA accuracy, reported in text",,,,,,
+TEST_RAG_MedRerank,E11,"error analysis statement of PubMedQA accuracy, reported in text",,,,,,value differs from the 0.742 stated in the conclusion

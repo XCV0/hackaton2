@@ -1,0 +1,10 @@
+publication_id,dataset_id,dataset_name,dataset_version,language,data_split,scientific_domain,note
+DEMO_RAG1,DS1,HotpotQA,,,dev,,Evaluated on Wikipedia document collection per abstract; version and split not stated on this page.
+DEMO_RAG1,DS2,MuSiQue,,,dev,,500 questions sampled from the dev split for evaluation.
+DEMO_RAG1,DS3,Natural Questions (NQ),,,test,,"Table 3 caption: test split, 1,000 questions"
+TEST_RAG_CLEAN_01,DS1,SyntheticLegalQA,v1.0,English,test,legal,"Evaluated on 250 English questions sampled from the 1000-question test split; sample size is 250, not 1000."
+TEST_RAG_ERRORS_01,DS1,SyntheticLegalQA,v1.0,English,test (1000-question test split; 250 questions evaluated),legal,Fully synthetic dataset per the document; evaluation uses 250 English questions sampled from the 1000-question test split.; merged mentions DS2
+TEST_RAG_MedRerank,DS1,PubMedQA,,,test portion,biomedical,Evaluation dataset for accuracy results.
+TEST_RAG_MedRerank,DS2,PubMed abstract collection,,,,,Retrieval passage collection used by the pipeline.
+TEST_RAG_MedRerank,DS3,Natural Questions,,,,,"Dataset on which the original RAG model's EM was cited from Lewis et al., 2020."
+TEST_RAG_MedRerank,DS4,BioASQ,11b,,test,biomedical,"Factoid test set, 500 questions."

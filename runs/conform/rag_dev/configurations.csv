@@ -1,0 +1,707 @@
+publication_id,config_id,rag_variant,retrieval_method,retriever_model,embedding_model,embedding_version,chunking_method,chunk_size,chunk_overlap,chunk_unit,index_type,vector_store,top_k,reranker_model,generator_model,generator_version,prompt_strategy,context_strategy,note
+D001,C1,ThreadRAG,Energy-Driven Pathfinding (EDP),BM25,,,Semantic Node extraction,,,tokens,hybrid retrieval index,,,,LLM M,,modality-native prompts,coherent textual evidence paths,"Uses a Semantic Topology Mapper (STM), a Semantic Topology Graph (STG), and Energy-Driven Pathfinding (EDP).; chunk_size as printed: under 512; top_k as printed: top-k; merged mentions C6, RC14; also referred to as: Semantic Topology Graph (STG)"
+D001,C2,text-centric methods,,,,,,,,,,,,,,,,,Baseline category; specific systems are not named on this page.
+D001,C3,best baseline,,,,,,,,,,,,,,,,,Specific baseline system is not named on this page.
+D001,C4,strongest baseline,,,,,,,,,,,,,,,,,Specific baseline system is not named on this page.
+D001,C5,KnowTrace,KG-Triplet RAG,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Comparison baseline for ThreadRAG on HotpotQA.; merged mentions RC13
+D001,C7,traditional global graphs,,,,,,,,,,,,,,,,,Baseline graph representation.
+D001,C8,STG-Paths,,,,,,,,,,,,,,,,sequence-native STG-Paths,
+D001,C9,RA-CoT,retrieval with chain-of-thought,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.; merged mentions RC1
+D001,C10,RA-CoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C11,RA-CoT,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C12,ReAct,retrieval with acting,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.; merged mentions RC2
+D001,C13,ReAct,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C14,ReAct,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C15,IRCoT,iteratively interleaving retrieval steps with generation,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.; merged mentions RC3
+D001,C16,IRCoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C17,IRCoT,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C18,Self-Ask,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,decomposing complex queries into manageable textual sub-queries,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.; merged mentions RC4
+D001,C19,Self-Ask,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C20,Self-Ask,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C21,Iter-RetGen,iteratively interleaving retrieval steps with generation,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.; merged mentions RC5
+D001,C22,Iter-RetGen,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C23,Iter-RetGen,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C24,HippoRAG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Chunk RAG.; merged mentions RC6
+D001,C25,HippoRAG,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Chunk RAG.
+D001,C26,HippoRAG,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Chunk RAG.
+D001,C27,LightRAG,graph-based retrieval,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Chunk RAG.; merged mentions RC7
+D001,C28,LightRAG,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Chunk RAG.
+D001,C29,LightRAG,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Chunk RAG.
+D001,C30,CoTKR,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Rewriting RAG.; merged mentions RC8
+D001,C31,CoTKR,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Rewriting RAG.
+D001,C32,CoTKR,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Rewriting RAG.
+D001,C33,EFSUM,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Rewriting RAG.; merged mentions RC9
+D001,C34,EFSUM,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Rewriting RAG.
+D001,C35,EFSUM,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Rewriting RAG.
+D001,C36,ToG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs.; merged mentions RC10"
+D001,C37,ToG,,,,,,,,,,,,,Qwen3.5 plus,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C38,ToG,,,,,,,,,,,,,GPT-4o mini,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C39,PoG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs.; merged mentions RC11"
+D001,C40,PoG,,,,,,,,,,,,,Qwen3.5 plus,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C41,PoG,,,,,,,,,,,,,GPT-4o mini,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C42,ERA-CoT,KG-Triplet RAG,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Triplet RAG.; merged mentions RC12
+D001,C43,ERA-CoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Triplet RAG.
+D001,C44,ERA-CoT,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Triplet RAG.
+D001,C45,knowtrace,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Triplet RAG.
+D001,C46,knowtrace,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Triplet RAG.
+D001,C47,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,LLaMA3-8B-Instruct,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations."
+D001,C48,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,Qwen3.5 plus,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations."
+D001,C49,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,GPT-4o mini,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations.; merged mentions C50"
+D001,C51,GraphRAG*,,,,,,,,,,,,,,,,pre-constructed global KG,Uses rigid entity-relation triplets. Retrieval indices and prompting templates are kept identical to ThreadRAG*.
+D001,C52,KG-Triplets,,,,,,,,,,,,,,,,discrete relational triplets,
+D001,C53,KG-Paths,,,,,,,,,,,,,,,,linear structural paths,
+D001,C54,KG-Texts,,,,,,,,,,,,,,,,LLM-rewritten natural language,
+D001,C55,EF-SUM,,,,,,,,,,,,,,,,,Generates evidence-focused summaries from graph structures.
+D001,C56,Think-on-Graph (ToG),KG-Path RAG,,,,,,,,,,,,,,,discrete relational paths extracted from the knowledge graph,"Adapted to use the same local KG as LightRAG, replacing its external KG."
+D001,C57,Paths-over-Graph (PoG),KG-Path RAG,,,,,,,,,,,,,,,discrete relational paths extracted from the knowledge graph,"Adapted to use the same local KG as LightRAG, replacing its external KG."
+D001,C58,Graph-Free,query–passage similarity,,,,,,,,,,,,,,,retrieved passages concatenated following their original document order,"Retains the same retrieval pipeline, iterative reasoning procedure, downstream LLM, prompts, and evidence budget as ThreadRAG; removes Semantic Topology Graph (STG) construction and EDP."
+D001,C59,No subgraph,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,without subgraph-based selection,Uses the same candidate graph and evidence budget as the other Table 7 variants.; merged mentions RC15
+D001,C60,BFS (depth = 3),,,,,,,,,,,,,LLaMA3-8B-Instruct,,,"breadth-first search (BFS), depth = 3",Uses the same candidate graph and evidence budget as the other Table 7 variants.; merged mentions RC16; also referred to as: BFS (depth
+D001,C61,DFS (depth = 3),,,,,,,,,,,,,LLaMA3-8B-Instruct,,,"depth-first search (DFS), depth = 3",Uses the same candidate graph and evidence budget as the other Table 7 variants.; merged mentions RC17; also referred to as: DFS (depth
+D001,C62,EDP,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,EDP,Uses the same candidate graph and evidence budget as the other Table 7 variants.; merged mentions RC18
+D001,C63,ThreadRAG,,,,,,,,,,,,,baseline Large Language Model,,Information Sufficiency Discriminator,Semantic Topology Graph (STG),Uses Energy-Driven Pathfinding (EDP) for graph pathfinding and structural pruning.
+D002,C1,MoRSE (Mixture of RAGs Security Experts),parallel retrievers,,BAAI/bge-large-en; BAAI/bge-large-en-v1.5,,,,,,,,,,mistralai/Mistral-7B-Instruct-v0.2,v0.2,,retrieve semantically related information in different formats and structures,Uses two RAG systems and retrieves relevant documents from Non-Parametric Knowledge Bases; supports real-time knowledge-base updates.
+D002,C2,GPT-4,,,,,,,,,,,,,GPT-4,,,,Named as a comparison solution in the abstract.
+D002,C3,Mixtral 7x8,,,,,,,,,,,,,Mixtral 7x8,,,,Named as a comparison solution in the abstract.; merged mentions C35
+D002,C4,GPT-4 0125-Preview,,,,,,,,,,,,,GPT-4,0125-Preview,Prompt 2: The prompt for Five-Level Judgment Criteria Referencing the Top-Scoring Reference.,,"Generator setting printed for Example 2.; merged mentions C5, C24"
+D002,C6,GEMINI 1.0 Pro,,,,,,,,,,,,,GEMINI,1.0 Pro,,,"Commercial LLM baseline.; merged mentions C26, C36; also referred to as: GEMINI"
+D002,C7,,,,,,,,,,,,,,MIXTRAL,,,,LLM baseline.
+D002,C8,,,,,,,,,,,,,,HACKERGPT,,,,Commercial LLM baseline.
+D002,C9,Structured RAG,"Retrieval from preprocessed, structured data",,,,,,,,,,,,LLM,,"wrap(C, Q)",First RAG in the MoRSE cascade,Component tailored to fast retrieval tasks; not separately evaluated on this page.
+D002,C10,Unstructured RAG,Exploration of data in its original form,BM25,,,,2000,,characters,,,5,,,,,Activated only if Structured RAG does not find any relevant documents,Higher-complexity component that retrieves a larger amount of information; not separately evaluated on this page.
+D002,C11,Structured RAG Workflow,,,,,,,,,,,,,,,"VULNERABILITYEXTRACTOR keyword substitution; ENTITYEXTRACTOR questions ""Who is e?"" and ""What is e?""",,"The Query Handling Process uses the Haystack framework with ""dslim/bert-base-NER"" to detect entities classified as PER or OBJ/CON."
+D002,C12,Mitre Retriever,similarity score,MITRE Retriever,(a),,,,,,graph database,,,,,,,,"The graph database contains Malware and Techniques nodes. Malware is evaluated with a similarity score exceeding ().7, corresponding to the Test distribution’s median."
+D002,C13,Metasploit Retriever,semantic Search; keyword search,TF-IDF algorithm [52],(a),,,,,,,,,,,,,,The knowledge base includes over 4900 cybersecurity elements. Semantic Search uses a similarity value of 0.75 (Q3 of the test distribution); only salient code parts such as descriptions and exploit information are indexed.
+D002,C14,ExploitDB Retriever,keyword search,TF-IDF algorithm [52],,,,,,,,,,,,,,,"Only the first 600 characters of each Script are indexed, focusing on data such as CVE identifiers and author names."
+D002,C15,Question Retrieval System,,Question Retrieval System,8),,documents are divided into chunks,2000,,characters,,,10,,Model (y); Mistral-7B-Instruct-v0.2,v0.2,,Lost In the Middle Principle [55],"Model (y) generates about seven questions per chunk, refined with Mistral-7B-Instruct-v0.2. Four retrievers operate in sequence, each selecting the ten most relevant documents. Results are merged, filtered with a similarity threshold of 0.6 (Q3 of the test distribution), reordered, and redundant questions targeting the same chunk are removed."
+D002,C16,Entity Retriever,Structured RAG Retrievers,Entity Retriever,(3),,segment the documents into chunks,500,,words,,,,,mistralai/Mistral-7B-Instruct-v0.2,v0.2,,,Model (@) identifies and classifies relevant entities. Contextual descriptions are generated with mistralai/Mistral-7B-Instruct-v0.2 and made retrievable with a similarity threshold of 0.5 (Q3 of the test distribution).
+D002,C17,Malware Retriever,semantic search,Malware Retriever,(a),,,,,,,,,,,,,,"The retriever contains more than 1000 malware source codes originating from GitHub pages and uses a threshold value of 0.7, the median of the test distribution."
+D002,C18,CWE Retriever,semantic search,CWE Retriever,(a),,,,,,,,10,,,,,,User queries are matched with CWE descriptions using a threshold of 0.7 (Q3 of the test distribution).
+D002,C19,Text Buffers,hybrid semantic search and keyword search,BM25,(a) embedding,,,2000,,characters,,,5,,,,,TEXT BUFFERS,Five separate buffers process content from websites and blogs.
+D002,C20,Metasploit Buffers,hybrid semantic search and keyword search,BM25,(a) embedding,,,2000,,characters,,,5,,,,,METASPLOIT BUFFERS,Five buffers contain entire codes from the Metasploit framework.
+D002,C21,Code Buffers,hybrid semantic search and keyword search,BM25,(a) embedding,,,2000,,characters,,,5,,,,,CODE BUFFERS,A single buffer processes code snippets from Exploit DB.
+D002,C22,Paper Buffers,hybrid semantic search and keyword search,BM25,(3) embedding,,,2000,,characters,,,5,,,,,PAPER BUFFERS,Three buffers manage academic papers.
+D002,C23,Context Transformation,,,(3) embeddings,,Splitting Stage,300,,characters,,,,,,,,Redundant Content Removal; Filtration Stage; Reordering Phase according to the Lost in the Middle principle,The Filtration Stage uses a similarity threshold of 0.6 set to the third quartile (Q3) of similarity results from tests with 156 queries.
+D002,C25,HACKERGPT,,,,,,,,,,,,,HACKERGPT,,,,Competing model in TABLE II.
+D002,C27,MIXTRAL,,,,,,,,,,,,,MIXTRAL,,,,
+D002,C28,,Question Retrieval System,,,,,,,,,,,,,,,,Also printed as Question Ret. Sys.
+D002,C29,,Entity Retriever,,,,,,,,,,,,,,,,Also printed as Entity.
+D002,C30,,MITRE,,,,,,,,,,,,,,,,
+D002,C31,,CWE,,,,,,,,,,,,,,,,
+D002,C32,,ExploitDB,,,,,,,,,,,,,,,,
+D002,C33,,Metasploit Retriever,,,,,,,,,,,,,,,,
+D002,C34,,Malware Retriever,,,,,,,,,,,,,,,,
+D002,C37,ExploitDB Retriever,TF-IDF,ExploitDB Retriever,,,,,,,,,,,,,,,The ExploitDB Retriever Size is not listed as it uses TF-IDF for retrieval.
+D002,C38,Metasploit Retriever,,Metasploit Retriever,,,,,,,,,,,,,,,Structured RAG component described as a dense retriever.
+D002,C39,CODE BUFFER,,,,,,,,,,,,,,,,,Unstructured RAG component.
+D002,C40,Structured Retrievers,Structured Retrievers,,,,,,,,,,,,,,,switch to the Unstructured RAG,Failure analysis concerns finding relevant text data in response to a user query.
+D002,C41,METASPLOIT BUFFER,,,,,,,,,,,,,,,,contains the entire codes,Unstructured RAG component.
+D002,C42,fine-tuned BERT embeddings with a feed forward network,,,,,,,,,,,,,,,,,Cited entity-recognition setup in Srivastava et al. [66].
+D002,C43,NEDetector,,,,,,,,,,,,,,,,,Cited cybersecurity neologism detector developed by Li et al. [68].
+D002,C44,Question Ret. Sys.,Structured RAG Retrievers,,,,,,,,,,,,,,,,Table VII: Size 3.863GB; Thres. 0.6; No. Doc. ~ 7000.
+D002,C45,CONTEXT TRANSF.,Unstructured RAG Components,,,,,,,,,,,,,,,CONTEXT TRANSF.,Table VII: Thres. 0.6; No. Doc. 2.
+D002,C46,CRUSH,,,,,,,,,,,,,GPT-3.5/GPT-4/ChatGPT,,,Enterprise Knowledge Graphs (EKGs),
+D002,C47,NLP,,,,,,,,,,,,,,,,,Liu et al. [76]
+D002,C48,,,,,,,,,,,,,,BERT,,,,BERT for feature classification; before optimizing the hyperparameters.
+D003,C1,Synthetic Mixed Training,,,,,,,,,,,,,70B,,,synthetic QAs and synthetic documents,Combines synthetic QAs and synthetic documents.
+D003,C2,final recipe,,,,,,,,,,,,,Llama 8B model,,Focal Rewriting,,"The page introduces Focal Rewriting and then reports the QuaLITY result for ""our final recipe""."
+D003,C4,our training combined with RAG,RAG,,,,,,,,,,,,,,,,merged mentions C3; also referred to as: our training
+D003,C5,existing training recipes based on synthetic data,,,,,,,,,,,,,8B model,,,,Collective label for four existing data generation algorithms: one for synthetic QA pairs and three for synthetic documents. Llama 3.1 8B and 70B models generate up to 700M synthetic tokens for training an 8B model.
+D003,C6,RAG,retrieve document chunks and rerank,Qwen3-Embedding-8B,Qwen3-Embedding-8B,,,,,,,,128,Qwen3-Reranker-8B,Qwen3 8B,,,Rerank the top-128 chunks and select the top-8 as context,Comparison baseline.
+D003,C7,Synth Mixed Training,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Combines synthetic QAs with synthetic documents during training.
+D003,C8,Synth Mixed Training + Gen scaling,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Synthetic Mixed Training with generator scaling.
+D003,C9,Synth Mixed Training + Gen scaling + Focal Rewriting,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Focal Rewriting conditions synthetic document generation on synthetic questions about the source document.; merged mentions C27; also referred to as: our trained 8B model
+D003,C10,Llama 3.1 8B Instruct RAG,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,
+D003,C11,Saturation point when scaling existing methods + Gen scaling,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Point annotated at 700M synthetic training data tokens; the text layer does not identify the named existing method associated with this point.
+D003,C12,"EntiGraph (Yang et al., 2024)",,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Existing synthetic data generation strategy named in Figure 1.
+D003,C13,"Active Reading (Lin et al., 2025)",,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Existing synthetic data generation strategy named in Figure 1.
+D003,C14,our recipe,,,,,,,,,,,,,Qwen3 models ranging from 1.7B to 14B parameters,,,,"Generalization configuration evaluated across QuaLITY, LongHealth, and FinanceBench."
+D003,C15,our approach complementary to RAG,,,,,,,,,,,,,Qwen3 models ranging from 1.7B to 14B parameters,,,,Combines the authors' approach with RAG.
+D003,C16,vanilla RAG,,,,,,,,,,,,,Qwen3 models ranging from 1.7B to 14B parameters,,,,Baseline for the three-benchmark generalization results.
+D003,C17,Original,,,,,,,,,,,,,Qwen3 8B,,,,Baseline label in Figure 4.
+D003,C18,Synth QA only (8B gen),,,,,,,,,,,,,Llama 3.1 8B Inst,,simple instruction,,The model generates open-ended QA pairs and then responses with a short explanation; Llama 3.1 8B Inst is used for both data generation and model training.
+D003,C19,Synth QA only (70B gen),,,,,,,,,,,,,Llama 3.1 70B Instruct,,simple instruction,,The 70B model generates synthetic data; model training uses Llama 3.1 8B Inst.
+D003,C20,Synth docs (AR) only (8B gen),,,,,,,,,,,,,Llama 3.1 8B Inst,,,,AR indicates Active Reading.
+D003,C21,Synth docs (AR) only (70B gen),,,,,,,,,,,,,Llama 3.1 70B Instruct,,,,AR indicates Active Reading; the 70B model generates synthetic data.
+D003,C22,document-based methods,,,,,,,,,,,,,Llama 3.1 70B Instruct,,,,"Aggregate across AR, EG, and WRAP when scaling the synthetic-data generator from 8B to 70B."
+D003,C23,Synth QA only (70B gen),,,,,,,,,,,,,70B gen,,,,
+D003,C25,Synth Mixed Training (QA+AR) (8B gen),,,,,,,,,,,,,8B gen,,,,
+D003,C26,Synth Mixed Training (QA+AR) (70B gen),,,,,,,,,,,,,70B gen,,,,"The caption describes 70B-generated synthetic QAs and AR documents mixed at a 1:1 ratio, with comparison to RAG at 350M and 700M synthetic training tokens."
+D003,C28,Synth docs (AR) only (70B gen),,,,,,,,,,,,,70B,,,AR only,The printed generator setting refers to the synthetic-document generator; model identity is not stated.; merged mentions C24
+D003,C29,Synthetic QAs only,,,,,,,,,,,,,,,,,Training only on synthetic QAs.
+D003,C30,Synthetic Mixed Training,,,,,,,,,,,,,8B,,,,Uses 8B-generated data.
+D003,C31,LongHealth synthetic QAs + QuaLITY synthetic AR documents,,,,,,,,,,,,,,,,,Cross-domain Synthetic Mixed Training variant.
+D003,C32,Focal Rewriting,,,,,,,,,,,,,,,,,Introduced to diversify content and style; the text discusses cases where synthetic tokens exceed original documents by more than 100 times.
+D003,C33,Synth Mixed Training (LongHealth QA+QuaLITY AR),,,,,,,,,,,,,70B,,Focus on the question {{query}},LongHealth QA+QuaLITY AR,Mixing 50% synthetic QAs grounded in a different domain with 50% synthetic documents grounded in the target domain.
+D003,C34,Qwen3 8B,,,,,,,,,,,,,,,,,Another base model used to verify the recipe.
+D003,C35,our training recipe,,,,,,,,,,,,,,,,,Also referred to as our method and our methods.
+D003,C36,training recipes that scale only synthetic QAs,,,,,,,,,,,,,,,,,
+D003,C37,training recipes that scale only synthetic AR documents,,,,,,,,,,,,,,,,,
+D003,C38,RAG with our trained model,,,,,,,,,,,,,,,,,Also described as our trained models combined with RAG.
+D003,C40,,,,,,,,,,,,,,Qwen3 4B,,,,One of four Qwen3 model sizes in the scaling study; synthetic tokens were scaled up to 88M.
+D003,C41,,,,,,,,,,,,,,Qwen3 8B,,,,One of four Qwen3 model sizes in the scaling study; synthetic tokens were scaled up to 88M.
+D003,C43,our methods,,,,,,,,,,,,,Llama 8B,,,,
+D003,C39,Ours (Qwen3 1.7B),,,,,,,,,,,,,Qwen3 1.7B,,,,One of four Qwen3 model sizes in the scaling study; synthetic tokens were scaled up to 88M.; merged mentions C44
+D003,C45,Ours (Qwen3 4B),,,,,,,,,,,,,Qwen3 4B,,,,"Mixed Synthetic Training with synthetic QAs and Focal Rewriting AR documents, using 70B generator."
+D003,C46,Ours (Qwen3 8B),,,,,,,,,,,,,Qwen3 8B,,,,"Mixed Synthetic Training with synthetic QAs and Focal Rewriting AR documents, using 70B generator."
+D003,C42,Ours (Qwen3 14B),,,,,,,,,,,,,Qwen3 14B,,,,One of four Qwen3 model sizes in the scaling study; synthetic tokens were scaled up to 88M.; merged mentions C47
+D003,C48,RAG Qwen3 1.7B,RAG,,,,,,,,,,,,Qwen3 1.7B,,,,
+D003,C49,RAG Qwen3 4B,RAG,,,,,,,,,,,,Qwen3 4B,,,,
+D003,C50,RAG Qwen3 8B,RAG,,,,,,,,,,,,Qwen3 8B,,,,
+D003,C51,RAG Qwen3 14B,RAG,,,,,,,,,,,,Qwen3 14B,,,,
+D003,C53,Ours + RAG,RAG,,,,,,,,,,,,Llama,,,,“Ours + RAG” denotes the same trained model with RAG.; merged mentions C52; also referred to as: Ours
+D003,C54,Vanilla RAG,RAG,,,,,,,,,,,,Llama,,,,“Vanilla RAG” denotes the RAG baseline.
+D003,C56,Ours + RAG,RAG,,,,,,,,,,,,Qwen,,,,“Ours + RAG” denotes the same trained model with RAG.; merged mentions C55; also referred to as: Ours
+D003,C57,Vanilla RAG,RAG,,,,,,,,,,,,Qwen,,,,“Vanilla RAG” denotes the RAG baseline.
+D003,C58,Llama 3.1 8B RAG model,fetch the top-128 document chunks most relevant to the query,Qwen3-Embedding-8B,Qwen3-Embedding-8B,,,,,,,,128,Qwen3-Reranker-8B,Llama 3.1 8B,,prompt in Table 4,rerank these chunks and select the top-8 as context,Uses the model before synthetic data training.
+D003,C59,RAG reported by Yang et al. (2025b),,,,,,,,,,,,,,,,,Implementation details are not stated on this page.
+D003,C60,synthetic training,,,,,,,,,,,,,70B model,,,,Most expensive training run: training an 8B model on 700M tokens generated by a 70B model.
+D003,C61,RAG,retrieve document chunks and rerank,Qwen3-Embedding-8B,Qwen3-Embedding-8B,,,,,,,,128,Qwen3-Reranker-8B,Llama 3.1 8B Instruct,,,Rerank the top-128 chunks and select the top-8 as context,Uses the model before synthetic data training.
+D003,C62,Original,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,Original model baseline.
+D003,C63,Synth QA only,,,,,,,,,,,,,Qwen3 8B,,,,
+D003,C64,Synth docs (AR) only,,,,,,,,,,,,,Qwen3 8B,,,,
+D003,C65,Synth Mixed Training (QA+Focal Rewriting AR),,,,,,,,,,,,,Qwen3 8B,,,,
+D003,C66,Synth QA only,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,
+D003,C67,Synth docs (AR) only,,,,,,,,,,,,,Llama 3.1 8B Instruct,,,,
+D003,C68,QA generation,,,,,,,,,,,,,Llama 3.1 8B Instruct,,QA-pair generation prompt in Table 6; generation of questions for Focal Rewriting,,"Used for QA generation in all experiments. Temperature 1.0, top-p 1.0, and maximum length 2048."
+D003,C69,response and document generation,,,,,,,,,,,,,Llama 3.1 70B Instruct,,"Document-generation prompts in Table 7, Table 8, Table 9, Table 10, and Table 11",,"Used in Section 3.3 except on FinanceBench. Document generation uses temperature 0.7, top-p 0.95, and maximum length 4096."
+D003,C70,FinanceBench response and document generation,,,,,,,,,,,,,Qwen3 30B A3B Instruct,,"Document-generation prompts in Table 7, Table 8, Table 9, Table 10, and Table 11",,"Document generation uses temperature 0.7, top-p 0.95, and maximum length 4096."
+D003,C71,LoRA layers to acquire new knowledge,,,,,,,,,,,,,Llama 8B,,,,LoRA combined with context distillation.
+D003,C72,Focal Rewriting AR (70B gen),,,,,,,,,,,,,70B gen,,,,
+D003,C73,AR (70B gen),,,,,,,,,,,,,70B gen,,,,
+D003,C74,Focal Rewriting AR (8B gen),,,,,,,,,,,,,8B gen,,,,
+D003,C75,AR (8B gen),,,,,,,,,,,,,8B gen,,,,
+D004,C1,Opinion-Aware RAG (O-RAG),opinion-aware retrieval,,,,,,,,,,,,,,,,"Documents are enriched with LLM-extracted, entity-linked opinion metadata before indexing."
+D004,C2,current retrievers,,,,,,,,,,,,,,,,,perspective-blind
+D004,C3,Opinion-Enriched KB,vector search,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking; per-entity document splitting,4000,,tokens,,,20,,,,,opinion enrichment step before indexing,"Opinion-Aware RAG (O-RAG) with entity registry, opinion attributes, and author attributes embedded alongside content.; chunk_overlap as printed: 15%; merged mentions C13"
+D004,C4,Raw KB,vector search,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,,20,,,,,traditional RAG with no opinion metadata,Compared against the Opinion-Enriched KB using identical source content.; chunk_overlap as printed: 15%
+D004,C5,Raw KB,,,,,,,,,,,10,,,,,,Forums empirical W1 significance comparison.
+D004,C6,Opinion-Enriched KB,,,,,,,,,,,10,,,,,,Forums empirical W1 significance comparison.
+D004,C7,Raw KB,,,,,,,,,,,40,,,,,,Forums empirical W1 significance comparison.
+D004,C8,Opinion-Enriched KB,,,,,,,,,,,40,,,,,,Forums empirical W1 significance comparison.
+D004,C9,Raw KB,,,,,,,,,,,60,,,,,,Forums empirical W1 significance comparison.
+D004,C10,Opinion-Enriched KB,,,,,,,,,,,60,,,,,,Forums empirical W1 significance comparison.
+D004,C11,Full O-RAG,,,,,,,,,,,20,,,,,,Extraction model: Mistral Large.
+D004,C12,Entity-Split-Only,,,,,,,,,,,20,,,,,,Extraction model: Mistral Large.
+D004,C14,semantic-only,semantic-only,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,10,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C15,semantic-only,semantic-only,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,20,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C16,semantic-only,semantic-only,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,40,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C17,semantic-only,semantic-only,,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,60,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C18,hybrid (dense plus keyword),hybrid (dense plus keyword),,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,10,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C19,hybrid (dense plus keyword),hybrid (dense plus keyword),,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,20,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C20,hybrid (dense plus keyword),hybrid (dense plus keyword),,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,40,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C21,hybrid (dense plus keyword),hybrid (dense plus keyword),,Amazon Titan Text Embeddings V2,V2,fixed-size chunking,4000,,tokens,,Amazon Bedrock Knowledge Base vector store,60,,Anthropic Claude Sonnet 4.5,4.5,,retrieved context,"Document and query embeddings have 1024 dimensions. Generation used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens.; chunk_overlap as printed: 15%"
+D004,C22,Opinion extraction with Mistral Large,,,,,,,,,,,,,Mistral Large,,,,"Accessed through Amazon Bedrock in April 2026. Extraction used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens."
+D004,C23,Opinion extraction with Qwen 235B,,,,,,,,,,,,,Qwen 235B,,,,"Accessed through Amazon Bedrock in April 2026. Extraction used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens."
+D004,C24,Opinion extraction with Claude Sonnet 4.5,,,,,,,,,,,,,Claude Sonnet 4.5,4.5,,,"Accessed through Amazon Bedrock in April 2026. Extraction used temperature 0, the Amazon Bedrock default top-p, and a maximum output length of 4096 tokens."
+D004,C25,Mistral,hybrid,,,,,,,,,,20,,,,,,Opinion extraction LLM configuration in Table 5; identified as Mistral Large in the experimental settings.
+D004,C26,Qwen,hybrid,,,,,,,,,,20,,,,,,Opinion extraction LLM configuration in Table 5; identified as Qwen 235B in the experimental settings.
+D004,C27,Sonnet,hybrid,,,,,,,,,,20,,,,,,Opinion extraction LLM configuration in Table 5; identified as Claude Sonnet 4.5 in the experimental settings.
+D004,C28,Raw,hybrid retrieval,,,,,,,,,,20,,,,Detailed Overview,,Table 7 Sonnet 4.5 ablation configuration.
+D004,C29,Raw,hybrid retrieval,,,,,,,,,,10,,,,,,
+D004,C30,Enriched,hybrid retrieval,,,,,,,,,,10,,,,,,
+D004,C31,Enriched,hybrid retrieval,,,,,,,,,,20,,,,Detailed Overview,,Question Type Ablation
+D004,C32,Raw,hybrid retrieval,,,,,,,,,,40,,,,,,
+D004,C33,Enriched,hybrid retrieval,,,,,,,,,,40,,,,,,
+D004,C34,Raw,hybrid retrieval,,,,,,,,,,60,,,,,,
+D004,C35,Enriched,hybrid retrieval,,,,,,,,,,60,,,,,,
+D004,C36,Emergent Opinion Synthesis Example,,,,,,,,,,,,,ChatGPT (GPT-4o),,What do small business owners think about the current tax policy?,,January 2026
+D005,C1,PRISMRAG,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,typical RAG prompt as in Appendix G.2,gold evidence with subtle distractor passages,Cross-benchmark configuration using distractor-aware QA pairs and reasoning-centric habits.; top_k as printed: 0 to 50
+D005,C2,Baseline,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,typical RAG prompt as in Appendix G.2,closed-book,Baseline configuration in the CRAG retrieval-page sweep.; top_k as printed: 0 to 50
+D005,C3,state-of-the-art solutions,,,,,,,,,,,,,,,,,Abstract comparison group; individual solutions are not identified on this page.
+D005,C4,fine-tuning on distractor-augmented content,,,,,,,,,,,,,LLM,,targeted synthetic generation of distractions via modifying the golden passage,distractor-augmented content,"Synthetic distractors alter named entities, locations, and temporal information while remaining grammatically coherent and stylistically similar to the original."
+D005,C5,fine tune LLM’s reasoning capability for generating better answers,,,,,,,,,,,,,LLM,,,,Presented as complementary and orthogonal to the distractor-focused fine-tuning method.
+D005,C6,Distractor Resilience,,,,,,,,,,,,,,,,,Method in Table 1 with Web Search seed data.
+D005,C7,Dynamic Strategization,,,,,,,,,,,,,,,,,Method in Table 1 with Web Search and Wiki Pages seed data.
+D005,C8,distractor resilience and dynamic strategization,,,,,,,,,,,,,,,,,The final training data consists of a mix of these methods.
+D005,C9,stochastic generation,,,,,,,,,,,,,,,rerun the inference in step 1,,temperature=1.0 and top-p=0.90; used for the first 6 thought-regeneration attempts.
+D005,C10,critique-based revision,,,,,,,,,,,,,,,analysis produced during the thought evaluation step as critique feedback,,Used for the remaining attempts after the first 6 stochastic attempts.
+D005,C11,BGE embedding,rank references by semantic relevance to the question,,BGE embedding,,,,,,,,,,,,,,Used to rank references for the CRAG web portion.
+D005,C12,NaiveSFT,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,typical RAG prompt as in Appendix G.2,,Directly trained on final answers without strategization and CoT. Fine-tuning experimented with learning rate 10−5; inference used temperature 0.2 and top-p 0.9.; merged mentions C17; also referred to as: -Strategization
+D005,C13,STaR,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,static CoT instructions,,"STaR (Zelikman et al., 2022) was re-implemented as a rationalization chain for RAG QA. Inference used a typical RAG prompt, temperature 0.2, and top-p 0.9."
+D005,C14,LLMQuoter,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,quote extraction instructions,quote extraction,"LLMQuoter was re-implemented to produce training data. Inference used a typical RAG prompt, temperature 0.2, and top-p 0.9."
+D005,C15,RAFT,RAG,,,,,,,,,,,,Llama-3.1-70b-instruct,,typical RAG prompt as in Appendix G.2,irrelevant references,RAFT data-generation code was reused with closed-source model endpoints replaced by LLaMA. Inference used temperature 0.2 and top-p 0.9.
+D005,C16,-Distractor,,,,,,,,,,,,,,,,,
+D005,C18,Prompt-A,,,,,,,,,,,,,llama-3.3-70b-instruct,,Prompt-A,,Instruction prompt in G.2.
+D005,C19,Prompt-B,,,,,,,,,,,,,llama-3.3-70b-instruct,,Prompt-B,,Step 1 directly asks for evaluating individual references; steps 2 and 3 are consolidated with emphasis on saying “I don’t know” when provided information is insufficient.
+D005,C20,Prompt-C,,,,,,,,,,,,,llama-3.3-70b-instruct,,Prompt-C,,The emphasis on “I don’t know” is removed.
+D005,C21,Prompt-D,,,,,,,,,,,,,llama-3.3-70b-instruct,,Prompt-D,,All CoT step instructions are removed; the model is asked to think before answering the question.
+D005,C22,This Work,,,,,,,,,,,,,llama-3.1-70b-instruct,,,closed-book,Fine-tuned version using the proposed approach.
+D005,C23,llama-3.1-70b-instruct,,,,,,,,,,,,,llama-3.1-70b-instruct,,,without any reference documents,
+D005,C24,fined-tuned version using our proposed approach,,,,,,,,,,,,,llama-3.1-70b-instruct,,,without any reference documents,The recipe for fine-tuning and inference is the same as the setting used in the main text.
+D006,C1,LLM-Confidence Reranker (LCR),BM25,,,,,,,,,,,LLM-Confidence Reranker (LCR),pre-trained LLM (7-9B parameters),,zero-shot,,"training-free, plug-and-play reranker; two-stage confidence assessment via MSCP"
+D006,C2,LCR (LLM-Confidence Reranker),BM25,BM25,,,,,,,,,,Qwen7B,Qwen7B,,,,"Zero-shot reranking method based on black-box LLM confidence signals (Maximum Semantic Cluster Proportion, MSCP); relies solely on lightweight pre-trained LLMs with 7-9B parameters, no training or internal parameter access; pointwise independent scoring mechanism; can be a standalone reranker or integrated after existing rerankers."
+D006,C3,LLM-Confidence Reranker (LCR),reranking,,,,,,,,,,,,LLM (unspecified),,"high-temperature sampling (typically T=1), K samples",,"MSCP-based reranking; thresholds T_query, T_upper, T_lower"
+D006,C4,QLM,BM25,BM25,,,,,,,,,,Qwen7B,Qwen7B,,,,Requires Internal Param.: Yes; Base Model: Qwen7B; Architecture Type: Decoder-Only; Fine-tuned: No
+D006,C5,RankGPT,BM25,BM25,,,,,,,,,,Qwen7B,Qwen7B,,,,Requires Internal Param.: No; Base Model: Qwen7B; Architecture Type: Decoder-Only; Fine-tuned: No
+D006,C6,unnamed (Qwen7B Decoder-Only),BM25,BM25,,,,,,,,,,Qwen7B,Qwen7B,,,,Requires Internal Param.: Yes; Base Model: Qwen7B; Architecture Type: Decoder-Only; Fine-tuned: No; reranker name not printed in table
+D006,C7,Cross-Encoder,BM25,BM25,,,,,,,,,10,BERT-base,,,,,Requires Internal Param.: No; Base Model: BERT-base; Architecture Type: Encoder-Only; Fine-tuned: Yes
+D006,C8,ColBERT,BM25,BM25,,,,,,,,,10,BERT-base,,,,,Requires Internal Param.: No; Base Model: BERT-base; Architecture Type: Encoder-Only; Fine-tuned: Yes
+D006,C9,RankT5,BM25,BM25,,,,,,,,,10,T5-base,,,,,Requires Internal Param.: No; Base Model: T5-base; Architecture Type: Encoder-Decoder; Fine-tuned: Yes
+D006,C10,LCR,BM25,BM25,,,,,,,,,10,LCR,Qwen2.5-7B-Instruct,Qwen7B,"MSCP confidence quantification; multinomial sampling T=1, K=10 samples per query-document pair",,"training-free, confidence-based reranker; retriever fetches top-10 documents"
+D006,C11,LCR,dense,Contriever,,,,,,,,,10,LCR,Qwen2.5-7B-Instruct,Qwen7B,"MSCP confidence quantification; multinomial sampling T=1, K=10 samples per query-document pair",,"training-free, confidence-based reranker; retriever fetches top-10 documents"
+D006,C12,QLM,BM25,BM25,,,,,,,,,10,QLM,Qwen2.5-7B-Instruct,Qwen7B,,,"point-wise reranking, pre-trained LM, no fine-tuning"
+D006,C13,QLM,dense,Contriever,,,,,,,,,10,QLM,Qwen2.5-7B-Instruct,Qwen7B,,,"point-wise reranking, pre-trained LM, no fine-tuning"
+D006,C14,RankGPT,BM25,BM25,,,,,,,,,10,RankGPT,Qwen2.5-7B-Instruct,Qwen7B,,,"generative list-wise reranking with sliding windows, no fine-tuning"
+D006,C15,RankGPT,dense,Contriever,,,,,,,,,10,RankGPT,Qwen2.5-7B-Instruct,Qwen7B,,,"generative list-wise reranking with sliding windows, no fine-tuning"
+D006,C16,YesNo,BM25,BM25,,,,,,,,,10,YesNo,Qwen2.5-7B-Instruct,Qwen7B,,,"point-wise yes/no relevance likelihood, no fine-tuning"
+D006,C17,YesNo,dense,Contriever,,,,,,,,,10,YesNo,Qwen2.5-7B-Instruct,Qwen7B,,,"point-wise yes/no relevance likelihood, no fine-tuning"
+D006,C18,Cross-Encoder,dense,Contriever,,,,,,,,,10,Cross-Encoder,,,,,cross-encoder relevance from joint query-document representations
+D006,C19,ColBERT,dense,Contriever,,,,,,,,,10,ColBERT,,,,,context embedding-based reranking with token-level interactions
+D006,C20,RankT5,dense,Contriever,,,,,,,,,10,RankT5,,,,,Transformer-based sequence-to-sequence reranker
+D006,C21,BM25 Retriever-Only,BM25,,,,,,,,,,,,,,,,"initial retriever BM25, no reranker"
+D006,C22,BM25 Retriever-Only + LCR,BM25,,,,,,,,,,,,,,,,LCR applied without reranker
+D006,C23,YesNo reranker,BM25,,,,,,,,,,,YesNo (7B),,,,,"pre-trained LLM-based reranker, 7B parameters"
+D006,C24,YesNo reranker + LCR,BM25,,,,,,,,,,,YesNo (7B),,,,,LCR applied on YesNo reranker
+D006,C25,QLM reranker,BM25,,,,,,,,,,,QLM (7B),,,,,"pre-trained LLM-based reranker, 7B parameters"
+D006,C26,RankGPT reranker,BM25,,,,,,,,,,,RankGPT (7B),,,,,"pre-trained LLM-based reranker, 7B parameters"
+D006,C27,RankGPT reranker + LCR,BM25,,,,,,,,,,,RankGPT (7B),,,,,LCR applied on RankGPT reranker
+D006,C28,ColBERT reranker,BM25,,,,,,,,,,,ColBERT,,,,,fine-tuned Transformer-based reranker
+D006,C29,Cross-Encoder reranker,BM25,,,,,,,,,,,Cross-Encoder,,,,,fine-tuned Transformer-based reranker
+D006,C30,RankT5 reranker,BM25,,,,,,,,,,,RankT5,,,,,fine-tuned Transformer-based reranker
+D006,C32,Contriever + LCR w/o QT,Contriever,Contriever,,,,,,,,,,,,,,,LCR applied without query threshold
+D006,C33,Contriever + LCR,Contriever,Contriever,,,,,,,,,,,,,,,LCR with query threshold
+D006,C34,Contriever + YesNo reranker,Contriever,Contriever,,,,,,,,,,YesNo (7B),,,,,Contriever with YesNo reranker
+D006,C35,Contriever + YesNo reranker + LCR,Contriever,Contriever,,,,,,,,,,YesNo (7B),,,,,Contriever with YesNo reranker and LCR
+D006,C37,+LCR w/o QT,Contriever,Contriever,,,,,,,,,,YesNo,,,,,"LCR without query threshold, Retriever-Only base; merged mentions C31, C36; also referred to as: Contriever Retriever-Only; Retriever-Only"
+D006,C38,Pre-trained LLM Based Reranker (YesNo),Contriever,Contriever,,,,,,,,,,YesNo,,,,,row label printed as 'YesNo'
+D006,C39,LCR,BM25,,,,,,,,,,,RankGPT,InternLM2.5-7B-Chat,,MSCP confidence quantification,,"Figure 5, 24.5% NDCG@5 improvement"
+D006,C40,LCR,BM25,,,,,,,,,,,RankGPT,Llama3.1-8B-Instruct,,MSCP confidence quantification,,Figure 5
+D006,C41,LCR,BM25,,,,,,,,,,,RankGPT,GLM-4-9B-Chat,,MSCP confidence quantification,,"Figure 5, follows closely behind InternLM7B"
+D006,C42,LCR (LLM-Confidence Reranker),BM25,BM25,,,,,,,,,,RankGPT,Llama8B,,,,"Figure 5(a) BM25, Llama8B"
+D006,C43,LCR (LLM-Confidence Reranker),BM25,BM25,,,,,,,,,,RankGPT,GLMChat9B,,,,"Figure 5(a) BM25, GLMChat9B"
+D006,C44,LCR (LLM-Confidence Reranker),BM25,BM25,,,,,,,,,,RankGPT,InternLM7B,,,,"Figure 5(a) BM25, InternLM7B"
+D006,C45,LCR (LLM-Confidence Reranker),Contriever,Contriever,,,,,,,,,,RankGPT,Qwen7B,,,,"Figure 5(b) Contriever, Qwen7B"
+D006,C46,LCR (LLM-Confidence Reranker),Contriever,Contriever,,,,,,,,,,RankGPT,Llama8B,,,,"Figure 5(b) Contriever, Llama8B"
+D006,C47,LCR (LLM-Confidence Reranker),Contriever,Contriever,,,,,,,,,,RankGPT,GLMChat9B,,,,"Figure 5(b) Contriever, GLMChat9B"
+D006,C48,LCR (LLM-Confidence Reranker),Contriever,Contriever,,,,,,,,,,RankGPT,InternLM7B,,,,"Figure 5(b) Contriever, InternLM7B"
+D006,C49,LCR (LLM-Confidence Reranker) with MSCP,BM25,BM25,,,,,,,,,,QLM,,,,,"Figure 6(a), MSCP quantification, NaturalQuestions"
+D006,C50,LCR (LLM-Confidence Reranker) with SE,BM25,BM25,,,,,,,,,,QLM,,,,,"Figure 6(a), SE quantification, NaturalQuestions"
+D006,C51,LCR (LLM-Confidence Reranker) with MSCP,Contriever,Contriever,,,,,,,,,,QLM,,,,,"Figure 6(b), MSCP quantification, NaturalQuestions"
+D006,C52,LCR (LLM-Confidence Reranker) with SE,Contriever,Contriever,,,,,,,,,,QLM,,,,,"Figure 6(b), SE quantification, NaturalQuestions"
+D007,C1,"non-retrieval LLM, LLM(q)",,,,,,,,,,,,,,,,,strategy label 'A': query is straightforward and answerable by the LLM itself without retrieval
+D007,C2,"single-step retrieval-augmented LLM, LLM(q, d)",,,,,,,,,,,,,,,,,"strategy label 'B': moderate complexity, at least a single-step approach is needed"
+D007,C3,"multi-step retrieval-augmented LLM, LLM(q, d, c)",,,,,,,,,,,,,,,,,strategy label 'C': complex queries requiring the most extensive iterative solution
+D007,C4,Adaptive-RAG,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,adaptive framework: a smaller Language Model Classifier(q) predicts complexity label 'A'/'B'/'C' per query and routes to the matching strategy; classifier trained with cross-entropy loss on automatically constructed query-complexity pairs
+D007,C5,No Retrieval,none,,,,,,,,,,,,FLAN-T5-XL,3B,,,"Single-step, Simple data type; merged mentions RC1, RC8"
+D007,C6,Single-step Approach,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,"Single-step, Simple data type; merged mentions RC2, RC9"
+D007,C7,Adaptive Retrieval,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,"Adaptive, Simple data type; merged mentions RC3, RC10"
+D007,C8,Self-RAG*,,,,,,,,,,,,,LLaMA2,,,,
+D007,C9,Multi-step Approach,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,Complex data type
+D007,C10,Adaptive-RAG w/ Oracle,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,Oracle classifier
+D007,C11,No Retrieval,,,,,,,,,,,,,FLAN-T5-XXL,,,,
+D007,C12,Single-step Approach,,,,,,,,,,,,,FLAN-T5-XXL,,,,
+D007,C13,Adaptive Retrieval,,,,,,,,,,,,,FLAN-T5-XXL,,,,
+D007,C14,Adaptive-RAG (Ours),,,,,,,,,,,,,FLAN-T5-XXL,,,,merged mentions RC12
+D007,C15,Multi-step Approach,,,,,,,,,,,,,FLAN-T5-XXL,,,,
+D007,C16,Adaptive-RAG w/ Oracle,,,,,,,,,,,,,FLAN-T5-XXL,,,,
+D007,C17,No Retrieval,,,,,,,,,,,,,GPT-3.5,,,,
+D007,C22,Adaptive-RAG w/ Oracle,,,,,,,,,,,,,GPT-3.5,,,,
+D007,C23,Self-RAG*,BM25,,,,,,,,,,,,FLAN-T5-XL,3B,,,"Adaptive, Simple data type; asterisk as printed"
+D007,C24,w/o Binary,,,,,,,,,,,,,,,,,Ablation in Table 4: classifier trained without the binary (retrieval-required) labels
+D007,C25,w/o Silver,,,,,,,,,,,,,,,,,Ablation in Table 4: classifier trained without silver data from predicted outcomes
+D007,C26,Adaptive-RAG (Ours),adaptive (non-retrieval / single-step / multi-step by query complexity),,,,,,,,,,,,GPT-3.5 (Turbo),,,,"Case study configuration in Table 5; query handling strategy selected by query complexity (A: Non Retrieval, B: Single-step Approach, C: Multi-step Approach); merged mentions C18, C20, C21; also referred to as: Single-step Approach; Multi-step Approach"
+D007,C27,Adaptive Retrieval,adaptive retrieval (baseline),,,,,,,,,,,,GPT-3.5 (Turbo),,,,Baseline compared against Adaptive-RAG in the Table 5 case study; merged mentions C19
+D007,C28,Classifier Small (60M),,,,,,,,,,,,,,,,,"Query-complexity classifier size variant, Table 6"
+D007,C29,Classifier Base (223M),,,,,,,,,,,,,,,,,"Query-complexity classifier size variant, Table 6"
+D007,C30,Classifier Large (770M),,,,,,,,,,,,,,,,,"Query-complexity classifier size variant, Table 6"
+D007,C31,,,,,,,,,,,,,,FLAN-T5-XXL,,,,11B parameters
+D007,C32,,,,,,,,,,,,,,GPT-3.5 (Turbo),,,,
+D007,RC4,Adaptive Self-RAG∗,,,,,,,,,,,,,FLAN-T5-XL,,,,row label of Table 1 p.6; generator from column group header (rule-based)
+D007,RC5,Adaptive-RAG (Ours),,,,,,,,,,,,,FLAN-T5-XL,,,,row label of Table 1 p.6; generator from column group header (rule-based)
+D007,RC6,Complex Multi-step Approach,,,,,,,,,,,,,FLAN-T5-XL,,,,row label of Table 1 p.6; generator from column group header (rule-based); merged mentions RC13
+D007,RC7,Oracle Adaptive-RAG w/ Oracle,,,,,,,,,,,,,FLAN-T5-XL,,,,row label of Table 1 p.6; generator from column group header (rule-based); merged mentions RC14
+D007,RC11,Single-step Adaptive Self-RAG∗,,,,,,,,,,,,,,,,,row label of Table 2 p.7 (rule-based)
+D007,RC15,Multi-step Adaptive Self-RAG∗,,,,,,,,,,,,,,,,,row label of Table 2 p.7 (rule-based)
+D007,RC16,Multi (C),,,,,,,,,,,,,,,,,row label of Table 3 p.8 (rule-based)
+D007,RC17,Small (60M),,,,,,,,,,,,,,,,,row label of Table 5 p.9 (rule-based)
+D007,RC18,Base (223M),,,,,,,,,,,,,,,,,row label of Table 5 p.9 (rule-based)
+D007,RC19,Large (770M),,,,,,,,,,,,,,,,,row label of Table 5 p.9 (rule-based)
+D008,C1,CoDA,,,,,,,,,,,,,Llama3-8B,,,,attention-centric locate-and-intervene framework for RAG hallucination
+D008,C2,Vanilla-RAG,,,,,,,,,,,,,,,,,baseline
+D008,C3,Attr_prompt,,,,,,,,,,,,,,,,,baseline
+D008,C4,OI_prompt,,,,,,,,,,,,,,,,,baseline
+D008,C5,COIECD,,,,,,,,,,,,,,,,,baseline
+D008,C6,SFT,,,,,,,,,,,,,,,,,baseline
+D008,C7,KAFT,,,,,,,,,,,,,,,,,baseline
+D008,C8,C-DPO,,,,,,,,,,,,,,,,,baseline
+D008,C9,DDR,,,,,,,,,,,,,,,,,baseline
+D008,C10,ReDeEP,,,,,,,,,,,,,,,,,baseline
+D008,C11,ParamMute,,,,,,,,,,,,,,,,,baseline
+D008,C12,ReDeEP vs Base,,,,,,,,,,,,,Llama3-8B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C13,Ours (CoDA) vs ReDeEP,,,,,,,,,,,,,Llama3-8B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C14,ReDeEP vs Base,,,,,,,,,,,,,Llama2-13B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C15,Ours (CoDA) vs ReDeEP,,,,,,,,,,,,,Llama2-13B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C16,ReDeEP vs Base,,,,,,,,,,,,,Llama2-7B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C17,Ours (CoDA) vs ReDeEP,,,,,,,,,,,,,Llama2-7B,,,,"Figure 5 pairwise comparison, RAGTruth"
+D008,C18,Baseline (no CoDA),,,,,,,,,,,,,Llama3-8B,,,,Baseline latency on RAGTruth
+D008,C19,CoDA,,,,,,,,,,,,,Llama2-13B,,,,Latency on RAGTruth
+D008,C20,Baseline (no CoDA),,,,,,,,,,,,,Llama2-13B,,,,Baseline latency on RAGTruth
+D008,C21,CoDA,,,,,,,,,,,,,Llama2-7B,,,,Latency on RAGTruth
+D008,C22,Baseline (no CoDA),,,,,,,,,,,,,Llama2-7B,,,,Baseline latency on RAGTruth
+D009,C1,"Direct (zero-shot, no retrieval)",,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,"Zero-shot baseline, 'Direct'; merged mentions RC1; also referred to as: Direct"
+D009,C2,Standard RAG,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,"Lewis et al., 2020; merged mentions RC2"
+D009,C3,FLARE,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,Advanced RAG; merged mentions RC3
+D009,C4,Self-RAG,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Llama-2-13B (Self-RAG specialized variant),,,,Official checkpoint; merged mentions RC4
+D009,C5,IRCoT,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,Advanced RAG; merged mentions RC5
+D009,C6,Search-o1,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,Advanced RAG; merged mentions RC6
+D009,C7,AutoRAG,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Llama-3-8B-Instruct,,,,"RL-based, official checkpoint; merged mentions RC7"
+D009,C8,Search-R1,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,"RL-based, outcome reward; merged mentions RC8"
+D009,C9,ReasonRAG,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,"RL-based, process reward; merged mentions RC9"
+D009,C10,StepSearch,dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,,,"RL-based, process reward; merged mentions RC10"
+D009,C11,PRO-STEP (Ours),dense retrieval,BGE-base-en-v1.5,,,,,,,,,3,,Qwen2.5-7B-Instruct,,process-supervised (PRM),retrieval steps = 1,"Trained on 5,000 multi-hop QA questions; PRM-guided VTS + step-level DPO; merged mentions RC11; also referred to as: Ours PRO-STEP"
+D009,C13,PRO-STEP PRM,WMV,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,"RAG-specific PRM, weighted majority voting over 128 sampled trajectories"
+D009,C14,VersaPRM,WMV,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,"WMV, K=128",open-source PRM baseline
+D009,C15,Qwen-Math-PRM,WMV,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,math-specific PRM baseline
+D009,C16,Majority Voting,MV,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,ignores PRM scores
+D009,C17,PRO-STEP without PRM,,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,"ablation: preference pairs from depth-discounted F1 reward only; merged mentions C12, RC13; also referred to as: Without PRM"
+D009,C19,PRO-STEP,iterative retrieval,,,,,,,,,,5,,Qwen2.5-7B Base,,,,"Figure 4, k=5 retrieval docs"
+D009,C20,PRO-STEP,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,smaller model scale; merged mentions C31; also referred to as: PRO-STEP 3B
+D009,C21,PRM selection (WMV),,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,"weighted majority voting, K=128",authors' PRM
+D009,C22,MV,,,,,,,,,,,,,,,,"majority voting, K=128",baseline
+D009,C18,PRO-STEP,iterative retrieval,,,,,,,,,,1,,Llama-3.1-8B-Instruct,,,,"Figure 4, k=1 retrieval docs; merged mentions C23, RC12, RC17, RC18; also referred to as: Base"
+D009,C24,PRO-STEP-Base,,,,,,,,,,,,,Qwen2.5-7B Base,,,,PRO-STEP without instruction tuning
+D009,C25,PRO-STEP-Instruct,,,,,,,,,,,,,Qwen2.5-7B-Instruct,,,,Main instruction-tuned backbone; merged mentions RC31; also referred to as: Main
+D009,C26,Search-R1,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,Outcome-based baseline at 3B scale; merged mentions C30; also referred to as: Search-R1 3B
+D009,C27,PRO-STEP,,,,,,,,,,,,,QwQ-32B,,,,QwQ-32B used as PRM labeler
+D009,C28,VTS (Verifier-Guided Tree Search) with PRM-guided step evaluation,multi-hop search (agentic),,,,,,,,,,,,QwQ-32B,,step-level PRM evaluation prompt (R1-R6 rubric),,PRM used for step-level evaluation during VTS expansion; ed 8B PRM
+D009,C29,PRO-STEP w/o margin filter,,,,,,,,,,,,,,,,,"39,578 pairs"
+D009,C32,Qwen2.5-3B Base,,,,,,,,,,,,,Qwen2.5-3B,,,,
+D009,C33,Reduced branching,,,,,,,,,,,,,,,,,K = 2
+D009,C34,Main configuration,,,,,,,,,,,,,,,,,K = 3
+D009,C35,PRM weight alpha=0.0,,,,,,,,,,,,,,,,,no PRM
+D009,C36,PRM weight alpha=0.3,,,,,,,,,,,,,,,,,selected configuration
+D009,C37,PRM weight alpha=0.5,,,,,,,,,,,,,,,,,
+D009,C38,PRM weight alpha=1.0,,,,,,,,,,,,,,,,,
+D009,C39,Base 3B,,,,,,,,,,,,,,,,,
+D009,C40,Outcome-only ablation,,,,,,,,,,,,,,,,,
+D009,C41,Search-R1,,,,,,,,,,,,,Search-R1,,,,baseline
+D009,C42,PRO-STEP,,,,,,,,,,,,,PRO-STEP,,,,proposed method
+D009,C43,outcome filter main,,,,,,,,,,,,,,,,,"DPO training variant, β=0.1, LoRA r=64/α=128"
+D009,C44,+ regen,,,,,,,,,,,,,,,,,"regen-augmented DPO training variant, β=0.1, LoRA r=64/α=128"
+D009,C45,outcome filter + regen,,,,,,,,,,,,,,,,,regen-augmented variant; degrades on every benchmark
+D009,RC14,PRO-STEP (SFT),,,,,,,,,,,,,,,,,row label of Table 2 p.6 (rule-based)
+D009,RC15,PRO-STEP (KTO),,,,,,,,,,,,,,,,,row label of Table 3 p.6 (rule-based)
+D009,RC16,PRO-STEP (DPO),,,,,,,,,,,,,,,,,row label of Table 3 p.6 (rule-based)
+D009,RC19,Search-R1,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based)
+D009,RC20,HotpotQA,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based); merged mentions RC25
+D009,RC21,PopQA,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based); merged mentions RC26
+D009,RC22,2WikiMulti,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based); merged mentions RC27
+D009,RC23,Bamboogle,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based); merged mentions RC28
+D009,RC24,MuSiQue,,,,,,,,,,,,,Llama-3.1-8B-Instruct,,,,row label of Table 4 p.9; generator from column group header (rule-based); merged mentions RC29
+D009,RC30,Reduced,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC32,(no PRM),,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC33,Data Size,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC34,Learning Rate,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC35,Effective Batch Size,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC36,Epochs,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC37,Max Length,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC38,Rank (r),,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC39,Alpha (α),,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC40,Dropout,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC41,Audited,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC42,QwQ-labeled,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC43,answer,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC44,search,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC45,reason,,,,,,,,,,,,,,,,,row label of Table 10 p.18 (rule-based)
+D009,RC46,Average,,,,,,,,,,,,,,,,,row label of Table 17 p.19 (rule-based)
+D009,RC47,answers,,,,,,,,,,,,,,,,,row label of Table 17 p.19 (rule-based)
+D009,RC48,QwQ-32B,,,,,,,,,,,,,,,,,row label of Table 17 p.19 (rule-based)
+D009,RC49,PRM,,,,,,,,,,,,,,,,,row label of Table 17 p.19 (rule-based)
+D010,C1,RAGRoute,federated search,,all embedding models used by the data sources,,,,,,IndexFlatL2,FAISS,,cross-encoder reranker,LLM,,relevant documents and original user query are combined into a single prompt,dynamically selects relevant data sources at query time,Dynamically selects relevant data sources at query time using a neural classifier.; top_k as printed: kret
+D010,C2,querying all sources,federated search,,,,,,,,,,,,,,,,Comparison baseline.
+D010,C3,querying all data sources,federated search,,,,,,,,,,,,,,,querying all data sources,Baseline comparator described on this page.
+D010,C4,RAG,,,,,,,,,,,15,,,,,,"The knowledge backend uses four corpora: PubMed, StatPearls, Wikipedia and Textbooks. Corpus relevance is determined from the top-15 retrieved results."
+D010,C5,none,,,,,,,,,,,,,LLaMA 3.1 8B Instruct,,zero-shot chain-of-thought,The input prompt is not enhanced with retrieved documents.,No data source is queried. Output is formatted in JSON.
+D010,C6,all,exact similarity search with FAISS followed by reranking,,,,,,,,,FAISS,15,BAAI/bge-reranker-v2-m3,LLaMA 3.1 8B Instruct,,zero-shot chain-of-thought,All data sources are queried; the global top-15 reranked documents are used for generation.,Each data source retrieves top-kret = 50 candidate documents. This strategy is described as a naive baseline for federated search. Output is formatted in JSON.
+D010,C7,RAGRoute,exact similarity search with FAISS followed by reranking,,,,,,,,,FAISS,15,BAAI/bge-reranker-v2-m3,LLaMA 3.1 8B Instruct,,zero-shot chain-of-thought,The RAGRoute router selects relevant data sources; the global top-15 reranked documents are used for generation.,Each selected data source retrieves top-kret = 50 candidate documents. Output is formatted in JSON.; merged mentions C8; also referred to as: RAGRoute router
+D010,C9,random,random baseline,,,,,,,,,,,,,,,,queries a similar number of sources as RAGRoute
+D010,C10,All baseline,,,,,,,,,,,,cross-encoder reranker,,,,,
+D010,C11,None routing baseline,,,,,,,,,,,,,,,,no data sources are queried,
+D011,C1,knowledge-infused and multi-bit watermarking (KMW),,,,,,,,,,,,,,,,,RAG knowledge base watermarking
+D011,C2,WARD,,,,,,,,,,,,,,,rewriting-based strategy,Text Perplexity Filtering,Embeds watermarks by paraphrasing IP data using LLM watermarking
+D011,C3,Knowledge-infused Multi-bit Watermarking (KMW),Watermark Text Indexer,,,,,,,,,,,,,,,knowledge completion,The Watermark Text Indexer optimizes queries to retrieve watermarked content; watermark extraction uses majority voting.
+D011,C4,current methods,,,,,,,,,,,,,,,,,Collective label for existing RAG watermarking methods; the page does not report separate payload values for individual methods.
+D011,C5,KMW,cosine similarity,BGE-M3,,,split KB into text chunks,,,,,,1,,Qwen2.5,,“relationship-to-knowledge” prompt,random subset sampling; 20% of the stolen KB,Four-stage pipeline: Watermark Prefix Construct; Generation and Infusion; Watermark Text Indexer; Query and Extract.
+D011,C6,RAGwm,,,,,,,,,,,,,LLM,,“relationship-to-knowledge” prompt,injection-based strategy,Multi-bit Generative Watermarking; Watermark Text Indexer (WTI) comprising a question generator Qg and an RAG simulator (RAGs).
+D011,C7,RAG-WM,,,,,,,,,,,,,,,,Text Perplexity Filtering,"Lv et al., 2025"
+D011,C8,ORI,,,,,,,,,,,,,,,,Text Perplexity Filtering,non-watermarked RAG
+D011,C9,,,,,,,,,,,,,,GPT-4.1,,,,black-box LLM
+D011,C10,,,,,,,,,,,,,,Gemini-2.5-Flash,,,,black-box LLM
+D011,C11,,,,,,,,,,,,,,Qwen2.5-32B-Instruct,,,,white-box LLM
+D011,C12,KMW,,Contriever,,,,,,,,,5,,gpt-4.1,,,retrieving more unwatermarked documents during LLM generation,Evaluated as an alternative retriever. The page jointly mentions Euclidean distance and inner product for Contriever and ANCE without explicitly pairing a distance with each retriever.
+D011,C13,KMW,,ANCE,,,,,,,,,10,,GPT,,,retrieving more unwatermarked documents during LLM generation,Evaluated as an alternative retriever. The page jointly mentions Euclidean distance and inner product for Contriever and ANCE without explicitly pairing a distance with each retriever.
+D011,C14,KMW,,Contriever-ms,,,,,,,,,15,,Gemini,,,retrieving more unwatermarked documents during LLM generation,LLM setting in Table 1.
+D011,C15,KMW,contextual retrieval,,,,,,,,,,20,,Qwen,,,retrieving more unwatermarked documents during LLM generation,LLM setting in Table 1.
+D011,C16,random chance,,,,,,,,,,,,,,,,,Comparator for Human Identification.
+D011,C17,RAG system,retrieval from the knowledge base,BGE-m3,,,,,,,,,1,,GPT-4.1,,System Prompt for RAG,top-1 text retrieved from the knowledge base,The retriever was simulated using BGE-m3. GPT-4.1 was used as the Watermark Text Indexer query generator and as the underlying LLM for response generation; up to 3 questions were generated for each watermarked knowledge entry. Black-box model temperature was 0.01 by default.
+D011,C18,RAG setting with context compression,retrieval from the knowledge base,BGE-m3,,,,,,,,,3,,GPT-4.1,,,retrieving the top-3 texts and using GPT-4.1 to summarize them,Context compression was applied before RAG response generation.
+D011,C19,RAG with Ban-verbatim-use System Prompt,retrieval from the knowledge base,BGE-m3,,,,,,,,,1,,GPT-4.1,,Ban-verbatim-use System Prompt,answer from the provided context without verbatim use,One of three advanced system prompts; it requests direct-to-the-point answers and 'I do not know' when the answer is unavailable.
+D011,C20,watermarking process,,,,,sampled texts partitioned into around 200 chunks for subgraph extraction,,,,,,,,GPT-4.1,,,,"Black-box model with temperature 0.01 by default. Approximately 2,000 texts were sampled. Predicted relations per subgraph were set to 2–5. The algorithm used δ = 3.0, SHA256 as the keyed hash function, the binary string of “ACL”, and a 24-bit pseudorandom binary string i.i.d Bernoulli(0.5). Candidate texts were evaluated using GPT-4.1; the top-3 per chunk were selected, with around 600 watermark texts infused randomly."
+D011,C21,watermarking process,,,,,sampled texts partitioned into around 200 chunks for subgraph extraction,,,,,,,,Gemini-2.5-Flash,,,,"Black-box model with temperature 0.01 by default. Approximately 2,000 texts were sampled. Predicted relations per subgraph were set to 2–5. The algorithm used δ = 3.0, SHA256 as the keyed hash function, the binary string of “ACL”, and a 24-bit pseudorandom binary string i.i.d Bernoulli(0.5). Candidate texts were evaluated using GPT-4.1; the top-3 per chunk were selected, with around 600 watermark texts infused randomly."
+D011,C22,"knowledge modification (i.e., paraphrasing) attacks",,,,,,,,,,,,,GPT-based LLMs,,,,Temperature was set to 0.7.
+D011,C23,RAG,,,,,,,,,,,,,,,Style-Specific System Prompt,provided context,"Requires at least one clear analogy or metaphor, avoids technical jargon, and uses an enthusiastic and approachable tone."
+D012,C1,TrustRAG,,,,,,,,,,,,,Qwen-Max,,,metadata-governed routing layer,"Filters inadmissible evidence before generation, returns a deterministic refusal when no admissible evidence remains, and preserves unresolved conflicts for conflict-reporting generation."
+D012,C2,TrustRAG,,,,,,,,,,,,,DeepSeek-V3,,,metadata-governed routing layer,"Filters inadmissible evidence before generation, returns a deterministic refusal when no admissible evidence remains, and preserves unresolved conflicts for conflict-reporting generation."
+D012,C3,TrustRAG,,,,,,,,,,,,,GLM-4-32B-0414,,,metadata-governed routing layer,"Filters inadmissible evidence before generation, returns a deterministic refusal when no admissible evidence remains, and preserves unresolved conflicts for conflict-reporting generation."
+D012,C4,unguided RAG,,,,,,,,,,,,,,,,,
+D012,C5,prompting baseline,,,,,,,,,,,,,,,,,
+D012,C6,filtering baseline,,,,,,,,,,,,,,,,,
+D012,C7,routing baseline,,,,,,,,,,,,,,,,,
+D012,C8,verification baseline,,,,,,,,,,,,,,,,,
+D012,C9,recency baseline,,,,,,,,,,,,,,,,,
+D012,C10,TrustRAG,,,,,,,,,,,,,LLM,,model-agnostic conflict-reporting prompting policy,filtered evidence context,
+D012,C11,Naive RAG,,,,,,,,,,,,,Qwen-Max,,,unguided RAG,Reporting configuration for ranges stated only across the three generator models; endpoint-to-generator mapping is not stated on this page.
+D012,C12,Naive RAG,,,,,,,,,,,,,DeepSeek-V3,,,unguided RAG,
+D012,C13,Naive RAG,,,,,,,,,,,,,GLM-4-32B-0414,,,unguided RAG,
+D012,C14,Prompt RAG,,,,,,,,,,,,,Qwen-Max,,prompt-only governance,Receives all retrieved documents without physical filtering.,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414.; merged mentions C63; also referred to as: w/o Conflict"
+D012,C15,Prompt RAG,,,,,,,,,,,,,DeepSeek-V3,,prompt-only governance,,
+D012,C16,Prompt RAG,,,,,,,,,,,,,GLM-4-32B-0414,,prompt-only governance,,
+D012,C17,Metadata Filter,,,,,,,,,,,,,Qwen-Max,,,metadata filtering,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,C18,Metadata Filter,,,,,,,,,,,,,DeepSeek-V3,,,metadata filtering,
+D012,C19,Metadata Filter,,,,,,,,,,,,,GLM-4-32B-0414,,,metadata filtering,
+D012,C20,LLM Router,,,,,,,,,,,,,Qwen-Max,,,LLM-based routing,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,C21,LLM Router,,,,,,,,,,,,,DeepSeek-V3,,,LLM-based routing,
+D012,C22,LLM Router,,,,,,,,,,,,,GLM-4-32B-0414,,,LLM-based routing,
+D012,C23,Post-hoc Verifier,,,,,,,,,,,,,Qwen-Max,,,post-hoc verification,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,C24,Post-hoc Verifier,,,,,,,,,,,,,DeepSeek-V3,,,post-hoc verification,
+D012,C25,Post-hoc Verifier,,,,,,,,,,,,,GLM-4-32B-0414,,,post-hoc verification,
+D012,C26,recency-based reranking,,,,,,,,,,,,,Qwen-Max,,,recency-based reranking,
+D012,C27,recency-based reranking,,,,,,,,,,,,,DeepSeek-V3,,,recency-based reranking,
+D012,C28,recency-based reranking,,,,,,,,,,,,,GLM-4-32B-0414,,,recency-based reranking,
+D012,C29,Permission-Aware RAG,,,,,,,,,,,,,Qwen-Max,,,50-document candidate pools,Reporting configuration for the 6.25% value because its generator setting and aggregation are not stated in the prose on this page.
+D012,C30,Permission-Aware RAG,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C31,Permission-Aware RAG,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C32,Metadata-Aware RAG,,,,,,,,,,,,,Qwen-Max,,,50-document candidate pools,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,C33,Metadata-Aware RAG,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C34,Metadata-Aware RAG,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C35,Recency Reranker,timestamp recency,,,,,,,,,,,,Qwen-Max,,,Selects evidence by timestamp recency.,"Reported across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,C36,Recency Reranker,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C37,Recency Reranker,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C38,w/o Access Filtering,,,,,,,,,,,,,,,,,Component ablation; Range across the three evaluated LLMs.
+D012,C39,w/o Conflict Reporting,,,,,,,,,,,,,,,,,Component ablation; Range across the three evaluated LLMs.
+D012,C40,w/o Supersession Filtering,,,,,,,,,,,,,Qwen-Max,,,,Component ablation; Range across the three evaluated LLMs.
+D012,C41,,,,,,,,,,,,,,,,,After routing,The configuration associated with the reported retained-context average is not named in the sentence.
+D012,C42,Judge,,,,,,,,,,,,,DeepSeek-V3,,,,Automatic judge compared with human labels.; merged mentions C50; also referred to as: DeepSeek-V3 judge
+D012,C43,Judge,,,,,,,,,,,,,Qwen-Max,,,,Automatic judge compared with human labels.
+D012,C44,Judge,,,,,,,,,,,,,GLM-4-32B-0414,,,,Automatic judge compared with human labels.
+D012,C45,Removing access filtering,,,,,,,,,,,,,,,,,TrustRAG component ablation.
+D012,C46,Removing the conflict-reporting constraint,,,,,,,,,,,,,,,,,TrustRAG component ablation.
+D012,C47,three judges,,,,,,,,,,,,,,,,,"Aggregate reporting across Qwen-Max, GLM-4-32B-0414, and DeepSeek-V3."
+D012,C48,Qwen-Max judge,,,,,,,,,,,,,Qwen-Max,,,,Used as a judge.
+D012,C49,GLM-4-32B-0414 judge,,,,,,,,,,,,,GLM-4-32B-0414,,,,Used as a judge.
+D012,C51,LLM_Router_RAG,LLM routing,,,,,,,,,,,,,,,Uses an LLM to select admissible evidence before generation.,All generator models use a sampling temperature of 0.1.
+D012,C52,PostHoc_Verifier,,,,,,,,,,,,,,,,Verifies or revises the response after generation.,All generator models use a sampling temperature of 0.1.
+D012,C53,BM25_RAG,sparse lexical retrieval,BM25,,,,,,,,,,,,,,,Uses sparse lexical retrieval before generation. All generator models use a sampling temperature of 0.1.
+D012,C54,Dense_RAG,dense embedding retrieval,,,,,,,,,,,,,,,,Uses dense embedding retrieval before generation. All generator models use a sampling temperature of 0.1.
+D012,C55,TrustRAG_Full,metadata-governed routing,,,,,,,,,,,,All,,Answer only from the FILTERED ACTIVE CONTEXT; report unresolved conflicts between active documents.,Deterministic access and supersession routing followed by generation from filtered active context.,"Uses metadata-governed routing, deterministic refusal, and conflict-reporting generation. All generator models use a sampling temperature of 0.1.; merged mentions C60; also referred to as: TrustRAG"
+D012,C56,TrustRAG,,,,,,,,,,,,,"DeepSeek-V3, Qwen-Max, and GLM-4-32B-0414",,,50-document candidate pools,Aggregate unsupported-answer count across the three generator settings.
+D012,C57,w/o Access,,,,,,,,,,,,,Qwen-Max,,,,
+D012,C58,w/o Access,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C59,w/o Access,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C61,w/o Supersession Filtering,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C62,w/o Supersession Filtering,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C64,w/o Conflict,,,,,,,,,,,,,DeepSeek-V3,,,,
+D012,C65,w/o Conflict,,,,,,,,,,,,,GLM-4-32B-0414,,,,
+D012,C66,Naive RAG,,,,,,,,,,,,,MacroAvg,,,,Rows labeled MacroAvg report the arithmetic mean over the three evaluated LLMs.
+D012,C67,Prompt RAG,,,,,,,,,,,,,MacroAvg,,,,Rows labeled MacroAvg report the arithmetic mean over the three evaluated LLMs.
+D012,C68,Meta. Filter,,,,,,,,,,,,,MacroAvg,,,,Rows labeled MacroAvg report the arithmetic mean over the three evaluated LLMs.; merged mentions C69; also referred to as: TrustRAG
+D012,C70,BM25 top-k retrieval,BM25,,,,,,,,,,5,,,,,,
+D012,C71,BM25 top-k retrieval,BM25,,,,,,,,,,10,,,,,,
+D012,C72,BM25 top-k retrieval,BM25,,,,,,,,,,20,,,,,,
+D012,C73,BM25 top-k retrieval,BM25,,,,,,,,,,50,,,,,,
+D012,C74,,,,,,,,,,,,,,DeepSeek-V3,,,,Generator
+D012,C75,,,,,,,,,,,,,,Qwen-Max,,,,Generator
+D012,C76,,,,,,,,,,,,,,GLM-4-32B-0414,,,,Generator
+D013,C1,Search-R1-style PPO,search tool (interactive retrieval),,,,,,,,,,3,,Search-R1 PPO,,,,main Top-3 setting; baseline
+D013,C2,OAS (Observation-aware Stabilization) on Search-R1 PPO,search tool (interactive retrieval),,,,,,,,,,3,,Search-R1 PPO + OAS,,,,main Top-3 setting; proposed method
+D013,C3,Search-R1-style PPO,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,Runs used for step-level pooled Pearson correlations in Table 1
+D013,C4,Search-R1 PPO,search-tool RL,,,,,,,,,,3,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2; merged mentions C29
+D013,C5,Search-R1 GRPO,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2
+D013,C6,DAPO,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2
+D013,C7,KL-Cov,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2
+D013,C8,DAR,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2
+D013,C9,1-PPO,,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,baseline row in Table 2
+D013,C10,Ours (OVR only),,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,ablation row in Table 2
+D013,C11,OAS,search-tool RL,Top-3,,,,,,,,,3,,Qwen2.5-3B-Instruct,,,,Top-3 setting; merged mentions C34
+D013,C12,OVR-only,search-tool RL,,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,observation-side value regularization and residual decay only
+D013,C13,Search-R1 PPO,search-tool RL,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,1.5B baseline; Top-3
+D013,C14,OAS,search-tool RL,Top-3 retrieval,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"1.5B; Top-3; merged mentions C36, C45"
+D013,C15,PPO,search-tool RL,Top-3 retrieval,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"FEVER fact verification, fixed Top-3 retrieval; merged mentions C35, C44"
+D013,C16,Search-R1 GRPO,,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C17,DAPO,,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C18,KL-Cov,,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C19,DAR,,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C20,1-PPO,,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C21,Ours (OVR only),,,,,,,,,,,3,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 3"
+D013,C22,Search-R1 PPO,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C23,Search-R1 GRPO,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C24,DAPO,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C25,KL-Cov,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C26,DAR,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C27,1-PPO,,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C28,Ours (OVR only),,,,,,,,,,,2,,Qwen2.5-1.5B-Instruct,,,,"Table 3, Top-k = 2"
+D013,C30,OAS w/o anchor,,,,,,,,,,,3,,Qwen2.5-3B,,,,Table 4 ablation
+D013,C31,OAS w/o decay,,,,,,,,,,,3,,Qwen2.5-3B,,,,Table 4 ablation
+D013,C32,OAS w/o smoothing,,,,,,,,,,,3,,Qwen2.5-3B,,,,Table 4 ablation
+D013,C33,Full-response smoothing,,,,,,,,,,,3,,Qwen2.5-3B,,,,Table 4 ablation
+D013,C37,Search-R1-style search-tool RL framework,search tool (Top-k passage retrieval),,,,,,,,,,,,Qwen2.5-3B-Instruct,,,,"main experiments base model; Top-k values 2, 3, 5 each return 2/3/5 candidate evidence passages; top_k as printed: 2, 3, 5"
+D013,C38,Search-R1-style search-tool RL framework,search tool (Top-k passage retrieval),,,,,,,,,,,,Qwen2.5-1.5B-Instruct,,,,additional reported base model
+D013,C39,Hleagoe,,Top-3,,,,,,,,,,,Qwen2.5-3B,,,,
+D013,C40,"B, 0.5x",,Top-3,,,,,,,,,,,Qwen2.5-3B,,,,
+D013,C41,"B, 2x",,Top-3,,,,,,,,,,,Qwen2.5-3B,,,,
+D013,C42,"Asm, 0.5",,Top-3,,,,,,,,,,,Qwen2.5-3B,,,,
+D013,C43,"Asm, 2",,Top-3,,,,,,,,,,,Qwen2.5-3B,,,,
+D013,RC1,using a one-at-a-time,,,,,,,,,,,,,,,,,row label of Table 9 p.20 (rule-based)
+D013,RC2,its,,,,,,,,,,,,,,,,,row label of Table 9 p.20 (rule-based)
+D014,C1,No knowledge,,,,,,,,,,,,,GPT-4o-mini,,,,"generator receives no external knowledge; merged mentions C2, RC1, RC2; also referred to as: Full knowledge"
+D014,C3,Gold knowledge,,,,,,,,,,,,,GPT-4o-mini,,,,"perfect knowledge selection, upper bound; merged mentions RC3"
+D014,C4,No knowledge,,,,,,,,,,,,,LLaMA 3.1 8B,,,,
+D014,C5,Full knowledge,,,,,,,,,,,,,LLaMA 3.1 8B,,,,
+D014,C6,Gold knowledge,,,,,,,,,,,,,LLaMA 3.1 8B,,,,
+D014,C7,No knowledge,,,,,,,,,,,,,Mistral 7B Instruct,,,,
+D014,C8,Full knowledge,,,,,,,,,,,,,Mistral 7B Instruct,,,,
+D014,C9,Gold knowledge,,,,,,,,,,,,,Mistral 7B Instruct,,,,
+D014,C10,,,,,,,,,,,,,,GPT-4o-mini,,,,Generator named in text (page 7); no configuration details printed on this page
+D014,C11,,,,,,,,,,,,,,LLaMA 3.1 8B,,,,Generator named in text (page 7); no configuration details printed on this page
+D014,C12,,,,,,,,,,,,,,Mistral 7B-Instruct,,,,Weaker generator named in text (page 7); no configuration details printed on this page
+D014,C13,zero-shot RAG simulation,,,,,,,,,,,,,gpt-4o-mini,gpt-4o-mini-2024-07-18,zero-shot,,"temperature 0, no fine-tuning or hyperparameter tuning"
+D014,C14,zero-shot RAG simulation,,,,,,,,,,,,,Meta-Llama-3.1-8B-Instruct-Turbo,meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo,zero-shot,,"temperature 0, no fine-tuning or hyperparameter tuning"
+D014,C15,zero-shot RAG simulation,,,,,,,,,,,,,Mistral-7B-Instruct,mistralai/Mistral-7B-Instruct-v0.1,zero-shot,,"temperature 0, no fine-tuning or hyperparameter tuning"
+D014,C16,Simulated knowledge selector with GPT-4o-mini generator,,,,,,,,,,,,,GPT-4o-mini,,,,"Knowledge retriever and selector are simulated by random sampling. Figures 5-6 show a noisy HotpotQA setting and Figure 7 shows single-sentence inputs. The length-constrained setting caps knowledge input at k=3 sentences (a knowledge-input cap, not retriever top_k)."
+D015,C1,monolingual retrieval cross-lingual RAG,monolingual retrieval,,,,,,,,,,,,,,,,English-only knowledge base serving non-English queries (Figure 1a)
+D015,C2,multilingual retrieval cross-lingual RAG,multilingual retrieval,,,,,,,,,,,,,,,,combines English and user-language documents (Figure 1b)
+D015,C3,no retrieval,none,,,,,,,,,,,,GPT-4o,,topic relevance verification prompt (Figure 9),,evaluated LLM; no-retrieval setting; merged mentions C11
+D015,C4,,,,,,,,,,,,,,Command-R,,,,cited from Chirkova et al. (2024) for XORQA no-retrieval
+D015,C5,monolingual retrieval,dense retrieval,multilingual dense retriever,,,,,,,,,,,GPT-4o,,,question + two supporting documents + six distracting documents,all documents in English
+D015,C6,multilingual retrieval,dense retrieval,multilingual dense retriever,,,,,,,,,,,,,,"question + one supporting and three distracting documents in English, same again in question language",documents in English and question language
+D015,C7,monolingual retrieval,,,,,,,,,,,,,Claude Sonnet-3.5 v1,,,,benchmarked model
+D015,C8,monolingual retrieval,monolingual,,,,,,,,,,,,Mistral-large,,,"two supporting + six distracting documents, all English",benchmarked model
+D015,C9,monolingual retrieval,monolingual,,,,,,,,,,,,Command-R+,,,"two supporting + six distracting documents, all English",benchmarked model
+D015,C12,oracle retrieval,oracle,,,,,,,,,,,,GPT-4o,,,,"Oracle Retrieval: supporting articles only, no distractors"
+D015,C13,no retrieval,none,,,,,,,,,,,,Claude Sonnet 3.5,,,,No Retrieval condition
+D015,C14,oracle retrieval,oracle,,,,,,,,,,,,Claude Sonnet 3.5,,,,Oracle Retrieval
+D015,C15,no retrieval,none,,,,,,,,,,,,Mistral-Large,,,,No Retrieval condition
+D015,C16,oracle retrieval,oracle,,,,,,,,,,,,Mistral-Large,,,,Oracle Retrieval
+D015,C17,no retrieval,none,,,,,,,,,,,,Command-R+,,,,No Retrieval condition
+D015,C18,oracle retrieval,oracle,,,,,,,,,,,,Command-R+,,,,Oracle Retrieval
+D015,C19,no retrieval,none,,,,,,,,,,,,Nova-Pro,,,,No Retrieval condition
+D015,C20,oracle retrieval,oracle,,,,,,,,,,,,Nova-Pro,,,,Oracle Retrieval
+D015,C21,monolingual retrieval,monolingual,,,,,,,,,,,,Claude 3.5,,,"two supporting + six distracting documents, all English",Table 4
+D015,C22,monolingual retrieval,monolingual,,,,,,,,,,,,Nova-Pro,,,"two supporting + six distracting documents, all English",Table 4; merged mentions C10
+D015,C23,XRAG multilingual retrieval setting,multilingual retrieval (supporting + three distracting documents in language X and same in English),,,,,,,,,,,,GPT-4o,,,,Table 5; merged mentions C28; also referred to as: XRAG-MultiR
+D015,C24,XRAG multilingual retrieval setting,multilingual retrieval (supporting + three distracting documents in language X and same in English),,,,,,,,,,,,Claude 3.5,,,multilingual retrieval setting,Table 5; merged mentions C39; also referred to as: XRAG-MultiR
+D015,C25,XRAG multilingual retrieval setting,multilingual retrieval (supporting + three distracting documents in language X and same in English),,,,,,,,,,,,Mistral-large,,,multilingual retrieval setting,Table 5; merged mentions C43; also referred to as: XRAG-MultiR
+D015,C26,XRAG multilingual retrieval setting,multilingual retrieval (supporting + three distracting documents in language X and same in English),,,,,,,,,,,,Command-R+,,,multilingual retrieval setting,Table 5; merged mentions C47; also referred to as: XRAG-MultiR
+D015,C27,XRAG multilingual retrieval setting,multilingual retrieval (supporting + three distracting documents in language X and same in English),,,,,,,,,,,,Nova-Pro,,,,Table 5
+D015,C29,XRAG-MultiR +EQ,multilingual retrieval,,,,,,,,,,,,GPT-4o,,,,questions replaced with English counterparts
+D015,C30,"XRAG-MultiR +EQ, +ES",multilingual retrieval,,,,,,,,,,,,GPT-4o,,,,questions and supporting articles replaced with English counterparts
+D015,C31,"MonoRAG (+EQ, +ES, +ED)",English monolingual retrieval,,,,,,,,,,,,GPT-4o,,,,English monolingual RAG baseline setting
+D015,C32,Google search retrieval (native locale),Google search,Google search,,,,,,,,,,,,,,,Native uses Google search in the user locale
+D015,C33,,multilingual dense retrieval,BGE-M3,BGE-M3,,,,,,,Milvus,,,,,,,"Multilingual dense retriever built on BGE-M3 (as text encoder, Chen et al., 2024a) and Milvus (as vector database, Wang et al., 2021); operates on news articles downloaded from News Crawl; used to search across languages for articles related to events collected from Wiki 2024; also used for selecting distracting articles (footnote 11)."
+D015,C34,XRAG benchmark (cross-lingual RAG),,,,,,,,,,,,,GPT-4o-2024-08-06,,,,one of five benchmarked models
+D015,C35,XRAG benchmark (cross-lingual RAG),,,,,,,,,,,,,Claude 3.5 Sonnet,2024-06-20,,,one of five benchmarked models
+D015,C36,XRAG benchmark (cross-lingual RAG),,,,,,,,,,,,,Mistral-Large-Instruct-2407,,,,one of five benchmarked models
+D015,C37,XRAG benchmark (cross-lingual RAG),,,,,,,,,,,,,Command-r+,,,,one of five benchmarked models
+D015,C38,XRAG benchmark (cross-lingual RAG),,,,,,,,,,,,,Nova-pro,,,,one of five benchmarked models
+D015,C40,XRAG-MultiR +EQ,,,,,,,,,,,,,Claude 3.5 Sonnet,,,questions replaced with English counterparts,Table 9
+D015,C41,"XRAG-MultiR +EQ, ES",,,,,,,,,,,,,Claude 3.5 Sonnet,,,questions and supporting articles replaced with English counterparts,Table 9
+D015,C42,MonoRAG,,,,,,,,,,,,,Claude 3.5 Sonnet,,,"English monolingual RAG baseline (+EQ, +ES, +ED)",Table 9
+D015,C44,XRAG-MultiR +EQ,,,,,,,,,,,,,Mistral-large,,,questions replaced with English counterparts,Table 10
+D015,C45,"XRAG-MultiR +EQ, ES",,,,,,,,,,,,,Mistral-large,,,questions and supporting articles replaced with English counterparts,Table 10
+D015,C46,MonoRAG,,,,,,,,,,,,,Mistral-large,,,"English monolingual RAG baseline (+EQ, +ES, +ED)",Table 10
+D015,C48,XRAG-MultiR +EQ,,,,,,,,,,,,,Command-R+,,,questions replaced with English counterparts,Table 11
+D015,C49,"XRAG-MultiR +EQ, ES",,,,,,,,,,,,,Command-R+,,,questions and supporting articles replaced with English counterparts,Table 11
+D015,C50,MonoRAG,,,,,,,,,,,,,Command-R+,,,"English monolingual RAG baseline (+EQ, +ES, +ED)",Table 11
+D015,C51,RAG (answering with retrieved documents),,,,,,,,,,,,,Claude 3.7,,default prompt (Figure 18),non-English queries with English documents,Table 12 'Default Prompt' column; single-judge (GPT-4) setup
+D015,C52,RAG with chain-of-thought,,,,,,,,,,,,,Claude 3.7,,chain-of-thought prompt (Figure 22),non-English queries with English documents,Table 12 'CoT Prompt' column; single-judge (GPT-4) setup
+D015,C53,RAG (answering with retrieved documents),,,,,,,,,,,,,Nova Pro,,default prompt (Figure 18),non-English queries with English documents,Table 12 'Default Prompt' column; single-judge (GPT-4) setup
+D015,C54,RAG with chain-of-thought,,,,,,,,,,,,,Nova Pro,,chain-of-thought prompt (Figure 22),non-English queries with English documents,Table 12 'CoT Prompt' column; single-judge (GPT-4) setup
+D015,RC1,GPT-4o,,,,,,,,,,,,,,,,,row label of Table 4 p.7 (rule-based)
+D015,RC2,Claude,,,,,,,,,,,,,,,,,row label of Table 4 p.7 (rule-based)
+D015,RC3,Mistral-large,,,,,,,,,,,,,,,,,row label of Table 4 p.7 (rule-based)
+D015,RC4,Command-R+,,,,,,,,,,,,,,,,,row label of Table 4 p.7 (rule-based)
+D015,RC5,Nova-Pro,,,,,,,,,,,,,,,,,row label of Table 4 p.7 (rule-based)
+D015,RC6,Responses,,,,,,,,,,,,,,,,,row label of Table 5 p.8 (rule-based)
+D016,C1,SMART-SLIC with RAG,vector store retrieval (Milvus) + knowledge graph (Neo4j) cypher retrieval,GPT-4-instruct,,,,,,,,Milvus,,,GPT-4-instruct,,,,"operating model of SMART-SLIC; KG built from 1,457,534 triplets, 321,122 nodes, 1,136,412 edges"
+D016,C2,no RAG,,,,,,,,,,,,,GPT-4-instruct,,Zero-Shot Conditioning,,same model used to answer without RAG
+D016,C3,SMART-SLIC RAG,RAG framework (vector store + knowledge graph),,,,,,,,,Milvus,,,GPT-4-instruct,,Zero-Shot Conditioning,RAG with domain-specific knowledge graph (KG) and vector store (VS); ReAct agent for general queries; NER and cypher query generation for document-specific questions,with RAG; merged mentions C4
+D017,C1,GPT-4o-mini (direct PDF input),,,,,,,,,,,,,GPT-4o-mini,,,"page-level screenshots; for documents >50 pages, 50 randomly sampled screenshots",Directly feeding PDFs into GPT-4o-mini
+D017,C2,VisRAG,visual embedding retrieval,,,,,,,,,,,,,,,,Visual-centric framework bypassing OCR; pages treated as images; merged mentions RC2
+D017,C3,ViDoRAG,"GMM-based multimodal fusion, agentic iterative workflow",Qwen3-Embedding-4B (text segments); nomic-embed-multimodal-3b (page-level PDF screenshots),,,MinerU document parsing,,,,,,,,GPT-4o-mini,,,,Agent-based approach with Explore/Summarize/Reflect stages; merged mentions RC3
+D017,C4,RAGFlow,modular RAG pipeline with agentic capabilities,Qwen3-Embedding-4B,,,,,,,,,,bge-reranker-v2-m3,GPT-4o-mini,azure-gpt-4o-mini,"simple prompt_type; keyword analysis, TOC enhance, use knowledge graph, reasoning enabled","top_k 1024, top_n 8, similarity_threshold 0.2, keywords_similarity_weight 0.7","Open-source RAG engine baseline; merged mentions C13, RC4; also referred to as: RAG-Anything"
+D017,C5,RAGAnything,hybrid retrieval (knowledge graph + semantic vector matching),,,,,,,,,,,,GPT-4o-mini,,,,Dual-graph construction mechanism; merged mentions RC5
+D017,C6,BayesRAG (ours),Dempster-Shafer evidence fusion with consistency prior,bge-reranker-v2-m3,Qwen3-Embedding-4B; PE-Core-G14-448; colnomic-embed-multimodal-3b,,,,,,,,512,,GPT-4o-mini,,,,"Proposed method; merged mentions C10, C11, RC6; also referred to as: Linear Fusion; Layout Prior only"
+D017,C7,Vector Retrieval (baseline),"raw cosine similarity from text/image/screenshot embeddings with text reranker, no probabilistic re-ranking",bge-reranker-v2-m3,,,,,,,,,,,,,,,Shallow visual candidate pool (Top-20 or adaptive top-k)
+D017,C8,Embedding-RAG,hybrid embedding retrieval with text reranker,bge-reranker-v2-m3,,,,,,,,,20,,,,,,"Baseline with independent retrieval; text candidates Top-1024 then Top-20, visual candidates Top-20 raw embedding scores"
+D017,C9,,,,,,,,,,,,,,GPT-4o-mini,,,,compact generator mentioned in attribution analysis
+D017,C12,baseline,,,,,,,,,,,,,,,,,overall score 32.7%
+D017,C15,RAGAnything,,,,,,,,,,,,,Qwen3-VL-32B,,,,baseline
+D017,C16,BayesRAG (ours),,,,,,,,,,,,,Qwen3-VL-32B,,,,proposed method
+D017,RC1,GPT-4o-mini,,,,,,,,,,,,,,,,,row label of Table 3 p.5 (rule-based)
+D018,C1,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,OpenAI/GPT-4o-2024-08-06,2024-08-06,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: GPT-4o.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C2,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3,v0.3,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: Swallow-8B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C3,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,llm-jp/llm-jp-3-1.8b-instruct,3,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: llm-jp-1.8B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C4,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,llm-jp/llm-jp-3-3.7b-instruct,3,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: llm-jp-3.7B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C5,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,llm-jp/llm-jp-3-13b-instruct,3,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: llm-jp-13B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C6,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,Qwen/Qwen2.5-1.5B-Instruct,2.5,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: Qwen-1.5B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C7,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,Qwen/Qwen2.5-3B-Instruct,2.5,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: Qwen-3B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C8,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,Qwen/Qwen2.5-7B-Instruct,2.5,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: Qwen-7B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C9,Naive RAG,dense vector search,,sbintuitions/sarashina-embedding-v1-1b,v1-1b,maximum chunk length,,20,characters,,,4,,Qwen/Qwen2.5-14B-Instruct,2.5,incorporated into the prompt during generation,Four chunks with the highest cosine similarity to the question,Printed short label: Qwen-14B.; chunk_size as printed: 400 (ProductReview); 200 (other datasets)
+D018,C10,RAG,,,,,,,,,,,,,GPT-4o,,,,
+D018,C11,RAG,,,,,,,,,,,,,llm-jp-1.8B,,,,
+D018,C12,RAG,,,,,,,,,,,,,llm-jp-3.7B,,,,
+D018,C13,RAG,,,,,,,,,,,,,llm-jp-13B,,,,
+D018,C14,RAG,,,,,,,,,,,,,Swallow-8B,,,,
+D018,C15,RAG,,,,,,,,,,,,,Qwen-1.5B,,,,
+D018,C16,RAG,,,,,,,,,,,,,Qwen-3B,,,,
+D018,C17,RAG,,,,,,,,,,,,,Qwen-7B,,,,
+D018,C18,RAG,,,,,,,,,,,,,Qwen-14B,,,,
+D018,C19,No retrieval results provided,,,,,,,,,,,,,GPT-4o,,,No retrieval results were provided,
+D018,C20,No retrieval results provided,,,,,,,,,,,,,llm-jp-1.8B,,,No retrieval results were provided,
+D018,C21,No retrieval results provided,,,,,,,,,,,,,llm-jp-3.7B,,,No retrieval results were provided,
+D018,C22,No retrieval results provided,,,,,,,,,,,,,llm-jp-13B,,,No retrieval results were provided,
+D018,C23,No retrieval results provided,,,,,,,,,,,,,Swallow-8B,,,No retrieval results were provided,
+D018,C24,No retrieval results provided,,,,,,,,,,,,,Qwen-1.5B,,,No retrieval results were provided,
+D018,C25,No retrieval results provided,,,,,,,,,,,,,Qwen-3B,,,No retrieval results were provided,
+D018,C26,No retrieval results provided,,,,,,,,,,,,,Qwen-7B,,,No retrieval results were provided,
+D018,C27,No retrieval results provided,,,,,,,,,,,,,Qwen-14B,,,No retrieval results were provided,
+D019,C1,reasoning-enhanced missing knowledge RAG framework,missing knowledge retrieval,,,,,,,,,,,,,,,generated reasoning traces are seamlessly incorporated into the final answer generation process,Uses a reasoner module to analyze missing knowledge and follow-up queries and verify knowledge conflicts or hallucinations.
+D019,C2,Standard RAG,,,,,,,,,,,,,LLM Reader,,,,
+D019,C3,RAG with missing knowledge retrieval,dense retriever,,,,,,,,Offline Faiss Indexing,,,,LLM Reader,,CoT Prompting,Wikipedia,LLM Reasoner; iterative retrieval with generated queries corresponding to missing knowledge; L2 metric; top_k as printed: top-K
+D019,C4,Reasoning Enhanced Missing Knowledge Judgment,similarity search with L2 distance metrics,,bge-en-large,,document segmentation into text chunks,,,words,IndexFlat,Faiss,,,Llama3.3-70B,,"structured prompt including the query, contexts, reasoning content, and reflective thought about the first round answer","retrieve missing information using aligned missing knowledge queries, append it to the contexts, and deduplicate text chunks using MD5 hashing",English benchmark. DeepSeek-R1 is used as the reasoner LLM. The NQ document segmentation results in 4.8M text chunks before the subsequent MD5-hash deduplication.; chunk_size as printed: fewer than 300
+D019,C5,Reasoning Enhanced Missing Knowledge Judgment,similarity search with L2 distance metrics,,bge-large-zh-v1.5,,,,,,IndexFlat,Faiss,,,Qwen2.5-70B-Instruct,,"structured prompt including the query, contexts, reasoning content, and reflective thought about the first round answer","retrieve missing information using aligned missing knowledge queries, append it to the contexts, and deduplicate text chunks using MD5 hashing",Chinese benchmark. DeepSeek-R1 is used as the reasoner LLM.
+D019,C6,DirectGen,,,,,,,,,,,,,,,prompting the reader LLM,,The answer is directly generated by prompting the reader LLM.
+D019,C7,CoT,,,,,,,,,,,,,,,chain-of-thought paradigm,,Responses are generated in a chain-of-thought paradigm.
+D019,C8,MIGRES,,,,,,,,,,,,,,,,pipeline-based framework for determining missing information and its entailment,The authors employ the identical backbone LLM for fair comparison.
+D019,C10,STD-RAG Wiki -top-K=4,Wikipedia (Wiki),,,,,,,,,,4,,,,,,"The table continuation row is printed as ""-top-K=4"" under STD-RAG Wiki.; merged mentions C9; also referred to as: STD-RAG Wiki"
+D019,C12,STD-RAG with QA Pairs -top-K=4,history QA pairs (QA Pairs),,,,,,,,,,4,,,,,history QA pairs,"The table continuation row is printed as ""-top-K=4"" under STD-RAG with QA Pairs.; merged mentions C11, C21; also referred to as: STD-RAG with QA Pairs; History QA Pairs"
+D019,C13,STD-RAG with 2-way retrieval,2-way retrieval,,,,,,,,,,,,,,,,
+D019,C14,STD-RAG with Merged KB,Merged KB,,,,,,,,,,,,,,,,
+D019,C15,Misknow-RAG with Wiki,Wikipedia (Wiki),,,,,,,,,,,,,,,,
+D019,C16,Misknow-RAG with QA Pairs,history QA pairs (QA Pairs),,,,,,,,,,,,,,,,
+D019,C17,Misknow-RAG with Wiki+QA Pairs,Wiki+QA Pairs,,,,,,,,,,,,,,,,merged mentions C34; also referred to as: Wiki+QA Pairs
+D019,C18,Misknow-RAG with QA Pairs+Wiki,QA Pairs+Wiki,,,,,,,,,,,,,,,,
+D019,C19,Misknow-RAG with Merged KB,Merged KB,,,,,,,,,,,,,,,,
+D019,C20,Wikipedia knowledge base,,,,,,,,,,,,,,,,Wikipedia,
+D019,C22,Merged KB,Merged KB,,,,,,,,,,,,,,,merged knowledge base,Reasoning-enhanced method in Table 5.
+D019,C23,pseudo QA pairs in the test set,,,,,,,,,,,,,,,,pseudo QA pairs,
+D019,C24,STD-RAG,Wikipedia retrieval,,,,,,,,,,,,,,,Simply retrieve from Wikipedia with top-K contexts.,top_k as printed: K
+D019,C25,2-way retrieval,Wikipedia and QA pairs,,,,,,,,,,,,,,,Separately retrieve from Wikipedia and QA pairs.,"In the context-recall setting, two passages are drawn from Wikipedia and two from QA pairs.; top_k as printed: K/2 from Wikipedia and K/2 from QA pairs"
+D019,C26,Misknow-RAG,missing knowledge retrieval,,,,,,,,,,,,reasoner LLM,,,Explicitly identifying missing knowledge and checking knowledge conflicts during retrieval and generation.,Generic configuration used where the knowledge-base setting is not stated.
+D019,C27,Mis Wiki+QA pairs,missing knowledge retrieval from QA pairs after Wikipedia,,,,,,,,,,,,reasoner LLM,,,"First retrieve from Wikipedia, then use missing knowledge retrieval for QA pairs.",top_k as printed: two passages from Wikipedia and the remaining two from QA pairs
+D019,C28,Mis QA Pairs+Wiki,missing knowledge retrieval from Wiki chunks after QA pairs,,,,,,,,,,,,reasoner LLM,,,,The number of retrieved text chunks is stated to be identical for evaluation.
+D019,C29,OrigQ,Wiki,,,,,,,,,,,,,,,,
+D019,C30,MisQ,Wiki,,,,,,,,,,,,,,,,
+D019,C31,Wiki,Wiki,,,,,,,,,,,,,,,,Reasoning-enhanced method in Table 5.
+D019,C32,w/o reasoning,Wiki,,,,,,,,,,,,,,,,Reasoning ablation under Wiki in Table 5.
+D019,C33,QA Pairs,QA Pairs,,,,,,,,,,,,,,,,Reasoning-enhanced method in Table 5.
+D019,C35,QA Pairs+Wiki,QA Pairs+Wiki,,,,,,,,,,,,,,,,Reasoning-enhanced method in Table 5.
+D020,C1,Web Retrieval-Aware Chunking (W-RAC),,,,,Web Retrieval-Aware Chunking (W-RAC),,,,,,,,,,,,Preserves original source text verbatim and uses deterministic web parsing. Web pages are parsed into structured representations such as HTML →Markdown →AST.
+D020,C2,fixed-size chunking,,,,,fixed-size chunking,,,token or character,,,,,,,,,Splits documents based on token or character limits.
+D020,C3,rule-based structural chunking,,,,,rule-based structural chunking,,,,,,,,,,,,"Uses document structure such as headings, paragraphs, or HTML tags."
+D020,C4,agentic chunking using LLMs,,,,,agentic chunking using LLMs,,,,,,,,,,,,
+D020,C5,Agentic Chunking,,,,,Agentic chunking,,,,,,,,LLM,4.1,,,Employs LLMs to read raw text and generate semantically coherent chunks.
+D020,C6,Traditional Chunking,,,,,Traditional Chunking,,,,,,,,,,,,
+D020,C7,W-RAC,,,,,W-RAC,,,,,,,,LLM,4.1,,,"The LLM receives only identifiers, hierarchy, ordering, and optional metadata and outputs chunk plans as ordered lists of identifiers. Chunk plans are resolved locally by mapping IDs back to original text; final chunks are assembled, embedded, and indexed into the retrieval system."
+D020,C8,Baseline,,,,,agentic chunking,,,,,,,,,,,,Baseline agentic chunking approach.

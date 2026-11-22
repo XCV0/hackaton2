@@ -161,6 +161,42 @@ def dup_compatible(a: dict, b: dict) -> bool:
         fmt(to_float(a.get("metric_value"))) == fmt(to_float(b.get("metric_value")))
 
 
+RESTATE_FIELDS = ("experiment_id", "task_id", "sample_size", "metric_unit", "aggregation")
+
+
+def restates(o: dict, main: dict, same_variant: bool) -> bool:
+    """o repeats main's value elsewhere (abstract, figure label, discussion). Fields o leaves unstated are taken from main,
+    with a note; then duplicate_of is set only if every field the official checker compares is identical."""
+    if fmt(to_float(o.get("metric_value"))) != fmt(to_float(main.get("metric_value"))):
+        return False
+    trial, mtrial = dict(o), dict(main)
+    filled, mfilled = [], []
+    for f in RESTATE_FIELDS:
+        if not (trial.get(f) or "") and (main.get(f) or ""):
+            trial[f] = main[f]
+            filled.append(f)
+        elif (trial.get(f) or "") and not (main.get(f) or "") and f in ("sample_size", "aggregation"):
+            mtrial[f] = trial[f]  # stated only in the restatement (e.g. the abstract gives the sample size)
+            mfilled.append(f)
+    if same_variant and (trial.get("metric_variant") or "") != (main.get("metric_variant") or ""):
+        trial["metric_variant"] = main.get("metric_variant") or ""
+        filled.append("metric_variant")
+    if not dup_compatible(trial, mtrial):
+        return False
+    for f in mfilled:
+        main[f] = mtrial[f]
+    if mfilled:
+        main["note"] = (main.get("note", "") + "; " if main.get("note") else "") + f"{', '.join(mfilled)} stated in restatement {o['result_id']}"
+    for f in filled:
+        o[f] = trial[f]
+        if f == "metric_unit":
+            o["normalized_unit"] = main.get("normalized_unit") or main[f]
+    o["duplicate_of"] = main["result_id"]
+    if filled:
+        o["note"] = (o.get("note", "") + "; " if o.get("note") else "") + f"restates {main['result_id']}: {', '.join(filled)} taken from it"
+    return True
+
+
 def _sentences(text: str) -> list[str]:
     t = re.sub(r"-\s*\n\s*(?=\w)", "", text or "")
     t = re.sub(r"\s+", " ", t)
@@ -234,13 +270,13 @@ def rag_rules(results: list[dict], entities: dict, page_text=None) -> tuple[list
     for key, rs in slots.items():
         if len(rs) < 2 or not key[1] or key[1] in ("CT",) or not key[2] or key[2] in unspecified_ds:
             continue
+        rs = sorted(rs, key=lambda r: (not r.get("source_table"), bool(r.get("source_figure"))))  # a table cell is the main record
         main = rs[0]
         for o in rs[1:]:
             if o.get("source_page") == main.get("source_page") and o.get("source_table") == main.get("source_table") and o.get("source_fragment") == main.get("source_fragment") and not same_sentence(o, main):
                 continue
             if fmt(to_float(o["metric_value"])) == fmt(to_float(main["metric_value"])):
-                if dup_compatible(o, main):
-                    o["duplicate_of"] = main["result_id"]
+                restates(o, main, True)
             elif (str(o.get("source_page")) == str(main.get("source_page")) and (o.get("source_table") or "") == (main.get("source_table") or "")
                   and o.get("source_table")) or same_sentence(o, main):
                 # one table row-slot / one sentence cannot hold two values: the extractor merged distinct variants
@@ -256,30 +292,64 @@ def rag_rules(results: list[dict], entities: dict, page_text=None) -> tuple[list
                                    o.get("source_page"), o.get("source_fragment")))
     # second pass: a value restated in running text (abstract, discussion) vs the table value of the same
     # configuration/dataset/metric. Nodes often give each page its own experiment id, so experiment is not required here.
+    # a variant word that the paper's own protocol uses to define the metric ("token-level F1") is the default
+    # definition, not a different variant
+    protocol = " ".join((e.get("evaluation_protocol") or "") for e in entities.get("experiments", [])).lower()
+
+    def vkey(r):
+        v = (r.get("metric_variant") or "").strip().lower()
+        if v and protocol and re.search(re.escape(v) + r"\s+" + re.escape(D.canonical_metric("rag", r.get("metric_name", ""))[0].lower()), protocol):
+            return ""
+        return v
+
     loose = collections.defaultdict(list)
     for r in results:
-        if not usable(r) or r.get("duplicate_of") or r["result_id"] in linked:
+        if not usable(r) or r["result_id"] in linked:
             continue
         if not r.get("config_id") or not r.get("dataset_id") or r.get("dataset_id") in unspecified_ds:
             continue
-        loose[(r.get("config_id"), r.get("dataset_id"), cm(r), r.get("metric_variant"), r.get("metric_k"),
+        loose[(r.get("config_id"), r.get("dataset_id"), cm(r), vkey(r), r.get("metric_k"),
                r.get("result_origin"), r.get("cited_publication_id"))].append(r)
     flagged_pairs = {tuple(sorted(i_["record_ids"].split(";"))) for i_ in issues}
     for key, rs in loose.items():
-        tables = [r for r in rs if r.get("source_table")]
-        texts = [r for r in rs if not r.get("source_table") and not r.get("source_figure")]
+        tables = [r for r in rs if r.get("source_table") and not r.get("duplicate_of")]
+        texts = [r for r in rs if not r.get("source_table") and not r.get("duplicate_of")]  # running text and printed figure labels
         if not tables or not texts:
             continue
         main = tables[0]
         for o in texts:
             if fmt(to_float(o["metric_value"])) == fmt(to_float(main["metric_value"])):
-                if dup_compatible(o, main):
-                    o["duplicate_of"] = main["result_id"]
+                restates(o, main, vkey(o) == vkey(main))
+            elif o.get("source_figure"):
+                continue  # a different number read from a figure is a reading question (figure review), not a contradiction
             elif tuple(sorted([main["result_id"], o["result_id"]])) not in flagged_pairs:
                 issues.append(_iss("contradiction", [main["result_id"], o["result_id"]],
                                    f"{main.get('metric_name')}: в тексте {o['raw_value']} (с. {o.get('source_page')}), в {main.get('source_table')} "
                                    f"{main['raw_value']} (с. {main.get('source_page')}) для одной конфигурации/набора",
                                    o.get("source_page"), o.get("source_fragment")))
+    # a printed difference ("improves F1 by 3.3 points relative to BM25") is checked against the absolute values when both are printed
+    for r in results:
+        d = r.get("_delta") or {}
+        if not d.get("baseline_config_id") or to_float(r.get("metric_value")) is None:
+            continue
+        def absval(cfg_id):
+            xs = [x for x in results if x.get("config_id") == cfg_id and cm(x) == (d["metric"] or "").lower() and not x.get("_delta")
+                  and x.get("dataset_id") == r.get("dataset_id") and x.get("source_table") and to_float(x.get("metric_value")) is not None]
+            return xs[0] if xs else None
+        a, b = absval(r.get("config_id")), absval(d["baseline_config_id"])
+        if not a or not b:
+            continue
+        diff = to_float(a["metric_value"]) - to_float(b["metric_value"])
+        if (a.get("metric_unit") or "") == "fraction" or (not a.get("metric_unit") and abs(diff) < 1 and to_float(r["metric_value"]) > 1):
+            diff *= 100
+        ok = abs(diff - to_float(r["metric_value"])) <= 0.051
+        per[r["result_id"]].append({"check": "delta_consistency", "ts": now(), "outcome": "pass" if ok else "fail",
+                                    "formula": f"{a['result_id']} − {b['result_id']} = {a['raw_value']} − {b['raw_value']}",
+                                    "computed": round(diff, 4), "inputs": {"printed_delta": r.get("raw_value"), "unit": r.get("metric_unit")}})
+        if not ok:
+            issues.append(_iss("contradiction", [r["result_id"], a["result_id"], b["result_id"]],
+                               f"Разница {r.get('raw_value')} не совпадает с {a['raw_value']} − {b['raw_value']} = {diff:.3g}",
+                               r.get("source_page"), r.get("source_fragment")))
     return issues, per
 
 

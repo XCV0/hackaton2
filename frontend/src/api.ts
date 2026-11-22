@@ -34,6 +34,7 @@ export const REVIEW: Record<string, { label: string; cls: string }> = {
 };
 export const QUOTE: Record<string, { label: string; cls: string }> = {
   matched: { label: "Цитата найдена", cls: "b-ok" },
+  matched_no_value: { label: "Фрагмент найден, числа в нём нет", cls: "b-warn" },
   matched_ocr_only: { label: "Найдена только в OCR", cls: "b-warn" },
   wrong_page: { label: "На другой странице", cls: "b-err" },
   not_found: { label: "Цитата не найдена", cls: "b-err" },
@@ -65,4 +66,12 @@ export function qs(o: Record<string, any>) {
   Object.entries(o).forEach(([k, v]) => { if (v !== undefined && v !== null && v !== "") p.set(k, String(v)); });
   const s = p.toString();
   return s ? `?${s}` : "";
+}
+
+/** Same rule as the API: a found fragment counts as confirmed only when the number is in it or in the table cell/row. */
+export function quoteOutcome(checks: any[] | undefined): string | undefined {
+  const q = (checks || []).find((c: any) => c.check === "quote");
+  if (!q) return undefined;
+  const cell = (checks || []).some((c: any) => c.check === "table_cell" || (c.check === "table_row" && c.outcome === "value_in_row"));
+  return q.outcome === "matched" && q.value_in_fragment === false && !cell ? "matched_no_value" : q.outcome;
 }

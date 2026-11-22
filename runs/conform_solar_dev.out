@@ -1,0 +1,35 @@
+{
+ "verdict": "СТРУКТУРА НЕ ВАЛИДНА: 30 ошибок",
+ "structure_valid": false,
+ "header_only": false,
+ "content": {
+  "pdfs_in_set": 21,
+  "publications": 21,
+  "in_scope": 19,
+  "excluded": 2,
+  "publications_with_results": 19,
+  "results": 1083,
+  "extracted": 1082,
+  "duplicates": 0,
+  "cited": 86,
+  "issues": 106,
+  "rows_by_table": {
+   "devices": 210,
+   "issues": 106,
+   "layers": 325,
+   "materials": 150,
+   "measurements": 100,
+   "publications": 21,
+   "results": 1083
+  }
+ },
+ "counts": {
+  "errors": 30,
+  "warnings": 0,
+  "by_rule": {
+   "error:enum": 20,
+   "error:empty_cells": 8,
+   "error:cited": 2
+  }
+ }
+}

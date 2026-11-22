@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { api, DOMAIN_LONG } from "../api";
-import { Badge, Empty, ErrorState, IssueTag, Kpi, Loading, useAsync } from "../components/ui";
+import { api, DOMAIN_LONG, quoteOutcome } from "../api";
+import { Badge, Empty, ErrorState, IssueTag, Kpi, Loading, Term, useAsync } from "../components/ui";
+import SourceViewer from "../components/SourceViewer";
 import { ResultsTable } from "./Results";
 
 const ENT_TITLE: Record<string, string> = { configurations: "Конфигурации", datasets: "Наборы данных", tasks: "Задачи", experiments: "Эксперименты",
@@ -16,7 +17,7 @@ export default function Publication() {
   const p = data.publication?.data || {};
   const corp = data.corpus;
   const st = corp.stats || {};
-  const res = data.results.map((r: any) => ({ ...r, quote_outcome: (r.checks || []).find((c: any) => c.check === "quote")?.outcome,
+  const res = data.results.map((r: any) => ({ ...r, quote_outcome: quoteOutcome(r.checks),
     issue_types: data.issues.filter((i: any) => (i.data.record_ids || "").split(";").includes(r.rec_id)).map((i: any) => i.data.check_name) }));
   return (
     <div className="stack" style={{ gap: 16 }}>
@@ -37,6 +38,7 @@ export default function Publication() {
         <div className="row">
           <a className="btn" href={`/api/pdf/${domain}/${split}/${pid}.pdf`} target="_blank" rel="noreferrer">PDF ↗</a>
           <a className="btn" href={`/api/export/${domain}/${split}.zip?pub=${pid}`}>Экспорт CSV</a>
+          <a className="btn teal" href={`/api/passport/${domain}/${split}/${pid}.pdf`} target="_blank" rel="noreferrer" title="PDF-отчёт: каждое значение с вырезкой страницы и цитатой, проблемные — первыми">Паспорт доказательств</a>
         </div>
       </div>
       {corp.status === "error" && <div className="notice err">Обработка завершилась ошибкой. Подробности — в «Корпус и задачи». <pre className="code">{(corp.error || "").slice(-800)}</pre></div>}
@@ -51,11 +53,14 @@ export default function Publication() {
           <div className="tabs" role="tablist">
             <button className={tab === "results" ? "on" : ""} onClick={() => setTab("results")}>Результаты ({data.results.length})</button>
             {data.entity_tables.map((t: string) => <button key={t} className={tab === t ? "on" : ""} onClick={() => setTab(t)}>{ENT_TITLE[t] || t} ({data.entities[t]?.length || 0})</button>)}
+            <button className={tab === "pages" ? "on" : ""} onClick={() => setTab("pages")}>Рентген страниц</button>
             <button className={tab === "issues" ? "on" : ""} onClick={() => setTab("issues")}>Замечания ({data.issues.length})</button>
             <button className={tab === "nodes" ? "on" : ""} onClick={() => setTab("nodes")}>Ноды ({data.node_runs.length})</button>
           </div>
           {tab === "results" && (res.length ? <ResultsTable rows={res} domain={domain} /> : <Empty title={p.in_scope === "false" ? "Публикация исключена — значений нет" : "Значения не извлечены"}>{p.in_scope === "false" ? p.exclusion_reason : "Нода не нашла значений с проверяемым источником."}</Empty>)}
           {data.entity_tables.includes(tab) && <EntityTable rows={data.entities[tab] || []} cols={data.tables[tab]} />}
+          {tab === "pages" && <div className="stack"><div className="small muted"><Term k="рентген">Все числа страницы поверх PDF</Term>: цветная рамка — извлечённое значение (клик откроет его), пунктир — напечатанное число, которое никто не извлёк (клик — добавить вручную).</div>
+            <SourceViewer domain={domain} split={split} pid={pid} page={1} pageCount={corp.pages} xrayDefault /></div>}
           {tab === "issues" && <IssueList issues={data.issues} results={data.results} />}
           {tab === "nodes" && <NodeRuns runs={data.node_runs} />}
         </div>

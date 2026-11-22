@@ -1,0 +1,326 @@
+publication_id,layer_id,device_id,layer_order,layer_function,layer_material,layer_thickness,thickness_unit,deposition_method,annealing_temperature,annealing_time,atmosphere,note
+D001,L1,DV3,1,front_contact,fluorine-doped tin oxide (FTO),,,,,,,"Nippon Sheet Glass, 8 Ω/square; O2 plasma treatment for 3 min at 10.2 W."
+D001,L2,DV3,2,ETL,compact TiO2 blocking layer,,,TiCl4 aqueous-solution treatment,500°C,60 min,,25 mM TiCl4 aqueous solution for 60 min at 70°C.
+D001,L3,DV3,3,absorber,CsPbI2Br perovskite with SrCl2 dopants,,,spin-coating,,,,Perovskite precursors were dissolved in DMSO solution.
+D001,L4,DV3,4,HTL,P3HT,,,spin-coating,120°C,10 min,,"15 mg/ml in chlorobenzene; 2,500 rpm for 30 s."
+D001,L5,DV3,5,back_contact,Ag,100,nm,thermal evaporation,,,,
+D001,L6,DV2,1,,FTO,,,,,,,
+D001,L7,DV2,2,,compact-TiO2 (c-TiO2),,,,,,,
+D001,L8,DV2,3,,CsPbI2Br,,,,,,,
+D001,L9,DV2,4,,P3HT,,,,,,,
+D001,L10,DV2,5,,Au,,,,,,,
+D001,L11,DV5,1,,FTO,,,,,,,
+D001,L12,DV5,2,,compact-TiO2 (c-TiO2),,,,,,,
+D001,L13,DV5,3,,CsPbI2Br,,,,,,,
+D001,L14,DV5,4,,P3HT,,,,,,,
+D001,L15,DV5,5,,Au,,,,,,,
+D001,L16,DV6,1,,FTO,,,,,,,
+D001,L17,DV6,2,,compact-TiO2 (c-TiO2),,,,,,,
+D001,L18,DV6,3,,CsPbI2Br,,,,,,,
+D001,L19,DV6,4,,P3HT,,,,,,,
+D001,L20,DV6,5,,Au,,,,,,,
+D001,L21,DV7,1,,FTO,,,,,,,
+D001,L22,DV7,2,,compact-TiO2 (c-TiO2),,,,,,,
+D001,L23,DV7,3,,CsPbI2Br,,,,,,,
+D001,L24,DV7,4,,P3HT,,,,,,,
+D001,L25,DV7,5,,Au,,,,,,,
+D001,L26,DV8,1,,FTO,,,,,,,
+D001,L27,DV8,2,,compact-TiO2 (c-TiO2),,,,,,,
+D001,L28,DV8,3,,CsPbI2Br,,,,,,,
+D001,L29,DV8,4,,P3HT,,,,,,,
+D001,L30,DV8,5,,Au,,,,,,,
+D002,L1,DV1,,HTL,nickel oxide (NiO),,,,,,,
+D002,L2,DV1,,HTL,graphene oxide (GO),,,,,,,
+D002,L3,DV1,,absorber,perovskite,,,,,,,
+D002,L4,DV2,,HTL,NiO,,,,,,,
+D002,L5,DV2,,absorber,perovskite,,,,,,,
+D002,L6,DV3,1,front_contact,Fluorine doped Tin Oxide (FTO) glass substrate,,,,,,,"The FTO pattern was cleaned ultrasonically using acetone, detergent, and UV-Ozone Cleaner for 25 minutes."
+D002,L7,DV3,2,HTL,NiO,,,spin-coating,,,,Deposited on FTO and spin-coated at 1000 rpm for 45 seconds.
+D002,L8,DV3,3,HTL,GO,,,spin-coating,200 °C,1 hour,,GO solution was dripped on the NiO film and spin-coated at 1000 rpm for 30 seconds.
+D002,L9,DV3,4,absorber,perovskite CH3NH3PbI3,,,spin-coating,100 °C,3 minutes,,"PbI2 solution and then CH3NH3 solution were each spin-coated at 1000 rpm for 30 seconds, resulting in conversion to CH3NH3PbI3."
+D002,L10,DV3,5,ETL,ZnO,,,spin-coating,100 °C,3 minutes,,ZnO solution was spin-coated at 1000 rpm for 30 seconds.
+D002,L11,DV3,6,back_contact,Ag electrode,100,nm,thermal evaporation,,,,Deposited using a thermal evaporator at a pressure of 1 × 10−6 mbar.
+D002,L12,DV4,1,front_contact,Fluorine doped Tin Oxide (FTO) glass substrate,,,,,,,
+D002,L13,DV4,2,HTL,NiO,,,,,,,
+D002,L14,DV4,3,absorber,perovskite CH3NH3PbI3,,,,,,,
+D002,L15,DV4,4,ETL,ZnO,,,,,,,
+D002,L16,DV4,5,back_contact,Ag electrode,,,,,,,
+D002,L17,DV5,1,,FTO,,,,,,,
+D002,L18,DV5,2,HTL,NiO,,,,,,,
+D002,L19,DV5,3,absorber,Perovskite,,,,,,,
+D002,L20,DV5,4,,ZnO,,,,,,,
+D002,L21,DV5,5,,Ag,,,,,,,
+D002,L22,DV1,1,,FTO,,,,,,,
+D002,L23,DV1,2,HTL,NiO,,,,,,,
+D002,L24,DV1,3,HTL,GO,,,,,,,The GO layer is described as a bridge for accelerating ion h+ to NiO and as a blocking layer to avoid electron recombination.
+D002,L25,DV1,4,absorber,Perovskite,,,,,,,
+D002,L26,DV1,5,,ZnO,,,,,,,
+D002,L27,DV1,6,,Ag,,,,,,,
+D002,L28,DV5,,absorber,perovskite,,,,,,,
+D002,L29,DV5,,HTL,NiO,,,,,,,single hole transport layer
+D002,L30,DV1,,HTL,NiO,,,,,,,component of the double hole transport layer
+D002,L31,DV1,,HTL,GO,,,,,,,component of the double hole transport layer; also described as a blocking layer
+D002,L32,DV1,,ETL,ZnO,,,,,,,
+D003,L1,DV1,,ETL,Y-Sn3O4,,,,,,,
+D003,L2,DV2,,ETL,Y-doped Sn3O4,,,,,,,
+D003,L3,DV2,,absorber,perovskites,,,,,,,
+D003,L4,DV5,1,ETL,ETL,35,nm,,,,,about 35 nm
+D003,L5,DV5,2,absorber,perovskite,530,nm,,,,,about 530 nm
+D003,L6,DV5,3,HTL,Spiro-OMeTAD,,,,,,,
+D003,L7,DV5,4,back_contact,Ag,,,,,,,
+D003,L8,DV3,,ETL,Sn3O4,,,,,,,
+D003,L9,DV3,,absorber,perovskite,,,,,,,
+D003,L10,DV4,,ETL,Y-Sn3O4,,,,,,,
+D003,L11,DV4,,absorber,perovskite,,,,,,,
+D003,L12,DV6,1,front_contact,ITO,,,,,,,"ITO was cleaned by sonication in ITO detergent, water, and ethanol and treated under ultraviolet ozone for 20 min."
+D003,L13,DV6,2,ETL,Y-Sn3O4,,,spin coating,140°C,30 mins,,Spin coated at 4000 rpm for 30 s three times; Five percent Y doping was optimized.
+D003,L14,DV6,3,absorber,perovskite,,,consecutive two-step spin coating,100°C,30 min,,Spun at 1000 and 6000 rpm for 10 and 30 s with acceleration rates of 200 and 2000 rpm/s; 70 μl chlorobenzene was dropped during the second step within 1 to 1.5 s.
+D003,L15,DV6,4,HTL,Spiro-OMeTAD,,,spin coating,,,,"The solution contained Spiro-OMeTAD (90 mg), tert-butylpyridine (35.5 μl), FK209 (200 mg/ml, 5 μl), and lithium bis(trifluoromethanesulfonyl) imide (17.5 μl, 520 mg/ml in acetonitrile) in 1 ml CB and was deposited at 4000 rpm for 30 s."
+D003,L16,DV6,5,back_contact,Ag,,nm,thermal evaporation,,,,layer_thickness as printed: about 100
+D004,L1,DV1,1,,FTO,,,,,,,
+D004,L2,DV1,2,ETL,MoS2 NPs,,,,,,,
+D004,L3,DV1,3,absorber,perovskite absorber,,,,,,,
+D004,L4,DV1,4,,spiro-OMeTAD,,,,,,,
+D004,L5,DV1,5,,Ag,,,,,,,
+D004,L6,DV5,1,,FTO glass,,,,,,,"Patterned FTO glass substrate (7 Ω·sq−1), sequentially cleaned with ethanol, isopropanol, and O2 plasma."
+D004,L7,DV5,2,ETL,MoS2 (obtained from C-ED-2),,nm,spin-coated,150 ◦C,an hour,,100 µL of electron transport layer solution; spin-coated at 4000 rpm for 30 s.; layer_thickness as printed: 63 to 68
+D004,L8,DV5,3,absorber,perovskite,,,spin-coated,100 ◦C,1 h,approximately 70% RH,"DMF, DMSO, and acetone volume ratio 7.2:1.8:1; 70 µL spin-coated at 3000 rpm for 35 s; at the 12th s, 0.05 vol.% MA (400 µL) was dropped onto the coating layer."
+D004,L9,DV5,4,,spiro-OMeTAD,,,spin-coated,,,,"72.3 mg spiro-OMeTAD, 28.8 µL 4-tBP, 17.5 µL Li-TFSI (260 mg·mL−1 in AN), and 29 µL FK209 (300 mg·mL−1 in AN) in 1 mL chlorobenzene; 70 µL spin-coated at 2000 rpm for 30 s."
+D004,L10,DV5,5,,silver,100,nm,thermal evaporation,,,,Top electrode.
+D004,L11,DV6,,,MoS2,,,deposition,,,,Figure 1(a); followed by an annealing process in Figure 1(b).
+D004,L12,DV6,,absorber,perovskite absorber,,,coating,,,,Figure 1(c); followed by an annealing process in Figure 1(d).
+D004,L13,DV6,,HTL,hole trasport material,,,doposition,,,,Figure 1(e); followed by drying at room temperature in Figure 1(f).
+D004,L14,DV6,,back_contact,Silver,,,coating,,,,"Figure 1(g,h)."
+D004,L15,,,ETL,MoS2,,,,,,,
+D004,L16,DV7,1,front_contact,FTO,,,,,,,
+D004,L17,DV7,2,ETL,MoS2,,,,,,,ED- and C-ED-treated MoS2 variants are mentioned.
+D004,L18,DV7,3,absorber,CsFAMAPbI3−xBrx,,,,,,,
+D004,L19,DV7,4,HTL,spiro-OMeTAD,,,,,,,
+D004,L20,DV7,5,back_contact,Ag,,,,,,,
+D004,L21,DV8,1,front_contact,FTO,,,,,,,
+D004,L22,DV8,2,ETL,MoS2,,,,,,,ED-treated.
+D004,L23,DV8,3,absorber,perovskite,,,,,,,
+D004,L24,DV8,4,HTL,spiro-OMeTAD,,,,,,,
+D004,L25,DV8,5,back_contact,Ag,,,,,,,
+D004,L26,DV9,,ETL,MoS2,,,,,,,BCC-ED-treated.
+D004,L27,DV10,,ETL,MoS2,,,,,,,C-ED-1.
+D004,L28,DV11,,ETL,MoS2,,,,,,,C-ED-2.
+D004,L29,DV9,1,front_contact,FTO,,,,,,,
+D004,L30,DV9,2,ETL,MoS2,,,,,,,MoS2 (from): BCC-ED.
+D004,L31,DV9,3,absorber,perovskite,,,,,,,
+D004,L32,DV9,4,HTL,spiro-OMeTAD,,,,,,,
+D004,L33,DV9,5,back_contact,Ag,,,,,,,
+D004,L34,DV10,1,front_contact,FTO,,,,,,,
+D004,L35,DV10,2,ETL,MoS2,,,,,,,MoS2 (from): C-ED-1.
+D004,L36,DV10,3,absorber,perovskite,,,,,,,
+D004,L37,DV10,4,HTL,spiro-OMeTAD,,,,,,,
+D004,L38,DV10,5,back_contact,Ag,,,,,,,
+D004,L39,DV11,1,front_contact,FTO,,,,,,,
+D004,L40,DV11,2,ETL,MoS2,,,,,,,MoS2 (from): C-ED-2.
+D004,L41,DV11,3,absorber,perovskite,,,,,,,
+D004,L42,DV11,4,HTL,spiro-OMeTAD,,,,,,,
+D004,L43,DV11,5,back_contact,Ag,,,,,,,
+D004,L44,DV12,1,,FTO,,,,,,,
+D004,L45,DV12,2,ETL,C-ED-2-treated MoS2 nanoparticles,,,,,,,
+D004,L46,DV12,3,absorber,perovskite absorber,,,,,,,
+D004,L47,DV12,4,,spiro-OMeTAD,,,,,,,
+D004,L48,DV12,5,,Ag,,,,,,,
+D004,L49,DV13,,ETL,ED-treated MoS2,,,,,,,
+D004,L50,DV13,,absorber,perovskite absorber,,,,,,,
+D004,L51,DV14,,ETL,C-ED-2-treated MoS2 nanoparticles,,,,,,,
+D004,L52,DV14,,absorber,perovskite absorber,,,,,,,
+D005,L1,DV1,,ETL,metal oxides,,,,,,,metal oxides as an electron-transporting layer underneath the perovskite
+D005,L2,DV1,,absorber,perovskite,,,,,,,perovskite layer
+D005,L3,DV1,,HTL,organic p-type semiconductors,,,,,,,organic p-type semiconductors as a hole-transporting layer (HTL) above the perovskite
+D005,L4,DV8,1,front_contact,FTO glass,,,,,,,8 Ω per square
+D005,L5,DV8,2,ETL,TiO2,,,chemical water bath (TiCl4),90,,,water bath 50 min
+D005,L6,DV8,3,absorber,perovskite,,,spin-coating,150,15,,annealing time in min
+D005,L7,DV8,4,passivation,PEAI,,,spin-coating,,,,"5 mg/ml in IPA, 5500 rpm 20 s"
+D005,L8,DV8,5,HTL,SF-MPA-MCz,,,spin-coating,,,,"30 mg/ml in CB, 4000 rpm 30 s"
+D005,L9,DV8,6,back_contact,Au,100,nm,thermal evaporation,,,,
+D005,L10,DV9,5,HTL,Spiro-OMeTAD,,,spin-coating,,,,73 mg in 1 ml CB
+D007,L1,DV1,,HTL,V1553,,,,,,,
+D007,L2,DV2,,HTL,Spiro-OMeTAD,,,,,,,
+D007,L3,DV3,1,,FTO,,,,,,,
+D007,L4,DV3,2,,SnO2,,,,,,,
+D007,L5,DV3,3,,perovskite,700,nm,,,,,Reported as approximately 700 nm.
+D007,L6,DV3,4,HTL,spiro-OMeTAD,,,,,,,
+D007,L7,DV3,5,,Au,70,nm,,,,,Reported as around 70 nm.
+D007,L8,DV4,1,,FTO,,,,,,,
+D007,L9,DV4,2,,SnO2,,,,,,,
+D007,L10,DV4,3,,perovskite,700,nm,,,,,Reported as approximately 700 nm.
+D007,L11,DV4,4,HTL,V1553,,,,,,,Reported as thinner than the spiro-OMeTAD layer.
+D007,L12,DV4,5,,Au,70,nm,,,,,Reported as around 70 nm.
+D007,L13,DV6,1,front_contact,FTO,,,,,,,
+D007,L14,DV6,2,ETL,SnO2,,,,,,,
+D007,L15,DV6,3,absorber,perovskite,,,,,,,
+D007,L16,DV6,4,HTL,V1553,,,,,,,
+D007,L17,DV6,5,back_contact,Au,,,,,,,
+D007,L18,DV7,1,front_contact,FTO,,,,,,,
+D007,L19,DV7,2,ETL,SnO2,,,,,,,
+D007,L20,DV7,3,absorber,perovskite,,,,,,,
+D007,L21,DV7,4,HTL,spiro-OMeTAD,,,,,,,
+D007,L22,DV7,5,back_contact,Au,,,,,,,
+D007,L23,DV8,,HTL,V1565,,,,,,,
+D008,L1,DV3,,HTL,PTAA,1.5,mg mL-1,spin coating,100,10,air,
+D008,L2,DV3,,absorber,Cs0.15FA0.85PbI2.85Br0.15,600,nm,thermal evaporation,,,,
+D008,L3,DV3,,ETL,C60,20,nm,thermal evaporation,,,,
+D008,L4,DV3,,interlayer,BCP,2,nm,thermal evaporation,,,,
+D008,L5,DV3,,back_contact,Ag,100,nm,thermal evaporation,,,,
+D009,L1,DV5,1,HTL,PEDOT:PSS (Clevios P VP AI 4083),,,spin-coating,140,20 min,ambient,"Spin-coated at 6,000 r.p.m. for 40 s on patterned ITO"
+D009,L2,DV5,2,absorber,PEA2(Cs0.05FA0.95)Sn2I7,,,spin-coating,80,10 min,nitrogen glovebox,"Toluene antisolvent added dropwise; precursor spun at 5,000 r.p.m. for 30 s"
+D009,L3,DV5,3,ETL,ICBA,,,spin-coating,80,10 min,,"20 mg ml-1 in chlorobenzene, spun at 1,000 r.p.m. for 30 s"
+D009,L4,DV5,4,interlayer,BCP,6,nm,thermal evaporation,,,,Deposited at 0.1 Å s-1
+D009,L5,DV5,5,back_contact,Ag,80,nm,thermal evaporation,,,,Deposited at 0.5 Å s-1
+D010,L1,DV2,,absorber,"Na-doped Cu2ZnSn(S,Se)4",,,sol–gel spin coating with selenization,540 ◦C,15 min,Se,
+D010,L2,DV2,,ETL,CdS,,,chemical-bath deposition (CBD),,,,Buffer layer; reaction at 75 ◦C for 14 min as printed
+D010,L3,DV2,,front_contact,intrinsic zinc oxide/aluminum zinc oxide (AZO),,,sputtering,,,,Transparent conducting layer
+D012,L1,DV2,1,back_contact,Mo,1,µm,,,,,Mo-coated soda–lime glass (Mo-SLG) substrate
+D012,L2,DV2,2,absorber,CZTS (from electrodeposited Cu–Zn–Sn alloy + sulfurization),,,electrochemical (galvanostatic) deposition followed by annealing and sulfurization,,,,"electrolyte: CuSO4·5H2O 0.02 M, ZnSO4·2H2O 0.02 M, SnSO4 0.01 M, Na2S2O3·5H2O 0.2 M complexing agent, oleylamine total 40 mL, DIO 5/10/15/20 mg/mL"
+D012,L3,DV3,1,back_contact,Mo,1,µm,,,,,Mo/glass substrate
+D012,L4,DV3,2,absorber,CZTS,,µm,electrodeposition (triangle wave pulse method),580,2 h,"sulfur (200 mg sulfur powder), quartz tube furnace",etched 30 s in 10% KCN; layer_thickness as printed: ~1
+D012,L5,DV3,3,ETL,CdS,80,nm,chemical bath deposition,180,15 min,,n-type buffer layer
+D012,L6,DV3,4,interlayer,i-ZnO,80,nm,"Rf magnetron sputtering, 100 W",350,20 min,N2,window layer
+D012,L7,DV3,5,front_contact,AZO,,nm,"Rf magnetron sputtering, 100 W",350,20 min,N2,aluminum-doped zinc oxide transparent conducting oxide; layer_thickness as printed: ~300
+D012,L8,DV3,6,back_contact,Ag,250,nm,thermal evaporation,,,,
+D012,L9,DV1,1,back_contact,Mo,,,,,,,on SLG
+D012,L10,DV1,2,absorber,CZTS,,,,,,,average grain size 1 um
+D012,L11,DV1,3,ETL,CdS,80,nm,chemical bath deposition,,,,
+D012,L12,DV1,4,ETL,i-ZnO,100,nm,RF sputtering,,,,
+D012,L13,DV1,5,front_contact,ZnO:Al (AZO),120,nm,RF sputtering,,,,
+D012,L14,DV1,6,back_contact,Ag,,,,,,,
+D013,L1,DV2,1,back_contact,Mo,,,sputtering,,,,SLG/Mo substrate
+D013,L2,DV2,2,absorber,ACZTGSSe,1,um,spin-coating + selenization,560,15,"Ar, ~500 mbar, Se pellets","precursor spin-coated 60 s at 3000 rpm, hotplate 3 min at 340 C, repeated 8 times"
+D013,L3,DV2,3,ETL,CdS,50,nm,chemical bath,,,,
+D013,L4,DV2,4,interlayer,i-ZnO,40,nm,RF sputtering,,,,
+D013,L5,DV2,5,front_contact,ITO,150,nm,RF sputtering,,,,
+D013,L6,DV2,6,front_contact,Ag,500,nm,thermal evaporation,,,,Ag grid
+D013,L7,DV3,,back_contact,Mo,,,,,,,Mo back contact shown in SEM cross sections for all Ge contents
+D013,L8,DV3,,interlayer,"Mo(Sx,Se2-x)",,,,,,,1-2 times lower thickness than the absorber layer
+D013,L9,DV3,,absorber,ACZTGSSe,,,,,,,micron-size well-defined crystalline grains
+D014,L1,DV2,1,front_contact,ITO,,,,,,,standardized architecture ITO/CdTe/ZnO:In/Al
+D014,L2,DV2,2,absorber,CdTe,500,nm,spin-coating,350,20,N2,"layer-by-layer, CdCl2 bath, 12-20 repeats"
+D014,L3,DV2,3,ETL,ZnO:In,,,spin-coating,300,2,,ZnO sol-gel with InCl3
+D014,L4,DV2,4,back_contact,Al,100,nm,thermal evaporation,,,,Ag 100 nm on top of Al
+D014,L5,DV3,2,absorber,CdTe,500,nm,"doctor-blading (layer-by-layer, CdCl2 bath, hot plate annealing)",,,,~500 nm
+D014,L6,DV4,2,absorber,CdTe,500,nm,"spray-coating (layer-by-layer, CdCl2 bath, hot plate annealing)",,,,~500 nm
+D015,L1,DV6,,interlayer,CuxCryOz,,,,200,,,back-buffer; annealed 6 min
+D015,L2,DV7,,interlayer,CuxCryOz,,,,200,,,back-buffer; annealed 8 min
+D015,L3,DV8,,interlayer,CuxCryOz,,,,200,,,back-buffer; annealed 10 min
+D015,L4,DV9,,interlayer,CuxCryOz,,,,200,,,back-buffer; annealed 12 min
+D015,L5,DV16,,back_contact,Au,45,nm,thermal evaporation,,,,shadow mask
+D015,L6,DV17,,back_contact,ITO,250,nm,RF sputtering,,,,at room temperature
+D015,L7,DV17,,interlayer,CuxCryOz,,,spin coating,200,,,50 μL solution onto CdTe surface; annealing time varied per design of experiment (Table ST3)
+D017,L1,DV1,1,back_contact,Mo,500,nm,sputtering,,,,approx. 500 nm
+D017,L2,DV1,0,interlayer,SiOx,,,reactive sputtering,,,,barrier layer below Mo
+D017,L3,DV1,2,absorber,CIGS,,,co-evaporation,450,,,multi-stage low-temperature process
+D017,L4,DV1,3,ETL,CdS,30,nm,chemical bath deposition,,,,
+D017,L5,DV1,4,ETL,ZnO (intrinsic),80,nm,RF sputtering,,,,
+D017,L6,DV1,5,front_contact,ZnO:Al (Al2O3 2 wt.%),200,nm,RF sputtering,,,,
+D017,L7,DV1,6,front_contact,Ni/Al grids,,,electron beam evaporation,,,,
+D017,L8,DV1,7,passivation,MgF2,,,,,,,anti-reflective coating
+D017,L9,DV1,,passivation,Al2O3,30,nm,atomic layer deposition,200,,,back side of selected absorbers after Mo delamination; layer_order as printed: 1b
+D018,L1,DV1,1,back_contact,Mo,,,,,,,Mo-coated glass substrate
+D018,L2,DV1,2,absorber,CIGS,,,pulsed hybrid reactive magnetron sputtering (PHRMS),,,,
+D018,L3,DV1,3,ETL,CdS,,,,,,,CdS buffer layer
+D018,L4,DV2,1,back_contact,Mo,,,,,,,Mo-coated glass substrate 5 cm x 5 cm x 1 mm
+D018,L5,DV2,2,absorber,CIGS,1500,nm,pulsed hybrid reactive magnetron sputtering (PHRMS),,,,"first stage, slightly Cu-rich, ~80 min"
+D018,L6,DV2,3,absorber,In-Se,600,nm,sputtering with pulsed Se evaporation,,,,second stage
+D018,L7,DV2,4,ETL,CdS,,,chemical bath deposition,60,,,"1.33 g thiourea, 0.118 g cadmium acetate, 15 ml NH3, 80 ml DI water"
+D018,L8,DV2,5,ETL,i-ZnO,50,nm,RF sputtering,,,,"room temperature, 5.6e-3 mbar Ar, 40 W"
+D018,L9,DV2,6,front_contact,ZnO:Al,200,nm,RF sputtering,,,,"room temperature, 5.6e-3 mbar Ar, 60 W"
+D018,L10,DV3,2,interlayer,CsCO3,,,spin coating,400,2,vacuum ~6e-6 mbar,1000 rpm for 60 s; no additional Se during annealing
+D019,L1,DV1,1,back_contact,Mo,,,,,,,
+D019,L2,DV1,2,interlayer,MoSe2,,,,,,,seed layer for preferential Sb2Se3 nanorod growth
+D019,L3,DV1,3,absorber,Sb2Se3,,,co-evaporation,,,,
+D019,L4,DV1,4,ETL,CdS,,,,,,,buffer layer
+D019,L5,DV2,1,back_contact,Mo,600,nm,DC magnetron sputtering,,,,
+D019,L6,DV2,2,interlayer,MoSe2,100,nm,selenization in Se atmosphere,430,10,Se/Ar,
+D019,L7,DV2,3,absorber,Sb2Se3,500,nm,co-evaporation,250-290,,,substrate temperature range
+D019,L8,DV2,4,ETL,CdS,50,nm,chemical bath deposition,,,,
+D019,L9,DV2,5,ETL,i-ZnO,50,nm,RF sputtering,,,,
+D019,L10,DV2,6,front_contact,Al-doped ZnO (AZO),300,nm,RF sputtering,,,,
+D019,L11,DV2,7,front_contact,Al,1,mm,thermal evaporation,,,,collection grid
+D020,L1,DV1,1,absorber,"Sb2(S,Se)3 (Sb2S3/Sb2(S,Se)3 stack)",400,nm,two-step hydrothermal,350,15 min,N2 glove box,thickness given as around 400 nm for the three film types
+D020,L2,DV2,2,HTL,P3HT,,,,,,,dopant-free HTM between absorber and carbon electrode
+D020,L3,DV1,3,back_contact,carbon,,,,,,,carbon counter electrode
+D020,L4,DV4,1,front_contact,FTO,,,,,,,
+D020,L5,DV4,2,ETL,SnO2,,,,,,,
+D020,L6,DV4,3,ETL,CdS,,,,,,,
+D020,L7,DV4,4,absorber,"Sb2(S, Se)3",,,hydrothermal,,,,
+D020,L8,DV4,5,back_contact,Carbon,,um,painting carbon paste,120,30,,annealing 120 °C for 30 min; layer_thickness as printed: tens of micrometers
+D020,L9,DV7,,interlayer,P3HT,,,,,,,"Interlayer between Sb2S3/Sb2(S, Se)3 film and carbon electrode; thickness not stated on this page"
+D021,L1,DV1,1,front_contact,AZO,,,RF magnetron sputtering,,,,"RT, 120 W, Ar 5.0 × 10−1 Pa"
+D021,L2,DV1,2,ETL,UZO,,,RF magnetron sputtering,,,,"RT, 120 W, Ar 5.0 × 10−1 Pa"
+D021,L3,DV1,3,ETL,CdS,,,,,,,
+D021,L4,DV1,4,absorber,Sb2Se3,,,PED + RF magnetron sputtering,280,,,PED substrate temperature 280 °C; RFMS substrate temperature 300 °C
+D021,L5,DV1,5,interlayer,NaF,,,PED,,,,Na doping at back interface
+D021,L6,DV1,6,back_contact,FTO,,,,,,,on glass substrate
+D021,L7,DV4,1,interlayer,NaF,10,nm,PED,,,,deposited on FTO/glass prior to Sb2Se3 deposition
+D021,L8,DV7,1,front_contact,FTO,,,,,,,On glass substrate.
+D021,L9,DV7,2,interlayer,NaF,,,,,,,
+D021,L10,DV7,3,absorber,Sb2Se3,,,RFMS,,,,Single thick sputtered Sb2Se3 layer.
+D021,L11,DV7,4,ETL,CdS,,,,,,,
+D021,L12,DV7,5,back_contact,UZO,,,,,,,
+D021,L13,DV7,6,back_contact,AZO,,,,,,,
+D021,L14,DV8,1,front_contact,FTO,,,,,,,On glass substrate.
+D021,L15,DV8,2,interlayer,NaF,,,,,,,
+D021,L16,DV8,3,absorber,Cu:Sb2Se3,,,PED,,,,Single thick layer deposited via PED.
+D021,L17,DV8,4,ETL,CdS,,,,,,,
+D021,L18,DV8,5,back_contact,UZO,,,,,,,
+D021,L19,DV8,6,back_contact,AZO,,,,,,,
+D021,L20,DV9,1,front_contact,FTO,,,,,,,On glass substrate.
+D021,L21,DV9,2,interlayer,NaF,,,,,,,
+D021,L22,DV9,3,absorber,Sb2Se3,,,RFMS,,,,First layer deposited with RFMS.
+D021,L23,DV9,4,absorber,Cu:Sb2Se3,,,PED,,,,PED film deposited after RFMS layer (PED-on-RFMS).
+D021,L24,DV9,5,ETL,CdS,,,,,,,
+D021,L25,DV9,6,back_contact,UZO,,,,,,,
+D021,L26,DV9,7,back_contact,AZO,,,,,,,
+D021,L27,DV10,1,front_contact,FTO,,,,,,,On glass substrate.
+D021,L28,DV10,2,interlayer,NaF,,,,,,,
+D021,L29,DV10,3,absorber,Cu:Sb2Se3,,,PED,,,,First layer deposited via PED on NaF/FTO.
+D021,L30,DV10,4,absorber,Sb2Se3,,,RFMS,,,,Sputtered layer deposited after PED layer (RFMS-on-PED).
+D021,L31,DV10,5,ETL,CdS,,,,,,,
+D021,L32,DV10,6,back_contact,UZO,,,,,,,
+D021,L33,DV10,7,back_contact,AZO,,,,,,,
+D021,L34,DV7,,absorber,Sb2Se3 (RFMS),1200,nm,RFMS,,,,Table 1
+D021,L35,DV11,,absorber,Sb2Se3 (RFMS),1100,nm,RFMS,,,,Table 1
+D021,L36,DV11,,absorber,Cu:Sb2Se3 (PED),100,nm,PED,,,,Table 1
+D021,L37,DV12,,absorber,Sb2Se3 (RFMS),950,nm,RFMS,,,,Table 1
+D021,L38,DV12,,absorber,Cu:Sb2Se3 (PED),250,nm,PED,,,,Table 1
+D021,L39,DV13,,absorber,Sb2Se3 (RFMS),800,nm,RFMS,,,,Table 1
+D021,L40,DV13,,absorber,Cu:Sb2Se3 (PED),400,nm,PED,,,,Table 1
+D021,L41,DV14,,absorber,Sb2Se3 (RFMS),400,nm,RFMS,,,,Table 1
+D021,L42,DV14,,absorber,Cu:Sb2Se3 (PED),800,nm,PED,,,,Table 1
+D021,L43,DV15,,absorber,Sb2Se3 (RFMS),200,nm,RFMS,,,,Table 1
+D021,L44,DV15,,absorber,Cu:Sb2Se3 (PED),1000,nm,PED,,,,Table 1
+D021,L45,DV8,,absorber,Cu:Sb2Se3 (PED),1200,nm,PED,,,,Table 2
+D021,L46,DV16,,absorber,Cu:Sb2Se3 (PED),1000,nm,PED,,,,Table 2
+D021,L47,DV16,,absorber,Sb2Se3 (RFMS),200,nm,RFMS,,,,Table 2
+D021,L48,DV17,,absorber,Cu:Sb2Se3 (PED),200,nm,PED,,,,Table 2
+D021,L49,DV17,,absorber,Sb2Se3 (RFMS),1000,nm,RFMS,,,,Table 2
+D021,L50,DV18,,absorber,Cu:Sb2Se3 (PED),100,nm,PED,,,,Table 2
+D021,L51,DV18,,absorber,Sb2Se3 (RFMS),1100,nm,RFMS,,,,Table 2
+D021,L52,DV18,,absorber,Cu:Sb2Se3,100,nm,PED,,,,
+D021,L53,DV18,,absorber,Sb2Se3,1.1,um,RFMS (sputtering),,,,
+D022,L1,DV1,1,front_contact,FTO,,,,,,,on glass
+D022,L2,DV1,2,ETL,ZnO,,,,,,,metal-oxide carrier selective contact
+D022,L3,DV1,3,absorber,a-Si:H,,nm,,,,,ultrathin intrinsic layer; layer_thickness as printed: <30
+D022,L4,DV1,4,HTL,MoO3,,,,,,,metal-oxide carrier selective contact
+D022,L5,DV1,5,back_contact,ITO,,,,,,,transparent electrical contact
+D022,L6,DV2,1,front_contact,FTO,,,,,,,on SLG
+D022,L7,DV2,2,ETL,ZnO,0,nm,,,,,
+D022,L8,DV2,3,absorber,a-Si:H,15,nm,,,,,intrinsic
+D022,L9,DV2,4,HTL,MoO3,20,nm,,,,,
+D022,L10,DV2,5,back_contact,ITO,,,,,,,
+D022,L11,DV4,1,front_contact,FTO,,,,,,,on SLG
+D022,L12,DV4,2,ETL,ZnO,50,nm,,,,,
+D022,L13,DV4,3,absorber,a-Si:H,15,nm,,,,,intrinsic
+D022,L14,DV4,4,HTL,MoO3,20,nm,thermal evaporation,ambient temperature,,air exposure,
+D022,L15,DV4,5,back_contact,ITO,,,,,,,
+D022,L16,DV9,1,front_contact,FTO,250,nm,,,,,"commercial glass/FTO, Rsh 13 ohm/sq, AVT 83%"
+D022,L17,DV9,2,ETL,ZnO,50,nm,DC-pulsed magnetron sputtering,,,Ar,"room temperature, 3e-3 mbar"
+D022,L18,DV9,3,absorber,a-Si:H,15,nm,PE-CVD,400,2,SiH4/CH4,"13.56 MHz, 6 W; substrate ~200 C"
+D022,L19,DV9,4,HTL,MoO3,10,nm,thermal evaporation,,,,"0.5 A/s, room temperature"
+D022,L20,DV9,5,back_contact,ITO,190,nm,DC-pulsed magnetron sputtering,200,,Ar/O2,
+D022,L21,DV10,2,ETL,AZO,75,nm,ALD,135,,N2 purge,"DEZ:TMA 19:1, 21 supercycles"

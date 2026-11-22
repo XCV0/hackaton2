@@ -1,0 +1,218 @@
+publication_id,dataset_id,dataset_name,dataset_version,language,data_split,scientific_domain,note
+D001,DS1,HotpotQA,,,,,Multi-hop QA benchmark.; merged mentions RDS1
+D001,DS2,2WikiMultihop,,,,,Multi-hop QA benchmark.
+D001,DS3,local Wikipedia corpus,,,,,Retrieval corpus.
+D001,DS4,2WikiMultihopQA,,,,,Table 1 label: 2Wiki. Standard open-domain multi-hop QA benchmark; the same data splits as previous works are used.
+D001,DS5,MuSiQue,,,,,Standard open-domain multi-hop QA benchmark; the same data splits as previous works are used.; merged mentions RDS3
+D001,DS6,2Wiki,,,,,merged mentions RDS2
+D001,DS7,Wikipedia corpus,,,,,"A sample of 100 complex multi-hop documents was used for silver-label data curation, yielding 1,553 distinct semantic nodes."
+D001,DS8,Wikipedia documents,,,held-out evaluation set,,Independent evaluation set with 719 teacher-generated reference boundaries.
+D002,DS1,cybersecurity specific questions,,,,cybersecurity,
+D002,DS2,Cybersecurity questions,,,,cybersecurity,"Comprehensive evaluation set of 600 questions: 150 General Cybersecurity questions, 150 Multi-Hop Cybersecurity questions, and 300 CVE questions."
+D002,DS3,General Cybersecurity questions,,,,cybersecurity,Evaluation subset of 150 questions.
+D002,DS4,Multi-Hop Cybersecurity questions,,,,cybersecurity,Evaluation subset of 150 questions involving multiple entities contained in different documents.
+D002,DS5,CVE questions,,,,cybersecurity,Evaluation subset of 300 questions on vulnerabilities.
+D002,DS6,website of the MITRE Corporation,,,,cybersecurity,The knowledge base is structured as a graph database containing Malware and Techniques nodes.
+D002,DS7,Metasploit Framework,,,,cybersecurity,"The knowledge base includes over 4900 cybersecurity elements, including exploits, encoders, payloads, and various modules."
+D002,DS8,ExploitDB framework,,,,cybersecurity,The knowledge base consists of exploits from the ExploitDB framework.
+D002,DS9,original documents,,,,cybersecurity,Questions are extracted from chunks of the original documents for the Question Retrieval System.
+D002,DS10,malware source codes originating from GitHub pages,,,,cybersecurity,The Malware Retriever contains more than 1000 source codes.
+D002,DS11,CWE descriptions,,,,cybersecurity,
+D002,DS12,CWE,,,,cybersecurity,Used by the CWE Retriever.
+D002,DS13,Exploit DB,,,,cybersecurity,Code snippets are processed by the Code Buffer.
+D002,DS14,websites and blogs,,,,,Content is processed by Text Buffers.
+D002,DS15,Academic papers,,,,,Managed by Paper Buffers.
+D002,DS16,Mitre,,,,cybersecurity,Content from the Mitre retriever is placed at the end of the structured-RAG prompt.
+D002,DS17,Common Vulnerability Exposure (CVE) questions,,,,cybersecurity,300 questions addressing specific security vulnerabilities.
+D002,DS18,CVE Queries,,,,cybersecurity,Also labeled CVE Questions.
+D002,DS19,General Cybersecurity Question,,,,Cybersecurity,Question category for Table V.
+D002,DS20,General Questions and Multi-Hop Questions,,,,cybersecurity,
+D002,DS21,customized set of 100 test questions,,,,cybersecurity,Test questions based on the retrievers' specialized knowledge in cybersecurity.
+D002,DS22,Test Queries,,,test,cybersecurity,Tot. Qs. states for Total Test Queries; Table VII reports 100 for each component.
+D002,DS23,cybersecurity reports,,,,cybersecurity,over 29k cybersecurity reports
+D002,DS24,questions related to vulnerabilities,,,,cybersecurity vulnerabilities,
+D003,DS1,QuaLITY,,,,Fictional stories,Long-document reading comprehension benchmark requiring the acquisition of new knowledge.
+D003,DS2,LongHealth,,,,Medical,Additional benchmark mentioned without a numeric result on this page.
+D003,DS3,FinanceBench,,,,Finance,Additional benchmark mentioned without a numeric result on this page.
+D003,DS4,"QuaLITY, LongHealth, FinanceBench",,,,,"Aggregate benchmark grouping used by the phrase ""Across models and benchmarks""."
+D003,DS5,"QuaLITY, LongHealth, and FinanceBench",,,,,Aggregate three-benchmark evaluation scope.
+D003,DS6,FineWeb,,,,,Used as replay data with a mixing ratio of 10%.
+D004,DS1,e-commerce seller forums and public hotel reviews,,,,,The two evaluation sources are named collectively; no formal dataset names or versions are stated on this page.
+D004,DS2,OpinioRAG,,,,,Year: 2025; Evaluation Focus: Sentiment Alignment; Opinion: Yes.
+D004,DS3,BERDS,,,,,Year: 2025; Evaluation Focus: Perspective Coverage; Opinion: Partial.
+D004,DS4,PIR,,,,,Year: 2024; Evaluation Focus: Perspective Recall; Opinion: Partial.
+D004,DS5,RAGBench,,,,,Year: 2024; Evaluation Focus: TRACe Metrics; Opinion: No.
+D004,DS6,CRAG,,,,,"Year: 2024; Evaluation Focus: Accuracy, Hallucination; Opinion: No."
+D004,DS7,FActScore,,,,,Year: 2023; Evaluation Focus: Atomic Fact Accuracy; Opinion: No.
+D004,DS8,BEIR,,,,,"Year: 2021; Evaluation Focus: nDCG, MAP, Recall; Opinion: No."
+D004,DS9,Natural Questions,,,,,"Year: 2019; Evaluation Focus: EM, Token F1; Opinion: No."
+D004,DS10,HotpotQA,,,,,"Year: 2018; Evaluation Focus: EM, F1, Sup. F1; Opinion: No."
+D004,DS11,major RAG benchmarks,,,,,36 benchmarks were surveyed; Table 1 presents 9 representative datasets.
+D004,DS12,E-commerce seller forums,,English,,E-commerce,"Six months of discussions, approximately 8,000 unique sellers, 10K+ documents, and a 98-entity registry across three tiers."
+D004,DS13,OpinioBank,,,3-property sample,Public hotel reviews,Publicly available dataset of consumer reviews of hotel properties; entity registry construction stabilized at approximately 90 entities.
+D004,DS14,Forums,,,,,"Also printed as forums dataset. Four entities with H(e) ≥0.6 were selected, yielding 48 questions."
+D004,DS15,Silverton Las Vegas,,,sample,hotel reviews,OpinioBank hotel property; Table 3 label: Silverton.
+D004,DS16,Ambassador Bangkok,,,sample,hotel reviews,OpinioBank hotel property; Table 3 label: Ambassador.
+D004,DS17,Ala Moana Honolulu,,,sample,hotel reviews,OpinioBank hotel property; Table 3 label: Ala Moana.
+D004,DS18,OpinioBank hotel reviews,,,sample,hotel reviews,"Sample of three hotel properties totaling 6,256 reviews across 15 entities and 57 questions; the full release contains 500 entities."
+D004,DS19,forums dataset,,,,e-commerce forums,
+D004,DS20,hotel reviews,,English,,,
+D004,DS21,OpinioBank hotel-review data,,English,,,Publicly available under the CC BY-NC-SA 4.0 license; used in cross-domain evaluation; introduced by Nayeem and Rafiei (2025).
+D004,DS22,e-commerce seller-forum corpus,,English,,,Proprietary user-generated content; aggregate statistics are reported and platform-specific terms and quoted content are anonymized.
+D004,DS23,forum posts,,,,,Manual annotation corpus.
+D005,DS1,12 open-book RAG QA benchmarks,,,,,Benchmarks span diverse application domains and scenarios.
+D005,DS2,CRAG,,,web portion,,"CRAG (Yang et al., 2024) benchmark."
+D005,DS3,English Wikipedia dataset,,English,,,Content source labeled Wiki Pages; used to generate synthetic QA pairs.
+D005,DS4,Web Search,,,,,Parsed web pages retrieved using web search queries in response to a set of internal factual questions.
+D005,DS5,Wiki Pages,,,,,Seed Data in Table 1.
+D005,DS6,RAGBench,,,,,"Source of pre-processed data for the remaining 11 benchmarks, covering health, finance, customer support, legal, and general knowledge."
+D005,DS7,HotpotQA,,,,,"Yang et al., 2018"
+D005,DS8,MS Marco,,,,,
+D005,DS9,FinQA,,,,,"Chen et al., 2021"
+D005,DS10,TAT-QA,,,,,"Zhu et al., 2021"
+D005,DS11,HAGRID,,,,,"Kamalloo et al., 2023"
+D005,DS12,ExpertQA,,,,,"Malaviya et al., 2023"
+D005,DS13,final training data mix,,,,,Aggregate represented by the Total row in Table 1.
+D005,DS14,CovidQA,,,,,"Möller et al., 2020"
+D005,DS15,DelucionQA,,,,,"Sadat et al., 2023"
+D005,DS16,Emanual,,,,,"Nandy et al., 2021"
+D005,DS17,MS Macro,,,,,"Nguyen et al., 2016"
+D005,DS18,PubMedQA,,,,,"Jin et al., 2019"
+D005,DS19,TechQA,,,,,"Castelli et al., 2019"
+D005,DS20,Web Pages (C),,,holdout set,,Used as the test set.
+D005,DS21,SimpleQA,,,,,"Comprises 4,326 short QA pairs covering history, technology, science, and entertainment."
+D005,DS22,Head-to-Tail,,,,,"Contains simple QA pairs generated from DBPedia and IMDb; 200 entities were sampled respectively from head, torso, and tail entities for each dataset, resulting in 1,200 QA pairs."
+D005,DS23,IMDB,,,,,Closed-book.
+D005,DS24,DBpedia,,,,,Closed-book.
+D006,DS1,BEIR,,,,information retrieval,Mentioned as evaluation benchmark for LCR performance improvements.; merged mentions RDS1
+D006,DS2,TREC,,,,,Mentioned as evaluation benchmark for LCR performance improvements.
+D006,DS3,TREC Deep Learning 2019,2019,,,information retrieval,"TREC Deep Learning track 2019, passage ranking with graded relevance annotations"
+D006,DS4,TREC Deep Learning 2020,2020,,,information retrieval,"TREC Deep Learning track 2020, passage ranking with graded relevance annotations"
+D006,DS5,NaturalQuestions (NQ),,,,open-domain question answering,"real user queries from Google search, annotated with answers from Wikipedia passages"
+D006,DS6,DBpedia-Entity (DBPE),,,,entity retrieval,entity-centric retrieval dataset emphasizing entity linking and knowledge graph queries
+D006,DS7,FEVER (FEVE),,,,fact verification,queries are claims verified against Wikipedia documents
+D006,DS8,SciDocs (SCID),,,,scientific citation prediction,"scientific paper abstracts as queries, relevance from citation links"
+D006,DS9,Touché (TOUC),,,,argument retrieval,debate topics as queries
+D006,DS10,NFCorpus (NFCO),,,,biomedical information retrieval,medical queries and scientific articles
+D006,DS11,TREC DL19 (DL19),,,,passage ranking,TREC 2019 Deep Learning track
+D006,DS12,TREC DL20 (DL20),,,,passage ranking,TREC 2020 Deep Learning track
+D006,DS13,DL19,,,,,TREC dataset
+D006,DS14,DL20,,,,,TREC dataset
+D006,DS15,NQ,,,,,BEIR
+D006,DS16,TOUC,,,,,BEIR
+D006,DS17,SCID,,,,,BEIR
+D006,DS18,NFCO,,,,,BEIR
+D006,DS19,DBPE,,,,,BEIR
+D006,DS20,FEVE,,,,,BEIR
+D006,DS21,BEIR AVG,,,,,average across BEIR datasets
+D006,DS22,TREC AVG,,,,,average across TREC datasets
+D007,DS1,SQuAD,,,,,single-hop; merged mentions RDS2
+D007,DS2,Natural Questions,,,,,single-hop; merged mentions RDS3
+D007,DS3,TriviaQA,,,,,single-hop; merged mentions RDS4
+D007,DS4,MuSiQue,,,,,multi-hop
+D007,DS5,HotpotQA,,,,,multi-hop
+D007,DS6,2WikiMultiHopQA,,,,,multi-hop
+D007,DS7,NQ,,,,,Used in Table 5 case study (single-hop example)
+D008,DS1,CoFaithfulQA,,,,,six subsets
+D008,DS2,HotpotQA,,,,,subset of CoFaithfulQA
+D008,DS3,NQ,,,,,subset of CoFaithfulQA
+D008,DS4,NewsQA,,,,,subset of CoFaithfulQA
+D008,DS5,SearchQA,,,,,subset of CoFaithfulQA
+D008,DS6,SQuAD,,,,,subset of CoFaithfulQA
+D008,DS7,TriviaQA,,,,,subset of CoFaithfulQA
+D008,DS8,RAGTruth,,,,,used for latency evaluation
+D008,DS9,Dolly (AC),,,,,used for latency evaluation
+D008,DS10,CoFaithfulQA - HotpotQA,,,,,Contextual-faithfulness subset
+D008,DS11,CoFaithfulQA - NewsQA,,,,,Contextual-faithfulness subset
+D008,DS12,CoFaithfulQA - NQ,,,,,Contextual-faithfulness subset
+D008,DS13,CoFaithfulQA - SearchQA,,,,,Contextual-faithfulness subset
+D008,DS14,CoFaithfulQA - SQuAD,,,,,Contextual-faithfulness subset
+D008,DS15,CoFaithfulQA - TriviaQA,,,,,Contextual-faithfulness subset
+D009,DS1,PopQA,,,,single-hop QA,"Mallen et al., 2023; merged mentions RDS1"
+D009,DS2,HotpotQA,,,,multi-hop QA,"Yang et al., 2018; merged mentions RDS2"
+D009,DS3,2WikiMultiHopQA,,,,multi-hop QA,"Ho et al., 2020; printed as '2WikiMulti'; merged mentions RDS6"
+D009,DS4,Bamboogle,,,,multi-hop QA,"Press et al., 2023; merged mentions RDS4"
+D009,DS5,MuSiQue,,,,multi-hop QA,"Trivedi et al., 2022; merged mentions RDS5"
+D009,DS6,Average (over 5 benchmarks),,,,,Average column of Table 1
+D009,DS7,2WikiMulti,,,,,
+D009,DS8,multi-hop QA seed questions (PRM training),,,train,,"2,000 source multi-hop QA questions; 31,728 reasoning trajectories; 109,664 step-level decisions"
+D010,DS1,MIRAGE,,,test set,medical,Cited as [42].
+D010,DS2,MMLU,,,eight subject-specific subsets,,Cited as [19].
+D010,DS3,FeB4RAG,,,test set,diverse domains,Cited as [39].
+D010,DS4,MedQA,,,,medical,A question set in the MIRAGE benchmark.
+D010,DS5,MedRAG,,,,healthcare,Knowledge source for MIRAGE that includes four corpora with documents related to healthcare; each corpus is treated as a separate data source.
+D010,DS6,Wikipedia dataset,,,,,Knowledge source for MMLU. Documents are clustered into ten groups using k-means; cluster sizes range from 1.41 M to 2.88 M vectors per cluster.
+D010,DS7,MMLU,,,test set,,
+D011,DS1,various datasets,,,,,The page later states that experiments span four datasets; individual dataset names are not printed.
+D011,DS2,NFCorpus,,English,,biomedical,domain-specific knowledge
+D011,DS3,TREC-COVID,,,,COVID-19 scientific literature,domain-specific knowledge
+D011,DS4,DROP,,,,,Evaluates the watermark effects on the main task performance.
+D011,DS5,MS-MARCO,,,,,Evaluates the effectiveness of watermarking on large-scale knowledge bases.
+D011,DS6,COVID,,,,,
+D011,DS7,MARCO,,,,,
+D011,DS8,original datasets,,,,,Source of the clean texts sampled for human evaluation.
+D012,DS1,AeroTrustBench,,,,compliance-oriented QA,Counterfactual compliance QA benchmark.
+D012,DS2,TEMPLATE,,,All,aerospace,Evaluation setting named in the main-results discussion.
+D012,DS3,FRESH-STRESS,,,,aerospace,Document text contains no explicit obsolescence cues.
+D012,DS4,SOURCE_ANCHORED,,,,aerospace,"For enlarged candidate-pool evaluation, 100 instances use recall-controlled 50-document pools: the original two gold documents plus 24 BM25-selected, world-consistent distractor pairs (48 documents)."
+D012,DS5,RECENCY-TRAP,,,,aerospace,Tests timestamp recency against explicit supersession. Auxiliary stress set.
+D012,DS6,Matched Sets,,,,,Setting in Table 2.
+D012,DS7,PROMPT-INJECTION,,,,aerospace,Adversarial instructions inserted into inadmissible evidence. Auxiliary stress set.
+D012,DS8,SILICONFLOW_HELDOUT,,,held-out,,Table 3 uses SF.
+D012,DS9,human-audited responses,,,,,The underlying dataset is not named on this page.
+D012,DS10,Metadata noise stress test,,,,,Figure 2 evaluation setting; the underlying dataset is not named on this page.
+D012,DS11,SF_HELDOUT,,,,aerospace,Small non-Qwen-generated check for generator-bias concerns. SF_HELDOUT denotes SILICONFLOW_HELDOUT.
+D012,DS12,SOURCE,,,,,
+D012,DS13,50-document candidate pools,,,,,Large Candidate-Pool Error Analysis.
+D012,DS14,Retrieval-miss boundary for explicit supersession,,,,,
+D012,DS15,TEMPLATE,,,Restricted,,
+D012,DS16,TEMPLATE,,,Freshness,,
+D012,DS17,TEMPLATE,,,Conflict,,
+D012,DS18,TEMPLATE,,,Global,,
+D013,DS1,NQ,,English,"train 79,168; dev 8,757; test/eval 3,610",open-domain factoid QA / wiki,Multiple groups of NQ runs
+D013,DS2,TriviaQA,,English,"train 78,785; dev 8,837; test/eval 11,313",open-domain factoid QA / wiki/web,"Joshi et al., 2017"
+D013,DS3,HotpotQA,,English,"train 90,447; dev 7,405; test/eval 7,405",multi-hop QA / wiki,"Yang et al., 2018; development split used for evaluation because processed benchmark has no separate test split; merged mentions RDS2"
+D013,DS4,FEVER,,,,,"fact verification, three-way labels"
+D014,DS1,WoW,,,,,Wizard of Wikipedia dialogue generation
+D014,DS2,HotpotQA,,,train (first 500 examples),,multi-hop QA from Wikipedia
+D014,DS3,Wizard of Wikipedia,,,"test seen (first 100 conversations, 452 wizard utterances)",,"Gold knowledge annotation allows only one gold sentence, even when other retrieved sentences are relevant."
+D014,DS4,Noisy HotpotQA,,,,,Variant created by the authors by removing one sentence from the gold knowledge set per example.
+D015,DS1,XRAG,,English; Arabic; Chinese; German; Spanish,monolingual retrieval,news,benchmark introduced in this paper; two sub-tasks (monolingual and multilingual retrieval)
+D015,DS2,XQA,,,,,"existing cross-lingual open-domain QA dataset (Liu et al., 2019a)"
+D015,DS3,XOR QA,,,,,"existing cross-lingual open-domain QA dataset (Asai et al., 2021)"
+D015,DS4,News Crawl,,en; de; es; zh; ar,,news,source of news articles for question generation
+D015,DS5,XRAG,,German,multilingual retrieval,,example number 300
+D015,DS6,XRAG,,English,"English questions, monolingual retrieval setting",,Table 3 questions and supporting articles in English
+D015,DS7,XRAG,,En; De; Es; Zh; Ar,"monolingual retrieval setting, English documents",,"Table 4, query languages En/De/Es/Zh/Ar"
+D015,DS8,XRAG,,"En, De, Es, Zh, Ar",test,,multilingual retrieval setting; EnX = English translations via Google Translate
+D015,DS9,XRAG,,En+De; En+Es; En+Zh; En+Ar,multilingual retrieval setting,,controlled analysis of GPT-4o
+D015,DS10,SimilarWeb real-world LLM traffic queries,,German; Japanese; Spanish,,real-world information seeking,proprietary dataset of real LLM traffic provided by SimilarWeb; queries filtered by locale and language using langid
+D015,DS11,XRAG,,,En+De,,multilingual retrieval setting
+D015,DS12,XRAG,,,En+Es,,multilingual retrieval setting
+D015,DS13,XRAG,,,En+Zh,,multilingual retrieval setting
+D015,DS14,XRAG,,,En+Ar,,multilingual retrieval setting
+D015,DS15,XRAG,,,Avg.,,average over language pairs
+D016,DS1,SMART-SLIC scientific publication corpus,,,,large-scale malware analysis and anomaly detection with tensor decomposition,"30 core documents selected by SME, expanded along citation network 2 times; final 8,790 scientific publications; 22% had full-texts"
+D017,DS1,DocBench,,,,"multimodal document QA (Finance, Law, Academia, Government, News)","229 documents across five domains, 1,102 QA pairs, avg. 66 pages, ~46k tokens"
+D017,DS2,MMLongBench-Doc,,,,multimodal long-document QA,"135 documents spanning 7 types, 1,082 questions"
+D017,DS3,MMMU,,,,,Sociology subject: 287 samples (2.48%)
+D018,DS1,Wikipedia,,Japanese,,,open-domain knowledge querying
+D018,DS2,News,,Japanese,,,temporal and dynamic event tracking
+D018,DS3,ProductReview,,Japanese,,,customer support and e-commerce
+D018,DS4,CompanyRules,,Japanese,,,enterprise-level private data retrieval
+D018,DS5,Pseudo Wikipedia (Wikipedia),,,,,"A dataset composed of introductions and explanations of non-existent entities, synthesized by imitating articles about real entities found on Wikipedia."
+D018,DS6,Pseudo News (News),,,,,"A dataset composed of news articles reporting on fictional events, synthesized by imitating articles from a fictional news media outlet."
+D018,DS7,Pseudo Product Review (ProductReview),,,,,"A dataset consisting of descriptions of specifications and user experiences for non-existent products, synthesized by imitating product evaluation articles found on review sites and personal blogs."
+D018,DS8,Pseudo Company Rules (CompanyRules),,,,,"A dataset consisting of documents describing work systems, compensation structures, and employee benefits, modeled after real-world internal regulations and work rules."
+D018,DS9,Overall,,Japanese,,,Combines scores from all datasets.
+D018,DS10,Product Review,,Japanese,,,
+D018,DS11,Company Rules,,Japanese,,,
+D019,DS1,Natural Questions (NQ),,English,test set,general knowledge,Contains real-world user queries from search engines. All provided documents without HTML tags are used to construct a Wikipedia knowledge base. All QA pairs in the NQ training set are also leveraged.
+D019,DS2,Huatuo-26M,,Chinese,test set,medical,Large-scale Chinese medical QA dataset curated from online healthcare QA websites.
+D020,DS1,RAG-MULTI-CORPUS,,,,multi-domain,"A multi-format, multi-domain benchmark designed to mirror real-world enterprise knowledge bases. It contains 236 documents spanning five fictional organizations and 786 curated query–answer pairs with ground-truth citations. Formats include PDF, Markdown, HTML, DOCX, and PPTX. Queries are categorized into seven types."
+D020,DS2,Aventro Motors,,,,Automotive,RAG-Multi-Corpus enterprise
+D020,DS3,Cendara University,,,,Academia & Education,RAG-Multi-Corpus enterprise
+D020,DS4,Velvera Technologies,,,,Enterprise Technology,RAG-Multi-Corpus enterprise
+D020,DS5,ZX Bank,,,,Banking & Finance,RAG-Multi-Corpus enterprise
+D020,DS6,CloudWay 24,,,,,RAG-Multi-Corpus organization
+D020,DS7,RAG-Multi-Corpus benchmark,,,,,

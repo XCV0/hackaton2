@@ -1,0 +1,211 @@
+publication_id,device_id,absorber_material_id,device_label,device_role,device_type,architecture,substrate_type,active_area,area_unit,area_definition,encapsulation,note
+D001,DV1,M1,champion device,target,cell,,,,,,,
+D001,DV2,M4,pristine device,control,cell,n-i-p,,,,,,planar n-i-p conﬁguration
+D001,DV3,M4,best planar heterojunction CsPbI2Br perovskite solar cell,target,cell,n-i-p,rigid,0.0625,cm2,aperture,,"FTO/compact TiO2/CsPbI2Br/P3HT/Ag stack. A metal aperture was stated to define the active area. All steps were carried out in a nitrogen glove box (H2O < 0.01 ppm, O2 < 0.01 ppm)."
+D001,DV4,M5,pristine one,control,cell,n-i-p,rigid,0.0625,cm2,aperture,,Pristine comparator for the stated PCE increment.
+D001,DV5,M12,0.001 M SrCl2,target,cell,n-i-p,,,,,,SrCl2 additive concentration: 0.001 M; planar n-i-p conﬁguration.
+D001,DV6,M12,0.005 M SrCl2,target,cell,n-i-p,,,,,,SrCl2 additive concentration: 0.005 M; planar n-i-p conﬁguration.
+D001,DV7,M12,0.01 M SrCl2,target,cell,n-i-p,,,,,,SrCl2 additive concentration: 0.01 M; planar n-i-p conﬁguration.
+D001,DV8,M12,0.05 M SrCl2,target,cell,n-i-p,,,,,,SrCl2 additive concentration: 0.05 M; planar n-i-p conﬁguration.
+D001,DV9,M14,pristine CsPbI2Br cell,,cell,,,,,,,
+D001,DV10,M15,0.01 M SrCl2–doped CsPbI2Br cell,,cell,,,,,,,
+D001,DV11,M16,0.01 M NiCl2–doped CsPbI2Br cell,,cell,,,,,,,
+D001,DV12,M17,champion device for the SrCl2-doped PSC,,cell,,,,,,,
+D001,DV13,,20 individual PSCs based on pristine and 0.01 M SrCl2–doped CsPbI2Br films,,cell,,,,,,,
+D001,DV14,M18,Pristine,control,cell,,,,,,,
+D001,DV15,M15,champion devices (FB–SC and SC–FB),target,cell,,,,,,,Based on the 0.01 M SrCl2–doped perovskite film.
+D001,DV16,M18,best pristine sample,control,cell,,,,,,,
+D001,DV17,M22,NiCl2-doped device,target,cell,,,,,,,
+D002,DV1,M1,NiO/GO,target,cell,p-i-n,,1,cm2,,,The experiment utilizes the spin-coating method to observe the effect of combining NiO and GO in perovskite solar cells.
+D002,DV2,M1,single-layer NiO,control,cell,,,,,,,
+D002,DV3,M2,solar cell fabrication with coating NiO/GO,target,cell,p-i-n,rigid,,,,,Fabricated on an FTO glass substrate with NiO/GO as the double hole transport layer.
+D002,DV4,M2,solar cell fabrication with coating NiO,control,cell,p-i-n,rigid,,,,,NiO-coated solar cell used as a comparison; the stated difference between the two solar cells is the hole transport layer.
+D002,DV5,M1,NiO,,cell,p-i-n,,1,cm2,,,"PSC with NiO as the hole transport layer, fabricated without adding GO solution; the area is printed as the active area."
+D003,DV1,M3,PSCs based on Y-doped Sn3O4 ETL,target,cell,,,,,,,The Sn3O4 ETL is doped with Y.
+D003,DV2,M5,PSCs based on Sn3O4 ETL,target,cell,,,,,,,Device with Y-doped Sn3O4 as the electron transport material.
+D003,DV3,M3,Sn3O4,control,cell,n-i-p,,,,,,Control device based on the undoped Sn3O4 ETL.
+D003,DV4,M3,Y-Sn3O4,target,cell,n-i-p,,,,,,PSCs based on 5% Y-Sn3O4.
+D003,DV5,M3,glass/ETL/perovskite/Spiro-OMeTAD/Ag,,cell,n-i-p,,,,,,Cross-sectional PSC shown in Figure 5A.
+D003,DV6,M3,Y-Sn3O4 planar perovskite solar cell,target,cell,n-i-p,rigid,,mm,,,ITO/Y-Sn3O4/perovskite/Spiro-OMeTAD/Ag device with Five percent Y doping; the active area was formed by superposing ITO and Ag.; active_area as printed: 2 × 2
+D003,DV7,M3,planar perovskite solar cells,,cell,,,4,mm2,,,Measured with a square part of 0.04 cm2 in the ambient condition; the effective area 4 mm2 was confirmed by metallographic microscopy.
+D004,DV1,M1,MoS2 NPs as an ETL,target,cell,,,,,,,Cell structure printed as FTO/ETL/perovskite absorber/spiro-OMeTAD/Ag.
+D004,DV2,,ED-treated MoS2 devices without curcumin,control,cell,,,,,,,
+D004,DV3,,synthesized without curcumin,,cell,,,,,,,Fabricated device using MoS2-NPs synthesized without curcumin.
+D004,DV4,,synthesized with curcumin,,cell,,,,,,,Fabricated device using MoS2-NPs synthesized with curcumin.
+D004,DV5,M4,PSCs,,cell,,,,,,,Device fabricated on patterned FTO glass with a MoS2 electron transport layer obtained from C-ED-2 and a silver top electrode.
+D004,DV6,M1,perovskite solar cells,,cell,,,,,,,
+D004,DV7,M9,glass/FTO/ETL/perovskite absorber/spiro-OMeTAD/Ag,,cell,,,,,,,General cell structure using synthesized MoS2 as the electron transport material.
+D004,DV8,M4,ED,,cell,n-i-p,,,,,,ED-treated MoS2 solar cell; printed stack: FTO/ETL/perovskite/spiro-OMeTAD/Ag.
+D004,DV9,M4,BCC-ED,,cell,,,,,,,BCC-ED-treated MoS2-based device.
+D004,DV10,M4,C-ED-1,,cell,,,,,,,C-ED-treated MoS2 cell.
+D004,DV11,M4,C-ED-2,,cell,,,,,,,C-ED-2-treated MoS2-based device.
+D004,DV12,M1,FTO/ETL/perovskite absorber/spiro-OMeTAD/Ag,control,cell,,,,,,,Baseline endpoint in the printed from-to comparisons; the ETL material for this endpoint is not stated on this page.
+D004,DV13,M16,ED-treated MoS2 devices,control,cell,,,,,,,
+D004,DV14,M16,C-ED-2-treated MoS2 nanoparticles,target,cell,,,,,,,
+D005,DV1,M1,,,cell,n-i-p,,,,,,top-performing PSCs feature a n-i-p structure
+D005,DV2,,Spiro-OMeTAD-based device,control,cell,n-i-p,,,,,,FTO/TiO2/PVK/HTM/Au
+D005,DV3,,SF-MPA-MCz-based device,target,cell,n-i-p,,,,,,FTO/TiO2/PVK/HTM/Au
+D005,DV4,M2,Spiro-OMeTAD,control,cell,n-i-p,,,,,,champion device based on Spiro-OMeTAD
+D005,DV5,M3,SF-MPA-MCz,target,cell,n-i-p,,,,,,champion device based on SF-MPA-MCz
+D005,DV6,,SF-MPA-MCz-based unencapsulated perovskite device,target,cell,,,,,,,unencapsulated
+D005,DV7,,Spiro-OMeTAD-based unencapsulated PSC,control,cell,,,,,,,unencapsulated
+D005,DV8,M1,SF-MPA-MCz-based PSC,target,cell,n-i-p,rigid,,,,,FTO/TiO2/perovskite/PEAI/SF-MPA-MCz/Au
+D005,DV9,M1,Spiro-OMeTAD-based PSC,control,cell,n-i-p,rigid,,,,,FTO/TiO2/perovskite/PEAI/Spiro-OMeTAD/Au
+D005,DV10,M3,PSC with SF-MPA-MCz,target,cell,n-i-p,,,,,,optimal SF-MPA-MCz solution concentration 30 mg/ml
+D005,RDV1,M1,Spiro-OMeTAD Forward,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,RDV2,M1,Reverse,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,RDV3,M1,SF-MPA-MCz Forward,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D007,DV1,M1,V1553,target,cell,,,,,,,Perovskite solar cell incorporating V1553 as the hole transporting material.
+D007,DV2,,Spiro-OMeTAD,control,cell,,,,,,,Comparator device measured under identical conditions.
+D007,DV3,M1,PSCs based on spiro-OMeTAD,,cell,,,,,,,FTO/SnO2/perovskite/spiro-OMeTAD/Au
+D007,DV4,M1,PSCs based on V1553,,cell,,,,,,,FTO/SnO2/perovskite/V1553/Au. The CWPL paragraph prints V1353 in one comparison.
+D007,DV5,M1,mini-module,,minimodule,,,30.24,cm2,designated illumination,,Designated illumination area was estimated as 30.24 cm2.
+D007,DV6,M1,V1553-based device,target,cell,,,,,,,
+D007,DV7,M1,spiro-OMeTAD reference device,control,cell,,,,,,,
+D007,DV8,M1,PSCs utilizing V1565 as HTM,target,cell,,,,,,,
+D007,DV9,M1,V1553-based module,target,minimodule,,,,,,,dimensions of 6.5 × 7 cm2
+D007,DV10,M1,module using spiro-OMeTAD,control,minimodule,,,,,,,dimensions of 6.5 × 7 cm2
+D008,DV1,M1,,target,cell,p-i-n,,0.09,cm2,,,"PCE 18.5% with PbCl2, annealed at 150 °C"
+D008,DV2,M1,,record,cell,p-i-n,,0.36,cm2,,,"scaled-up cell, champion PCE 17.06%"
+D008,DV3,M2,,target,cell,p-i-n,rigid,0.09,cm2,designated illumination,,
+D008,DV4,M2,,target,cell,,,0.36,cm2,designated illumination,,
+D008,DV5,M3,solar cells (active area 0.09 cm2),,cell,,,0.09,cm2,designated illumination,,active area determined using the top metal contact
+D008,DV6,M4,w/o PbCl2,control,cell,p-i-n,,0.09,cm2,designated illumination,,"PTAA/PVK/C60 architecture, annealed 150 °C"
+D008,DV7,M5,w/ PbCl2,record,cell,p-i-n,,0.09,cm2,designated illumination,,"PTAA/PVK/C60 architecture, annealed 150 °C"
+D008,DV8,M3,champion cell w/ PbCl2,target,cell,p-i-n,,,,,,PTAA/PVK/C60 architecture
+D008,DV9,M3,sample w/o PbCl2,control,cell,p-i-n,,,,,,
+D008,DV10,M3,PSCs w/o PbCl2,control,cell,p-i-n,,0.09,cm2,designated illumination,,
+D008,DV11,M3,PSCs w/ PbCl2,target,cell,p-i-n,,0.09,cm2,designated illumination,,
+D008,DV12,M3,champion PSC 0.36 cm2,target,cell,p-i-n,,0.36,cm2,designated illumination,,annealed at 150 °C
+D008,DV13,M2,champion device w/ PbCl2 annealed at 150 °C,target,cell,p-i-n,,0.09,cm2,,,"champion efficiency of this work; larger 0.36 cm2 devices also made (Voc > 1 V, no numeric value printed)"
+D009,DV1,M1,caesium-incorporated THP solar cell,target,,,,,,,,abstract-level description; architecture and area not printed on page 1
+D009,DV2,M2,Cs5 homogeneous 2D/3D THPSC,target,cell,,,,,,,Optimal Cs+ molar ratio of 5%; architecture and area not printed on this page
+D009,DV3,M4,Cs0,control,cell,,,,,,,unencapsulated; Cs0 THPSC device in Fig. 3
+D009,DV4,M4,Cs5,target,cell,,,,,,,unencapsulated; target Cs5 THPSC device
+D009,DV5,M7,Sn perovskite solar cell (PEDOT:PSS/perovskite/ICBA/BCP/Ag),,,p-i-n,rigid,0.0576,cm2,,,Active area defined by metal shadow mask (0.0576 cm2) for performance evaluation; architecture inferred from layer order ITO/PEDOT:PSS/perovskite/ICBA/BCP/Ag
+D009,DV6,,lab-tested device (unnamed in this section),,cell,,,0.0576,cm^2,aperture,unencapsulated,Active area of J-V and EQE measurements defined by a non-reflective metal shadow mask with aperture area 0.0576 cm^2; measured in N2-filled glove box
+D009,DV7,,all measured devices (identical shadow masks),,,,,0.0576,cm^2,aperture,unencapsulated (stability tests),Aperture area 0.0576 cm^2 defined by a metal shadow mask; 20 devices per condition from different batches measured for statistics.
+D009,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D010,DV1,M1,"best cell, 540 °C selenization",,cell,,,,,,,"Best PCE reported in the abstract, obtained at 540 °C selenization. Film deposited on Mo substrate. Device role, architecture and area are not stated on this page."
+D010,DV2,M1,"Mo/SLG cell, nine areas per substrate",,cell,,,0.19,cm2,,,"Nine devices per substrate, mechanically scribed into nine areas of 0.19 cm2; area definition not stated"
+D010,DV3,M5,CZTSSe,control,cell,substrate,rigid,,,,,Structure SLG/Mo/absorber/CdS/ZnO/ITO/Al as sketched in Figure 7; active area not printed on this page
+D010,DV4,M6,"(Na0.1Cu0.9)2ZnSn(S,Se)4",target,cell,substrate,rigid,,,,,"Structure SLG/Mo/(Na0.1Cu0.9)2ZnSn(S,Se)4/CdS/ZnO/ITO/Al as sketched in Figure 7; active area not printed on this page"
+D010,DV5,M1,"Na-doped Cu2ZnSn(S,Se)4 solar cell",,cell,,,,,,,"Absorber selenized at 540 °C, the optimal temperature stated in the conclusions"
+D012,DV1,M1,DIO-20 mg/mL,record,cell,substrate,rigid,,,,,glass/CZTS/CdS/n-ZnO/AZO/Ag; best-performing device
+D012,DV2,M2,CZTS solar cell on Mo-SLG,target,cell,superstrate,rigid,,,,,"metal (Cu, Zn, Sn) thin film alloy galvanostatically electrodeposited on Mo-coated soda–lime glass, followed by annealing and sulfurization; substrate SLG 3.0 × 2.5 cm, 1 µm Mo/glass"
+D012,DV3,M2,SLG/Mo/CZTS/CdS/ZnO/AZO/Ag,target,cell,substrate,rigid,,,,,structure completed by depositing 250-nm-thick Ag films
+D012,DV4,M1,DIO-5 mg/mL,control,cell,substrate,rigid,,,,,"lowest DIO concentration; Rs 23.37 ohm cm2, Jsc 11.74 mA/cm2, Voc 432 mV"
+D012,DV5,M2,DIO-10 mg/mL,target,cell,substrate,rigid,,,,,
+D012,DV6,M2,DIO-15 mg/mL,target,cell,substrate,rigid,,,,,
+D012,DV7,M2,SLG/CZTS/CdS/i-ZnO/AZO/Ag with DIO-20 mg/mL,record,cell,substrate,rigid,,,,,best-performing device
+D012,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D013,DV1,M1,champion (40 % Ge),record,cell,,,,,,,"champion efficiency 12.1 % with 40 % Ge, 1.2 eV bandgap"
+D013,DV2,M2,40Ge,record,cell,substrate,rigid,0.23,cm2,total,,"champion device with 40% Ge, no ARC; SLG/Mo substrate"
+D013,DV3,M3,0Ge,control,cell,substrate,rigid,0.23,cm2,total,,glass/Mo substrate; area from previous page
+D013,DV4,M3,60Ge,target,cell,substrate,rigid,0.23,cm2,total,,glass/Mo substrate; area from previous page
+D013,DV5,M3,80Ge,target,cell,substrate,rigid,0.23,cm2,total,,glass/Mo substrate; area from previous page
+D013,DV6,M3,100Ge,target,cell,substrate,rigid,0.23,cm2,total,,glass/Mo substrate; area from previous page
+D013,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D014,DV1,M1,integrated R2R-friendly device,record,cell,,flexible,,,,,"spray-coating + doctor-blading, bath-free sintering, IR lamp heating; measured after current/light soaking"
+D014,DV2,M2,spin-coating,target,cell,superstrate,rigid,5.94,mm2,aperture,,ITO/CdTe/ZnO:In/Al; measured aperture 5.94 mm2
+D014,DV3,M2,doctor-blading,target,cell,superstrate,rigid,5.94,mm2,aperture,,ITO/CdTe/ZnO:In/Al
+D014,DV4,M2,spray-coating,target,cell,superstrate,rigid,5.94,mm2,aperture,,ITO/CdTe/ZnO:In/Al
+D014,DV5,M2,"standard devices, 2 wt % pyr-CdCl3 ink",target,cell,,,,,,,maximum PCE after current/light soaking
+D014,DV6,M2,devices from washed pyr-CdCl3-capped NCs without additional ligand,control,cell,,,,,,,"negligible PCE, Rs ~500 Ω cm2"
+D014,DV7,M2,devices with 4 wt % pyr-CdCl3,target,cell,,,,,,,"catastrophic shorting, low shunt resistance"
+D014,DV8,M2,R2R-friendly best device,target,cell,,,,,,,"doctor-bladed pyr-CdCl3-capped CdTe NCs with 2 wt % pyr-CdCl3, IR lamp annealing; best after current/light soaking"
+D015,DV1,M1,best bifacial device,record,cell,superstrate,,,,,,CdTe/CdS with CuxCryOz back-buffer
+D015,DV2,M1,"reference device (no buffer, CuCl2-treated)",control,cell,superstrate,,,,,,glass/FTO/CdS/CdTe/Au
+D015,DV3,M1,CuxCryOz/Au back contact annealed 8 min,target,cell,superstrate,,,,,,glass/FTO/CdS/CdTe/CuxCryOz/Au; 30% Cu compound in precursor
+D015,DV4,M1,bifacial device with ITO back electrode,target,cell,superstrate,,,,,,glass/FTO/CdS/CdTe/CuxCryOz/ITO
+D015,DV5,M1,CuxCryOz/Au 0 min,target,cell,superstrate,,,,,,no intentional Cu
+D015,DV6,M1,"CuxCryOz/Au, buffer layer annealed at 200 °C, 6 min",target,cell,superstrate,,,,,,no intentional Cu
+D015,DV7,M1,"CuxCryOz/Au, buffer layer annealed at 200 °C, 8 min",target,cell,superstrate,,,,,,no intentional Cu
+D015,DV8,M1,"CuxCryOz/Au, buffer layer annealed at 200 °C, 10 min",target,cell,superstrate,,,,,,no intentional Cu
+D015,DV9,M1,"CuxCryOz/Au, buffer layer annealed at 200 °C, 12 min",target,cell,superstrate,,,,,,no intentional Cu
+D015,DV10,M1,ITO-only device (ITO/CdTe/CdS),control,cell,superstrate,,,,,,"bifacial, back contact ITO, no back-buffer"
+D015,DV11,M1,CuxCryOz/CdTe/CdS with ITO hole-collecting electrode,target,cell,superstrate,,,,,,bifacial; heat treated at 200 °C for 8 min before ITO deposition
+D015,DV12,,"Cu-doped and ITO electrode, front illumination",control,cell,superstrate,,,,,,reference (Cu-doped and ITO contact); parameters adopted from recent publication [26]
+D015,DV13,,"Cu-doped and ITO electrode, back illumination",control,cell,superstrate,,,,,,"reference, back illumination"
+D015,DV14,,"CuxCryOz/ITO, front illumination",target,cell,superstrate,,,,,,buffer layer annealed 8 min
+D015,DV15,,"CuxCryOz/ITO, back illumination",target,cell,superstrate,,,,,,"bifacial, back illumination"
+D015,DV16,M1,monofacial device (Au electrode),control,cell,superstrate,rigid,0.08,cm2,designated illumination,,45 nm Au back electrode by thermal evaporation; reference Cu-doped
+D015,DV17,M1,bifacial device (ITO back contact),target,cell,superstrate,rigid,0.08,cm2,designated illumination,,ITO 250 nm by RF sputtering at room temperature; with CuxCryOz back-buffer
+D015,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D017,DV1,M2,CIGS cell,,cell,substrate,rigid,0.57,cm2,,,area defined by mechanical scribing
+D017,DV2,M2,R1,control,cell,substrate,,,,,,"reference sample, ΔGGI reference"
+D017,DV3,M2,R2,,cell,,,,,,,
+D017,DV4,M2,G1,control,cell,substrate,rigid,,,,,ΔGGI 0.21
+D017,DV5,M2,G2,,cell,,,,,,,
+D017,DV6,M2,I1,,cell,,,,,,,
+D017,DV7,M2,I2,,cell,,,,,,,
+D017,DV8,M2,I3,,cell,,,,,,,
+D017,DV9,M2,I4,,cell,,,,,,,
+D017,DV10,M2,O1,,cell,,,,,,,
+D017,DV11,M2,O2,,cell,,,,,,,
+D017,DV12,M2,O3,target,cell,substrate,rigid,,,,,ΔGGI 0.50
+D017,DV13,M2,champion cell in this study,record,cell,substrate,rigid,,,,,
+D018,DV1,M2,CIGS thin film solar cell,,cell,,rigid,,,,,Mo-coated glass substrate 5 cm x 5 cm x 1 mm
+D018,DV2,M2,untreated CIGS,control,cell,substrate,rigid,0.25,cm2,total,,"manually scribed to 0.25 cm2, measured without front grid"
+D018,DV3,M2,Cs-ST CIGS,target,cell,substrate,rigid,0.25,cm2,total,,"CsCO3 spin-coated, annealed 400 C for 2 min at ~6e-6 mbar; scribed to 0.25 cm2, no front grid"
+D018,DV4,M2,Cs-ST CIGS solar cell,target,cell,substrate,,,,,,Cs surface treatment (Cs-ST) applied
+D018,DV5,M2,untreated CIGS solar cell,control,cell,,,,,,,
+D019,DV1,M1,3D p-n junction Sb2Se3 solar cell,target,cell,substrate,,,,,,Mo substrate / MoSe2 interlayer / Sb2Se3 nanorod array / CdS buffer
+D019,DV2,M1,Sb2Se3 solar cell with MoSe2 interlayer,target,cell,substrate,rigid,,,,,SLG/Mo/MoSe2/Sb2Se3/CdS/i-ZnO/AZO/Al; 3D p-n junction
+D019,DV3,M1,Sb2Se3 solar cell without MoSe2 interlayer,control,cell,substrate,rigid,,,,,Sb2Se3 on bare Mo substrate
+D019,DV4,M1,"Mo substrate, 200 Å s-1",,cell,,,,,,,"Table 1 row: substrate Mo, evaporation rate 200 Å s-1, deposition at 290 1C"
+D019,DV5,M1,"MoSe2/Mo substrate, 200 Å s-1",,cell,,,,,,,"Table 1 row: substrate MoSe2/Mo, evaporation rate 200 Å s-1, deposition at 290 1C"
+D019,DV6,M1,"MoSe2/Mo substrate, 100 Å s-1",,cell,,,,,,,"Table 1 row: substrate MoSe2/Mo, evaporation rate 100 Å s-1, deposition at 290 1C"
+D019,DV7,M1,"MoSe2/Mo, 250 °C",target,cell,substrate,,,,,,"MoSe2/Mo substrate, substrate temperature 250 °C; CdS partner layer per text"
+D019,DV8,M1,"MoSe2/Mo, 260 °C",target,cell,substrate,,,,,,"MoSe2/Mo substrate, substrate temperature 260 °C; described as best cell (PCE 5.637%)"
+D019,DV9,M1,"MoSe2/Mo, 270 °C",target,cell,substrate,,,,,,"MoSe2/Mo substrate, substrate temperature 270 °C"
+D019,DV10,M1,"MoSe2/Mo, 290 °C",target,cell,substrate,,,,,,"MoSe2/Mo substrate, substrate temperature 290 °C"
+D019,DV11,M1,"Mo, 315 °C",control,cell,substrate,,,,,,"Bare Mo substrate, substrate temperature 315 °C"
+D019,DV12,M1,"Sb2Se3 solar cell, 260 °C, MoSe2/Mo substrate (certified)",record,cell,substrate,,,,,,analyzed by an external certified laboratory (KIER)
+D019,RDV1,M1,Mo,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+D019,RDV2,M1,MoSe2/Mo,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+D019,RDV3,M1,MoSe2,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+D019,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D020,DV1,M1,"carbon-based Sb2(S,Se)3 cell (no HTM)",control,cell,,,,,,,"carbon counter electrode, no HTM and no precious metal"
+D020,DV2,M1,"Sb2(S,Se)3 cell with P3HT layer",target,cell,,,,,,,"P3HT layer inserted between Sb2(S,Se)3 film and carbon electrode"
+D020,DV3,M3,Sb2S3 solar cells,control,cell,superstrate,rigid,,,,,FTO/SnO2/CdS/Sb2S3/Carbon
+D020,DV4,M1,"Sb2(S, Se)3 solar cells",target,cell,superstrate,rigid,,,,,"FTO/SnO2/CdS/Sb2(S, Se)3/Carbon"
+D020,DV5,M4,"Sb2S3/Sb2(S, Se)3 solar cells",target,cell,superstrate,rigid,,,,,"bilayer absorber, carbon electrode"
+D020,DV6,M5,"carbon-based Sb2(S, Se)3 solar cell (FTO/SnO2/CdS/Sb2(S, Se)3/Carbon)",,cell,,,,,,,structure as printed in Figure 4a; device_role and architecture not stated on this page
+D020,DV7,M4,"Sb2S3/Sb2(S, Se)3/P3HT/carbon",target,,,,,,,,"Carbon-based cell with P3HT interlayer; structure SnO2/CdS/Sb2S3/Sb2(S, Se)3/P3HT/carbon"
+D020,DV8,M4,"Sb2S3/Sb2(S, Se)3/carbon (without P3HT)",control,,,,,,,,"Carbon-based cell without P3HT; structure SnO2/CdS/Sb2S3/Sb2(S, Se)3/carbon"
+D020,DV9,,with P3HT,target,cell,superstrate,rigid,,,,,"structure SnO2/CdS/Sb2S3/Sb2(S, Se)3/P3HT/carbon on FTO glass"
+D020,DV10,,without P3HT,control,cell,superstrate,rigid,,,,,"structure SnO2/CdS/Sb2S3/Sb2(S, Se)3/carbon on FTO glass"
+D020,DV11,M1,"carbon-based Sb2(S,Se)3 cell without HTM",control,cell,,,6.25,mm2,,,Active area masked at around 6.25 mm2; no HTM
+D020,DV12,M1,"SnO2/CdS/Sb2S3/Sb2(S,Se)3/P3HT/carbon cell",target,cell,,,6.25,mm2,,,P3HT used as HTM; active area masked at around 6.25 mm2
+D021,DV1,M1,optimized bilayer architecture,target,cell,substrate,rigid,,,,,AZO/UZO/CdS/Sb2Se3/NaF/FTO/glass; Sb2Se3 bilayer by PED + RFMS
+D021,DV2,M1,AZO/UZO/CdS/undoped-Sb2Se3/FTO/glass,,cell,superstrate,rigid,,,,,RFMS-grown Sb2Se3
+D021,DV3,M3,AZO/UZO/CdS/Cu:Sb2Se3/FTO/glass,control,cell,superstrate,rigid,,,,,PED-grown Cu:Sb2Se3
+D021,DV4,M1,AZO/UZO/CdS/Sb2Se3/NaF/FTO/glass,target,cell,superstrate,rigid,,,,,with 10 nm NaF interlayer deposited by PED on FTO/glass
+D021,DV5,M1,AZO/UZO/CdS/Sb2Se3/FTO/glass (without NaF),control,cell,superstrate,rigid,,,,,RFMS-grown Sb2Se3
+D021,DV6,M3,AZO/UZO/CdS/Cu:Sb2Se3/NaF/FTO/glass,target,cell,superstrate,rigid,,,,,PED-grown 5%Cu:Sb2Se3 with NaF interlayer
+D021,DV7,M1,A1,control,cell,superstrate,rigid,6,mm2,,,Single thick sputtered Sb2Se3 layer (RFMS); structure AZO/UZO/CdS/Sb2Se3(RFMS)/NaF/FTO/glass.
+D021,DV8,M4,B1,control,cell,superstrate,rigid,6,mm2,,,Single thick layer deposited via PED; structure AZO/UZO/CdS/Cu:Sb2Se3(PED)/NaF/FTO/glass.
+D021,DV9,M1,A2 to A6,,cell,superstrate,rigid,,,,,PED-on-RFMS bilayer architecture; first layer RFMS then PED film; structure AZO/UZO/CdS/Cu:Sb2Se3(PED)/Sb2Se3(RFMS)/NaF/FTO/glass.
+D021,DV10,M1,B2 to B4,,cell,superstrate,rigid,,,,,RFMS-on-PED bilayer architecture; first layer PED then sputtered layer; structure AZO/UZO/CdS/Sb2Se3(RFMS)/Cu:Sb2Se3(PED)/NaF/FTO/glass.
+D021,DV11,M1,A2,,cell,substrate,rigid,,,,,PED-on-RFMS bilayer
+D021,DV12,M1,A3,,cell,substrate,rigid,,,,,PED-on-RFMS bilayer
+D021,DV13,M1,A4,,cell,substrate,rigid,,,,,PED-on-RFMS bilayer
+D021,DV14,M1,A5,,cell,substrate,rigid,,,,,PED-on-RFMS bilayer
+D021,DV15,M1,A6,,cell,substrate,rigid,,,,,PED-on-RFMS bilayer
+D021,DV16,M1,B2,,cell,substrate,rigid,,,,,RFMS-on-PED bilayer
+D021,DV17,M1,B3,,cell,substrate,rigid,,,,,RFMS-on-PED bilayer
+D021,DV18,M1,B4,record,cell,substrate,rigid,6,mm2,,,RFMS-on-PED bilayer
+D021,DV19,,AZO/UZO/CdS/Sb2Se3(RFMS)/Cu:Sb2Se3 (PED)/NaF/FTO/glass,record,cell,superstrate,,,,,,
+D021,RDV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D022,DV1,M1,Glass/FTO/ZnO/a-Si:H/MoO3/ITO,,cell,superstrate,rigid,,,,,transparent ultrathin prototype; fully inorganic architecture
+D022,DV2,M2,SLG/FTO/ZnO(0 nm)/a-Si:H(15 nm)/MoO3(20 nm)/ITO,control,cell,superstrate,rigid,,,,,no ZnO ETL
+D022,DV3,M2,0 nm ZnO,control,cell,superstrate,rigid,,,,,SLG/FTO/ZnO(0 nm)/a-Si:H(15 nm)/MoO3(20 nm)/ITO
+D022,DV4,M2,50 nm ZnO,target,cell,superstrate,rigid,,,,,SLG/FTO/ZnO(50 nm)/a-Si:H(15 nm)/MoO3(20 nm)/ITO
+D022,DV5,M2,400 nm ZnO,control,cell,superstrate,rigid,,,,,SLG/FTO/ZnO(400 nm)/a-Si:H(15 nm)/MoO3(20 nm)/ITO
+D022,DV6,M2,0 nm MoO3,control,cell,superstrate,rigid,,,,,"a-Si:H 15 nm, ZnO 50 nm, MoO3 0 nm"
+D022,DV7,M2,10 nm MoO3,target,cell,superstrate,rigid,,,,,"a-Si:H 15 nm, ZnO 50 nm, MoO3 10 nm"
+D022,DV8,M2,20 nm MoO3,target,cell,superstrate,rigid,,,,,"a-Si:H 15 nm, ZnO 50 nm, MoO3 20 nm; s-shape in J-V"
+D022,DV9,M2,FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO,control,cell,superstrate,rigid,,,,,TPV device
+D022,DV10,M2,FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO,target,cell,superstrate,rigid,,,,,TPV device with ALD AZO front contact

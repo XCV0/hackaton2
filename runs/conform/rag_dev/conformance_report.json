@@ -1,0 +1,361 @@
+{
+ "domain": "rag",
+ "folder": "runs/conform/rag_dev",
+ "pdf_dir": "/Users/artemshelkunov/hackaton2/data/domain2_rag/dev",
+ "template": {
+  "dir": "/Users/artemshelkunov/hackaton2/data/domain2_rag/submission_template",
+  "official": false,
+  "schema_version": "rag-viniti-adaptation-1.0",
+  "sources": {
+   "headers": "submission_template/*.csv (заголовки пустых таблиц)",
+   "enums": "submission_template/schema.json: enums (закрытые), recommended_enums (рекомендуемые)",
+   "rules": "submission_template/README.md RAG-комплекта"
+  }
+ },
+ "structure_valid": false,
+ "header_only": false,
+ "verdict": "СТРУКТУРА НЕ ВАЛИДНА: 6 ошибок",
+ "content": {
+  "pdfs_in_set": 21,
+  "publications": 21,
+  "in_scope": 20,
+  "excluded": 1,
+  "publications_with_results": 20,
+  "results": 5255,
+  "extracted": 5241,
+  "duplicates": 39,
+  "cited": 16,
+  "issues": 1544,
+  "rows_by_table": {
+   "configurations": 706,
+   "datasets": 217,
+   "experiments": 395,
+   "issues": 1544,
+   "publications": 21,
+   "results": 5255,
+   "tasks": 230
+  }
+ },
+ "counts": {
+  "errors": 6,
+  "warnings": 46,
+  "by_rule": {
+   "error:empty_cells": 6,
+   "warning:cells": 46
+  }
+ },
+ "findings": [
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:286",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:574",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:582",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:584",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:586",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "error",
+   "rule": "empty_cells",
+   "where": "configurations.csv:588",
+   "message": "retrieval_method = «none»: вместо пропуска должна быть пустая ячейка"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2249",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2251",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2252",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2253",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2254",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2255",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2256",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2257",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2258",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2259",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2261",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2262",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2263",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2264",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2265",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2266",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2267",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2268",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2269",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2270",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2272",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2273",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2274",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2275",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2276",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2277",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2278",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2279",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2280",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2281",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2282",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2284",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2285",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2286",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2287",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2288",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2289",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2290",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2291",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2292",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:2293",
+   "message": "source_fragment: пробелы по краям «Table 1: Comparison of different RAG met»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:3812",
+   "message": "source_fragment: пробелы по краям « 872 291 296 284 263»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:3814",
+   "message": "source_fragment: пробелы по краям « 872 291 296 284 263»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:3816",
+   "message": "source_fragment: пробелы по краям « 872 291 296 284 263»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:3818",
+   "message": "source_fragment: пробелы по краям « 872 291 296 284 263»"
+  },
+  {
+   "severity": "warning",
+   "rule": "cells",
+   "where": "results.csv:3820",
+   "message": "source_fragment: пробелы по краям « 872 291 296 284 263»"
+  }
+ ]
+}

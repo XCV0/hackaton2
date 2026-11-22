@@ -21,7 +21,7 @@ from .core import db, evaluate, export, llm, pipeline
 from .core import domain as D
 from .core.pdftext import extract_document, norm_rag, render_page_png
 from .core.quotes import now, verify_quote
-from .settings import CONFIG_DIR, DOMAINS, REPORTS_DIR, ROOT, list_pdfs, pdf_path
+from .settings import CONFIG_DIR, DOMAINS, REPORTS_DIR, ROOT, list_pdfs, pdf_path, split_dir
 
 warnings.filterwarnings("ignore")
 logging.getLogger("pypdf").setLevel(logging.ERROR)
@@ -105,6 +105,17 @@ def corpus(domain: str | None = None, split: str | None = None):
 
 
 # ------------------------------------------------------------------ catalog
+def quote_outcome(checks):
+    """Fragment found AND number confirmed (in the fragment or in the table cell/row) — otherwise not a green «matched»."""
+    q = next((x for x in checks or [] if x.get("check") == "quote"), None)
+    if not q:
+        return None
+    cell = any(x.get("check") == "table_cell" or (x.get("check") == "table_row" and x.get("outcome") == "value_in_row") for x in checks)
+    if q.get("outcome") == "matched" and q.get("value_in_fragment") is False and not cell:
+        return "matched_no_value"
+    return q.get("outcome")
+
+
 @app.get("/api/publications")
 def publications(domain: str = "rag", split: str = "dev", q: str = "", status: str = "", scope: str = "", scan: str = "",
                  sort: str = "pub_id", metric: str = "", material_class: str = ""):
@@ -239,7 +250,7 @@ def results(domain: str = "rag", split: str = "dev", pub: str = "", metric: str 
     page = rows[offset: offset + limit]
     for r in page:
         r["issue_types"] = issues[(r["pub_id"], r["rec_id"])]
-        r["quote_outcome"] = next((x.get("outcome") for x in r["checks"] if x.get("check") == "quote"), None)
+        r["quote_outcome"] = quote_outcome(r["checks"])
         r.pop("checks", None)
     facets = {"metric": collections.Counter(r["data"].get("metric_name") for r in rows).most_common(40),
               "verification": collections.Counter(r["verification_status"] for r in rows).most_common(),
@@ -606,7 +617,9 @@ def compare(domain: str = "rag", split: str = "dev", metric: str = "", dataset: 
             pass
         out.append({"key": json.loads(k), "items": items, "publications": len({i["pub_id"] for i in items})})
     out.sort(key=lambda g: (-g["publications"], -len(g["items"])))
-    return J({"groups": out, "excluded": excluded[:500], "excluded_total": len(excluded),
+    reason_counts = collections.Counter(r for it in excluded for r in it["reasons"]).most_common()
+    return J({"groups": out, "excluded": excluded[:500], "excluded_total": len(excluded), "reason_counts": reason_counts,
+              "total_considered": len(rows),
               "rule": "Записи сравниваются только внутри группы с совпадающими условиями (ключ группы); разные протоколы не объединяются в один рейтинг."})
 
 
@@ -859,8 +872,231 @@ def admin_check(body: dict = Body(...)):
     domain, split = _dom(body.get("domain", "rag")), body.get("split", "dev")
     res = export.export_csv(domain, split, None, body.get("actor") or "admin", label="checked")
     chk = export.run_official_checker(domain, split, res["folder"], ocr=bool(body.get("ocr")))
-    (REPORTS_DIR / f"official_check_{domain}_{split}{'_ocr' if body.get('ocr') else ''}.json").write_text(json.dumps(chk, ensure_ascii=False, indent=1))
+    (REPORTS_DIR / f"{'official' if domain == 'solar' else 'kit'}_check_{domain}_{split}{'_ocr' if body.get('ocr') else ''}.json").write_text(json.dumps(chk, ensure_ascii=False, indent=1))
     return J(chk)
+
+
+@app.post("/api/admin/conformance")
+def admin_conformance(body: dict = Body(...)):
+    """Fresh export + independent check against the kit's template (headers, enums, keys, links, provenance, units)."""
+    from .core import conformance
+    domain, split = _dom(body.get("domain", "rag")), body.get("split", "dev")
+    res = export.export_csv(domain, split, None, body.get("actor") or "admin", label="conformance")
+    rep = conformance.check_folder(domain, res["folder"], split_dir(domain, split))
+    rep["withheld"] = [x for x in (pathlib.Path(res["folder"]) / "EXPORT_WITHHELD.txt").read_text(encoding="utf-8").splitlines() if x]
+    (REPORTS_DIR / f"conformance_{domain}_{split}.json").write_text(json.dumps(rep, ensure_ascii=False, indent=1))
+    rep["findings"] = rep["findings"][:300]
+    return J(rep)
+
+
+# ------------------------------------------------------------------ page x-ray, add from page, permalinks, passport
+from .core import xray as XR  # noqa: E402
+from .core import normalize as NZ  # noqa: E402
+
+STATUS_RANK = {"flagged": 0, "needs_review": 1, "verified": 2, "not_applicable": 3}
+
+
+@app.get("/api/page/{domain}/{split}/{pid}/{page}/xray")
+def page_xray(domain: str, split: str, pid: str, page: int):
+    """Every extracted value located on the page + printed numbers nobody extracted."""
+    doc, path = _doc(_dom(domain), split, pid)
+    if not 1 <= page <= doc["page_count"]:
+        raise HTTPException(404, "page outside PDF")
+    p = doc["pages"][page - 1]
+    words = XR.page_words(doc, path, page)
+    nums = XR.number_words(words)
+    recs = [db.row_to_record(r) for r in db.conn().execute(
+        "SELECT * FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl='results' AND review_status!='rejected' "
+        "AND json_extract(data,'$.source_page')=?", (domain, split, pid, str(page)))]
+    out, used = [], []
+    for r in recs:
+        d = r["data"]
+        rects = XR.fragment_rects(path, page, d.get("source_fragment", ""), p["has_text_layer"])
+        box, how = XR.locate(d, r["evidence"] or {}, nums, rects)
+        if box:
+            used.append(box)
+        out.append({"id": r["id"], "rec_id": r["rec_id"], "metric": d.get("metric_name"), "raw_value": d.get("raw_value"),
+                    "unit": d.get("raw_unit"), "status": r["verification_status"], "review": r["review_status"],
+                    "box": box, "how": how, "kind": (r["evidence"] or {}).get("kind")})
+    cands = [n for n in nums if not any(XR._inside(n["box"], u, pad=1.5) for u in used)]
+    located = sum(1 for o in out if o["box"])
+    return J({"page": page, "width": p["width"], "height": p["height"], "scan": not p["has_text_layer"],
+              "records": out, "candidates": cands,
+              "stats": {"numbers": len(nums), "extracted": len(out), "located": located, "unextracted": len(cands)}})
+
+
+@app.post("/api/records/add_from_page")
+def add_from_page(body: dict = Body(...)):
+    """A reviewer adds a printed number the nodes missed. The quote is the printed line itself and is verified
+    like any other value; nothing is auto-accepted beyond what the checks prove."""
+    from .core.quotes import verify_quote
+    domain, split, pid = _dom(body["domain"]), body["split"], body["pub_id"]
+    page = int(body["page"])
+    doc, path = _doc(domain, split, pid)
+    raw = str(body.get("raw_value", "")).strip()
+    metric = str(body.get("metric_name", "")).strip()
+    if not raw or not metric:
+        raise HTTPException(400, "Нужны значение и название показателя")
+    cfg = D.load(domain)
+    c = db.conn()
+    n = c.execute("SELECT COUNT(*) FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl='results' AND rec_id LIKE 'H%'",
+                  (domain, split, pid)).fetchone()[0]
+    rid = f"H{n + 1:03d}"
+    while c.execute("SELECT 1 FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl='results' AND rec_id=?",
+                    (domain, split, pid, rid)).fetchone():
+        n += 1
+        rid = f"H{n + 1:03d}"
+    quote = str(body.get("quote", "")).strip()
+    data = {col: "" for col in cfg["tables"]["results"]}
+    data.update(publication_id=pid, result_id=rid, metric_name=metric, raw_value=raw, raw_unit=str(body.get("raw_unit", "")).strip(),
+                result_origin=body.get("result_origin") or "primary", cited_publication_id=body.get("cited_publication_id", ""),
+                source_page=str(page), source_table=body.get("source_table", ""), source_fragment=quote, extraction_status="extracted",
+                note="added by a reviewer from the page X-ray (number clicked on the page)")
+    for k in ("config_id", "dataset_id", "task_id", "experiment_id", "device_id", "measurement_id", "material_id", "aggregation", "metric_k"):
+        if k in data and body.get(k):
+            data[k] = str(body[k])
+    if data["result_origin"] == "primary":
+        data["cited_publication_id"] = ""
+    r = {"metric_name": metric, "raw_value": raw, "raw_unit": data["raw_unit"], "unit": data["raw_unit"]}
+    m = re.search(r"[-−]?\d{1,3}(?:,\d{3})+(?:\.\d+)?|[-−]?\d*[.,]?\d+", raw)
+    from .core.extract_rules import _num
+    r["value"] = _num(m.group(0))[0] if m else None
+    NZ.normalize_result(domain, r)
+    for k in ("normalized_value", "normalized_unit", "metric_value", "metric_unit"):
+        data[k] = r.get(k, "")
+    q = verify_quote(doc, page, quote, raw)
+    ver = "verified" if q.get("outcome") == "matched" and q.get("value_in_fragment") else "needs_review"
+    ts = now()
+    actor = (body.get("actor") or "reviewer")[:60]
+    c.execute("INSERT INTO records(domain,split,pub_id,tbl,rec_id,data,node,extraction_status,verification_status,review_status,checks,quorum,evidence,created,updated)"
+              " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+              (domain, split, pid, "results", rid, db.j(data), "human", "extracted", ver, "confirmed",
+               db.j([q]), db.j({"outcome": "single_node", "nodes": ["human"], "limitation": "added manually from the page"}),
+               db.j({"kind": "manual", "page": page, "cell_bbox": body.get("box"), "norm": r.get("_norm"),
+                     "reasons": [] if ver == "verified" else ["value_not_in_fragment" if q.get("outcome") == "matched" else "citation_not_found"]}),
+               ts, ts))
+    new_id = c.execute("SELECT last_insert_rowid()").fetchone()[0]
+    db.audit(actor, "add_from_page", domain, split, pid, "results", rid, after=data, reason=body.get("comment") or "added from page X-ray")
+    c.commit()
+    return {"id": new_id, "rec_id": rid, "verification_status": ver, "quote_outcome": q.get("outcome")}
+
+
+@app.get("/api/resolve/{domain}/{split}/{pid}/{rec_id}")
+def resolve(domain: str, split: str, pid: str, rec_id: str, tbl: str = "results"):
+    r = db.conn().execute("SELECT id FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl=? AND rec_id=?",
+                          (_dom(domain), split, pid, tbl, rec_id)).fetchone()
+    if not r:
+        raise HTTPException(404, f"{pid}/{rec_id} не найдена — возможно, статью пересобрали без этой записи")
+    return {"id": r["id"]}
+
+
+def _font_file():
+    for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "/System/Library/Fonts/Supplemental/Arial.ttf",
+              "/Library/Fonts/Arial Unicode.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"):
+        if pathlib.Path(f).exists():
+            return f
+    return None
+
+
+@app.get("/api/passport/{domain}/{split}/{pid}.pdf")
+def passport(domain: str, split: str, pid: str, limit: int = 150):
+    """Evidence passport: every value with its quote, checks and a crop of the PDF page with the value highlighted."""
+    doc, path = _doc(_dom(domain), split, pid)
+    c = db.conn()
+    pub = c.execute("SELECT data FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl='publications'", (domain, split, pid)).fetchone()
+    pubd = db.lj(pub["data"], {}) if pub else {}
+    recs = [db.row_to_record(r) for r in c.execute(
+        "SELECT * FROM records WHERE domain=? AND split=? AND pub_id=? AND tbl='results' AND review_status!='rejected' ORDER BY id",
+        (domain, split, pid))]
+    recs.sort(key=lambda r: (STATUS_RANK.get(r["verification_status"], 9), int(r["data"].get("source_page") or 0)))
+    font = _font_file()
+    out = pymupdf.open()
+    src = pymupdf.open(str(path))
+    W, H, M = 595, 842, 40
+    STAT = {"verified": "Подтверждено источником", "flagged": "Противоречие правилу", "needs_review": "Нужна проверка",
+            "not_applicable": "Без значения"}
+
+    def newpage():
+        pg = out.new_page(width=W, height=H)
+        if font:
+            pg.insert_font(fontname="F0", fontfile=font)
+        pg.insert_text((M, H - 20), f"Паспорт доказательств · {domain}/{split}/{pid} · Evidence Extractor", fontsize=7,
+                       fontname="F0" if font else "helv", color=(0.45, 0.5, 0.58))
+        return pg
+
+    def text(pg, y, t, size=9, color=(0.08, 0.16, 0.29), width=W - 2 * M):
+        rect = pymupdf.Rect(M, y, M + width, y + 400)
+        rest = pg.insert_textbox(rect, t, fontsize=size, fontname="F0" if font else "helv", color=color)
+        return y + (400 - rest if rest >= 0 else 400) + 4
+
+    pg = newpage()
+    y = text(pg, 50, "Паспорт доказательств", 20)
+    y = text(pg, y, pubd.get("title") or pid, 12)
+    y = text(pg, y, f"{pid} · {pubd.get('year', '')} · DOI {pubd.get('DOI', '') or '—'}", 9, (0.36, 0.42, 0.5))
+    counts = {}
+    for r in recs:
+        counts[r["verification_status"]] = counts.get(r["verification_status"], 0) + 1
+    y = text(pg, y + 6, "Значений: " + str(len(recs)) + " · " + " · ".join(f"{STAT.get(k, k)}: {v}" for k, v in counts.items()), 10)
+    y = text(pg, y + 4, "Для каждого значения: опубликованное и нормализованное число, страница, дословная цитата, результаты "
+                        "машинных проверок и фрагмент страницы PDF с подсветкой. Сначала идут противоречия и значения на проверку.", 9,
+             (0.36, 0.42, 0.5))
+    nums_cache = {}
+    for r in recs[:limit]:
+        d = r["data"]
+        try:
+            page = int(d.get("source_page") or 0)
+        except ValueError:
+            page = 0
+        q = next((x for x in r["checks"] if x.get("check") == "quote"), {})
+        rules = [x for x in r["checks"] if x.get("check") not in ("quote", "table_cell", "table_row")]
+        block_h = 210 if 1 <= page <= doc["page_count"] else 90
+        if y + block_h > H - 40:
+            pg = newpage()
+            y = 40
+        y = text(pg, y + 8, f"{r['rec_id']} · {d.get('metric_name')} = {d.get('raw_value')} {d.get('raw_unit') or ''}"
+                            f"  →  {d.get('normalized_value') or '—'} {d.get('normalized_unit') or ''}", 11)
+        col = {"verified": (0.14, 0.5, 0.49), "flagged": (0.7, 0.14, 0.09), "needs_review": (0.6, 0.36, 0)}.get(r["verification_status"], (0.4, 0.4, 0.4))
+        y = text(pg, y, f"{STAT.get(r['verification_status'], r['verification_status'])} · цитата: {q.get('outcome', '—')} "
+                        f"({', '.join(q.get('engines') or []) or '—'}) · стр. {page} {d.get('source_table') or d.get('source_figure') or ''} · "
+                        f"{d.get('result_origin')}{' ' + d.get('cited_publication_id') if d.get('cited_publication_id') else ''}", 8.5, col)
+        if d.get("source_fragment"):
+            y = text(pg, y, "«" + d["source_fragment"].replace("\n", " ")[:300] + "»", 8.5, (0.2, 0.25, 0.32))
+        for x in rules[:3]:
+            y = text(pg, y, f"{x.get('check')}: {x.get('outcome')} {x.get('formula') or ''} {('расчёт ' + str(x.get('computed'))) if x.get('computed') is not None else ''}",
+                     8, (0.36, 0.42, 0.5))
+        if 1 <= page <= doc["page_count"]:
+            if page not in nums_cache:
+                nums_cache[page] = XR.number_words(XR.page_words(doc, path, page))
+            rects = XR.fragment_rects(path, page, d.get("source_fragment", ""), doc["pages"][page - 1]["has_text_layer"])
+            box, _ = XR.locate(d, r["evidence"] or {}, nums_cache[page], rects)
+            sp = src[page - 1]
+            if box:
+                cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
+                clip = pymupdf.Rect(max(0, cx - 240), max(0, cy - 55), min(sp.rect.width, cx + 240), min(sp.rect.height, cy + 55))
+            else:
+                clip = pymupdf.Rect(0, 0, sp.rect.width, min(sp.rect.height, 130))
+            pix = sp.get_pixmap(dpi=110, clip=clip)
+            ih = min(130, (W - 2 * M) * clip.height / max(1, clip.width))
+            iw = ih * clip.width / max(1, clip.height)
+            irect = pymupdf.Rect(M, y + 2, M + iw, y + 2 + ih)
+            pg.insert_image(irect, pixmap=pix)
+            pg.draw_rect(irect, color=(0.8, 0.84, 0.88), width=0.5)
+            if box:
+                sx, sy = iw / clip.width, ih / clip.height
+                hb = pymupdf.Rect(irect.x0 + (box[0] - clip.x0) * sx - 2, irect.y0 + (box[1] - clip.y0) * sy - 2,
+                                  irect.x0 + (box[2] - clip.x0) * sx + 2, irect.y0 + (box[3] - clip.y0) * sy + 2)
+                pg.draw_rect(hb, color=(0.88, 0.63, 0.1), width=1.6)
+            y = irect.y1 + 6
+        pg.draw_line((M, y + 2), (W - M, y + 2), color=(0.88, 0.9, 0.93), width=0.5)
+    if len(recs) > limit:
+        pg = newpage()
+        text(pg, 50, f"Показаны первые {limit} значений из {len(recs)} (сначала проблемные). Полный список — в экспорте CSV.", 10)
+    data = out.tobytes(deflate=True, garbage=3)
+    out.close()
+    src.close()
+    db.audit("ui", "export_passport", domain, split, pid, reason=f"evidence passport, {min(len(recs), limit)} values")
+    c.commit()
+    return Response(data, media_type="application/pdf", headers={"Content-Disposition": f'inline; filename="{pid}_passport.pdf"'})
 
 
 # ------------------------------------------------------------------ frontend

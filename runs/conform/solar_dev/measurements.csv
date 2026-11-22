@@ -1,0 +1,101 @@
+publication_id,measurement_id,device_id,measurement_type,spectrum,light_intensity,intensity_unit,scan_direction,scan_rate,mask_used,certified,certification_lab,temperature,stability_protocol,stress_conditions,note
+D001,MS1,DV1,,,,,,,,,,,,,
+D001,MS2,DV3,J-V,AM 1.5G,100,mW cm−2,reverse,0.15 V s−1,true,,,,,,Solar IV-150A simulator and Keithley 2400 source meter; intensity calibrated with a Newport calibrated KG5-ﬁltered Si reference cell.
+D001,MS3,DV7,EQE,,,,,,,,,,,,SCS10-X150-HBSD system.
+D001,MS4,DV12,J-V,,,,reverse,0.15 V s−1,,,,,,,forward bias (FB) to short circuit (SC)
+D001,MS5,DV12,J-V,,,,forward,0.15 V s−1,,,,,,,SC to FB
+D001,MS6,DV9,J-V,AM 1.5G,100,mW cm−2,,,,,,,,,
+D001,MS7,DV13,,,,,,,,,,,,,Statistical distribution of PCEs
+D001,MS8,DV15,MPP tracking,,,,,,,,,,,,Held at the maximum power point to measure stabilized power output.
+D001,MS9,DV14,J-V,,,,,,,,,,,,Statistical analysis of 20 individual devices in Figure 5E.
+D001,MS10,DV7,,,,,,,,,,,,0.8 V in dark condition; bias range of 0–1 V,EIS/Rrec measurement.
+D001,MS11,DV14,,,,,,,,,,,,0.8 V in dark condition; bias range of 0–1 V,EIS/Rrec measurement.
+D001,MS12,DV7,,,,,,,,,,300 K,,,Ideality factor (m) measurement shown in Supplementary Figure S4.
+D001,MS13,DV14,,,,,,,,,,300 K,,,Ideality factor (m) measurement shown in Supplementary Figure S4.
+D002,MS1,DV5,J-V,,1000,W/m2,,,,,,,,,"Electric current and voltage testing using a solar simulator with a halogen lamp; instruments include a data logger and digital multimeter (MS8250C). Testing was performed at the Solar Energy Laboratory, Mechanical Engineering Department, Universitas Brawijaya."
+D002,MS2,DV5,J-V,halogen lamps,1000,W/m2,,,,,,,,,The paper states collectively that the PCE parameters and data statistics were obtained from 100 different cells; a per-HTL allocation is not stated.
+D003,MS1,DV2,,,,,,,,,,,,,"PCE, VOC, JSC, and FF are reported together for this device; measurement conditions are not stated on this page."
+D003,MS2,,,,,,,,,,,,,,Mott–Schottky plots collected at a frequency of 5 kHz in the dark.
+D003,MS3,,,,,,,,,,,,,,Space charge limiting current (SCLC) experiments.
+D003,MS4,,,,,,,,,,,,,,current mode AFM; test area 2 μm  2 μm; bias voltage 1 V
+D003,MS5,DV3,J-V,,,,,100 mV/s,,,,,,,J–V plot for analyzing electronic conductivity; sample structure ITO/Sn3O4/Ag.
+D003,MS6,,,,,,,,,,,,,,Film thickness obtained by scanning electron micrographs (SEM) measurements.
+D003,MS7,,,,,,,,,,,,,,UV–Vis absorption spectroscopy; Tauc plots.
+D003,MS8,,,,,,,,,,,,,,Ultraviolet photoelectron spectroscopy (UPS); EF cutoff.
+D003,MS9,DV3,EQE,,,,,,,,,,,,External quantum efficiency and integrated current.
+D003,MS10,DV3,MPP tracking,,,,,,,,,,,,Steady-state output at maximum power point.
+D003,MS11,,stability,,,,,,,,,,other,stored in air conditions (RH = 10%),Figure 5F stability measurement.
+D003,MS12,DV3,stability,,,,,,,,,,,dry air (RH = 10%),storage stability
+D003,MS13,,,,,,,,,,,,,,Transient photoluminescence spectroscopy (TRPL) of perovskite on glass; first-order decay exponent fit
+D003,MS14,,,,,,,,,,,,,,Transient photoluminescence spectroscopy (TRPL) of perovskite on Sn3O4; two decay processes
+D003,MS15,,,,,,,,,,,,,,Transient photoluminescence spectroscopy (TRPL) of perovskite on Y-Sn3O4; two decay processes
+D003,MS16,DV3,,,,,,,,,,,,,Mott–Schottky analysis
+D003,MS17,DV4,,,,,,,,,,,,,Mott–Schottky analysis
+D003,MS18,DV3,,,,,,,,,,,,,transient photocurrent (TPC) decay
+D003,MS19,DV4,,,,,,,,,,,,,transient photocurrent (TPC) decay
+D003,MS20,DV3,,,,,,,,,,,,,transient photovoltage (TPV) decay
+D003,MS21,DV4,,,,,,,,,,,,,transient photovoltage (TPV) decay
+D003,MS22,DV3,,,,,,,,,,,,in the dark with a bias of 0.6 V,Electrochemical impedance spectroscopy (EIS); champion perovskite solar cell
+D003,MS23,DV4,,,,,,,,,,,,in the dark with a bias of 0.6 V,Electrochemical impedance spectroscopy (EIS); champion perovskite solar cell
+D003,MS24,DV6,J-V,AM 1.5G,100,mW cm−2,,,,,,,,,Characterized with a Keithley 2400 source measure unit; light intensity was calibrated using a standard Si solar cell (Newport 532 ISO1599).
+D004,MS1,DV1,,,,,,,,,,,,relative humidity of 70 ± 10% (open-air conditions),
+D004,MS2,,,,,,,,,,,,,,UV−vis spectroscopy
+D004,MS3,,,excitation wavelength of 400 nm,,,,,,,,,,,photoluminescence
+D004,MS4,DV8,J-V,,,,,,,,,,,,Main ED row values in Table 1.
+D004,MS5,,,,,,,,,,,,,,Ultraviolet photoemission spectroscopy (UPS); the sample is called “this material” on this page; He laser UV light source energy 21.2 eV.
+D004,MS6,,,,,,,,,,,,,,Low energy inverse photoelectron spectra (LEIPS); the sample variant is not identified on this page.
+D004,MS7,DV13,,,,,,,,,,,,,with a relative humidity of 70 ± 10%
+D004,MS8,DV14,,,,,,,,,,,,,with a relative humidity of 70 ± 10%
+D005,MS1,,,,,,,,,,,,,,UV-vis absorption spectra in solution and film (Fig. 2D); measurement_type as printed: other
+D005,MS2,DV2,J-V,,,,,,,,,,,,Table 2 values
+D005,MS3,DV2,EQE,,,,,,,,,,,,integrated photocurrent density
+D005,MS4,DV3,MPP tracking,,,,,,,,,,,,200 s MPP tracking
+D005,MS5,DV4,J-V,,,,forward,,,,,,,,"champion, Table 2"
+D005,MS6,DV4,J-V,,,,reverse,,,,,,,,"champion, Table 2"
+D005,MS7,DV6,stability,,100,mW cm−2,,,,,,,other,"continuous 1 sun illumination at MPP, unencapsulated","light soaking stability, Fig. 5A"
+D005,MS8,DV6,stability,,,,,,,,,85,ISOS-T,"85 °C in N2, unencapsulated","thermal stability, Fig. 5B"
+D005,MS9,DV8,J-V,AM 1.5G,100,mW cm-2,,,,,,,,,"Keithley 2400, Amazing Light SS-F5-3A"
+D005,MS10,DV8,stability,,,,,,,,,,ISOS-L,"continuous 1 sun light soaking at MPP, 500 h",over 90% PCE remaining
+D005,RMS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+D007,MS1,DV3,J-V,,,,,,,,,,,,Figure 8a.
+D007,MS2,DV3,EQE,,,,,,,,,,,,Figure 8c.
+D007,MS3,DV3,stability,,,,,,,,,RT,,"tested every 12 h, 15%–20% RH, RT",Figure 8d; long-term stability.
+D008,MS1,DV8,J-V,,1,sun,,,,,,,,,"Keithley 2604 with OAI TriSol Class AAA simulator; corrected by calculating the 1.2–1.28 sun shown on the run screen; scan 1.2 to −0.2 V and −0.2 to 1.2 V, step 20 mV, forward and reverse sweeps"
+D008,MS2,DV7,J-V,,,,forward,,,,,,,,"champion cell, forward bias scan"
+D008,MS3,DV10,stability,,,,,,,,,,other,stored 30 days in glovebox,retained 77% of initial efficiency
+D009,MS1,DV2,J-V,,,,,,,,,,,,Champion-type PCE as printed in text; scan direction not stated
+D009,MS2,DV2,J-V,,,,,,,true,,,,,Certified PCE as printed in text; certifying lab not stated on this page
+D009,MS3,DV2,stability,,100,mW cm-2,,,,,,60 ± 5 °C,other,"dark storage (shelf) and continuous one-sun illumination in nitrogen, unencapsulated","Shelf storage 6,000 h dark; operational 1,500 h continuous one-sun illumination"
+D009,MS4,,stability,,,,,,,,,,,dark storage in N2 at 35 ± 5 °C,"unencapsulated shelf stability, up to 6,000 h"
+D009,MS5,DV5,J-V,AM1.5G,100,mW cm-2,reverse,,,,,,,,"Reverse scan from 1.0 to -0.1 V with 50 ms delay; calibrated silicon reference cell (Keithley 2420, Enli-Tech SS-F7-3A)"
+D009,MS6,DV5,J-V,AM1.5G,100,mW cm-2,forward,,,,,,,,Forward scan from -0.1 to 1.0 V with 50 ms delay
+D009,MS7,DV6,J-V,,,,,,true,false,,room temperature,,,"Voltage range -0.10 to 1.05 V, scan step 0.01 V, delay time 50 ms; no preconditioning; forward and reverse scans performed"
+D009,MS8,DV7,J-V,AM 1.5G,,,,,true,true,"SIMIT, Chinese Academy of Sciences",,,,"Xenon lamp solar simulator (EnliTech, SS-F7-3A); intensity calibrated with standard Si reference cell (Enli/SRC2020), certified by EnliTech Optoelectronic Calibration Lab."
+D010,MS1,DV1,J-V,,,,,,,,,,,,"Solar cell performance parameters reported in the abstract. Light spectrum, intensity, scan direction and mask are not stated on this page."
+D012,MS1,DV1,J-V,,,,,,,,,,,,photovoltaic properties of glass/CZTS/CdS/n-ZnO/AZO/Ag solar cells
+D012,MS2,DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,Keithley 2400 source meter
+D012,MS3,DV1,J-V,AM 1.5 G,100,mW/cm2,,,,,,,,,J-V curve in Figure 10; values printed in text
+D013,MS1,DV3,J-V,1 sun,,,,,,,,,,,"champion 0Ge, Table 3"
+D014,MS1,DV1,J-V,,,,,,,,,,,,after current/light soaking
+D014,MS2,DV2,J-V,AM 1.5G,,,,,true,false,,,,current/light soaking,Xe lamp with AM 1.5G filter; aperture mask 5.94 mm2; after current/light soaking
+D014,MS3,DV2,J-V,,,,,,,false,,,,current/light soaking,best device after current/light soaking
+D014,MS4,DV5,J-V,AM 1.5G,,,,,,,,,,,after current/light soaking; Figure 4e
+D015,MS1,DV1,J-V,,,,,,,,,,,,front illumination
+D015,MS2,DV16,J-V,AM1.5G,100,mW/cm2,,,,,,,,,Keithley 2400 source meter
+D015,MS3,DV17,EQE,,,,,,,,,,,,PV instruments model IVQE8-C
+D017,MS1,DV1,J-V,AM1.5G,1000,W/m2,,,,false,,25,,,"four-terminal Keithley 2400, ABA-class sun simulator"
+D017,MS2,DV2,J-V,,,,,,,,,,,,J-V parameters of solar cells with different ΔGGI compared in Table 1
+D018,MS1,DV2,J-V,AM1.5,100,mW/cm2,,,false,,,,,,Oriel Sol3A class AAA solar simulator; measured without front grid
+D018,MS2,DV4,J-V,,,,,,,,,,,,"typical light J-V curve, Figure 6A"
+D019,MS1,DV2,J-V,AM 1.5,1,sun,,,,,,,,,"solar simulator Newport 94022A, Keithley 2400"
+D019,MS2,DV7,J-V,,,,,,,,,,,,I–V curve in Fig. 6; parameters from Table 2
+D019,MS3,DV12,J-V,,,,,,,true,Korea Institute of Energy Research (KIER),,,,"certified J-V curve, Fig. 8a"
+D019,MS4,DV12,EQE,,,,,,,true,Korea Institute of Energy Research (KIER),,,,"EQE data, Fig. 8b"
+D019,RMS1,DV1;DV2;DV3,J-V,,,,,,,,,,,,rule-based
+D020,MS1,DV3,J-V,AM 1.5G,100,mW/cm2,,,,,,,,,statistical data in Figure 4b-e
+D020,MS2,DV7,J-V,,,,,,,,,,,,J–V curves shown in Figure 6b; scan direction not stated
+D020,MS3,DV11,J-V,AM 1.5 global,100,mW/cm2,,,true,,,,,,"Solar simulator, ambient air; 1 Sun calibrated with Oriel reference cell"
+D021,MS1,DV1,J-V,,,,,,,,,,,,Keithley 2614B source meter
+D021,MS2,,J-V,AM 1.5G,1000,W/m2,,,,,,25,,,"Keithley 2614B source meter, ABET SUN 2000 AAB solar simulator, standard test conditions"
+D022,MS1,DV2,J-V,,,,,,,,,,,,J-V measurements shown in Figure 2a; no numeric values printed
+D022,MS2,DV7,J-V,AM1.5G,,,,,true,,,,,,Figure 2b

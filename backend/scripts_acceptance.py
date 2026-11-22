@@ -44,7 +44,7 @@ L += ["Экспорт: `GET /api/export/rag/dev.zip?pub=D001` (проверен�
 
 # 2. official checks
 L += ["## 2. Полный dev и официальная проверка", ""]
-for f in sorted(REPORTS_DIR.glob("official_check_*.json")):
+for f in sorted([*REPORTS_DIR.glob("official_check_*.json"), *REPORTS_DIR.glob("kit_check_*.json")]):
     d = json.loads(f.read_text())
     L += [f"- `{f.name}`: код выхода **{d['exit_code']}**, ошибок {d.get('n_errors', '—')}, на проверку {d.get('n_warnings', '—')}, "
           f"цитаты {json.dumps((d.get('report') or {}).get('quotes'), ensure_ascii=False)}; команда `{d['cmd'][:160]}`"]

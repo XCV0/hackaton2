@@ -73,3 +73,40 @@ def find_fragment(doc: dict, page: int, candidates: list[str]) -> str | None:
         if n and any(n in t for t in texts):
             return c
     return None
+
+
+def extend_fragment(doc: dict, page: int, fragment: str, raw_value: str, max_len: int = 400) -> dict | None:
+    """A quote that is found on the page but stops before the number ("... obtains Recall@10 =" with the value on the next
+    line) is widened to the sentence(s) of the same page and the same text engine that contain both the quote and the
+    number. Pages and engines are never mixed; the result is accepted only if it passes verify_quote again."""
+    toks = numeric_tokens(raw_value)
+    if not fragment or not toks or not doc or not page or not 1 <= page <= doc["page_count"]:
+        return None
+    p = doc["pages"][page - 1]
+    frag_flat = re.sub(r"\s+", " ", fragment).strip()
+    for engine in ("pymupdf", "pypdf"):
+        text = p.get(engine) or ""
+        flat = re.sub(r"\s+", " ", text)
+        pos = flat.find(frag_flat)
+        if pos < 0:
+            low = flat.lower().find(frag_flat.lower())
+            if low < 0:
+                continue
+            pos = low
+        end = pos + len(frag_flat)
+        starts = [m.end() for m in re.finditer(r"[.!?]\s+(?=[A-Z(\[])", flat[:pos])]
+        s0 = starts[-1] if starts else max(0, pos - 200)
+        m = re.search(r"[.!?](?=\s|$)", flat[end:])
+        while m and end + m.start() + 1 < len(flat) and flat[end + m.start() + 1:end + m.start() + 2].isdigit():
+            m = re.search(r"[.!?](?=\s|$)", flat[end + m.end():])
+        e0 = end + m.end() if m else min(len(flat), end + 200)
+        cand = flat[s0:e0].strip()
+        if len(cand) > max_len:
+            continue
+        num = norm_rag(cand).replace(",", ".")
+        if not all(t.replace(",", ".").lstrip("0") in num for t in toks):
+            continue
+        rec = verify_quote(doc, page, cand, raw_value)
+        if rec.get("outcome") == "matched" and rec.get("value_in_fragment"):
+            return {"fragment": cand, "engine": engine, "check": rec}
+    return None

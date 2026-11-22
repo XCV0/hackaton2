@@ -287,14 +287,14 @@
   "quote_literal_share": 0.9335,
   "quote_ocr_only_share": 0.0,
   "verification": {
-   "verified": 969,
-   "needs_review": 97,
+   "verified": 971,
+   "needs_review": 95,
    "flagged": 16,
    "not_applicable": 1
   },
   "review": {
-   "none": 970,
-   "pending": 113
+   "none": 972,
+   "pending": 111
   },
   "manual_review_share": 0.0,
   "quorum": {
@@ -313,7 +313,7 @@
   "node_runs": [
    {
     "node": "A",
-    "n": 1948,
+    "n": 2142,
     "s": 21983.97,
     "ti": 764727,
     "tt": 1049145,
@@ -322,7 +322,7 @@
    },
    {
     "node": "B",
-    "n": 190,
+    "n": 209,
     "s": 3423.95,
     "ti": 237407,
     "tt": 169226,
@@ -331,15 +331,15 @@
    },
    {
     "node": "R",
-    "n": 276,
-    "s": 108.93,
+    "n": 297,
+    "s": 117.6,
     "ti": 0,
     "tt": 0,
     "cost": 0.0,
     "err": 0
    }
   ],
-  "processing_seconds": 8.8,
+  "processing_seconds": 9.1,
   "cost_usd": 0.0475
  }
 }
