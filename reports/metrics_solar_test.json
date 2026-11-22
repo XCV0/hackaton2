@@ -1,0 +1,48 @@
+{
+ "publications": 90,
+ "processed": 90,
+ "errors": 0,
+ "excluded": 3,
+ "scans": 0,
+ "ocr_pages": 2,
+ "results": 1887,
+ "coverage_pubs_with_results": 79,
+ "quote_outcomes": {
+  "matched": 1886,
+  "not_found": 1
+ },
+ "quote_literal_share": 0.9995,
+ "quote_ocr_only_share": 0.0,
+ "verification": {
+  "verified": 1815,
+  "needs_review": 2,
+  "flagged": 70
+ },
+ "review": {
+  "none": 1815,
+  "pending": 72
+ },
+ "manual_review_share": 0.0,
+ "quorum": {
+  "single_node": 1887
+ },
+ "issues_by_type": {
+  "citation_not_found": 1,
+  "normalization": 139,
+  "range": 42,
+  "jv_consistency": 8
+ },
+ "node_runs": [
+  {
+   "node": "R",
+   "n": 90,
+   "s": 57.46,
+   "ti": 0,
+   "tt": 0,
+   "cost": 0.0,
+   "err": 0
+  }
+ ],
+ "processing_seconds": 57.2,
+ "cost_usd": 0.0
+}

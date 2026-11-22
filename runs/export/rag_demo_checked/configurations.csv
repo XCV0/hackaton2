@@ -1,0 +1,14 @@
+publication_id,config_id,rag_variant,retrieval_method,retriever_model,embedding_model,embedding_version,chunking_method,chunk_size,chunk_overlap,chunk_unit,index_type,vector_store,top_k,reranker_model,generator_model,generator_version,prompt_strategy,context_strategy,note
+DEMO_RAG1,C1,HybridRet-RAG,hybrid BM25 and dense retrieval,BM25 + Contriever,Contriever,,,256,32,tokens,,FAISS,5,,Llama-3-8B-Instruct,,,,Retrieves from a Wikipedia document collection and feeds passages to a generator; the generator and top_k are not stated on this page.
+DEMO_RAG1,C2,BM25-RAG,BM25,,,,,,,,,,,,,,,,Baseline named in the abstract; its own numeric result is not printed on this page.
+DEMO_RAG1,C3,Self-RAG,,,,,,,,,,,,,,,,,Cited from [12]; not a configuration re-run by the authors.
+DEMO_RAG1,C4,No-Retrieval,,,,,,,,,,,,,,,,,No-retrieval baseline in Table 1.
+DEMO_RAG1,C5,HybridRet-RAG w/o dense retriever,,,,,,,,,,,,,,,,,Ablation of C1 with the dense retriever removed (Table 2).
+DEMO_RAG1,C6,HybridRet-RAG w/o reranker,,,,,,,,,,,,,,,,,Ablation of C1 with the reranker removed (Table 2).
+TEST_RAG_MedRerank,C1,MedRerank-RAG (dense retrieval + cross-encoder reranking + generation),dense retriever,BGE-base,,,200-word chunks,200,,words,,,20,MiniLM-L6,Mistral-7B-Instruct,,,5 highest-scoring passages after reranking kept as context,Proposed pipeline; cross-encoder reranks retrieved passages from a PubMed abstract collection before generation.; chunk_overlap as printed: without overlap
+TEST_RAG_MedRerank,C2,same pipeline without reranking,dense retriever,BGE-base,,,,,,,,,,,Mistral-7B-Instruct,,,,Ablation: the same pipeline as C1 without the cross-encoder reranking step.
+TEST_RAG_MedRerank,C3,original RAG model (cited),,,,,,,,,,,,,,,,,"Cited from Lewis et al., 2020 in Background; not evaluated by this paper."
+TEST_RAG_MedRerank,C4,prior biomedical systems (cited),,,,,,,,,,,,,,,,,"Cited from [3] in Background; reported as a range of accuracies, not a single system."
+TEST_RAG_MedRerank,C5,Mistral-7B (no retrieval),,,,,,,,,,,,,Mistral-7B,,,,Table 1 row label 'Mistral-7B (no retrieval)'; no retrieval component. Generator label as printed in Table 1.
+TEST_RAG_MedRerank,C6,Dense-RAG (no rerank),dense,BGE-base,,,,,,,,,,,Mistral-7B-Instruct,,,,Abstract describes this as the same pipeline without reranking; retriever and generator taken from that statement. top_k not stated for this configuration.
+TEST_RAG_MedRerank,C7,MedRerank-RAG + GPT-4o generator,dense,BGE-base,,,200-word chunks,200,,words,,,20,MiniLM-L6 (cross-encoder),GPT-4o,,,5 highest-scoring passages after reranking kept as context,"Same retrieval pipeline as MedRerank-RAG, generator replaced with GPT-4o.; chunk_overlap as printed: without overlap"

@@ -1,0 +1,5 @@
+publication_id,device_id,absorber_material_id,device_label,device_role,device_type,architecture,substrate_type,active_area,area_unit,area_definition,encapsulation,note
+DEMO_SOLAR1,DV1,M1,champion device,target,cell,n-i-p,rigid,0.09,cm2,,,Active area of 0.09 cm2 defined by a metal aperture mask; area_definition not explicitly stated.
+DEMO_SOLAR1,DV2,,Champion (additive),target,,,,,,,encapsulated,"Champion device with additive, Table 1 (page 2)"
+DEMO_SOLAR1,DV3,,Control (no additive),control,,,,,,,,"Control device, Tables 1 and 2 (page 2)"
+DEMO_SOLAR1,DV4,,"Average (additive), 20 devices",target,,,,,,,,Batch average over 20 devices as printed in Table 1

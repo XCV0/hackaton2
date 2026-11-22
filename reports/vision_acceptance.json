@@ -1,0 +1,389 @@
+[
+ {
+  "case": "printed values on a figure",
+  "pub": "D002",
+  "page": 10,
+  "figure": "Fig. 6: Impact of Retrievers (scan)",
+  "model": "gpt-6.1-sol",
+  "seconds": 59,
+  "answer": {
+   "values": [
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: Malware",
+     "metric_name": "Impact",
+     "raw_value": "6.1",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; Malware; 6.1; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: Metasploit",
+     "metric_name": "Impact",
+     "raw_value": "8.6",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; Metasploit; 8.6; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: ExploitDB",
+     "metric_name": "Impact",
+     "raw_value": "7",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; ExploitDB; 7; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: CWE",
+     "metric_name": "Impact",
+     "raw_value": "7",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; CWE; 7; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: MITRE",
+     "metric_name": "Impact",
+     "raw_value": "9",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; MITRE; 9; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: Entity",
+     "metric_name": "Impact",
+     "raw_value": "21.7",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; Entity; 21.7; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "General Questions: Q. Ret. Sys.",
+     "metric_name": "Impact",
+     "raw_value": "56.3",
+     "raw_unit": "%",
+     "printed_text_nearby": "(a) Impact of Retrievers on General Questions; Q. Ret. Sys.; 56.3; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: Malware",
+     "metric_name": "Impact",
+     "raw_value": "6.3",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; Malware; 6.3; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: Metasploit",
+     "metric_name": "Impact",
+     "raw_value": "12",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; Metasploit; 12; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: ExploitDB",
+     "metric_name": "Impact",
+     "raw_value": "6",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; ExploitDB; 6; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: CWE",
+     "metric_name": "Impact",
+     "raw_value": "5",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; CWE; 5; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: MITRE",
+     "metric_name": "Impact",
+     "raw_value": "7",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; MITRE; 7; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: Entity",
+     "metric_name": "Impact",
+     "raw_value": "28.3",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; Entity; 28.3; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "MultiHop Questions: Q. Ret. Sys.",
+     "metric_name": "Impact",
+     "raw_value": "35.4",
+     "raw_unit": "%",
+     "printed_text_nearby": "(b) Impact of Retrievers on MultiHop Questions; Q. Ret. Sys.; 35.4; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: Malware",
+     "metric_name": "Impact",
+     "raw_value": "1",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; Malware; 1; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: Metasploit",
+     "metric_name": "Impact",
+     "raw_value": "31",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; Metasploit; 31; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: ExploitDB",
+     "metric_name": "Impact",
+     "raw_value": "18",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; ExploitDB; 18; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: CWE",
+     "metric_name": "Impact",
+     "raw_value": "10",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; CWE; 10; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: MITRE",
+     "metric_name": "Impact",
+     "raw_value": "5",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; MITRE; 5; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: Entity",
+     "metric_name": "Impact",
+     "raw_value": "10",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; Entity; 10; Impact (%)"
+    },
+    {
+     "figure": "Figure 6",
+     "label": "CVE Questions: Q. Ret. Sys.",
+     "metric_name": "Impact",
+     "raw_value": "14",
+     "raw_unit": "%",
+     "printed_text_nearby": "(c) Impact of Retrievers on CVE Questions; Q. Ret. Sys.; 14; Impact (%)"
+    }
+   ],
+   "diagrams_without_metrics": [],
+   "curves_not_digitised": []
+  }
+ },
+ {
+  "case": "architecture diagram without metrics",
+  "pub": "D001",
+  "page": 3,
+  "figure": "Figure 2: Overview of ThreadRAG",
+  "model": "gpt-6.1-sol",
+  "seconds": 21,
+  "answer": {
+   "values": [],
+   "diagrams_without_metrics": [
+    "Figure 2"
+   ],
+   "curves_not_digitised": []
+  }
+ },
+ {
+  "case": "curve: digitisation forbidden",
+  "pub": "D001",
+  "page": 8,
+  "figure": "Figure 3: Hyperparameter sensitivity (line plots)",
+  "model": "gpt-6.1-sol",
+  "seconds": 83,
+  "answer": {
+   "values": [
+    {
+     "figure": "Figure 3",
+     "label": "(a) Top-k Anchors",
+     "metric_name": "Exact Match (EM)",
+     "raw_value": "0.574",
+     "raw_unit": "",
+     "printed_text_nearby": "(a) Top-k Anchors; 0.574; Number of Anchors"
+    },
+    {
+     "figure": "Figure 3",
+     "label": "(b) Top-k Retrieved Docs",
+     "metric_name": "Exact Match (EM)",
+     "raw_value": "0.574",
+     "raw_unit": "",
+     "printed_text_nearby": "(b) Top-k Retrieved Docs; 0.574; Number of Documents"
+    },
+    {
+     "figure": "Figure 3",
+     "label": "(c) Number of Iterations",
+     "metric_name": "Exact Match (EM)",
+     "raw_value": "0.574",
+     "raw_unit": "",
+     "printed_text_nearby": "(c) Number of Iterations; 0.574; Iteration Count"
+    },
+    {
+     "figure": "Figure 3",
+     "label": "(d) Energy Threshold (ε)",
+     "metric_name": "Exact Match (EM)",
+     "raw_value": "0.574",
+     "raw_unit": "",
+     "printed_text_nearby": "(d) Energy Threshold (ε); 0.574; Threshold Value"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "HotpotQA — GraphRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.288",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; GraphRAG*; 0.288"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "HotpotQA — ThreadRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.414",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; ThreadRAG*; 0.414"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "2WikiMultihop — GraphRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.304",
+     "raw_unit": "",
+     "printed_text_nearby": "2WikiMultihop; GraphRAG*; 0.304"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "2WikiMultihop — ThreadRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.396",
+     "raw_unit": "",
+     "printed_text_nearby": "2WikiMultihop; ThreadRAG*; 0.396"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "MuSiQue — GraphRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.186",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; GraphRAG*; 0.186"
+    },
+    {
+     "figure": "Figure 4",
+     "label": "MuSiQue — ThreadRAG*",
+     "metric_name": "Exact Match",
+     "raw_value": "0.264",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; ThreadRAG*; 0.264"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "HotpotQA — KG-Triplets",
+     "metric_name": "Exact Match",
+     "raw_value": "0.556",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; KG-Triplets; 0.556"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "HotpotQA — KG-Texts",
+     "metric_name": "Exact Match",
+     "raw_value": "0.558",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; KG-Texts; 0.558"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "HotpotQA — KG-Paths",
+     "metric_name": "Exact Match",
+     "raw_value": "0.560",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; KG-Paths; 0.560"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "HotpotQA — STG-Paths (Ours)",
+     "metric_name": "Exact Match",
+     "raw_value": "0.574",
+     "raw_unit": "",
+     "printed_text_nearby": "HotpotQA; STG-Paths (Ours); 0.574"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "2Wiki — KG-Triplets",
+     "metric_name": "Exact Match",
+     "raw_value": "0.554",
+     "raw_unit": "",
+     "printed_text_nearby": "2Wiki; KG-Triplets; 0.554"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "2Wiki — KG-Texts",
+     "metric_name": "Exact Match",
+     "raw_value": "0.566",
+     "raw_unit": "",
+     "printed_text_nearby": "2Wiki; KG-Texts; 0.566"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "2Wiki — KG-Paths",
+     "metric_name": "Exact Match",
+     "raw_value": "0.564",
+     "raw_unit": "",
+     "printed_text_nearby": "2Wiki; KG-Paths; 0.564"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "2Wiki — STG-Paths (Ours)",
+     "metric_name": "Exact Match",
+     "raw_value": "0.588",
+     "raw_unit": "",
+     "printed_text_nearby": "2Wiki; STG-Paths (Ours); 0.588"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "MuSiQue — KG-Triplets",
+     "metric_name": "Exact Match",
+     "raw_value": "0.310",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; KG-Triplets; 0.310"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "MuSiQue — KG-Texts",
+     "metric_name": "Exact Match",
+     "raw_value": "0.316",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; KG-Texts; 0.316"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "MuSiQue — KG-Paths",
+     "metric_name": "Exact Match",
+     "raw_value": "0.304",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; KG-Paths; 0.304"
+    },
+    {
+     "figure": "Figure 5",
+     "label": "MuSiQue — STG-Paths (Ours)",
+     "metric_name": "Exact Match",
+     "raw_value": "0.328",
+     "raw_unit": "",
+     "printed_text_nearby": "MuSiQue; STG-Paths (Ours); 0.328"
+    }
+   ],
+   "diagrams_without_metrics": [],
+   "curves_not_digitised": []
+  }
+ }
+]

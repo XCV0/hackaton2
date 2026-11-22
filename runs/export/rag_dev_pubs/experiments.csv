@@ -1,0 +1,20 @@
+publication_id,experiment_id,evaluation_protocol,baseline_name,hardware,latency_ms,tokens_per_query,sample_size,note
+D001,E1,Experiments on three multi-hop QA benchmarks,text-centric methods,,,,,HotpotQA EM comparison.
+D001,E2,Multi-hop QA benchmark evaluation,KnowTrace,,,,,
+D001,E3,Graph representation evaluations,traditional global graphs,,,,,
+D001,E4,Knowledge representation modality evaluation,,,,,,
+D001,E5,Main results of multi-hop QA datasets,,4 NVIDIA A6000 GPUs,,,,The retrieval corpus aggregates all supporting and distractor passages. EM measures absolute correctness and F1 measures token-level overlap; standard text normalization is applied to predictions and ground-truth answers.
+D001,E6,"Ablation study of the STM (SN, STG) and EDP modules across three datasets.",,,,,,
+D001,E7,Inference Performance Comparison (GPT-4o mini),KnowTrace,,,,,
+D001,E8,Inference Performance Comparison (Qwen3.5 plus),IRCoT,,,,,
+D001,E9,token consumption across 100 randomly sampled queries per dataset using the tiktoken library (GPT-4o-mini standard),LightRAG; KnowTrace,,,,100,"Construction (Const.), inference (Inf.), and total token costs."
+D001,E10,hyperparameter analysis on the HotpotQA dataset using the GPT-4o-mini model,,,,,,"Variables are initial anchors, retrieved documents, reasoning iterations, and energy pruning threshold (ϵ)."
+D001,E11,Hyperparameter sensitivity analysis on the HotpotQA dataset using the GPT-4o-mini model.,,,,,,"Panels vary anchors (1, 2, 3, 4, 5, 6, 7), retrieved documents (1, 2, 3, 4, 5, 6, 7, 8, 9), iteration count (1, 2, 3, 4, 5, 6, 7), and threshold (0.001, 0.003, 0.006, 0.01, 0.02, 0.05, 0.1)."
+D001,E12,Performance comparison of EM scores using different underlying graph representations.,GraphRAG*,,,,,"All other components, including retrieval indices and prompting templates, are kept strictly identical."
+D001,E13,Performance comparison of various knowledge representation strategies.,KG-Triplets,,,,,"The text lists the strategies as KG-Triplets, KG-Paths, KG-Texts, and STG-Paths."
+D001,E14,Evaluation across three standard benchmarks,,,,,,"Experiments use HotpotQA, 2WikiMultihopQA, and MuSiQue. HotpotQA is evaluated under a realistic open-domain setting in which golden contexts are not provided a priori."
+D001,E15,Controlled Graph-Free ablation in terms of Exact Match (EM),ThreadRAG,,,,,Graph-Free preserves retrieval and iterative reasoning while removing graph construction and EDP.
+D001,E16,Comparison of evidence selection strategies on MuSiQue using LLaMA3-8B-Instruct,EDP,,,,,All methods use the same candidate graph and evidence budget; only the evidence selection strategy is changed.
+D001,E17,Comparison of evidence selection strategies,EDP,,,,,All strategies use the same candidate graph and evidence budget.
+D001,E18,Intrinsic evaluation of the semantic boundary predictor,,,,,50,"Evaluation uses 50 held-out Wikipedia documents disjoint from the 100 training documents, with 719 reference boundaries in total."
+D001,E19,Randomly sampled incorrect prediction cases from the evaluation pool and manually scrutinized their underlying reasoning traces.,,,,,200,"Failures were classified as Retrieval Failure, LLM Analysis Error, or Pathfinding Error."

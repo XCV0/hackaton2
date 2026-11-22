@@ -1,0 +1,42 @@
+publication_id,measurement_id,device_id,measurement_type,spectrum,light_intensity,intensity_unit,scan_direction,scan_rate,mask_used,certified,certification_lab,temperature,stability_protocol,stress_conditions,note
+P002,MS1,DV1;DV2,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P006,MS1,DV1,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P011,MS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P014,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV10;DV11;DV12;DV13;DV14;DV15;DV16;DV17;DV18;DV19,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P020,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P028,MS1,DV1;DV2,J-V,,100,mW/cm2,,,,,,,,,rule-based
+P029,MS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P031,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P035,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P036,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P037,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV16;DV17;DV18;DV19;DV20,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P037,MS2,DV10;DV12;DV13;DV14;DV15,J-V,AM1.5G,100,mW/cm2,reverse,,,,,,,,rule-based; conditions found in paper text
+P037,MS3,DV11,J-V,AM1.5G,100,mW/cm2,forward,,,,,,,,rule-based; conditions found in paper text
+P038,MS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P039,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P045,MS1,DV1;DV2,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P046,MS1,DV1;DV2,J-V,,,,,,,,,,,,rule-based
+P047,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P048,MS1,DV1,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P049,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P050,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV10;DV11;DV12;DV13;DV14;DV15;DV16;DV17;DV18;DV19;DV20;DV21;DV22;DV23;DV24;DV25;DV26;DV27;DV28;DV29;DV30;DV31;DV32;DV33;DV34;DV35;DV36;DV37;DV38;DV39;DV40;DV41;DV42;DV43,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P052,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P056,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P058,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P059,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P060,MS1,DV1;DV2;DV3;DV4,J-V,,,,,,,,,,,,rule-based
+P061,MS1,DV1;DV2,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P061,MS2,DV3,J-V,AM1.5G,100,mW/cm2,forward,,,,,,,,rule-based; conditions found in paper text
+P061,MS3,DV4,J-V,AM1.5G,100,mW/cm2,reverse,,,,,,,,rule-based; conditions found in paper text
+P063,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P065,MS1,DV1,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P067,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P073,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P075,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P076,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P078,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P081,MS1,DV1;DV2;DV3;DV4;DV5;DV6,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P082,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV10;DV11;DV12;DV13,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P083,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+P084,MS1,DV1;DV2;DV3;DV4,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+P086,MS1,DV1;DV2;DV3;DV4;DV5,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text

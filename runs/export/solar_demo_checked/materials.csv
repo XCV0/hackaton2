@@ -1,0 +1,2 @@
+publication_id,material_id,material_name_raw,formula_normalized,material_class,dimensionality,additives,bandgap_value,bandgap_unit,bandgap_method,note
+DEMO_SOLAR1,M1,MAPbI3,MAPbI3,perovskite,,phenethylammonium,1.60,eV,Tauc,

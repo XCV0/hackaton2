@@ -150,7 +150,7 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
+runs/viniti.db
 # Pyre type checker
 .pyre/
 
@@ -179,3 +179,17 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# --- Evidence Extractor: generated data and secrets (never commit) ---
+# local database: contains processed results AND the LLM API keys entered on the site
+runs/viniti.db
+runs/viniti.db-*
+runs/*.db
+# page text / OCR / page image cache (rebuilt automatically)
+runs/cache/
+runs/*.log
+# case corpus is linked locally (symlinks to the participant packages)
+data/
+# frontend dependencies (npm install)
+frontend/node_modules/
+.venv/
+.DS_Store

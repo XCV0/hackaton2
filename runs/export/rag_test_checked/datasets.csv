@@ -1,0 +1,122 @@
+publication_id,dataset_id,dataset_name,dataset_version,language,data_split,scientific_domain,note
+P001,DS1,,,,,,dataset not identifiable from table header
+P002,DS1,,,,,,dataset not identifiable from table header
+P002,DS2,PubMedQA,,,,,from table header
+P003,DS1,,,,,,dataset not identifiable from table header
+P004,DS1,,,,,,dataset not identifiable from table header
+P004,DS2,HotpotQA,,,,,from text
+P005,DS1,,,,,,dataset not identifiable from table header
+P005,DS2,MS MARCO,,,,,from table header
+P005,DS3,HotpotQA,,,,,from table header
+P005,DS4,WebQuestions,,,,,from table header
+P005,DS5,MSMARCO,,,,,from table header
+P006,DS1,,,,,,dataset not identifiable from table header
+P008,DS1,,,,,,dataset not identifiable from table header
+P009,DS1,,,,,,dataset not identifiable from table header
+P012,DS1,,,,,,dataset not identifiable from table header
+P012,DS2,NQ,,,,,from table header
+P012,DS3,TriviaQA,,,,,from table header
+P012,DS4,MS MARCO,,,,,from table header
+P012,DS5,HotpotQA,,,,,from table header
+P012,DS6,FEVER,,,,,from table header
+P013,DS1,HotpotQA,,,,,from table header
+P013,DS2,MuSiQue,,,,,from table header
+P013,DS3,,,,,,dataset not identifiable from table header
+P014,DS1,,,,,,dataset not identifiable from table header
+P014,DS2,NQ,,,,,from table header
+P014,DS3,TriviaQA,,,,,from table header
+P014,DS4,WebQ,,,,,from table header
+P014,DS5,HotpotQA,,,,,from text
+P015,DS1,,,,,,dataset not identifiable from table header
+P016,DS1,,,,,,dataset not identifiable from table header
+P019,DS1,2WikiMultihopQA,,,,,from table header
+P019,DS2,HotpotQA,,,,,from table header
+P019,DS3,MuSiQue,,,,,from table header
+P021,DS1,,,,,,dataset not identifiable from table header
+P022,DS1,,,,,,dataset not identifiable from table header
+P022,DS2,HotpotQA,,,,,from table header
+P022,DS3,PopQA,,,,,from table header
+P022,DS4,ARC,,,,,from table header
+P023,DS1,,,,,,dataset not identifiable from table header
+P025,DS1,,,,,,dataset not identifiable from table header
+P026,DS1,,,,,,dataset not identifiable from table header
+P027,DS1,TriviaQA,,,,,from text
+P028,DS1,,,,,,dataset not identifiable from table header
+P030,DS1,,,,,,dataset not identifiable from table header
+P031,DS1,,,,,,dataset not identifiable from table header
+P031,DS2,KILT,,,,,from table header
+P031,DS3,TriviaQA,,,,,from table header
+P031,DS4,SQuAD,,,,,from table header
+P031,DS5,NQ,,,,,from table header
+P032,DS1,,,,,,dataset not identifiable from table header
+P034,DS1,,,,,,dataset not identifiable from table header
+P035,DS1,,,,,,dataset not identifiable from table header
+P035,DS2,TriviaQA,,,,,from table header
+P035,DS3,PopQA,,,,,from table header
+P035,DS4,HotpotQA,,,,,from table header
+P035,DS5,StrategyQA,,,,,from table header
+P035,DS6,2Wiki,,,,,from table header
+P040,DS1,HotpotQA,,,,,from text
+P041,DS1,,,,,,dataset not identifiable from table header
+P042,DS1,,,,,,dataset not identifiable from table header
+P043,DS1,,,,,,dataset not identifiable from table header
+P045,DS1,,,,,,dataset not identifiable from table header
+P046,DS1,,,,,,dataset not identifiable from table header
+P046,DS2,HotPotQA,,,,,from text
+P047,DS1,,,,,,dataset not identifiable from table header
+P048,DS1,,,,,,dataset not identifiable from table header
+P049,DS1,,,,,,dataset not identifiable from table header
+P052,DS1,,,,,,dataset not identifiable from table header
+P053,DS1,NQ,,,,,from table header
+P053,DS2,TriviaQA,,,,,from table header
+P053,DS3,TREC,,,,,from table header
+P053,DS4,SQuAD,,,,,from table header
+P053,DS5,,,,,,dataset not identifiable from table header
+P054,DS1,,,,,,dataset not identifiable from table header
+P055,DS1,,,,,,dataset not identifiable from table header
+P057,DS1,,,,,,dataset not identifiable from table header
+P057,DS2,NQ,,,,,from table header
+P058,DS1,,,,,,dataset not identifiable from table header
+P059,DS1,,,,,,dataset not identifiable from table header
+P059,DS2,PubMedQA,,,,,from table header
+P060,DS1,,,,,,dataset not identifiable from table header
+P061,DS1,HotpotQA,,,,,from table header
+P062,DS1,,,,,,dataset not identifiable from table header
+P063,DS1,,,,,,dataset not identifiable from table header
+P064,DS1,HotpotQA,,,,,from table header
+P064,DS2,,,,,,dataset not identifiable from table header
+P064,DS3,MuSiQue,,,,,from table header
+P066,DS1,,,,,,dataset not identifiable from table header
+P067,DS1,,,,,,dataset not identifiable from table header
+P068,DS1,,,,,,dataset not identifiable from table header
+P069,DS1,,,,,,dataset not identifiable from table header
+P073,DS1,,,,,,dataset not identifiable from table header
+P074,DS1,,,,,,dataset not identifiable from table header
+P075,DS1,,,,,,dataset not identifiable from table header
+P076,DS1,NQ,,,,,from table header
+P076,DS2,HotpotQA,,,,,from table header
+P076,DS3,TriviaQA,,,,,from table header
+P077,DS1,,,,,,dataset not identifiable from table header
+P080,DS1,,,,,,dataset not identifiable from table header
+P080,DS2,TQA,,,,,from table header
+P083,DS1,,,,,,dataset not identifiable from table header
+P084,DS1,,,,,,dataset not identifiable from table header
+P085,DS1,,,,,,dataset not identifiable from table header
+P086,DS1,,,,,,dataset not identifiable from table header
+P087,DS1,CRAG,,,,,from text
+P087,DS2,HotpotQA,,,,,from text
+P087,DS3,PopQA,,,,,from text
+P087,DS4,NQ,,,,,from text
+P087,DS5,MuSiQue,,,,,from text
+P087,DS6,MultiHop-RAG,,,,,from text
+P088,DS1,,,,,,dataset not identifiable from table header
+P089,DS1,,,,,,dataset not identifiable from table header
+P089,DS2,TriviaQA,,,,,from table header
+P089,DS3,HotpotQA,,,,,from table header
+P090,DS1,NQ,,,,,from table header
+P090,DS2,RGB,,,,,from table header
+P090,DS3,HotpotQA,,,,,from table header
+P090,DS4,2WikiMQA,,,,,from table header
+P090,DS5,Bamboogle,,,,,from table header
+P090,DS6,StrategyQA,,,,,from table header
+P090,DS7,,,,,,dataset not identifiable from table header

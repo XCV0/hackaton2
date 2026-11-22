@@ -1,0 +1,115 @@
+publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+D001,I1,R044,source_figure_review,Значение с рисунка Figure 6B: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,"Rrec values of the SrCl2-doped device are about one time
+larger than Rrec values of the pristine one under the bias range
+of 0–1 V"
+D003,I1,R084;R072,eqe_consistency,Jsc из EQE 23.5 мА/см² vs Jsc из ВАХ 24.89 мА/см²: 5.6 % > 5 % (проверить сопоставимость условий),6,are 24.0 and 23.5 mA cm
+D003,I2,R010,citation_not_found,Цитата не найдена на с. 2 (not_found): «conductivity was improved from 6.00 × 10−3 to 1.81 × 10−2 mS cm−1.»,,
+D003,I3,R011,citation_not_found,Цитата не найдена на с. 2 (not_found): «conductivity was improved from 6.00 × 10−3 to 1.81 × 10−2 mS cm−1.»,,
+D003,I4,R081,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.089 ),6,reduction of the hysteresis index (HI) from 0.089 to 0.034
+D003,I5,R082,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.034 ),6,reduction of the hysteresis index (HI) from 0.089 to 0.034
+D004,I1,R066;R063;R064;R065,jv_consistency,"PCE по ВАХ: 0.943 В × 19.664 мА/см² × 56.07 % / 100 мВт/см² = 10.40 %; опубликовано 9.9 % (расхождение 5.0 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,"C-ED-1
+0.943
+19.664
+56.07
+9.90 ± 1.03(10.32)"
+D004,I2,R023,citation_not_found,"Цитата не найдена на с. 3 (not_found): «1H-NMR (CDCl3): 4.6 ppm (s, 2H, O=C-CH2-»",,
+D004,I3,R047,normalization,Нормализация невозможна: unit unknown: not normalised (raw 4.39 ),10,ED-treated MoS2 solar cells exhibited low efficiency (4.39 ± 0.81)
+D004,I4,R048,normalization,Нормализация невозможна: unit unknown: not normalised (raw 9.46 ),10,better performance (PCE: 9.46) than ED
+D004,I5,R051,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.94 ),10,voltage (Voc) from 0.94 to 1.05
+D004,I6,R052,normalization,Нормализация невозможна: unit unknown: not normalised (raw 1.05 ),10,voltage (Voc) from 0.94 to 1.05
+D005,I1,R025,citation_not_found,Цитата не найдена на с. 5 (not_found): «22.95% PCE of Spiro-OMeTAD-»,,
+D005,I2,R029,citation_not_found,Цитата не найдена на с. 5 (not_found): «25.41 and 25.73 mA cm−2 for Spiro-»,,
+D005,I3,R030,citation_not_found,Цитата не найдена на с. 5 (not_found): «25.41 and 25.73 mA cm−2 for Spiro-»,,
+D005,I4,R051,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «SF-MPA-MCz-treated perovskite (64.58 ns)»,,
+D005,I5,R063,citation_not_found,Цитата не найдена на с. 9 (not_found): «an appreciably high PCE of 24.53% was achieved for SF-MPA-»,,
+D007,I1,R058,range,"Voc = 9.399 V вне диапазона [0, 2.0]",6,"a VOC
+of 9.399 V"
+D009,I1,R013,source_figure_review,Значение с рисунка Fig. 3e: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,the certified PCE (16.65%)
+D009,I2,R014,source_figure_review,Значение с рисунка Supplementary Fig. 16: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,hysteresis index of 2.95%
+D009,I3,R015,source_figure_review,Значение с рисунка Fig. 3f: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,retaining 93.3% of the initial PCE
+D009,I4,R016,citation_not_found,"Цитата не найдена на с. 5 (not_found): «maintained 92.0% of the  PCE after 1,500 h»",,
+D009,I5,R016,source_figure_review,Значение с рисунка Fig. 3g: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,
+D009,I6,R023,source_figure_review,Значение с рисунка Fig. 3b: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,Stablized PCE@0.73 V = 13.31%
+D009,I7,R024,source_figure_review,Значение с рисунка Fig. 3b: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,Stablized PCE@0.85 V = 17.04%
+D009,I8,R025,source_figure_review,Значение с рисунка Fig. 3f: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,initial PCEs: 12.73% for Cs0 and 16.39% for Cs5
+D009,I9,R026,source_figure_review,Значение с рисунка Fig. 3f: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,initial PCEs: 12.73% for Cs0 and 16.39% for Cs5
+D009,I10,R027,source_figure_review,Значение с рисунка Fig. 3g: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,12.55% for Cs0 and 17.09% for Cs5
+D009,I11,R028,source_figure_review,Значение с рисунка Fig. 3g: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,5,12.55% for Cs0 and 17.09% for Cs5
+D009,I12,R031,source_figure_review,Значение с рисунка Fig. 4e: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,higher built-in potential of 0.82 V as estimated
+D009,I13,R032,source_figure_review,Значение с рисунка Fig. 4e: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,Vbi = 0.77 V
+D009,I14,R033,source_figure_review,Значение с рисунка Supplementary Fig. 24: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,ratio of 5.14% at the top surface
+D009,I15,R034,source_figure_review,Значение с рисунка Fig. 4f: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,average 2.18%) compared with the
+D009,I16,R035,source_figure_review,Значение с рисунка Fig. 4f: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,had an average Sn4+ ratio of 5.18%
+D009,I17,R036,source_figure_review,Значение с рисунка Fig. 4c: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,D-Cs5 = 488 nm
+D009,I18,R037,source_figure_review,Значение с рисунка Fig. 4c: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,D-Cs5 = 454 nm
+D009,I19,R038,source_figure_review,Значение с рисунка Fig. 4c: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,D-Cs0 = 240 nm
+D009,I20,R039,source_figure_review,Значение с рисунка Fig. 4c: текстовый поиск не подтверждает визуальное считывание; нужна визуальная проверка,6,D-Cs0 = 225 nm
+D013,I1,R003,normalization,Нормализация невозможна: unit % of detailed balance limit not convertible for Voc (raw 62 % of detailed balance limit),2,62 % of the detailed balance limit for Voc
+D013,I2,R008,citation_not_found,Цитата не найдена на с. 6 (not_found): «Jsc (mA/cm2) 31.59»,,
+D013,I3,R009,citation_not_found,Цитата не найдена на с. 6 (not_found): «Voc (mV) 592»,,
+D013,I4,R010,citation_not_found,Цитата не найдена на с. 6 (not_found): «FF (%) 64.89»,,
+D013,I5,R011,citation_not_found,Цитата не найдена на с. 6 (not_found): «η (%) 12.13»,,
+D013,I6,R012,citation_not_found,Цитата не найдена на с. 6 (not_found): «Jsc (mA/cm2) 27.48»,,
+D013,I7,R013,citation_not_found,Цитата не найдена на с. 6 (not_found): «Voc (mV) 618»,,
+D013,I8,R014,citation_not_found,Цитата не найдена на с. 6 (not_found): «FF (%) 55.78»,,
+D013,I9,R015,citation_not_found,Цитата не найдена на с. 6 (not_found): «η (%) 9.47»,,
+D013,I10,R016,citation_not_found,Цитата не найдена на с. 6 (not_found): «Jsc (mA/cm2) 22.12»,,
+D013,I11,R017,citation_not_found,Цитата не найдена на с. 6 (not_found): «Voc (mV) 650»,,
+D013,I12,R018,citation_not_found,Цитата не найдена на с. 6 (not_found): «FF (%) 45.06»,,
+D013,I13,R019,citation_not_found,Цитата не найдена на с. 6 (not_found): «η (%) 6.48»,,
+D013,I14,R020,citation_not_found,Цитата не найдена на с. 6 (not_found): «Jsc (mA/cm2) 20.35»,,
+D013,I15,R021,citation_not_found,Цитата не найдена на с. 6 (not_found): «Voc (mV) 647»,,
+D013,I16,R022,citation_not_found,Цитата не найдена на с. 6 (not_found): «FF (%) 41.21»,,
+D013,I17,R023,citation_not_found,Цитата не найдена на с. 6 (not_found): «η (%) 5.43»,,
+D013,I18,R025,citation_not_found,Цитата не найдена на с. 6 (not_found): «EU (meV) 22.3»,,
+D013,I19,R026,citation_not_found,Цитата не найдена на с. 6 (not_found): «EU (meV) 23.6»,,
+D013,I20,R027,citation_not_found,Цитата не найдена на с. 6 (not_found): «EU (meV) 20.3»,,
+D013,I21,R028,citation_not_found,Цитата не найдена на с. 6 (not_found): «EU (meV) 22.7»,,
+D013,I22,R030,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,PL (eV) 1.21»",,
+D013,I23,R031,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,PL (eV) 1.26»",,
+D013,I24,R032,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,PL (eV) 1.43»",,
+D013,I25,R033,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,PL (eV) 1.48»",,
+D013,I26,R035,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,EQE (eV) 1.19»",,
+D013,I27,R036,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,EQE (eV) 1.24»",,
+D013,I28,R037,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,EQE (eV) 1.40»",,
+D013,I29,R038,citation_not_found,"Цитата не найдена на с. 6 (not_found): «Eg,EQE (eV) 1.49»",,
+D015,I1,R040,citation_not_found,Цитата не найдена на с. 3 (not_found): «7.9 mA cm2 for back illumination»,,
+D015,I2,R041,citation_not_found,"Цитата не найдена на с. 3 (not_found): «values are 8.6% and 21.8 mA cm2, respectively, when illuminated from front»",,
+D015,I3,R042,citation_not_found,"Цитата не найдена на с. 3 (not_found): «values are 8.6% and 21.8 mA cm2, respectively, when illuminated from front»",,
+D015,I4,R043,citation_not_found,Цитата не найдена на с. 3 (not_found): «PCE of 7.6% and JSC of 15.8 mA cm2 when»,,
+D015,I5,R044,citation_not_found,Цитата не найдена на с. 3 (not_found): «PCE of 7.6% and JSC of 15.8 mA cm2 when»,,
+D015,I6,R045,citation_not_found,Цитата не найдена на с. 3 (not_found): «illumination are 12.5% and 22.2 mA cm2»,,
+D015,I7,R046,citation_not_found,Цитата не найдена на с. 3 (not_found): «illumination are 12.5% and 22.2 mA cm2»,,
+D019,I1,R052,citation_not_found,Цитата не найдена на с. 8 (not_found): «The JSC from integrated EQE (25.89 mA cm-2)»,,
+D019,I2,R053,citation_not_found,Цитата не найдена на с. 8 (not_found): «the JSC of the J–V curve (26.05 mA cm-2)»,,
+D020,I1,R024,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «the solar cell with P3HT showed a champion PCE of 4.15%»,,
+D020,I2,R025,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «with a VOC of 0.536 V»,,
+D020,I3,R026,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «JSC of 15.37 mA·cm−2»,,
+D020,I4,R027,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «and FF of 0.504»,,
+D020,I5,R028,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «the solar cell without P3HT showed a much lower PCE of 2.76%»,,
+D020,I6,R029,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «with a VOC of 0.467 V»,,
+D020,I7,R030,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «JSC of 13.24 mA·cm−2»,,
+D020,I8,R031,citation_not_found,Цитата не найдена на с. 6 (wrong_page): «and FF of 0.447»,,
+D021,I1,R001,range,"PCE = 47.1 % вне диапазона [0, 35]",1,record efficiency of 47.1% [1]
+D021,I2,R134,range,"PCE = 47.1 % вне диапазона [0, 35]",1,"warming. Currently, the most efficient solar cells, boasting a record
+efficiency of 47.1% [1], are based on multi-junctions of AlGaInP/AlGaAs/GaAs/GaInAs."
+D021,I3,R001,citation_not_found,Цитата не найдена на с. 1 (wrong_page): «record efficiency of 47.1% [1]»,,
+D021,I4,R002,citation_not_found,Цитата не найдена на с. 1 (wrong_page): «reaching a maximum of approximately 26% [2]»,,
+D021,I5,R109,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I6,R110,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I7,R111,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I8,R112,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I9,R113,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I10,R114,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I11,R115,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I12,R116,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I13,R117,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I14,R118,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I15,R119,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I16,R120,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I17,R121,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I18,R122,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I19,R123,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D021,I20,R124,citation_not_found,Цитата не найдена на с. 13 (no_fragment): «»,,
+D022,I1,R026;R023;R024;R025,jv_consistency,"PCE по ВАХ: 0.29 В × 1.85 мА/см² × 31 % / 100 мВт/см² = 0.17 %; опубликовано 0.21 % (расхождение 20.8 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",5,FTO/ZnO (50 nm)/a-Si:H (15 nm)/MoO3(10 nm)/ITO 89 69 0.29 1.85 31.0 0.21
+D022,I2,R040;R037;R038;R039,jv_consistency,"PCE по ВАХ: 0.43 В × 2.86 мА/см² × 37 % / 100 мВт/см² = 0.46 %; опубликовано 0.41 % (расхождение 11.0 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",5,FTO/AZO (75 nm)/a-Si:H (15 nm)/MoO3 (10 nm)/ITO 79 62 0.43 2.86 37.0 0.41

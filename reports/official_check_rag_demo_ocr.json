@@ -1,0 +1,40 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain2_rag/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/rag_demo_checked /Users/artemshelkunov/hackaton2/data_demo/rag --json-report /Users/artemshelkunov/hackaton2/runs/export/rag_demo_checked/check_report_ocr.json --ocr --ocr-language eng --tesseract /opt/homebrew/bin/tesseract",
+ "exit_code": 2,
+ "stdout_tail": "REVIEW: results:9: primary result without dataset_id\nREVIEW: results:14: primary result without dataset_id\nREVIEW: results:20: primary result without dataset_id\nREVIEW: results:20: primary result without task_id\nREVIEW: results:21: primary result without dataset_id\nREVIEW: results:21: primary result without task_id\nREVIEW: results:23: primary result without dataset_id\nREVIEW: results:25: primary result without dataset_id\nREVIEW: results:27: primary result without dataset_id\nREVIEW: results:27: value outside declared metric scale; preserve value and add an issue\n{\"rows\": {\"publications\": 1, \"configurations\": 6, \"datasets\": 3, \"tasks\": 4, \"experiments\": 7, \"results\": 35, \"issues\": 11}, \"quotes\": {\"requested\": 41, \"matched\": 41, \"unresolved\": 0}, \"semantic_completeness_certified\": false, \"exit_code\": 2, \"source_text_mode\": \"native plus local OCR on image-only pages\"}\nErrors: 0; review items: 10\n",
+ "stderr_tail": "",
+ "report": {
+  "rows": {
+   "publications": 1,
+   "configurations": 6,
+   "datasets": 3,
+   "tasks": 4,
+   "experiments": 7,
+   "results": 35,
+   "issues": 11
+  },
+  "quotes": {
+   "requested": 41,
+   "matched": 41,
+   "unresolved": 0
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native plus local OCR on image-only pages"
+ },
+ "n_errors": 0,
+ "n_warnings": 10,
+ "errors_head": [],
+ "warnings_head": [
+  "results:9: primary result without dataset_id",
+  "results:14: primary result without dataset_id",
+  "results:20: primary result without dataset_id",
+  "results:20: primary result without task_id",
+  "results:21: primary result without dataset_id",
+  "results:21: primary result without task_id",
+  "results:23: primary result without dataset_id",
+  "results:25: primary result without dataset_id",
+  "results:27: primary result without dataset_id",
+  "results:27: value outside declared metric scale; preserve value and add an issue"
+ ]
+}

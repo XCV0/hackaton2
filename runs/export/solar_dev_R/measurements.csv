@@ -1,0 +1,9 @@
+publication_id,measurement_id,device_id,measurement_type,spectrum,light_intensity,intensity_unit,scan_direction,scan_rate,mask_used,certified,certification_lab,temperature,stability_protocol,stress_conditions,note
+D001,MS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+D002,MS1,DV1;DV2,J-V,,,,,,,,,,,,rule-based
+D004,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV10;DV11,J-V,,,,,,,,,,,,rule-based
+D005,MS1,DV1;DV2;DV3,J-V,AM1.5G,100,mW/cm2,,,,,,,,,rule-based; conditions found in paper text
+D010,MS1,DV1;DV2,J-V,,100,mW/cm2,,,,,,,,,rule-based
+D017,MS1,DV1;DV2;DV3;DV4;DV5;DV6;DV7;DV8;DV9;DV10;DV11,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text
+D019,MS1,DV1;DV2;DV3,J-V,,,,,,,,,,,,rule-based
+D022,MS1,DV1;DV2;DV3,J-V,AM1.5G,,,,,,,,,,,rule-based; conditions found in paper text

@@ -1,0 +1,42 @@
+publication_id,experiment_id,evaluation_protocol,baseline_name,hardware,latency_ms,tokens_per_query,sample_size,note
+D001,E1,Table 1: Main results of multi-hop QA datasets. Best results are in bold and second best are underlined.,,,,,,"Table 1, page 6 (rule-based: protocol = caption text)"
+D001,E2,Table 7: Comparison of evidence selection strategies on,,,,,,"Table 7, page 14 (rule-based: protocol = caption text)"
+D001,ET,values stated in running text,,,,,,rule-based: textual statements
+D003,E1,"Table 2: Our training complements retrieval augmentation. “Ours” denotes the trained model without RAG,",,,,,,"Table 2, page 8 (rule-based: protocol = caption text)"
+D004,ET,values stated in running text,,,,,,rule-based: textual statements
+D005,E1,"Table 4, alight the base instructions are the same,",,,,,,"Table 4, page 10 (rule-based: protocol = caption text)"
+D005,E2,Table 6: Closed-book factuality benchmark results.,,,,,,"Table 6, page 13 (rule-based: protocol = caption text)"
+D006,ET,values stated in running text,,,,,,rule-based: textual statements
+D007,E1,Table 1: Averaged results on a collection of benchmark datasets for open-domain question answering including the single-hop,,,,,,"Table 1, page 6 (rule-based: protocol = caption text)"
+D007,E2,Table 2: Results on each of a collection of datasets with FLAN-T5-XL (3B) as the LLM. We emphasize our results in bold.,,,,,,"Table 2, page 7 (rule-based: protocol = caption text)"
+D007,E3,Table 3: The exact elapsed time per query and the percentage Table 4: Results on QA and complexity classification with,,,,,,"Table 3, page 8 (rule-based: protocol = caption text)"
+D007,E4,"Table 5: Case study with GPT-3.5 (Turbo), where we represent the factual error in red and the accurate information in blue.",,,,,,"Table 5, page 9 (rule-based: protocol = caption text)"
+D007,E5,Table 7: Results on each of a collection of datasets with FLAN-T5-XXL (11B) as the LLM. We emphasize our results in bold.,,,,,,"Table 7, page 15 (rule-based: protocol = caption text)"
+D008,E1,Table 4: Inference latency under different prompt,,,,,,"Table 4, page 14 (rule-based: protocol = caption text)"
+D009,E1,Table 1: Comparison of different RAG methods across 5 benchmarks using EM and F1 metrics. Bold denotes,,,,,,"Table 1, page 5 (rule-based: protocol = caption text)"
+D009,E2,Table 2: Component ablation study evaluating the impact of the Process Reward Model (PRM). The table reports,,,,,,"Table 2, page 6 (rule-based: protocol = caption text)"
+D009,E3,Table 3: Impact of different optimization strategies on PRO-STEP’s effectiveness across five benchmarks. Bold,,,,,,"Table 3, page 6 (rule-based: protocol = caption text)"
+D009,E4,Table 4: Generalization of PRO-STEP across different policy backbones. Results are reported using EM and F1.,,,,,,"Table 4, page 9 (rule-based: protocol = caption text)"
+D009,E5,Table 5: Final EM on recovered trajectories. n is given subsets are consistently smaller because it fails less,,,,,,"Table 5, page 9 (rule-based: protocol = caption text)"
+D009,E6,Table 10: Ablation of the VTS branching configuration. The main configuration improves average performance by,,,,,,"Table 10, page 18 (rule-based: protocol = caption text)"
+D009,E7,Table 11: Performance comparison across different Process Reward Model (PRM) weight (α) values. The table,,,,,,"Table 11, page 18 (rule-based: protocol = caption text)"
+D009,E8,Table 15: Macro-AVG bootstrap 95% confidence inter-,,,,,,"Table 15, page 18 (rule-based: protocol = caption text)"
+D009,E9,"Table 17: Results at the 3B scale (EM / F1, %). Bold Table 19: Token-level F1 on recovered trajectories.",,,,,,"Table 17, page 19 (rule-based: protocol = caption text)"
+D009,E10,Table 21: Final EM when the initial retrieval already we applied the same outcome-margin filter (chosen,,,,,,"Table 21, page 20 (rule-based: protocol = caption text)"
+D009,ET,values stated in running text,,,,,,rule-based: textual statements
+D010,E1,Table 1. Classification metrics (averages) for our router and for different benchmarks.,,,,,,"Table 1, page 10 (rule-based: protocol = caption text)"
+D010,E2,Table 2. Ablation study of router’s input features. Using all three features results in,,,,,,"Table 2, page 14 (rule-based: protocol = caption text)"
+D010,ET,values stated in running text,,,,,,rule-based: textual statements
+D013,E1,Table 9: One-at-a-time OAS coefficient,,,,,,"Table 9, page 20 (rule-based: protocol = caption text)"
+D013,ET,values stated in running text,,,,,,rule-based: textual statements
+D014,E1,Table 1: WoW response generation performance bench-,,,,,,"Table 1, page 4 (rule-based: protocol = caption text)"
+D014,E2,Table 2: HotpotQA answer generation performance and the overall observed trends are significant.,,,,,,"Table 2, page 4 (rule-based: protocol = caption text)"
+D015,E1,Table 4: LLM QA accuracy in the XRAG monolingual,,,,,,"Table 4, page 7 (rule-based: protocol = caption text)"
+D015,E2,"Table 5: LLM QA accuracy in the XRAG multilingual retrieval setting, which for each language X consists of a set",,,,,,"Table 5, page 8 (rule-based: protocol = caption text)"
+D017,E1,Table 3: Accuracy (%) and GPT-Score (%) on MMLongBench-Doc across different domains and overall perfor-,,,,,,"Table 3, page 5 (rule-based: protocol = caption text)"
+D019,E1,Table 1: A comparison of results from different baselines on the NQ and Huatuo test set. Our framework retrieves,,,,,,"Table 1, page 5 (rule-based: protocol = caption text)"
+D019,E2,Table 4: Evaluation on the retrieved contexts utilizing w/o reasoning 32.42 23.85 17.94 17.91,,,,,,"Table 4, page 7 (rule-based: protocol = caption text)"
+D019,E3,Table 5: Ablation results on reasoning content of miss-,,,,,,"Table 5, page 7 (rule-based: protocol = caption text)"
+D019,ET,values stated in running text,,,,,,rule-based: textual statements
+D020,E1,Table 1 presents detailed performance metrics for both methods across all five organizations in the benchmark. W-RAC,,,,,,"Table 1, page 4 (rule-based: protocol = caption text)"
+D020,E2,"Table 9 breaks down retrieval performance by query category, illustrating how W-RAC performs across different",,,,,,"Table 9, page 6 (rule-based: protocol = caption text)"

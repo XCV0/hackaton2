@@ -1,0 +1,60 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain2_rag/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/rag_demo_checked /Users/artemshelkunov/hackaton2/data_demo/rag --json-report /Users/artemshelkunov/hackaton2/runs/export/rag_demo_checked/check_report.json",
+ "exit_code": 2,
+ "stdout_tail": "REVIEW: results:9: primary result without dataset_id\nREVIEW: results:14: primary result without dataset_id\nREVIEW: results:20: primary result without dataset_id\nREVIEW: results:20: primary result without task_id\nREVIEW: results:21: primary result without dataset_id\nREVIEW: results:21: primary result without task_id\nREVIEW: results:23: primary result without dataset_id\nREVIEW: results:25: primary result without dataset_id\nREVIEW: results:27: primary result without dataset_id\nREVIEW: results:27: value outside declared metric scale; preserve value and add an issue\nREVIEW: results:40: extracted result without numeric metric_value\nREVIEW: results:43: primary result without dataset_id\nREVIEW: results:46: primary result without dataset_id\nREVIEW: results:47: primary result without dataset_id\nREVIEW: results:50: primary result without dataset_id\nREVIEW: results:51: primary result without dataset_id\nREVIEW: results:52: value outside declared metric scale; preserve value and add an issue\nREVIEW: results:54: primary result without dataset_id\nREVIEW: results:55: primary result without dataset_id\nREVIEW: results:56: primary result without dataset_id\nREVIEW: results:56: primary result without task_id\nREVIEW: results:57: primary result without dataset_id\nREVIEW: results:57: primary result without task_id\nREVIEW: results:32: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:33: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:34: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:35: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:36: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:58: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:59: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:60: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:61: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:62: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:15: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\n{\"rows\": {\"publications\": 2, \"configurations\": 13, \"datasets\": 7, \"tasks\": 10, \"experiments\": 18, \"results\": 61, \"issues\": 18}, \"quotes\": {\"requested\": 69, \"matched\": 58, \"unresolved\": 11}, \"semantic_completeness_certified\": false, \"exit_code\": 2, \"source_text_mode\": \"native PDF text only\"}\nErrors: 0; review items: 34\n",
+ "stderr_tail": "",
+ "report": {
+  "rows": {
+   "publications": 2,
+   "configurations": 13,
+   "datasets": 7,
+   "tasks": 10,
+   "experiments": 18,
+   "results": 61,
+   "issues": 18
+  },
+  "quotes": {
+   "requested": 69,
+   "matched": 58,
+   "unresolved": 11
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native PDF text only"
+ },
+ "n_errors": 0,
+ "n_warnings": 34,
+ "errors_head": [],
+ "warnings_head": [
+  "results:9: primary result without dataset_id",
+  "results:14: primary result without dataset_id",
+  "results:20: primary result without dataset_id",
+  "results:20: primary result without task_id",
+  "results:21: primary result without dataset_id",
+  "results:21: primary result without task_id",
+  "results:23: primary result without dataset_id",
+  "results:25: primary result without dataset_id",
+  "results:27: primary result without dataset_id",
+  "results:27: value outside declared metric scale; preserve value and add an issue",
+  "results:40: extracted result without numeric metric_value",
+  "results:43: primary result without dataset_id",
+  "results:46: primary result without dataset_id",
+  "results:47: primary result without dataset_id",
+  "results:50: primary result without dataset_id",
+  "results:51: primary result without dataset_id",
+  "results:52: value outside declared metric scale; preserve value and add an issue",
+  "results:54: primary result without dataset_id",
+  "results:55: primary result without dataset_id",
+  "results:56: primary result without dataset_id",
+  "results:56: primary result without task_id",
+  "results:57: primary result without dataset_id",
+  "results:57: primary result without task_id",
+  "results:32: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:33: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:34: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:35: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:36: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:58: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image",
+  "results:59: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image"
+ ]
+}

@@ -64,3 +64,9 @@ rules:
   duplicate_cycles: {check: duplicate_of}
   duplicate_value_mismatch: {check: contradiction}
   baseline_comparability: {check: protocol_mismatch}
+
+entity_links: {}
+numeric_fields: [publications.year, configurations.chunk_size, configurations.chunk_overlap, configurations.top_k,
+                 experiments.latency_ms, experiments.tokens_per_query, experiments.sample_size,
+                 results.metric_k, results.baseline_value, results.sample_size]
+integer_fields: [publications.year, configurations.top_k, results.metric_k, experiments.sample_size, results.sample_size]

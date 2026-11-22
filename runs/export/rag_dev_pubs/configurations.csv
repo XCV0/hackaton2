@@ -1,0 +1,81 @@
+publication_id,config_id,rag_variant,retrieval_method,retriever_model,embedding_model,embedding_version,chunking_method,chunk_size,chunk_overlap,chunk_unit,index_type,vector_store,top_k,reranker_model,generator_model,generator_version,prompt_strategy,context_strategy,note
+D001,C1,ThreadRAG,Energy-Driven Pathfinding (EDP),,,,Semantic Node extraction,under 512,,tokens,hybrid retrieval index,,,,,,modality-native prompts,coherent textual evidence paths,"Uses a Semantic Topology Mapper (STM), a Semantic Topology Graph (STG), and Energy-Driven Pathfinding (EDP)."
+D001,C2,text-centric methods,,,,,,,,,,,,,,,,,Baseline category; specific systems are not named on this page.
+D001,C3,best baseline,,,,,,,,,,,,,,,,,Specific baseline system is not named on this page.
+D001,C4,strongest baseline,,,,,,,,,,,,,,,,,Specific baseline system is not named on this page.
+D001,C5,KnowTrace,KG-Triplet RAG,,,,,,,,,,,,,,,,Comparison baseline for ThreadRAG on HotpotQA.
+D001,C6,Semantic Topology Graph (STG),,,,,,,,,,,,,,,,,Replaces traditional global graphs in the graph representation evaluation.
+D001,C7,traditional global graphs,,,,,,,,,,,,,,,,,Baseline graph representation.
+D001,C8,STG-Paths,,,,,,,,,,,,,,,,sequence-native STG-Paths,
+D001,C9,ThreadRAG,HybridRetrieve,BM25,,,MLP_Segmentation,,,,hybrid index; BM25 index over corpus,,top-k,,LLM M,,reasons step by step and produces a concise answer enclosed in a structured output tag,"Energy-Driven Pathfinding with PPR_Diffusion, BFS_Traversal, deterministic linearization, and iterative context refinement","Semantic Topology Mapper, Energy-Driven Pathfinding, and Adaptive Reasoning Agent; maximum iterations N, energy threshold ϵ, and MLP threshold θ are symbolic parameters."
+D001,C10,RA-CoT,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C11,RA-CoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C12,RA-CoT,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C13,ReAct,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C14,ReAct,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C15,ReAct,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C16,IRCoT,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C17,IRCoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C18,IRCoT,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C19,Self-Ask,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C20,Self-Ask,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C21,Self-Ask,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C22,Iter-RetGen,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C23,Iter-RetGen,,,,,,,,,,,,,Qwen3.5 plus,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C24,Iter-RetGen,,,,,,,,,,,,,GPT-4o mini,,,,Non-Graph RAG; text-centric multi-hop method reasoning over plain text.
+D001,C25,HippoRAG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Chunk RAG.
+D001,C26,HippoRAG,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Chunk RAG.
+D001,C27,HippoRAG,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Chunk RAG.
+D001,C28,LightRAG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Chunk RAG.
+D001,C29,LightRAG,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Chunk RAG.
+D001,C30,LightRAG,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Chunk RAG.
+D001,C31,CoTKR,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Rewriting RAG.
+D001,C32,CoTKR,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Rewriting RAG.
+D001,C33,CoTKR,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Rewriting RAG.
+D001,C34,EFSUM,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Rewriting RAG.
+D001,C35,EFSUM,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Rewriting RAG.
+D001,C36,EFSUM,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Rewriting RAG.
+D001,C37,ToG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C38,ToG,,,,,,,,,,,,,Qwen3.5 plus,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C39,ToG,,,,,,,,,,,,,GPT-4o mini,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C40,PoG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C41,PoG,,,,,,,,,,,,,Qwen3.5 plus,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C42,PoG,,,,,,,,,,,,,GPT-4o mini,,,,"Graph RAG; KG-Path RAG; adapted to use the same local KG as LightRAG, replacing external KGs."
+D001,C43,ERA-CoT,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Triplet RAG.
+D001,C44,ERA-CoT,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Triplet RAG.
+D001,C45,ERA-CoT,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Triplet RAG.
+D001,C46,knowtrace,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,,Graph RAG; KG-Triplet RAG.
+D001,C47,knowtrace,,,,,,,,,,,,,Qwen3.5 plus,,,,Graph RAG; KG-Triplet RAG.
+D001,C48,knowtrace,,,,,,,,,,,,,GPT-4o mini,,,,Graph RAG; KG-Triplet RAG.
+D001,C49,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,LLaMA3-8B-Instruct,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations."
+D001,C50,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,Qwen3.5 plus,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations."
+D001,C51,ThreadRAG,Elasticsearch hybrid retrieval with equal BM25 and dense weights,,nomic-embed-text,,,1200,150,characters,,Elasticsearch,5,,GPT-4o mini,,,global contexts,"Graph RAG. STG: 5-NN; 0.5/0.3 semantic/lexical thresholds; edge weights γ = 0.3, α = 0.35, β = 0.65. Pathfinding: 3 anchors; 0.5 PPR restart; 0.01 pruning threshold; 3 max iterations."
+D001,C52,ThreadRAG,,,,,,,,,,,,,GPT-4o mini,,,,
+D001,C53,ThreadRAG,,,,,,,,,,,,,Qwen3.5 plus,,,,
+D001,C54,LightRAG,graph-based retrieval,,,,,,,,,,,,,,,,Configuration in the Table 3 token-cost comparison.
+D001,C55,ThreadRAG,,,,,,,,,,,,,GPT-4o-mini,,,,"Hyperparameter sweep over initial anchors, retrieved documents, reasoning iterations, and energy pruning threshold (ϵ)."
+D001,C56,ThreadRAG,,,,,,,,,,,5,,GPT-4o-mini,,,,"Optimal printed setting: 3 anchors, 5 documents, 3 reasoning iterations, and a 0.01 energy pruning threshold."
+D001,C57,GraphRAG*,,,,,,,,,,,,,,,,pre-constructed global KG,Uses rigid entity-relation triplets. Retrieval indices and prompting templates are kept identical to ThreadRAG*.
+D001,C58,ThreadRAG*,,,,,,,,,,,,,,,,Semantic Topology Graph,Uses the proposed Semantic Topology Graph. Retrieval indices and prompting templates are kept identical to GraphRAG*.
+D001,C59,KG-Triplets,,,,,,,,,,,,,,,,discrete relational triplets,
+D001,C60,KG-Paths,,,,,,,,,,,,,,,,linear structural paths,
+D001,C61,KG-Texts,,,,,,,,,,,,,,,,LLM-rewritten natural language,
+D001,C62,STG-Paths (Ours),,,,,,,,,,,,,,,,topological text paths,
+D001,C63,RA-CoT,retrieval with chain-of-thought,,,,,,,,,,,,,,,,Non-Graph RAG baseline.
+D001,C64,ReAct,retrieval with acting,,,,,,,,,,,,,,,,Non-Graph RAG baseline.
+D001,C65,IRCoT,iteratively interleaving retrieval steps with generation,,,,,,,,,,,,,,,,Non-Graph RAG baseline.
+D001,C66,Iter-RetGen,iteratively interleaving retrieval steps with generation,,,,,,,,,,,,,,,,Non-Graph RAG baseline.
+D001,C67,Self-Ask,,,,,,,,,,,,,,,,decomposing complex queries into manageable textual sub-queries,Non-Graph RAG baseline.
+D001,C68,HippoRAG,,,,,,,,,,,,,,,,,KG-Chunk RAG baseline; a neurobiologically inspired framework simulating human long-term memory.
+D001,C69,CoTKR,,,,,,,,,,,,,,,,,Enhances knowledge rewriting via chain-of-thought.
+D001,C70,EF-SUM,,,,,,,,,,,,,,,,,Generates evidence-focused summaries from graph structures.
+D001,C71,Think-on-Graph (ToG),KG-Path RAG,,,,,,,,,,,,,,,discrete relational paths extracted from the knowledge graph,"Adapted to use the same local KG as LightRAG, replacing its external KG."
+D001,C72,Paths-over-Graph (PoG),KG-Path RAG,,,,,,,,,,,,,,,discrete relational paths extracted from the knowledge graph,"Adapted to use the same local KG as LightRAG, replacing its external KG."
+D001,C73,ERA-CoT,KG-Triplet RAG,,,,,,,,,,,,,,,,Improves reasoning through entity relationship analysis.
+D001,C74,Graph-Free,query–passage similarity,,,,,,,,,,,,,,,retrieved passages concatenated following their original document order,"Retains the same retrieval pipeline, iterative reasoning procedure, downstream LLM, prompts, and evidence budget as ThreadRAG; removes Semantic Topology Graph (STG) construction and EDP."
+D001,C75,No subgraph,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,without subgraph-based selection,Uses the same candidate graph and evidence budget as the other Table 7 variants.
+D001,C76,BFS (depth = 3),,,,,,,,,,,,,LLaMA3-8B-Instruct,,,"breadth-first search (BFS), depth = 3",Uses the same candidate graph and evidence budget as the other Table 7 variants.
+D001,C77,DFS (depth = 3),,,,,,,,,,,,,LLaMA3-8B-Instruct,,,"depth-first search (DFS), depth = 3",Uses the same candidate graph and evidence budget as the other Table 7 variants.
+D001,C78,EDP,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,EDP,Uses the same candidate graph and evidence budget as the other Table 7 variants.
+D001,C79,ThreadRAG,,,,,,,,,,,,,LLaMA3-8B-Instruct,,,DFS (depth = 3),Fixed-depth depth-first evidence selection strategy.
+D001,C80,ThreadRAG,,,,,,,,,,,,,baseline Large Language Model,,Information Sufficiency Discriminator,Semantic Topology Graph (STG),Uses Energy-Driven Pathfinding (EDP) for graph pathfinding and structural pruning.

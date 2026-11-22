@@ -1,0 +1,6 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain1_solar/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/solar_demo_checked /Users/artemshelkunov/hackaton2/data_demo/solar",
+ "exit_code": 0,
+ "stdout_tail": "внимание: results.csv, строка 27: собственный результат без device_id\n\nтаблиц: 7, результатов: 27, ошибок: 0, предупреждений: 1, проверено цитат: 31, не найдено: 0\nОшибки нужно исправить до сдачи. Предупреждения — проверить вручную: извлечение текста из PDF иногда расходится с видимым текстом.\n",
+ "stderr_tail": ""
+}

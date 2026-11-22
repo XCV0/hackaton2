@@ -1,0 +1,28 @@
+publication_id,result_id,device_id,measurement_id,material_id,metric_name,metric_value,metric_unit,aggregation,spread_value,n_devices,time_point,time_unit,raw_value,raw_unit,normalized_value,normalized_unit,result_origin,cited_publication_id,source_page,source_section,source_table,source_figure,source_fragment,extraction_status,duplicate_of,note
+DEMO_SOLAR1,R001,DV1,,M1,PCE,20.5,%,champion,,,,,20.5,%,20.5,%,primary,,1,Abstract,,,The champion device reaches a power conversion efficiency (PCE) of 20.5%,extracted,,
+DEMO_SOLAR1,R002,,,M1,PCE,22.1,%,,,,,,22.1,%,22.1,%,cited,[5],1,Abstract,,,The best reported MAPbI3 cell in the literature reaches 22.1% [5].,extracted,,
+DEMO_SOLAR1,R003,DV2,MS1,,Voc,1.12,V,champion,,,,,1.12,V,1.12,V,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R004,DV2,MS1,,Jsc,23.1,mA/cm2,champion,,,,,23.1,mA cm-2,23.1,mA/cm2,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R005,DV2,MS1,,FF,79.2,%,champion,,,,,79.2,%,79.2,%,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R006,DV2,MS1,,PCE,20.5,%,champion,,,,,20.5,%,20.5,%,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R007,DV2,MS1,,FF,79.2,%,champion,,,,,0.792,fraction,79.2,%,primary,,2,3 Results,,,The champion device shows a fill factor of 0.792 and a hysteresis index HI = 9.3%.,extracted,,FF printed as 0.792 in text; same device as Table 1 reverse row
+DEMO_SOLAR1,R008,DV2,MS1,,HI,9.3,%,champion,,,,,9.3,%,9.3,%,primary,,2,3 Results,,,The champion device shows a fill factor of 0.792 and a hysteresis index HI = 9.3%.,extracted,,
+DEMO_SOLAR1,R009,DV2,,,Jsc_EQE,21.5,mA/cm2,champion,,,,,21.5,mA cm-2,21.5,mA/cm2,primary,,2,3 Results,,,the EQE spectrum of the champion device is 21.5 mA cm-2.,extracted,,Integrated Jsc from EQE spectrum of the champion device
+DEMO_SOLAR1,R010,DV2,MS2,,Voc,1.09,V,champion,,,,,1.09,V,1.09,V,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R011,DV2,MS2,,Jsc,23,mA/cm2,champion,,,,,23.0,mA cm-2,23,mA/cm2,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R012,DV2,MS2,,FF,74,%,champion,,,,,74.0,%,74,%,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R013,DV2,MS2,,PCE,18.6,%,champion,,,,,18.6,%,18.6,%,primary,,2,3 Results,Table 1,,Champion (additive),extracted,,
+DEMO_SOLAR1,R014,DV4,MS1,,Voc,1.1,V,mean,0.02,20,,,1.1,V,1.1,V,primary,,2,3 Results,Table 1,,"Average (additive), 20 devices",extracted,,
+DEMO_SOLAR1,R015,DV4,MS1,,Jsc,22.6,mA/cm2,mean,0.3,20,,,22.6,mA cm-2,22.6,mA/cm2,primary,,2,3 Results,Table 1,,"Average (additive), 20 devices",extracted,,
+DEMO_SOLAR1,R016,DV4,MS1,,FF,77,%,mean,1.5,20,,,77.0,%,77,%,primary,,2,3 Results,Table 1,,"Average (additive), 20 devices",extracted,,
+DEMO_SOLAR1,R017,DV4,MS1,,PCE,21.3,%,mean,0.6,20,,,21.3,%,21.3,%,primary,,2,3 Results,Table 1,,"Average (additive), 20 devices",extracted,,
+DEMO_SOLAR1,R018,DV3,MS1,,Voc,1.05,V,,,,,,1.05,V,1.05,V,primary,,2,3 Results,Table 1,,Control (no additive),extracted,,
+DEMO_SOLAR1,R019,DV3,MS1,,Jsc,22,mA/cm2,,,,,,22.0,mA cm-2,22,mA/cm2,primary,,2,3 Results,Table 1,,Control (no additive),extracted,,
+DEMO_SOLAR1,R020,DV3,MS1,,FF,75,%,,,,,,75.0,%,75,%,primary,,2,3 Results,Table 1,,Control (no additive),extracted,,
+DEMO_SOLAR1,R021,DV3,MS1,,PCE,17.3,%,,,,,,17.3,%,17.3,%,primary,,2,3 Results,Table 1,,Control (no additive),extracted,,
+DEMO_SOLAR1,R022,DV3,MS1,,Voc,1.05,V,,,,,,1050,mV,1.05,V,primary,,2,3 Results,Table 2,,Control (no additive),extracted,,Table 2 reports Voc in mV
+DEMO_SOLAR1,R023,DV3,MS1,,Jsc,22,mA/cm2,,,,,,22.0,mA cm-2,22,mA/cm2,primary,,2,3 Results,Table 2,,Control (no additive),extracted,,
+DEMO_SOLAR1,R024,DV3,MS1,,FF,75,%,,,,,,75.0,%,75,%,primary,,2,3 Results,Table 2,,Control (no additive),extracted,,
+DEMO_SOLAR1,R025,DV3,MS1,,PCE,17.3,%,,,,,,17.3,%,17.3,%,primary,,2,3 Results,Table 2,,Control (no additive),extracted,,
+DEMO_SOLAR1,R026,,,,Voc,1.68,V,,,,,,1.68,V,1.68,V,primary,,2,3 Results,,,For device B a Voc of 1.68 V was measured under the same conditions.,extracted,,Device B is not defined in the printed tables on this page; device_id left empty
+DEMO_SOLAR1,R027,DV2,MS3,,retained_PCE,90,%,,,,500,h,90,%,90,%,primary,,3,4 Stability,,,retained 90% of its initial PCE after 500 h,extracted,,Retained 90% of initial PCE after 500 h of continuous 1-sun MPP tracking in N2 at 25 C; device is the encapsulated champion.

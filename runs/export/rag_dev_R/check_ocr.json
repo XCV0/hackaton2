@@ -1,0 +1,30 @@
+{
+  "errors": [],
+  "warnings": [
+    "D002: in-scope publication has no results; completeness has not been established",
+    "D003: in-scope publication has no results; completeness has not been established",
+    "D008: in-scope publication has no results; completeness has not been established",
+    "D011: in-scope publication has no results; completeness has not been established",
+    "D012: in-scope publication has no results; completeness has not been established",
+    "D016: in-scope publication has no results; completeness has not been established",
+    "D018: in-scope publication has no results; completeness has not been established",
+    "D021: in-scope publication has no results; completeness has not been established"
+  ],
+  "rows": {
+    "publications": 21,
+    "configurations": 161,
+    "datasets": 30,
+    "tasks": 21,
+    "experiments": 41,
+    "results": 1821,
+    "issues": 12
+  },
+  "quotes": {
+    "requested": 1829,
+    "matched": 1829,
+    "unresolved": 0
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native plus local OCR on image-only pages"
+}

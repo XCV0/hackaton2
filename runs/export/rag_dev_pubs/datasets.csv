@@ -1,0 +1,10 @@
+publication_id,dataset_id,dataset_name,dataset_version,language,data_split,scientific_domain,note
+D001,DS1,HotpotQA,,,,,Multi-hop QA benchmark.
+D001,DS2,2WikiMultihop,,,,,Multi-hop QA benchmark.
+D001,DS3,local Wikipedia corpus,,,,,Retrieval corpus.
+D001,DS4,2WikiMultihopQA,,,,,Table 1 label: 2Wiki. Standard open-domain multi-hop QA benchmark; the same data splits as previous works are used.
+D001,DS5,MuSiQue,,,,,Standard open-domain multi-hop QA benchmark; the same data splits as previous works are used.
+D001,DS6,2Wiki,,,,,
+D001,DS7,2WikiMultihopQA (2Wiki),,,,,"Focuses on complex 2-hop reasoning, compositional deduction, and comparative analysis; combines structured knowledge from Wikidata with unstructured texts from Wikipedia."
+D001,DS8,Wikipedia corpus,,,,,"A sample of 100 complex multi-hop documents was used for silver-label data curation, yielding 1,553 distinct semantic nodes."
+D001,DS9,Wikipedia documents,,,held-out evaluation set,,Independent evaluation set with 719 teacher-generated reference boundaries.

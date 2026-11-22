@@ -15,12 +15,18 @@ DOMAINS = {
     "solar": {"dir": DATA_DIR / "domain1_solar", "title": "Тонкоплёночные солнечные элементы"},
     "rag": {"dir": DATA_DIR / "domain2_rag", "title": "Retrieval-Augmented Generation"},
 }
-SPLITS = ("dev", "test")
+SPLITS = ("dev", "test", "demo")
+# "demo": synthetic test documents made for checking the service; kept outside the case corpus (never mixed in)
+DEMO_DIR = ROOT / "data_demo"
+
+
+def split_dir(domain: str, split: str) -> pathlib.Path:
+    return DEMO_DIR / domain if split == "demo" else DOMAINS[domain]["dir"] / split
 
 
 def pdf_path(domain: str, split: str, pid: str) -> pathlib.Path:
-    return DOMAINS[domain]["dir"] / split / f"{pid}.pdf"
+    return split_dir(domain, split) / f"{pid}.pdf"
 
 
 def list_pdfs(domain: str, split: str) -> list[pathlib.Path]:
-    return sorted((DOMAINS[domain]["dir"] / split).glob("*.pdf"))
+    return sorted(split_dir(domain, split).glob("*.pdf"))

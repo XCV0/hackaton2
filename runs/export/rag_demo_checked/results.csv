@@ -1,0 +1,67 @@
+publication_id,result_id,experiment_id,config_id,dataset_id,task_id,metric_group,metric_name,metric_variant,metric_direction,metric_k,metric_value,metric_unit,baseline_value,aggregation,sample_size,raw_value,raw_unit,normalized_value,normalized_unit,result_origin,cited_publication_id,source_page,source_section,source_table,source_figure,source_fragment,extraction_status,duplicate_of,note
+DEMO_RAG1,R001,E1,C1,DS1,T1,QA,EM,,,,48.2,,,,,48.2,,48.2,,primary,,1,Abstract,,,achieves 48.2 EM on HotpotQA,extracted,,HybridRet-RAG EM on HotpotQA as stated in the abstract.; metric_variant as printed: exact match
+DEMO_RAG1,R002,E1,C1,DS1,T1,QA,EM,improvement over BM25-RAG baseline,,,6.1,points,,,,6.1,points,6.1,points,primary,,1,Abstract,,,improving over the BM25-RAG baseline by 6.1 points,extracted,,"Printed improvement margin over BM25-RAG; the BM25-RAG absolute value is not printed on this page, so it is not derived."
+DEMO_RAG1,R003,E2,C3,DS1,T1,QA,EM,,,,46,,,,,46.0,,46,,cited,[12],1,1 Introduction,,,Self-RAG obtains 46.0 EM on HotpotQA,extracted,,Self-RAG result cited from [12] in the introduction.; metric_variant as printed: exact match
+DEMO_RAG1,R004,E3,C1,DS1,T2,answer quality,EM,,,,48.2,%,,,500,48.2,%,48.2,%,primary,,2,Experimental Setup,Table 1,,HybridRet-RAG (ours),extracted,,
+DEMO_RAG1,R005,E3,C1,DS1,T2,answer quality,F1,,,,61.7,%,,,500,61.7,%,61.7,%,primary,,2,Experimental Setup,Table 1,,HybridRet-RAG (ours),extracted,,
+DEMO_RAG1,R006,E3,C1,DS2,T2,answer quality,EM,,,,22.6,%,,,500,22.6,%,22.6,%,primary,,2,Experimental Setup,Table 1,,HybridRet-RAG (ours),extracted,,
+DEMO_RAG1,R007,E3,C1,DS2,T2,answer quality,F1,,,,33,%,,,500,33.0,%,33,%,primary,,2,Experimental Setup,Table 1,,HybridRet-RAG (ours),extracted,,
+DEMO_RAG1,R008,E3,C1,,T3,retrieval,Recall,,,5,0.83,,,,,0.83,,0.83,,primary,,2,Experimental Setup,Table 1,,HybridRet-RAG (ours),extracted,,Recall@5 is printed as a fraction; no dataset is attributed in Table 1.
+DEMO_RAG1,R009,E3,C2,DS1,T2,answer quality,EM,,,,42.1,%,,,500,42.1,%,42.1,%,primary,,2,Experimental Setup,Table 1,,BM25-RAG,extracted,,
+DEMO_RAG1,R010,E3,C2,DS1,T2,answer quality,F1,,,,55.3,%,,,500,55.3,%,55.3,%,primary,,2,Experimental Setup,Table 1,,BM25-RAG,extracted,,
+DEMO_RAG1,R011,E3,C2,DS2,T2,answer quality,EM,,,,17.9,%,,,500,17.9,%,17.9,%,primary,,2,Experimental Setup,Table 1,,BM25-RAG,extracted,,
+DEMO_RAG1,R012,E3,C2,DS2,T2,answer quality,F1,,,,27.4,%,,,500,27.4,%,27.4,%,primary,,2,Experimental Setup,Table 1,,BM25-RAG,extracted,,
+DEMO_RAG1,R013,E3,C2,,T3,retrieval,Recall,,,5,0.71,,,,,0.71,,0.71,,primary,,2,Experimental Setup,Table 1,,BM25-RAG,extracted,,Recall@5 is printed as a fraction; no dataset is attributed in Table 1.
+DEMO_RAG1,R014,E3,C4,DS1,T2,answer quality,EM,,,,21.4,%,,,500,21.4,%,21.4,%,primary,,2,Experimental Setup,Table 1,,No-Retrieval,extracted,,
+DEMO_RAG1,R015,E3,C4,DS1,T2,answer quality,F1,,,,29,%,,,500,29.0,%,29,%,primary,,2,Experimental Setup,Table 1,,No-Retrieval,extracted,,
+DEMO_RAG1,R016,E3,C4,DS2,T2,answer quality,EM,,,,8.3,%,,,500,8.3,%,8.3,%,primary,,2,Experimental Setup,Table 1,,No-Retrieval,extracted,,
+DEMO_RAG1,R017,E3,C4,DS2,T2,answer quality,F1,,,,15.2,%,,,500,15.2,%,15.2,%,primary,,2,Experimental Setup,Table 1,,No-Retrieval,extracted,,
+DEMO_RAG1,R018,E3,C4,,T3,retrieval,Recall,,,5,,,,,,,,,,primary,,2,Experimental Setup,Table 1,,No-Retrieval,absent,,Table 1 prints a dash ('-') for Recall@5 of No-Retrieval.
+DEMO_RAG1,R019,E4,C1,,,efficiency,latency,,,,850,ms,,,,850,ms,850,ms,primary,,2,Efficiency,,,The average latency of HybridRet-RAG is 850 ms per query,extracted,,Average latency per query on one NVIDIA A100 GPU.
+DEMO_RAG1,R020,E4,C2,,,efficiency,latency,,,,610,ms,,,,610,ms,610,ms,primary,,2,Efficiency,,,BM25-RAG needs 610 ms per query.,extracted,,Average latency per query; hardware not separately stated for this value.
+DEMO_RAG1,R021,E5,C1,DS1,T2,answer quality,EM,,,,48.2,,,,,48.2,,48.2,,primary,,2,Experimental Setup,Table 2,,full model,extracted,,Table 2 caption states the ablation is on HotpotQA (EM). Table 2 does not print a unit.
+DEMO_RAG1,R022,E5,C1,,T3,retrieval,Recall,,,10,0.91,,,,,0.91,,0.91,,primary,,2,Experimental Setup,Table 2,,full model,extracted,,Dataset not attributed in Table 2 beyond the caption's HotpotQA ablation.
+DEMO_RAG1,R023,E5,C5,DS1,T2,answer quality,EM,,,,44,,,,,44.0,,44,,primary,,2,Experimental Setup,Table 2,,w/o dense retriever,extracted,,Table 2 caption states the ablation is on HotpotQA (EM). Table 2 does not print a unit.
+DEMO_RAG1,R024,E5,C5,,T3,retrieval,Recall,,,10,0.78,,,,,0.78,,0.78,,primary,,2,Experimental Setup,Table 2,,w/o dense retriever,extracted,,Dataset not attributed in Table 2 beyond the caption's HotpotQA ablation.
+DEMO_RAG1,R025,E5,C6,DS1,T2,answer quality,EM,,,,46.5,,,,,46.5,,46.5,,primary,,2,Experimental Setup,Table 2,,w/o reranker,extracted,,Table 2 caption states the ablation is on HotpotQA (EM). Table 2 does not print a unit.
+DEMO_RAG1,R026,E5,C6,,T3,retrieval,Recall,,,10,104,%,,,,104.0,%,104,%,primary,,2,Experimental Setup,Table 2,,w/o reranker,extracted,,"Printed as '104.0%' in the row for w/o reranker. The column is otherwise fractional (0.91, 0.78), and 104% is not a valid recall. The value is kept as printed, not rescaled, and the column alignment is ambiguous."
+DEMO_RAG1,R027,E6,C1,DS1,T2,answer quality,EM,,,,47.9,,,,,47.9,,47.9,,primary,,3,3 Results and Discussion,,,HybridRet-RAG reaches 47.9 EM on HotpotQA,extracted,,Text value 47.9 differs from the full-model HotpotQA EM of 48.2 printed in Table 1 on page 2; both are kept as printed
+DEMO_RAG1,R028,E6,C4,DS1,T2,answer quality,EM,,,,21.4,,,,,21.4,,21.4,,primary,,3,3 Results and Discussion,,Figure 1,"EM
+21.4
+No-Ret.",extracted,,Value printed above the bar in Figure 1
+DEMO_RAG1,R029,E6,C2,DS1,T2,answer quality,EM,,,,42.1,,,,,42.1,,42.1,,primary,,3,3 Results and Discussion,,Figure 1,"BM25-RAG
+48.2
+Hybrid",extracted,,Value printed above the bar in Figure 1; the value 42.1 sits above the BM25-RAG label
+DEMO_RAG1,R030,E6,C1,DS1,T2,answer quality,EM,,,,48.2,,,,,48.2,,48.2,,primary,,3,3 Results and Discussion,,Figure 1,"48.2
+Hybrid",extracted,,Value printed above the bar labelled 'Hybrid' in Figure 1; mapped to HybridRet-RAG by label
+DEMO_RAG1,R031,E7,C2,DS3,T4,answer quality,EM,,,,35.2,,,,1000,35.2,,35.2,,primary,,4,4 Open-Domain Results,Table 3,,BM25-RAG 35.2 44.8,extracted,,
+DEMO_RAG1,R032,E7,C2,DS3,T4,answer quality,F1,,,,44.8,,,,1000,44.8,,44.8,,primary,,4,4 Open-Domain Results,Table 3,,BM25-RAG 35.2 44.8,extracted,,
+DEMO_RAG1,R033,E7,C1,DS3,T4,answer quality,EM,,,,39.5,,,,1000,39.5,,39.5,,primary,,4,4 Open-Domain Results,Table 3,,HybridRet-RAG (ours) 39.5 49.1,extracted,,
+DEMO_RAG1,R034,E7,C1,DS3,T4,answer quality,F1,,,,49.1,,,,1000,49.1,,49.1,,primary,,4,4 Open-Domain Results,Table 3,,HybridRet-RAG (ours) 39.5 49.1,extracted,,
+DEMO_RAG1,R035,E7,C1,DS3,T4,answer quality,EM improvement over BM25-RAG,,,,4.3,points,,,1000,4.3,points,4.3,points,primary,,4,4 Open-Domain Results,,,improves EM by 4.3 points over BM25-RAG,extracted,,Difference printed in the text; not recomputed from Table 3
+TEST_RAG_MedRerank,R001,E1,C1,DS1,T1,,accuracy,,,,0.742,,,,,0.742,,0.742,,primary,,1,Abstract,,,On PubMedQA it reaches an accuracy of 0.742,extracted,,
+TEST_RAG_MedRerank,R002,E1,C2,DS1,T1,,accuracy,,,,0.701,,,,,0.701,,0.701,,primary,,1,Abstract,,,compared with 0.701 for the same pipeline without reranking,extracted,,
+TEST_RAG_MedRerank,R003,E3,C3,DS3,T2,,EM,,,,44.5,,,,,44.5,,44.5,,cited,"Lewis et al., 2020",1,1 Background,,,The original RAG model reported 44.5 EM on Natural Questions,extracted,,
+TEST_RAG_MedRerank,R004,E2,C4,DS1,T1,,accuracy,,,,,,,,,0.61 and 0.65,,,,cited,[3],1,1 Background,,,systems report accuracies between 0.61 and 0.65 on PubMedQA,extracted,,"Printed as a range 'between 0.61 and 0.65' across prior systems; kept as a range, not averaged.; printed range «0.61 and 0.65»: no single normalized value"
+TEST_RAG_MedRerank,R005,E4,C5,DS1,T3,accuracy,accuracy,,,,0.584,fraction,,,250,0.584,fraction,0.584,fraction,primary,,2,Table 1,Table 1,,Mistral-7B (no retrieval),extracted,,PubMedQA Acc column labeled fraction in Table 1.; metric_variant as printed: PubMedQA
+TEST_RAG_MedRerank,R006,E5,C5,DS4,T4,accuracy,accuracy,BioASQ strict,,,31.2,%,,,500,31.2,%,31.2,%,primary,,2,Table 1,Table 1,,Mistral-7B (no retrieval),extracted,,BioASQ strict accuracy column labeled %.
+TEST_RAG_MedRerank,R007,E7,C5,,T6,generation,BLEU,,,,12.4,,,,,12.4,,12.4,,primary,,2,Table 1,Table 1,,Mistral-7B (no retrieval),extracted,,Dataset not stated for BLEU column.
+TEST_RAG_MedRerank,R008,E4,C6,DS1,T3,accuracy,accuracy,,,,0.701,fraction,,,250,0.701,fraction,0.701,fraction,primary,,2,Table 1,Table 1,,Dense-RAG (no rerank),extracted,,PubMedQA Acc column labeled fraction in Table 1.; metric_variant as printed: PubMedQA
+TEST_RAG_MedRerank,R009,E5,C6,DS4,T4,accuracy,accuracy,BioASQ strict,,,40.6,%,,,500,40.6,%,40.6,%,primary,,2,Table 1,Table 1,,Dense-RAG (no rerank),extracted,,BioASQ strict accuracy column labeled %.
+TEST_RAG_MedRerank,R010,E6,C6,,T5,retrieval,nDCG,,,10,0.552,,,,,0.552,,0.552,,primary,,2,Table 1,Table 1,,Dense-RAG (no rerank),extracted,,nDCG@10 column; dataset and sample size not stated.
+TEST_RAG_MedRerank,R011,E7,C6,,T6,generation,BLEU,,,,18.9,,,,,18.9,,18.9,,primary,,2,Table 1,Table 1,,Dense-RAG (no rerank),extracted,,Dataset not stated for BLEU column.
+TEST_RAG_MedRerank,R012,E4,C1,DS1,T3,accuracy,accuracy,,,,0.742,fraction,,,250,0.742,fraction,0.742,fraction,primary,,2,Table 1,Table 1,,MedRerank-RAG,extracted,,PubMedQA Acc column labeled fraction in Table 1.; metric_variant as printed: PubMedQA
+TEST_RAG_MedRerank,R013,E5,C1,DS4,T4,accuracy,accuracy,BioASQ strict,,,44.9,%,,,500,44.9,%,44.9,%,primary,,2,Table 1,Table 1,,MedRerank-RAG,extracted,,BioASQ strict accuracy column labeled %.
+TEST_RAG_MedRerank,R014,E6,C1,,T5,retrieval,nDCG,,,10,0.618,,,,,0.618,,0.618,,primary,,2,Table 1,Table 1,,MedRerank-RAG,extracted,,nDCG@10 column; dataset and sample size not stated.
+TEST_RAG_MedRerank,R015,E7,C1,,T6,generation,BLEU,,,,21.3,,,,,21.3,,21.3,,primary,,2,Table 1,Table 1,,MedRerank-RAG,extracted,,Dataset not stated for BLEU column.
+TEST_RAG_MedRerank,R016,E4,C7,DS1,T3,accuracy,accuracy,,,,1.07,fraction,,,250,1.07,fraction,1.07,fraction,primary,,2,Table 1,Table 1,,MedRerank-RAG + GPT-4o generator,extracted,,Printed value 1.07 exceeds 1 although the column is labeled fraction; kept as printed.; metric_variant as printed: PubMedQA
+TEST_RAG_MedRerank,R017,E5,C7,DS4,T4,accuracy,accuracy,BioASQ strict,,,47.3,%,,,500,47.3,%,47.3,%,primary,,2,Table 1,Table 1,,MedRerank-RAG + GPT-4o generator,extracted,,BioASQ strict accuracy column labeled %.
+TEST_RAG_MedRerank,R018,E6,C7,,T5,retrieval,nDCG,,,10,0.618,,,,,0.618,,0.618,,primary,,2,Table 1,Table 1,,MedRerank-RAG + GPT-4o generator,extracted,,nDCG@10 column; dataset and sample size not stated.
+TEST_RAG_MedRerank,R019,E7,C7,,T6,generation,BLEU,,,,24,,,,,24.0,,24,,primary,,2,Table 1,Table 1,,MedRerank-RAG + GPT-4o generator,extracted,,Dataset not stated for BLEU column.
+TEST_RAG_MedRerank,R020,E8,C1,,,efficiency,tokens_per_query,,,,1850,tokens,,,,"1,850",tokens,1850,tokens,primary,,2,Table 1 note,,,"MedRerank-RAG uses on average 1,850 tokens per query",extracted,,Average tokens per query (prompt and context) for MedRerank-RAG.; comma read as thousands separator
+TEST_RAG_MedRerank,R021,E8,C6,,,efficiency,tokens_per_query,,,,1400,tokens,,,,"1,400",tokens,1400,tokens,primary,,2,Table 1 note,,,"Dense-RAG uses 1,400.",extracted,,Average tokens per query (prompt and context) for Dense-RAG.; comma read as thousands separator
+TEST_RAG_MedRerank,R022,E9,C1,DS1,T3,accuracy,PubMedQA accuracy,,,,0.728,,,,,0.728,,0.728,,primary,,3,3 Analysis,,,with 3 kept passages accuracy is 0.728,extracted,,
+TEST_RAG_MedRerank,R023,E9,C1,DS1,T3,accuracy,PubMedQA accuracy,,,,0.735,,,,,0.735,,0.735,,primary,,3,3 Analysis,,,with 10 it is 0.735,extracted,,
+TEST_RAG_MedRerank,R024,E10,C1,DS1,T3,accuracy,PubMedQA accuracy,,,,0.742,,,,,0.742,,0.742,,primary,,3,conclusion (as referenced in text),,,MedRerank-RAG achieves 0.742 accuracy on PubMedQA,extracted,,
+TEST_RAG_MedRerank,R025,E11,C1,DS1,T3,accuracy,PubMedQA accuracy,,,,0.724,,,,,0.724,,0.724,,primary,,3,error analysis (as referenced in text),,,MedRerank-RAG reaches 0.724 accuracy on PubMedQA,extracted,,conflicts with the 0.742 value stated for MedRerank-RAG in the conclusion on this page
+TEST_RAG_MedRerank,R026,E9,,DS1,T3,accuracy,PubMedQA accuracy,,,,,,,,,,,,,primary,,3,,,Figure 1,PubMedQA accuracy (values printed above bars),present_not_extractable,,"Figure 1 bars labelled No-ret., Dense, Rerank; the printed values are not in the extracted text, so none are recorded"

@@ -1,0 +1,315 @@
+publication_id,device_id,absorber_material_id,device_label,device_role,device_type,architecture,substrate_type,active_area,area_unit,area_definition,encapsulation,note
+P001,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P002,DV1,M1,The best performed photocurrent density–photovoltage w/o,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P002,DV2,M1,curves of these diﬀerent devices are illustrated in Fig. 4a and,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P002,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P003,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P004,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P005,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P006,DV1,M1,PANI,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P006,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P008,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P011,DV1,M1,SnO2-only Forward,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P011,DV2,M1,PCBM/SnO2 Forward,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P011,DV3,M1,Reverse,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P011,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P012,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P013,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P014,DV1,M1,0.767,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV2,M1,- -,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV3,M1,20,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV4,M1,0.825,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV5,M1,0.751,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV6,M1,0.757,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV7,M1,0.778,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV8,M1,0.761,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV9,M1,0.783,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV10,M1,0.756,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV11,M1,0.808,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV12,M1,0.801,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV13,M1,0.765,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV14,M1,0.826,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV15,M1,0.821,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV16,M1,0.800,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV17,M1,0.786,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV18,M1,0.793,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P014,DV19,M1,0.784,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P016,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P017,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P018,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P019,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P020,DV1,M1,Experimental,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P020,DV2,M1,Model,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P020,DV3,M1,Homogeneous,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P020,DV4,M1,Linear (Backward),,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P020,DV5,M1,Linear (Forward),,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P020,DV6,M1,Nonlinear,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P020,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P021,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P022,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P023,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P025,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P026,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P027,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P028,DV1,M1,O1,,cell,,,,,,,row label of Table 3 p.8 (rule-based)
+P028,DV2,M1,O2,,cell,,,,,,,row label of Table 3 p.8 (rule-based)
+P028,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P029,DV1,M1,Li-doped,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P029,DV2,M1,Na-doped,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P029,DV3,M1,Li&Na co-doped,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P029,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P030,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P031,DV1,M1,120,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P031,DV2,M1,400,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P031,DV3,M1,2,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P031,DV4,M1,3,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P031,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P033,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P035,DV1,M1,None,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P035,DV2,M1,Methanol,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P035,DV3,M1,Freon,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P035,DV4,M1,Double,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P035,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P036,DV1,M1,S0,,cell,,,,,,,row label of Table 2 p.4 (rule-based)
+P036,DV2,M1,S1,,cell,,,,,,,row label of Table 2 p.4 (rule-based)
+P036,DV3,M1,S2,,cell,,,,,,,row label of Table 2 p.4 (rule-based)
+P036,DV4,M1,S3,,cell,,,,,,,row label of Table 2 p.4 (rule-based)
+P036,DV5,M1,S6,,cell,,,,,,,row label of Table 2 p.4 (rule-based)
+P036,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P037,DV1,M1,S1 0.25M TiO2 IPE average,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV2,M1,champion,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV3,M1,S2 0.25M TiO2 EtOH:EG average,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV4,M1,S3 0.35M TiO2 EtOH:EG average,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV5,M1,S4 0.25M SrTiO3 IPE average,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV6,M1,S5 0.25M SrTiO3 EtOH:EG average,,cell,,,,,,,row label of Table 1 p.7 (rule-based)
+P037,DV7,M1,0.35M SrTiO3 average,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P037,DV8,M1,0.25M SrTiO3 average,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P037,DV9,M1,0.15M SrTiO3 average,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P037,DV10,M1,SrTiO3/0% TiO2 reverse,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV11,M1,forward,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV12,M1,SrTiO3/5% TiO2 reverse,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV13,M1,SrTiO3/10% TiO2 reverse,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV14,M1,SrTiO3/15% TiO2 reverse,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV15,M1,SrTiO3/20% TiO2 reverse,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV16,M1,Hysteresis index,,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P037,DV17,M1,0.375%,,cell,,,,,,,row label of Table 5 p.13 (rule-based)
+P037,DV18,M1,0.75%,,cell,,,,,,,row label of Table 5 p.13 (rule-based)
+P037,DV19,M1,1.5%,,cell,,,,,,,row label of Table 5 p.13 (rule-based)
+P037,DV20,M1,3%,,cell,,,,,,,row label of Table 5 p.13 (rule-based)
+P037,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P038,DV1,M1,1st/no,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P038,DV2,M1,2nd/with,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P038,DV3,M1,80th/with,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P038,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P039,DV1,M1,1,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV2,M1,400,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV3,M1,2,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV4,M1,557,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV5,M1,3,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV6,M1,697,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV7,M1,4,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV8,M1,800,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P039,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P040,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P041,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P042,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P043,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P045,DV1,M1,Ref,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+P045,DV2,M1,PPS,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+P046,DV1,M1,"This work, No RbF",,cell,,,,,,,row label of Table 3 p.5 (rule-based)
+P046,DV2,M1,"Best cell from [49],",,cell,,,,,,,row label of Table 3 p.5 (rule-based)
+P046,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P047,DV1,M1,0.2,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P047,DV2,M1,0.4,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P047,DV3,M1,0.6,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P047,DV4,M1,0.8,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P047,DV5,M1,1.0,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P048,DV1,M1,(Forward),,cell,,,,,,,row label of Table 3 p.11 (rule-based)
+P048,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P049,DV1,M1,Sample A,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P049,DV2,M1,Sample B,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P049,DV3,M1,Sample C,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P049,DV4,M1,Sample D,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P049,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P050,DV1,M1,"CZTSSe N2H4 N2, glove 500°C",,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV2,M1,box,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV3,M1,CZTS MOE and MEA Stirring 580°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV4,M1,(50°C),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV5,M1,CZTS MOE Stirring 250°C + 580°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV6,M1,CZTSSe DMSO Stirring 540°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV7,M1,(2015),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV8,M1,CZTSSe MOE Stirring 560°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV9,M1,(2016),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV10,M1,"CZTSSe TGA, CH3NH2 Stirred 510°C",,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV11,M1,(45°C),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV12,M1,CZTSSe C2H4(SH)2. and Stirring 480°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV13,M1,(60°C),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV14,M1,CZTS MOE Stirring 600°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV15,M1,CZTSSe DMSO + Tu Stirring 550°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV16,M1,(2018),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV17,M1,"CZTSSe DMSO Stirring 300°C, 500°C,",,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV18,M1,550°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV19,M1,CZTSSe EGME Stirring 540°C + 520°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV20,M1,CZTSSe C2H4(SH)2. and Stirring 550°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV21,M1,C2H4(NH2)2,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV22,M1,CZTSSe DMSO Stirring 560°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV23,M1,(2019),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV24,M1,CZTS MOE Stirring 200°C + 580°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV25,M1,CZTSSe MOE Stirring 550°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV26,M1,CZTSSe MOE Stirring 555°C,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV27,M1,C2H4(NH2)2 + stabilizer (70°C),,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P050,DV28,M1,"CZTSSe DMSO N2, glove 550°C",,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV29,M1,CZTSSe C2H4(SH)2. and Stirring 300°C + 550°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV30,M1,C2H4(NH2)2 (70°C),,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV31,M1,CZTSSe DMF/DMSO Stirring 530°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV32,M1,binary solvents,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV33,M1,CZTSSe DMF Stirring 550°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV34,M1,(2022),,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV35,M1,(2023),,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV36,M1,CZCTS DMSO Stirring 625°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV37,M1,C2H4(NH2)2 (55°C),,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV38,M1,CZTSSe DMF Not Not mentioned,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV39,M1,mentioned,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV40,M1,CZTSSe MOE Stirring 520°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV41,M1,(2024),,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV42,M1,CZTSSe MOE Stirring 540°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV43,M1,CZTS MOE Stirring 620°C,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+P050,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P051,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P052,DV1,M1,C-400,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P052,DV2,M1,C-420,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P052,DV3,M1,C-440,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P052,DV4,M1,VTD ITO/CdS/Sb2Se3/Au,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV5,M1,VTD Mo/Sb2Se3/In2S3/ZnO/ITO,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV6,M1,MSD-Se Mo/Sb2Se3/CdS/ITO/Ag,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV7,M1,MSD-Sb-Se Mo/Sb2Se3/CdS/ITO/Ag,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV8,M1,VTD Mo/Sb2Se3/CdS/ITO/Ag,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV9,M1,VTD-Se Mo/Sb2Se3/CdS/ITO/Ag,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P052,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P053,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P054,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P055,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P056,DV1,M1,A,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV2,M1,B,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV3,M1,C,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV4,M1,D,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV5,M1,E,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV6,M1,F,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV7,M1,G,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV8,M1,H,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV9,M1,I,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P056,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P057,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P058,DV1,M1,L1-CA3.7,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P058,DV2,M1,L2-CA3.7,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P058,DV3,M1,L1-CA4.7,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P058,DV4,M1,L2-CA4.7,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P059,DV1,M1,FTO/c-TiO2/m-TiO2/Ag3BiI6/P3HT/Au,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P059,DV2,M1,FTO/NiO/Ag3BiI6/PCBM/BCP/Ag,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P059,DV3,M1,FTO/c-TiO2/m-TiO2/Ag3BiI6/PTAA/Au,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P059,DV4,M1,FTO/c-TiO2/m-TiO2/Ag3BiI6/spiro-OMeTAD/,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P059,DV5,M1,FTO/c-TiO2/m-TiO2/m-ZrO2/Carbon,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P059,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P060,DV1,M1,Ctrl (champion),,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P060,DV2,M1,Ctrl (average),,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P060,DV3,M1,UT (champion),,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P060,DV4,M1,UT (average),,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P061,DV1,M1,Control-FSa),,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P061,DV2,M1,Control-RSb),,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P061,DV3,M1,A&P-FS,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P061,DV4,M1,A&P-RS,,cell,,,,,,,row label of Table 1 p.8 (rule-based)
+P061,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P062,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P063,DV1,M1,SB,,cell,,,,,,,row label of Table 3 p.5 (rule-based)
+P063,DV2,M1,CB,,cell,,,,,,,row label of Table 3 p.5 (rule-based)
+P063,DV3,M1,"CIGS Metal acetate,",,cell,,,,,,,row label of Table 4 p.6 (rule-based)
+P063,DV4,M1,"CIGSSe Metal nitrates,",,cell,,,,,,,row label of Table 4 p.6 (rule-based)
+P063,DV5,M1,"CIGSSe Cu2S,In2Se3,Ga,",,cell,,,,,,,row label of Table 4 p.6 (rule-based)
+P063,DV6,M1,"CIGS Metal nitrates,",,cell,,,,,,,row label of Table 4 p.6 (rule-based)
+P063,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P064,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P065,DV1,M1,24,,cell,,,,,,,row label of Table 2 p.10 (rule-based)
+P065,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P066,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P067,DV1,M1,0,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P067,DV2,M1,0.02,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P067,DV3,M1,0.03,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P067,DV4,M1,0.04,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P067,DV5,M1,PEDOT,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P067,DV6,M1,PEDOT + CsI,,cell,,,,,,,row label of Table 2 p.8 (rule-based)
+P067,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P068,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P069,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P070,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P073,DV1,M1,0%,,cell,,,,,,,row label of Table 2 p.11 (rule-based)
+P073,DV2,M1,3.5%,,cell,,,,,,,row label of Table 2 p.11 (rule-based)
+P073,DV3,M1,7.5%,,cell,,,,,,,row label of Table 2 p.11 (rule-based)
+P073,DV4,M1,15%,,cell,,,,,,,row label of Table 2 p.11 (rule-based)
+P073,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P074,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P075,DV1,M1,1.20,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV2,M1,1.10,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV3,M1,1.00,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV4,M1,0.95,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV5,M1,0.92,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV6,M1,0.85,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV7,M1,0.80,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV8,M1,0.70,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV9,M1,2,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P075,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P076,DV1,M1,w/o HTL,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P076,DV2,M1,Spiro-OMeTAD,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P076,DV3,M1,CuSCN,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P076,DV4,M1,PTAA,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P076,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P078,DV1,M1,CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV2,M1,NG/CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV3,M1,1-Ni-NG/CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV4,M1,2-Ni-NG/CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV5,M1,4-Ni-NG/CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV6,M1,8-Ni-NG/CE,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+P078,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P080,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P081,DV1,M1,CsFA NO NO Reverse,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV2,M1,Forward,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV3,M1,RbCsFA NO NO Reverse,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV4,M1,KRbCsFA NO NO Reverse,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV5,M1,KRbCsFA /AC NH4Cl mol% NO Reverse,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV6,M1,KRbCsFA /AC-PAI NH4Cl mol% YES Reverse,,cell,,,,,,,row label of Table 1 p.2 (rule-based)
+P081,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P082,DV1,M1,h-CdS-55-cell,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV2,M1,h-CdS-60-cell,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV3,M1,h-CdS-65-cell,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV4,M1,h-CdS-70-cell,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV5,M1,h-CdS-75-cell,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV6,M1,Table,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV7,M1,h-CdS-55-,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV8,M1,h-CdS-60-,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV9,M1,h-CdS-65-,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV10,M1,h-CdS-70-,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV11,M1,h-CdS-75-,,cell,,,,,,,row label of Table 1 p.3 (rule-based)
+P082,DV12,M1,h-CdS-55-cell -,,cell,,,,,,,row label of Table 4 p.4 (rule-based)
+P082,DV13,M1,h-CdS-60-cell -,,cell,,,,,,,row label of Table 4 p.4 (rule-based)
+P082,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P083,DV1,M1,untreated,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P083,DV2,M1,NH4I,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P083,DV3,M1,2-iodothiophene,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+P083,DV4,M1,150,,cell,,,,,,,row label of Table 3 p.7 (rule-based)
+P083,DV5,M1,200,,cell,,,,,,,row label of Table 3 p.7 (rule-based)
+P083,DV6,M1,250,,cell,,,,,,,row label of Table 3 p.7 (rule-based)
+P083,DV7,M1,300,,cell,,,,,,,row label of Table 3 p.7 (rule-based)
+P083,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P084,DV1,M1,6,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P084,DV2,M1,None Ohmic þ,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P084,DV3,M1,ZnO Ohmic,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P084,DV4,M1,TiO2 Ohmic þ non-ohmic,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+P085,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P086,DV1,M1,PSC-Ref,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P086,DV2,M1,PSC-1,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P086,DV3,M1,PSC-2,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P086,DV4,M1,PSC-3,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P086,DV5,M1,PSC-5,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+P086,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P087,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P088,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+P090,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review

@@ -1,0 +1,180 @@
+publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+P006,I1,R015,citation_not_found,"Цитата не найдена на с. 2 (not_found): «combined with the interfacial layer of MoO3 were demon-
+stratedtoachieveaPCEof13.7%.Likewise,poly[2,6-(4,4-bis-»",,
+P011,I1,R005,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.044 ),6,Table 1.
+P011,I2,R010,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.035 ),6,Table 1.
+P014,I1,R003,range,"Voc = 44.96 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I2,R008,range,"Voc = 52.98 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I3,R013,range,"Voc = 52.76 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I4,R018,range,"Voc = 49.53 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I5,R023,range,"Voc = 53.75 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I6,R028,range,"Voc = 56.05 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I7,R033,range,"Voc = 54.73 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I8,R038,range,"Voc = 58.26 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I9,R043,range,"Voc = 53.68 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P014,I10,R048,range,"Voc = 52.35 V вне диапазона [0, 2.0]",8,Table 2. Comparison of device performance parameters of 20 highest efﬁciency CdTe solar ce
+P028,I1,R012,range,"PCE = 91.2 % вне диапазона [0, 35]",5,"depositing O1 HTM atop the perovskite layer, 
+showing a much higher quenching efficiency of 91.2% for O1 with 
+respect to O2 (64.3%), as summarized"
+P035,I1,R004,range,"PCE = 100 % вне диапазона [0, 35]",3,Table 1
+P035,I2,R008,range,"PCE = 167 % вне диапазона [0, 35]",3,Table 1
+P035,I3,R012,range,"PCE = 153 % вне диапазона [0, 35]",3,Table 1
+P035,I4,R016,range,"PCE = 181 % вне диапазона [0, 35]",3,Table 1
+P035,I5,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 22.6 ),3,Table 1
+P035,I6,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 23.6 ),3,Table 1
+P035,I7,R010,normalization,Нормализация невозможна: unit unknown: not normalised (raw 25.2 ),3,Table 1
+P035,I8,R014,normalization,Нормализация невозможна: unit unknown: not normalised (raw 25.4 ),3,Table 1
+P035,I9,R018,normalization,Нормализация невозможна: unit unknown: not normalised (raw 23.6 ),5,Table 2
+P035,I10,R020,normalization,Нормализация невозможна: unit unknown: not normalised (raw 25.2 ),5,Table 2
+P035,I11,R022,normalization,Нормализация невозможна: unit unknown: not normalised (raw 25.4 ),5,Table 2
+P037,I1,R003,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.06 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I2,R007,normalization,Нормализация невозможна: unit unknown: not normalised (raw 19.83 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I3,R013,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.83 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I4,R017,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.95 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I5,R023,normalization,Нормализация невозможна: unit unknown: not normalised (raw 19.30 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I6,R027,normalization,Нормализация невозможна: unit unknown: not normalised (raw 19.63 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I7,R033,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.08 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I8,R037,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.48 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I9,R043,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.99 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I10,R047,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.06 ),7,Table 1. Photovoltaic parameters from the current density-voltage (J-V) characteristics of
+P037,I11,R053,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.51 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I12,R057,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.99 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I13,R063,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.06 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I14,R067,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.79 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I15,R073,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.77 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I16,R077,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.16 ),8,Table 2. Photovoltaic parameters from J-V characteristics of mp-SrTiO3-based PSCs inkjet-p
+P037,I17,R083,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.33 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I18,R087,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.06 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I19,R091,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.38 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I20,R097,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.00 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I21,R101,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.10 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I22,R105,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.09 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I23,R111,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.11 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I24,R115,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.09 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I25,R119,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.99 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I26,R125,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.94 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I27,R129,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.98 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I28,R133,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.36 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I29,R139,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.62 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I30,R143,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.64 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I31,R147,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.99 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I32,R151,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.24 ),11,Table 3. Average photovoltaic parameters for mp-SrTiO3/TiO2-based PSCs inkjet-printed with
+P037,I33,R155,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.85 ),13,Table 5. Photovoltaic parameters for PSCs based on inkjet-printed SnO2 ETLs prepared from 
+P037,I34,R159,normalization,Нормализация невозможна: unit unknown: not normalised (raw 20.42 ),13,Table 5. Photovoltaic parameters for PSCs based on inkjet-printed SnO2 ETLs prepared from 
+P037,I35,R163,normalization,Нормализация невозможна: unit unknown: not normalised (raw 18.81 ),13,Table 5. Photovoltaic parameters for PSCs based on inkjet-printed SnO2 ETLs prepared from 
+P037,I36,R167,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.82 ),13,Table 5. Photovoltaic parameters for PSCs based on inkjet-printed SnO2 ETLs prepared from 
+P038,I1,R004,normalization,Нормализация невозможна: unit unknown: not normalised (raw 38 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I2,R008,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I3,R012,normalization,Нормализация невозможна: unit unknown: not normalised (raw 50 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I4,R016,normalization,Нормализация невозможна: unit unknown: not normalised (raw 58 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I5,R020,normalization,Нормализация невозможна: unit unknown: not normalised (raw 40 ),4,2nd/with 40
+P038,I6,R024,normalization,Нормализация невозможна: unit unknown: not normalised (raw 48 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I7,R028,normalization,Нормализация невозможна: unit unknown: not normalised (raw 98 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I8,R032,normalization,Нормализация невозможна: unit unknown: not normalised (raw 112 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P038,I9,R036,normalization,Нормализация невозможна: unit unknown: not normalised (raw 152 ),4,Table 1 Day-dependent device performance of photovoltaic cells under one sun illumination 
+P039,I1,R001,normalization,Нормализация невозможна: unit unknown: not normalised (raw 29.4 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I2,R005,normalization,Нормализация невозможна: unit unknown: not normalised (raw 36.5 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I3,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 27.2 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I4,R010,normalization,Нормализация невозможна: unit unknown: not normalised (raw 38.1 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I5,R011,normalization,Нормализация невозможна: unit unknown: not normalised (raw 30.2 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I6,R015,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39.1 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I7,R016,normalization,Нормализация невозможна: unit unknown: not normalised (raw 24.5 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P039,I8,R020,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39.7 ),8,Table 1. Device performance parameters and absorber thickness of Sb2Se3 solar cells fabric
+P047,I1,R005,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.36 ),4,Table 1. Sweep voltage scan direction and sweep-time-delay-dependent photovoltaic paramete
+P047,I2,R014,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.27 ),4,Table 1. Sweep voltage scan direction and sweep-time-delay-dependent photovoltaic paramete
+P047,I3,R023,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.22 ),4,Table 1. Sweep voltage scan direction and sweep-time-delay-dependent photovoltaic paramete
+P047,I4,R032,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.20 ),4,Table 1. Sweep voltage scan direction and sweep-time-delay-dependent photovoltaic paramete
+P047,I5,R041,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.18 ),4,Table 1. Sweep voltage scan direction and sweep-time-delay-dependent photovoltaic paramete
+P050,I1,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35.2 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I2,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 37.1 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I3,R010,normalization,Нормализация невозможна: unit unknown: not normalised (raw 14.8 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I4,R014,normalization,Нормализация невозможна: unit unknown: not normalised (raw 24.1 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I5,R018,normalization,Нормализация невозможна: unit unknown: not normalised (raw 38.8 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I6,R022,normalization,Нормализация невозможна: unit unknown: not normalised (raw 32.22 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I7,R026,normalization,Нормализация невозможна: unit unknown: not normalised (raw 28.17 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I8,R030,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35.19 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I9,R034,normalization,Нормализация невозможна: unit unknown: not normalised (raw 25 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I10,R038,normalization,Нормализация невозможна: unit unknown: not normalised (raw 33.4 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I11,R042,normalization,Нормализация невозможна: unit unknown: not normalised (raw 33.7 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I12,R046,normalization,Нормализация невозможна: unit unknown: not normalised (raw 30.5 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I13,R050,normalization,Нормализация невозможна: unit unknown: not normalised (raw 29.36 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I14,R054,normalization,Нормализация невозможна: unit unknown: not normalised (raw 32.2 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I15,R058,normalization,Нормализация невозможна: unit unknown: not normalised (raw 27.8 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I16,R062,normalization,Нормализация невозможна: unit unknown: not normalised (raw 21.5 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I17,R066,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39.33 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I18,R070,normalization,Нормализация невозможна: unit unknown: not normalised (raw 33.97 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I19,R074,normalization,Нормализация невозможна: unit unknown: not normalised (raw 37.07 ),3,TABLE 1    |    Overview of the experimental settings and device performances of CZTS/CZTS
+P050,I20,R078,normalization,Нормализация невозможна: unit unknown: not normalised (raw 32.1 ),4,TABLE 1    |    (Continued)
+P050,I21,R082,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35.65 ),4,TABLE 1    |    (Continued)
+P050,I22,R086,normalization,Нормализация невозможна: unit unknown: not normalised (raw 33.89 ),4,TABLE 1    |    (Continued)
+P050,I23,R090,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35.36 ),4,TABLE 1    |    (Continued)
+P050,I24,R094,normalization,Нормализация невозможна: unit unknown: not normalised (raw 33.7 ),4,TABLE 1    |    (Continued)
+P050,I25,R098,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39.3 ),4,TABLE 1    |    (Continued)
+P050,I26,R102,normalization,Нормализация невозможна: unit unknown: not normalised (raw 39.08 ),4,TABLE 1    |    (Continued)
+P050,I27,R106,normalization,Нормализация невозможна: unit unknown: not normalised (raw 27.8 ),4,TABLE 1    |    (Continued)
+P050,I28,R110,normalization,Нормализация невозможна: unit unknown: not normalised (raw 36.37 ),4,TABLE 1    |    (Continued)
+P050,I29,R114,normalization,Нормализация невозможна: unit unknown: not normalised (raw 38.69 ),4,TABLE 1    |    (Continued)
+P050,I30,R118,normalization,Нормализация невозможна: unit unknown: not normalised (raw 34.98 ),4,TABLE 1    |    (Continued)
+P050,I31,R122,normalization,Нормализация невозможна: unit unknown: not normalised (raw 36.9 ),4,TABLE 1    |    (Continued)
+P050,I32,R126,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35.1 ),4,TABLE 1    |    (Continued)
+P050,I33,R130,normalization,Нормализация невозможна: unit unknown: not normalised (raw 36.7 ),4,TABLE 1    |    (Continued)
+P050,I34,R134,normalization,Нормализация невозможна: unit unknown: not normalised (raw 36.63 ),4,TABLE 1    |    (Continued)
+P050,I35,R138,normalization,Нормализация невозможна: unit unknown: not normalised (raw 24.28 ),4,TABLE 1    |    (Continued)
+P058,I1,R003,range,"FF = 93 % вне диапазона [0, 92]",6,Table 2.
+P058,I2,R009,range,"FF = 100 % вне диапазона [0, 92]",6,Table 2.
+P058,I3,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.94 ),6,Table 2.
+P058,I4,R005,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.92 ),6,Table 2.
+P058,I5,R008,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.93 ),6,Table 2.
+P058,I6,R011,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.92 ),6,Table 2.
+P060,I1,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 10.3 ),5,Table 1. Champion and Average Device Performance Parameters for Solar Cells Fabricated fro
+P060,I2,R012,normalization,Нормализация невозможна: unit unknown: not normalised (raw 11.2 ),5,Table 1. Champion and Average Device Performance Parameters for Solar Cells Fabricated fro
+P060,I3,R018,normalization,Нормализация невозможна: unit unknown: not normalised (raw 8.4 ),5,Table 1. Champion and Average Device Performance Parameters for Solar Cells Fabricated fro
+P060,I4,R024,normalization,Нормализация невозможна: unit unknown: not normalised (raw 8.4 ),5,Table 1. Champion and Average Device Performance Parameters for Solar Cells Fabricated fro
+P063,I1,R010;R008;R007;R009,jv_consistency,"PCE по ВАХ: 0.32 В × 32 мА/см² × 49 % / 100 мВт/см² = 5.02 %; опубликовано 5.2 % (расхождение 3.5 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",5,Table 3
+P068,I1,R004,range,"PCE = 66 % вне диапазона [0, 35]",5,"a FF of 0.63, and a PCE of 9.3% after
+exposure to air for 30 days. The PCE is 66% of the original
+eﬃciency. By contrast, the"
+P073,I1,R004;R001;R002;R003,jv_consistency,"PCE по ВАХ: 555.9 В × 31.78 мА/см² × 59.87 % / 100 мВт/см² = 10576.93 %; опубликовано 10.58 % (расхождение 99871.0 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 2. Photovoltaic characteristics of the CIGS devices fabricated under different Na do
+P073,I2,R008;R005;R006;R007,jv_consistency,"PCE по ВАХ: 568.4 В × 33.64 мА/см² × 75.48 % / 100 мВт/см² = 14432.51 %; опубликовано 14.43 % (расхождение 99917.4 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 2. Photovoltaic characteristics of the CIGS devices fabricated under different Na do
+P073,I3,R012;R009;R010;R011,jv_consistency,"PCE по ВАХ: 583.9 В × 36.14 мА/см² × 76.72 % / 100 мВт/см² = 16189.57 %; опубликовано 16.19 % (расхождение 99897.3 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 2. Photovoltaic characteristics of the CIGS devices fabricated under different Na do
+P073,I4,R016;R013;R014;R015,jv_consistency,"PCE по ВАХ: 584.1 В × 35.27 мА/см² × 71.69 % / 100 мВт/см² = 14769.01 %; опубликовано 14.77 % (расхождение 99893.3 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 2. Photovoltaic characteristics of the CIGS devices fabricated under different Na do
+P073,I5,R001,range,"Voc = 555.9 V вне диапазона [0, 2.0]",11,0% 555.9
+P073,I6,R005,range,"Voc = 568.4 V вне диапазона [0, 2.0]",11,3.5% 568.4
+P073,I7,R009,range,"Voc = 583.9 V вне диапазона [0, 2.0]",11,7.5% 583.9
+P073,I8,R013,range,"Voc = 584.1 V вне диапазона [0, 2.0]",11,15% 584.1
+P075,I1,R008;R006;R005;R007,jv_consistency,PCE по ВАХ: 0.24 В × 6.9 мА/см² × 55 % / 100 мВт/см² = 0.91 %; опубликовано 0.53 % (расхождение 71.8 % > 3 %); агрегация: не указана,6,Table 1 Figures of merit for devices with PEA0.08FAxSnI3 tin perovskite
+P075,I2,R028;R026;R025;R027,jv_consistency,PCE по ВАХ: 0.53 В × 16.3 мА/см² × 40 % / 100 мВт/см² = 3.46 %; опубликовано 3.34 % (расхождение 3.5 % > 3 %); агрегация: не указана,6,Table 1 Figures of merit for devices with PEA0.08FAxSnI3 tin perovskite
+P076,I1,R020;R016;R017;R019,jv_consistency,PCE по ВАХ: 1.05 В × 20.55 мА/см² × 62.62 % / 100 мВт/см² = 13.51 %; опубликовано 12.92 % (расхождение 4.6 % > 3 %); агрегация: champion,5,Table 1 Current density–voltage (J–V) parameters of champion devices of each HTL
+P082,I1,R021,range,"PCE = 465.14 % вне диапазона [0, 35]",3,Table 1
+P082,I2,R024,range,"PCE = 529.46 % вне диапазона [0, 35]",3,Table 1
+P082,I3,R027,range,"PCE = 553.05 % вне диапазона [0, 35]",3,Table 1
+P082,I4,R030,range,"PCE = 205.88 % вне диапазона [0, 35]",3,Table 1
+P082,I5,R033,range,"PCE = 216.77 % вне диапазона [0, 35]",3,Table 1
+P082,I6,R037,range,"Voc = 56.51 V вне диапазона [0, 2.0]",4,Table 3
+P082,I7,R042,range,"Voc = -1.02 V вне диапазона [0, 2.0]",4,Table 3
+P082,I8,R043,range,"Voc = -31.77 V вне диапазона [0, 2.0]",4,Table 3
+P082,I9,R046,range,"FF = -208 % вне диапазона [0, 92]",4,Table 3
+P082,I10,R047,range,"FF = -6443 % вне диапазона [0, 92]",4,Table 3
+P082,I11,R051,range,"PCE = 80.31 % вне диапазона [0, 35]",4,Table 4
+P082,I12,R054,range,"PCE = -957 % вне диапазона [0, 35]",4,Table 4
+P082,I13,R056,range,"PCE = -9553 % вне диапазона [0, 35]",4,Table 4
+P082,I14,R058,range,"PCE = 56.51 % вне диапазона [0, 35]",2,"PCE 
+between h-CdS-x-cells, respectively. The ηPCE(VOC), ηPCE(JSC) and 
+ηPCE(FF) is 56.51%,   31.77% and 75.26%, respectively, to the"
+P082,I15,R038,normalization,Нормализация невозможна: unit unknown: not normalised (raw −0.58 ),4,Table 3
+P082,I16,R039,normalization,Нормализация невозможна: unit unknown: not normalised (raw −31.77 ),4,Table 3
+P082,I17,R044,normalization,Нормализация невозможна: unit unknown: not normalised (raw −0.12 ),4,Table 3
+P082,I18,R045,normalization,Нормализация невозможна: unit unknown: not normalised (raw −3.80 ),4,Table 3
+P082,I19,R048,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.11 ),4,Table 4
+P082,I20,R052,normalization,Нормализация невозможна: unit unknown: not normalised (raw 1.23 ),4,Table 4
+P082,I21,R053,normalization,Нормализация невозможна: unit unknown: not normalised (raw −1.16 ),4,Table 4
+P082,I22,R057,normalization,Нормализация невозможна: unit unknown: not normalised (raw 0.58 ),4,Table 4
+P084,I1,R001,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35 ),5,Table 1.
+P084,I2,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 2.29 ),5,Table 1.
+P084,I3,R003,normalization,Нормализация невозможна: unit unknown: not normalised (raw 32 ),5,ZnO Ohmic 32
+P084,I4,R004,normalization,Нормализация невозможна: unit unknown: not normalised (raw 2.21 ),5,Table 1.
+P084,I5,R005,normalization,Нормализация невозможна: unit unknown: not normalised (raw 68 ),5,TiO2 Ohmic þ non-ohmic 68
+P084,I6,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 30.1 ),5,Table 1.
+P084,I7,R007,normalization,Нормализация невозможна: unit unknown: not normalised (raw 35 ),5,Table 1. Representative ﬁtted diode parameters from dark JV curves with
+P084,I8,R009,normalization,Нормализация невозможна: unit unknown: not normalised (raw 32 ),5,ZnO Ohmic 32
+P084,I9,R011,normalization,Нормализация невозможна: unit unknown: not normalised (raw 68 ),5,TiO2 Ohmic þ non-ohmic 68

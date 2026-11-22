@@ -1,0 +1,60 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain2_rag/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/rag_test_checked /Users/artemshelkunov/hackaton2/data/domain2_rag/test --json-report /Users/artemshelkunov/hackaton2/runs/export/rag_test_checked/check_report_ocr.json --ocr --ocr-language eng --tesseract /opt/homebrew/bin/tesseract",
+ "exit_code": 2,
+ "stdout_tail": "results:5428: @k metric without metric_k\nREVIEW: results:5429: @k metric without metric_k\nREVIEW: results:5430: @k metric without metric_k\nREVIEW: results:5431: @k metric without metric_k\nREVIEW: results:5432: @k metric without metric_k\nREVIEW: results:5433: @k metric without metric_k\nREVIEW: results:5434: @k metric without metric_k\nREVIEW: results:5435: @k metric without metric_k\nREVIEW: results:5436: @k metric without metric_k\nREVIEW: results:5437: @k metric without metric_k\nREVIEW: results:5438: @k metric without metric_k\nREVIEW: results:5439: @k metric without metric_k\nREVIEW: results:5440: @k metric without metric_k\nREVIEW: results:5441: @k metric without metric_k\nREVIEW: results:5442: @k metric without metric_k\nREVIEW: results:5443: @k metric without metric_k\nREVIEW: results:5444: @k metric without metric_k\nREVIEW: results:5445: @k metric without metric_k\nREVIEW: results:5446: @k metric without metric_k\nREVIEW: results:5447: @k metric without metric_k\nREVIEW: results:5448: @k metric without metric_k\nREVIEW: results:5449: @k metric without metric_k\nREVIEW: results:5450: @k metric without metric_k\nREVIEW: results:5451: @k metric without metric_k\nREVIEW: results:5452: @k metric without metric_k\nREVIEW: results:5453: @k metric without metric_k\nREVIEW: results:5454: @k metric without metric_k\nREVIEW: results:5455: @k metric without metric_k\nREVIEW: results:5456: @k metric without metric_k\nREVIEW: results:5457: @k metric without metric_k\nREVIEW: results:5458: @k metric without metric_k\nREVIEW: results:5459: @k metric without metric_k\nREVIEW: results:5460: @k metric without metric_k\nREVIEW: results:5461: @k metric without metric_k\nREVIEW: results:5462: @k metric without metric_k\nREVIEW: results:5463: @k metric without metric_k\nREVIEW: results:5464: @k metric without metric_k\nREVIEW: results:5465: @k metric without metric_k\nREVIEW: results:5466: @k metric without metric_k\nREVIEW: results:5467: @k metric without metric_k\nREVIEW: results:5468: @k metric without metric_k\nREVIEW: results:5469: @k metric without metric_k\nREVIEW: results:5470: @k metric without metric_k\nREVIEW: results:5471: @k metric without metric_k\nREVIEW: results:5472: @k metric without metric_k\nREVIEW: results:5473: @k metric without metric_k\nREVIEW: results:5474: @k metric without metric_k\nREVIEW: results:5475: @k metric without metric_k\nREVIEW: results:5476: @k metric without metric_k\nREVIEW: results:5477: @k metric without metric_k\nREVIEW: results:5478: @k metric without metric_k\nREVIEW: results:5479: @k metric without metric_k\nREVIEW: results:5480: @k metric without metric_k\nREVIEW: results:5481: @k metric without metric_k\nREVIEW: results:5482: @k metric without metric_k\nREVIEW: results:5483: @k metric without metric_k\nREVIEW: results:5484: @k metric without metric_k\nREVIEW: results:5485: @k metric without metric_k\nREVIEW: results:5486: @k metric without metric_k\nREVIEW: results:5487: @k metric without metric_k\nREVIEW: results:5488: @k metric without metric_k\nREVIEW: results:5489: @k metric without metric_k\nREVIEW: results:5490: @k metric without metric_k\nREVIEW: results:5491: @k metric without metric_k\nREVIEW: results:5492: @k metric without metric_k\nREVIEW: results:5493: @k metric without metric_k\nREVIEW: results:5494: @k metric without metric_k\nREVIEW: results:5495: @k metric without metric_k\nREVIEW: results:5496: @k metric without metric_k\nREVIEW: results:5497: @k metric without metric_k\nREVIEW: P007: in-scope publication has no results; completeness has not been established\nREVIEW: P010: in-scope publication has no results; completeness has not been established\nREVIEW: P011: in-scope publication has no results; completeness has not been established\nREVIEW: P017: in-scope publication has no results; completeness has not been established\nREVIEW: P018: in-scope publication has no results; completeness has not been established\nREVIEW: P020: in-scope publication has no results; completeness has not been established\nREVIEW: P024: in-scope publication has no results; completeness has not been established\nREVIEW: P029: in-scope publication has no results; completeness has not been established\nREVIEW: P033: in-scope publication has no results; completeness has not been established\nREVIEW: P036: in-scope publication has no results; completeness has not been established\nREVIEW: P037: in-scope publication has no results; completeness has not been established\nREVIEW: P038: in-scope publication has no results; completeness has not been established\nREVIEW: P039: in-scope publication has no results; completeness has not been established\nREVIEW: P044: in-scope publication has no results; completeness has not been established\nREVIEW: P050: in-scope publication has no results; completeness has not been established\nREVIEW: P051: in-scope publication has no results; completeness has not been established\nREVIEW: P056: in-scope publication has no results; completeness has not been established\nREVIEW: P065: in-scope publication has no results; completeness has not been established\nREVIEW: P070: in-scope publication has no results; completeness has not been established\nREVIEW: P071: in-scope publication has no results; completeness has not been established\nREVIEW: P072: in-scope publication has no results; completeness has not been established\nREVIEW: P078: in-scope publication has no results; completeness has not been established\nREVIEW: P079: in-scope publication has no results; completeness has not been established\nREVIEW: P081: in-scope publication has no results; completeness has not been established\nREVIEW: P082: in-scope publication has no results; completeness has not been established\n{\"rows\": {\"publications\": 90, \"configurations\": 790, \"datasets\": 121, \"tasks\": 90, \"experiments\": 177, \"results\": 5994, \"issues\": 660}, \"quotes\": {\"requested\": 6242, \"matched\": 6242, \"unresolved\": 0}, \"semantic_completeness_certified\": false, \"exit_code\": 2, \"source_text_mode\": \"native plus local OCR on image-only pages\"}\nErrors: 0; review items: 253\n",
+ "stderr_tail": "Multiple definitions in dictionary at byte 0x804f for key /Group\nMultiple definitions in dictionary at byte 0x35067 for key /Group\nMultiple definitions in dictionary at byte 0x28a for key /Group\nMultiple definitions in dictionary at byte 0x28e66 for key /Group\nMultiple definitions in dictionary at byte 0xf2450 for key /Group\nMultiple definitions in dictionary at byte 0x29e for key /Group\nMultiple definitions in dictionary at byte 0x6eb97 for key /Group\nMultiple definitions in dictionary at byte 0x277 for key /Group\nMultiple definitions in dictionary at byte 0x16e89 for key /Group\nMultiple definitions in dictionary at byte 0x5063e for key /Group\nMultiple definitions in dictionary at byte 0x1180a6 for key /Group\nMultiple definitions in dictionary at byte 0x2a2 for key /Group\nMultiple definitions in dictionary at byte 0x277 for key /Group\nMultiple definitions in dictionary at byte 0x47947 for key /Group\nMultiple definitions in dictionary at byte 0x95c17 for key /Group\nMultiple definitions in dictionary at byte 0x278 for key /Group\nMultiple definitions in dictionary at byte 0x732f0 for key /Group\nMultiple definitions in dictionary at byte 0x4c1584 for key /Group\nMultiple definitions in dictionary at byte 0x51bc31 for key /Group\nMultiple definitions in dictionary at byte 0x274 for key /Group\n",
+ "report": {
+  "rows": {
+   "publications": 90,
+   "configurations": 790,
+   "datasets": 121,
+   "tasks": 90,
+   "experiments": 177,
+   "results": 5994,
+   "issues": 660
+  },
+  "quotes": {
+   "requested": 6242,
+   "matched": 6242,
+   "unresolved": 0
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native plus local OCR on image-only pages"
+ },
+ "n_errors": 0,
+ "n_warnings": 253,
+ "errors_head": [],
+ "warnings_head": [
+  "results:103: @k metric without metric_k",
+  "results:104: @k metric without metric_k",
+  "results:109: @k metric without metric_k",
+  "results:110: @k metric without metric_k",
+  "results:115: @k metric without metric_k",
+  "results:116: @k metric without metric_k",
+  "results:121: @k metric without metric_k",
+  "results:122: @k metric without metric_k",
+  "results:127: @k metric without metric_k",
+  "results:128: @k metric without metric_k",
+  "results:133: @k metric without metric_k",
+  "results:134: @k metric without metric_k",
+  "results:139: @k metric without metric_k",
+  "results:140: @k metric without metric_k",
+  "results:145: @k metric without metric_k",
+  "results:146: @k metric without metric_k",
+  "results:151: @k metric without metric_k",
+  "results:152: @k metric without metric_k",
+  "results:157: @k metric without metric_k",
+  "results:158: @k metric without metric_k",
+  "results:163: @k metric without metric_k",
+  "results:164: @k metric without metric_k",
+  "results:169: @k metric without metric_k",
+  "results:170: @k metric without metric_k",
+  "results:2538: @k metric without metric_k",
+  "results:2539: @k metric without metric_k",
+  "results:2540: @k metric without metric_k",
+  "results:2541: @k metric without metric_k",
+  "results:2542: @k metric without metric_k",
+  "results:2543: @k metric without metric_k"
+ ]
+}

@@ -1,0 +1,30 @@
+publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+D002,I1,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 14.8 ),5,Table 1 Photovoltaic properties of PSCs with different HTL
+D002,I2,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 17.9 ),5,Table 1 Photovoltaic properties of PSCs with different HTL
+D004,I1,R004;R001;R002;R003,jv_consistency,"PCE по ВАХ: 0.818 В × 9.344 мА/см² × 57.49 % / 100 мВт/см² = 4.39 %; опубликовано 0.81 % (расхождение 442.5 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,ED 0.81
+D004,I2,R008;R005;R006;R007,jv_consistency,"PCE по ВАХ: 1.009 В × 19.61 мА/см² × 47.79 % / 100 мВт/см² = 9.46 %; опубликовано 0.58 % (расхождение 1530.3 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure 
+D004,I3,R015;R012;R013;R014,jv_consistency,"PCE по ВАХ: 1.05 В × 18.65 мА/см² × 58.66 % / 100 мВт/см² = 11.49 %; опубликовано 0.66 % (расхождение 1640.5 % > 3 %); агрегация: не указана (Pin не указан у измерения — принято 100 мВт/см², AM1.5G)",11,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure 
+D005,I1,R025,citation_not_found,"Цитата не найдена на с. 5 (not_found): «remarkably high 
+PCE of 24.53% with JSC of 26.24 mA cm−2, VOC of 1.18 V, and 
+FF of 79.22%, showing an all-round enhance»",,
+D007,I1,R007,range,"Voc = 9.399 V вне диапазона [0, 2.0]",6,"module delivered
+an impressive PCE of 19.99%, with a JSC of 2.59 mA cm−2, a VOC
+of 9.399 V, and an FF of 82.1%. This performance surpassed"
+D019,I1,R017,normalization,Нормализация невозможна: unit unknown: not normalised (raw 5.48 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I2,R018,normalization,Нормализация невозможна: unit unknown: not normalised (raw 67.59 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I3,R020,normalization,Нормализация невозможна: unit unknown: not normalised (raw 5.89 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I4,R021,normalization,Нормализация невозможна: unit unknown: not normalised (raw 118.26 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I5,R023,normalization,Нормализация невозможна: unit unknown: not normalised (raw 6.04 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I6,R024,normalization,Нормализация невозможна: unit unknown: not normalised (raw 80.89 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I7,R026,normalization,Нормализация невозможна: unit unknown: not normalised (raw 8.49 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I8,R027,normalization,Нормализация невозможна: unit unknown: not normalised (raw 70.32 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I9,R029,normalization,Нормализация невозможна: unit unknown: not normalised (raw 5.69 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I10,R030,normalization,Нормализация невозможна: unit unknown: not normalised (raw 112.25 ),7,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using
+D019,I11,R031,citation_not_found,"Цитата не найдена на с. 2 (not_found): «ordered and (hk1) preferentially oriented Sb2Se3
+nanorod array showed a power conversion efficiency of 5.637%. Therefore»",,
+D021,I1,R002,range,"PCE = 47.1 % вне диапазона [0, 35]",1,"warming. Currently, the most efficient solar cells, boasting a record
+efficiency of 47.1% [1], are based on multi-junctions of AlGaInP/AlGaAs/GaAs/GaInAs."
+D022,I1,R002,normalization,Нормализация невозможна: unit unknown: not normalised (raw 1.85 ),4,Table 1. Summary of device parameters of absorber thickness variation
+D022,I2,R006,normalization,Нормализация невозможна: unit unknown: not normalised (raw 3.09 ),4,Table 1. Summary of device parameters of absorber thickness variation
+D022,I3,R010,normalization,Нормализация невозможна: unit unknown: not normalised (raw 1.86 ),4,Table 1. Summary of device parameters of absorber thickness variation
+D022,I4,R014,normalization,Нормализация невозможна: unit unknown: not normalised (raw 3.50 ),4,Table 1. Summary of device parameters of absorber thickness variation

@@ -1,0 +1,13 @@
+publication_id,issue_id,record_ids,check_name,description,source_page,source_fragment
+D007,I1,R230;R293,contradiction,Acc: 20.40 (с. 15) vs 18.40 (с. 15) для одной конфигурации/набора,15,Table 7: Results on each of a collection of datasets with FLAN-T5-XXL (11B) as the LLM. We
+D007,I2,R230;R356,contradiction,Acc: 20.40 (с. 15) vs 55.00 (с. 15) для одной конфигурации/набора,15,Table 7: Results on each of a collection of datasets with FLAN-T5-XXL (11B) as the LLM. We
+D007,I3,R230;R419,contradiction,Acc: 20.40 (с. 15) vs 43.20 (с. 15) для одной конфигурации/набора,15,Table 7: Results on each of a collection of datasets with FLAN-T5-XXL (11B) as the LLM. We
+D009,I1,R134;R181,contradiction,EM: 47.4 (с. 6) vs 40.5 (с. 6) для одной конфигурации/набора,6,PRO-STEP 40.5
+D009,I2,R241;R265,contradiction,EM: 22.94 (с. 9) vs 39.88 (с. 9) для одной конфигурации/набора,9,PRO-STEP 39.88
+D013,I1,R001,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,20,
+D013,I2,R002,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,20,
+D013,I3,R003,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,7,
+D013,I4,R004,ocr_uncertainty,Источник — скан: цитата подтверждена только OCR-текстом; цифры/знаки требуют сверки с изображением страницы,7,
+D019,I1,R033;R049,contradiction,EM: 26.69 (с. 5) vs 31.25 (с. 5) для одной конфигурации/набора,5,-top-K=4 31.25
+D019,I2,R125;R133,contradiction,EM: 32.81 (с. 7) vs 35.16 (с. 7) для одной конфигурации/набора,7,w/o reasoning 35.16
+D019,I3,R125;R141,contradiction,EM: 32.81 (с. 7) vs 37.11 (с. 7) для одной конфигурации/набора,7,w/o reasoning 37.11

@@ -1,0 +1,345 @@
+{
+ "domain": "solar",
+ "split": "dev",
+ "gold_publications": 21,
+ "matching_rule": "(documented in METRICS.md): one-to-one greedy matching within a publication.\n  L1 value      : same source_page and the same number at reported precision\n  L2 +metric    : L1 + same canonical metric family and same metric_k\n  L3 strict     : L2 + dataset/config (RAG) or aggregation/scan direction (solar) agree\nA number alone is never enough for the headline score: the headline is L3 (strict).",
+ "headline_strict_L3": {
+  "matched": 495,
+  "gold": 653,
+  "pred": 1082,
+  "precision": 0.4575,
+  "recall": 0.758,
+  "f1": 0.5706
+ },
+ "L2_value_metric": {
+  "matched": 597,
+  "gold": 653,
+  "pred": 1082,
+  "precision": 0.5518,
+  "recall": 0.9142,
+  "f1": 0.6882
+ },
+ "L1_value_page": {
+  "matched": 601,
+  "gold": 653,
+  "pred": 1082,
+  "precision": 0.5555,
+  "recall": 0.9204,
+  "f1": 0.6928
+ },
+ "printed_subset_L3": {
+  "matched": 495,
+  "gold": 653,
+  "pred": 1082,
+  "precision": 0.4575,
+  "recall": 0.758,
+  "f1": 0.5706
+ },
+ "printed_subset_L2": {
+  "matched": 597,
+  "gold": 653,
+  "pred": 1082,
+  "precision": 0.5518,
+  "recall": 0.9142,
+  "f1": 0.6882
+ },
+ "gold_digitised_share": 0.0,
+ "slices_L2": {
+  "scan_pdfs": {
+   "matched": 0,
+   "gold": 0,
+   "pred": 0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0
+  },
+  "native_pdfs": {
+   "matched": 597,
+   "gold": 653,
+   "pred": 1082,
+   "precision": 0.5518,
+   "recall": 0.9142,
+   "f1": 0.6882
+  },
+  "table": {
+   "matched": 404,
+   "gold": 429,
+   "pred": 529,
+   "precision": 0.7637,
+   "recall": 0.9417,
+   "f1": 0.8434
+  },
+  "text": {
+   "matched": 57,
+   "gold": 95,
+   "pred": 534,
+   "precision": 0.1067,
+   "recall": 0.6,
+   "f1": 0.1812
+  },
+  "figure": {
+   "matched": 6,
+   "gold": 129,
+   "pred": 19,
+   "precision": 0.3158,
+   "recall": 0.0465,
+   "f1": 0.0811
+  },
+  "primary": {
+   "matched": 558,
+   "gold": 596,
+   "pred": 996,
+   "precision": 0.5602,
+   "recall": 0.9362,
+   "f1": 0.701
+  },
+  "cited": {
+   "matched": 39,
+   "gold": 57,
+   "pred": 86,
+   "precision": 0.4535,
+   "recall": 0.6842,
+   "f1": 0.5455
+  },
+  "quorum_agreed_only": {
+   "matched": 258,
+   "gold": 653,
+   "pred": 348,
+   "precision": 0.7414,
+   "recall": 0.3951,
+   "f1": 0.5155
+  }
+ },
+ "scope_agreement": {
+  "agree": 21,
+  "total": 21,
+  "disagreements": {}
+ },
+ "per_publication": {
+  "D001": {
+   "gold": 45,
+   "gold_printed": 45,
+   "pred": 75,
+   "match_L2": 40,
+   "match_L3": 11,
+   "scan": false
+  },
+  "D002": {
+   "gold": 12,
+   "gold_printed": 12,
+   "pred": 20,
+   "match_L2": 12,
+   "match_L3": 12,
+   "scan": false
+  },
+  "D003": {
+   "gold": 21,
+   "gold_printed": 21,
+   "pred": 104,
+   "match_L2": 21,
+   "match_L3": 5,
+   "scan": false
+  },
+  "D004": {
+   "gold": 31,
+   "gold_printed": 31,
+   "pred": 93,
+   "match_L2": 31,
+   "match_L3": 21,
+   "scan": false
+  },
+  "D005": {
+   "gold": 30,
+   "gold_printed": 30,
+   "pred": 68,
+   "match_L2": 26,
+   "match_L3": 21,
+   "scan": false
+  },
+  "D007": {
+   "gold": 15,
+   "gold_printed": 15,
+   "pred": 64,
+   "match_L2": 14,
+   "match_L3": 14,
+   "scan": false
+  },
+  "D008": {
+   "gold": 19,
+   "gold_printed": 19,
+   "pred": 24,
+   "match_L2": 17,
+   "match_L3": 15,
+   "scan": false
+  },
+  "D009": {
+   "gold": 24,
+   "gold_printed": 24,
+   "pred": 49,
+   "match_L2": 20,
+   "match_L3": 15,
+   "scan": false
+  },
+  "D010": {
+   "gold": 17,
+   "gold_printed": 17,
+   "pred": 60,
+   "match_L2": 14,
+   "match_L3": 6,
+   "scan": false
+  },
+  "D012": {
+   "gold": 27,
+   "gold_printed": 27,
+   "pred": 46,
+   "match_L2": 27,
+   "match_L3": 20,
+   "scan": false
+  },
+  "D013": {
+   "gold": 24,
+   "gold_printed": 24,
+   "pred": 46,
+   "match_L2": 21,
+   "match_L3": 21,
+   "scan": false
+  },
+  "D014": {
+   "gold": 29,
+   "gold_printed": 29,
+   "pred": 33,
+   "match_L2": 26,
+   "match_L3": 25,
+   "scan": false
+  },
+  "D015": {
+   "gold": 58,
+   "gold_printed": 58,
+   "pred": 70,
+   "match_L2": 52,
+   "match_L3": 49,
+   "scan": false
+  },
+  "D017": {
+   "gold": 60,
+   "gold_printed": 60,
+   "pred": 47,
+   "match_L2": 47,
+   "match_L3": 46,
+   "scan": false
+  },
+  "D018": {
+   "gold": 8,
+   "gold_printed": 8,
+   "pred": 8,
+   "match_L2": 8,
+   "match_L3": 8,
+   "scan": false
+  },
+  "D019": {
+   "gold": 52,
+   "gold_printed": 52,
+   "pred": 54,
+   "match_L2": 51,
+   "match_L3": 42,
+   "scan": false
+  },
+  "D020": {
+   "gold": 22,
+   "gold_printed": 22,
+   "pred": 33,
+   "match_L2": 19,
+   "match_L3": 19,
+   "scan": false
+  },
+  "D021": {
+   "gold": 122,
+   "gold_printed": 122,
+   "pred": 134,
+   "match_L2": 114,
+   "match_L3": 108,
+   "scan": false
+  },
+  "D022": {
+   "gold": 37,
+   "gold_printed": 37,
+   "pred": 54,
+   "match_L2": 37,
+   "match_L3": 37,
+   "scan": false
+  }
+ },
+ "technical": {
+  "publications": 21,
+  "processed": 21,
+  "errors": 0,
+  "excluded": 2,
+  "scans": 0,
+  "ocr_pages": 0,
+  "results": 1083,
+  "coverage_pubs_with_results": 19,
+  "quote_outcomes": {
+   "matched": 1011,
+   "not_found": 45,
+   "wrong_page": 11,
+   "no_fragment": 16
+  },
+  "quote_literal_share": 0.9335,
+  "quote_ocr_only_share": 0.0,
+  "verification": {
+   "verified": 969,
+   "needs_review": 97,
+   "flagged": 16,
+   "not_applicable": 1
+  },
+  "review": {
+   "none": 970,
+   "pending": 113
+  },
+  "manual_review_share": 0.0,
+  "quorum": {
+   "agree": 348,
+   "single": 723,
+   "single_node": 12
+  },
+  "issues_by_type": {
+   "source_figure_review": 20,
+   "eqe_consistency": 1,
+   "citation_not_found": 72,
+   "normalization": 7,
+   "jv_consistency": 3,
+   "range": 3
+  },
+  "node_runs": [
+   {
+    "node": "A",
+    "n": 1948,
+    "s": 21983.97,
+    "ti": 764727,
+    "tt": 1049145,
+    "cost": 0.0,
+    "err": 159
+   },
+   {
+    "node": "B",
+    "n": 190,
+    "s": 3423.95,
+    "ti": 237407,
+    "tt": 169226,
+    "cost": 0.047518,
+    "err": 36
+   },
+   {
+    "node": "R",
+    "n": 276,
+    "s": 108.93,
+    "ti": 0,
+    "tt": 0,
+    "cost": 0.0,
+    "err": 0
+   }
+  ],
+  "processing_seconds": 8.8,
+  "cost_usd": 0.0475
+ }
+}

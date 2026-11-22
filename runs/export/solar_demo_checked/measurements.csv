@@ -1,0 +1,4 @@
+publication_id,measurement_id,device_id,measurement_type,spectrum,light_intensity,intensity_unit,scan_direction,scan_rate,mask_used,certified,certification_lab,temperature,stability_protocol,stress_conditions,note
+DEMO_SOLAR1,MS1,DV1,J-V,AM1.5G,100,mW/cm2,reverse,100 mV/s,true,,,,,,"Table 1 caption: AM1.5G, 100 mW/cm2"
+DEMO_SOLAR1,MS2,DV1,J-V,AM1.5G,100,mW/cm2,forward,100 mV/s,true,,,,,,"Table 1 caption: AM1.5G, 100 mW/cm2"
+DEMO_SOLAR1,MS3,DV2,stability,,1,sun,,,,,,25 C,,"continuous 1-sun illumination, maximum power point tracking, N2, 25 C",Maximum power point tracking under continuous 1-sun illumination in N2 at 25 C. Stability protocol (ISOS or other) is not stated.

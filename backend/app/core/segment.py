@@ -84,11 +84,46 @@ def group_lines(words: list[Word], ytol: float = 3.0) -> list[Line]:
     return lines
 
 
+def _bold_lines(pdf_path: str, page_no: int) -> list[tuple[float, str, bool, float]]:
+    """(y, text, is_bold, size) for native text lines."""
+    out = []
+    with pymupdf.open(pdf_path) as d:
+        for b in d[page_no - 1].get_text("dict")["blocks"]:
+            for l in b.get("lines", []):
+                spans = [s for s in l["spans"] if s["text"].strip()]
+                if not spans:
+                    continue
+                t = " ".join(s["text"].strip() for s in spans)
+                bold = all((s["flags"] & 16) or "bold" in s["font"].lower() for s in spans)
+                out.append((l["bbox"][1], t, bold, max(s["size"] for s in spans)))
+    return out
+
+
 def sections(doc: dict, pdf_path: str) -> dict[int, list[tuple[float, str]]]:
-    """page -> [(y, heading)] in reading order."""
+    """page -> [(y, heading)] in reading order. Native pages: numbered or bold/large headings only
+    (a lone table header such as 'Methods' is not a section)."""
     out = {}
+    sizes = []
+    for p in doc["pages"][:3]:
+        if p["has_text_layer"]:
+            try:
+                sizes += [sz for _, _, _, sz in _bold_lines(pdf_path, p["page"])]
+            except Exception:
+                pass
+    body = sorted(sizes)[len(sizes) // 2] if sizes else 10
     for p in doc["pages"]:
         heads = []
+        if p["has_text_layer"]:
+            try:
+                for y, t, bold, sz in _bold_lines(pdf_path, p["page"]):
+                    t = t.strip()
+                    low = re.sub(r"^((\d+(\.\d+)*\.?)|([IVX]+\.))\s*", "", t).strip(" .:").lower()
+                    if len(t) < 90 and (bold or sz > body + 0.8) and (HEAD_RE.match(t) and not re.search(r"\d{3,}|=|%", t) or low in SECTION_WORDS):
+                        heads.append((y, t))
+            except Exception:
+                pass
+            out[p["page"]] = heads
+            continue
         try:
             lines = group_lines(page_words(doc, pdf_path, p["page"]))
         except Exception:
@@ -190,28 +225,49 @@ def parse_table_grid(lines: list[Line], caption: dict, page_height: float) -> di
 
     header_labels = ["" for _ in centers]
     spans = ["" for _ in centers]
-    for hr in header_rows:
-        for w in hr:
-            xc = (w.x0 + w.x1) / 2
-            near = min(range(len(centers)), key=lambda i: abs(centers[i] - xc))
-            if abs(centers[near] - xc) < 25:
-                header_labels[near] = (header_labels[near] + " " + w.t).strip()
+    for hr in header_rows[-4:]:
+        hr = sorted(hr, key=lambda w: w.x0)
+        phrases, cur = [], [hr[0]]
+        for w in hr[1:]:
+            if w.x0 - cur[-1].x1 < 7:
+                cur.append(w)
             else:
-                # spanning header word: attach to all columns to its right until next span word
-                for i, c in enumerate(centers):
-                    if c >= w.x0 - 5:
-                        spans[i] = (spans[i] + " " + w.t).strip() if c - w.x0 < 220 else spans[i]
+                phrases.append(cur)
+                cur = [w]
+        phrases.append(cur)
+        for k, ph in enumerate(phrases):
+            x0, x1 = ph[0].x0, ph[-1].x1
+            text = " ".join(w.t for w in ph)
+            inside = [i for i, c in enumerate(centers) if x0 - 6 <= c <= x1 + 6]
+            if len(inside) <= 1 and (x1 - x0) < 70:
+                near = min(range(len(centers)), key=lambda i: abs(centers[i] - (x0 + x1) / 2))
+                if abs(centers[near] - (x0 + x1) / 2) < 30:
+                    header_labels[near] = (header_labels[near] + " " + text).strip()
+                continue
+            nxt = phrases[k + 1][0].x0 if k + 1 < len(phrases) else 1e9
+            prv = phrases[k - 1][-1].x1 if k > 0 else -1e9
+            for i, c in enumerate(centers):
+                if max(prv + 4, x0 - 40) <= c < nxt - 4:
+                    spans[i] = (spans[i] + " " + text).strip()
     out_rows = []
     for r in data_rows:
         label_words = [w for w in r if not is_num(w.t.rstrip("%")) and (w.x1 < centers[0] - 8)]
         cells = []
+        prev = ""
         for w in r:
             if not is_num(w.t.rstrip("%")):
+                prev = w.t
                 continue
             ci = col_of(w)
             if ci is None:
+                prev = w.t
                 continue
-            cells.append({"col": ci, "value": w.t, "bbox": (w.x0, w.y0, w.x1, w.y1)})
+            role = "spread" if prev in ("±", "+/-", "+/−") or w.t.startswith("±") else (
+                "paren" if w.t.startswith("(") or prev.endswith("(") else "main")
+            if any(c["col"] == ci and c["role"] == "main" for c in cells) and role == "main":
+                role = "extra"
+            cells.append({"col": ci, "value": w.t.lstrip("±"), "bbox": (w.x0, w.y0, w.x1, w.y1), "role": role})
+            prev = w.t
         out_rows.append({"label": " ".join(w.t for w in label_words).strip(), "cells": cells,
                          "y": r[0].y0, "bbox": (min(w.x0 for w in r), min(w.y0 for w in r), max(w.x1 for w in r), max(w.y1 for w in r))})
     return {"caption": caption, "columns": [{"header": header_labels[i], "span": spans[i]} for i in range(len(centers))],

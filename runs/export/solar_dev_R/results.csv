@@ -1,0 +1,570 @@
+publication_id,result_id,device_id,measurement_id,material_id,metric_name,metric_value,metric_unit,aggregation,spread_value,n_devices,time_point,time_unit,raw_value,raw_unit,normalized_value,normalized_unit,result_origin,cited_publication_id,source_page,source_section,source_table,source_figure,source_fragment,extraction_status,duplicate_of,note
+D001,R001,DV1,MS1,M1,Jsc,15.37,mA/cm2,,,,,,15.37,mA/cm2,15.37,mA/cm2,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.001'; column='JSC (mA cm−2)'
+D001,R002,DV1,MS1,M1,Voc,1.266,V,,,,,,"1,266",mV,1.266,V,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.001'; column='VOC (mV)'; comma read as thousands separator
+D001,R003,DV1,MS1,M1,FF,70,%,,,,,,0.70,fraction,70,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.001'; column='FF'; unit inferred from magnitude (fraction)
+D001,R004,DV1,MS1,M1,PCE,13.55,%,,,,,,13.55,%,13.55,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.001'; column='PCE (%)'
+D001,R005,DV2,MS1,M1,Jsc,15.64,mA/cm2,,,,,,15.64,mA/cm2,15.64,mA/cm2,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.005'; column='JSC (mA cm−2)'
+D001,R006,DV2,MS1,M1,Voc,1.278,V,,,,,,"1,278",mV,1.278,V,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.005'; column='VOC (mV)'; comma read as thousands separator
+D001,R007,DV2,MS1,M1,FF,72,%,,,,,,0.72,fraction,72,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.005'; column='FF'; unit inferred from magnitude (fraction)
+D001,R008,DV2,MS1,M1,PCE,14.32,%,,,,,,14.32,%,14.32,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.005'; column='PCE (%)'
+D001,R009,DV3,MS1,M1,Jsc,15.02,mA/cm2,,,,,,15.02,mA/cm2,15.02,mA/cm2,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.05'; column='JSC (mA cm−2)'
+D001,R010,DV3,MS1,M1,Voc,1.163,V,,,,,,"1,163",mV,1.163,V,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.05'; column='VOC (mV)'; comma read as thousands separator
+D001,R011,DV3,MS1,M1,FF,70,%,,,,,,0.70,fraction,70,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.05'; column='FF'; unit inferred from magnitude (fraction)
+D001,R012,DV3,MS1,M1,PCE,12.11,%,,,,,,12.11,%,12.11,%,primary,,5,RESULTS AND DISCUSSION,Table 1,,TABLE 1 | Photovoltaic parameters of PSCs with different SrCl2 dopant,extracted,,row='0.05'; column='PCE (%)'
+D001,R013,DV-text,,M1,PCE,16.07,%,champion,,,,,16.07,%,16.07,%,primary,,2,RESULTS AND DISCUSSION,,,"best planar
+heterojunction CsPbI2Br perovskite solar cell achieved a high
+PCE of 16.07%, with ∼18% increment than the pristine one.",extracted,,rule-based text pattern
+D001,R014,DV-text,,M1,PCE,12.89,%,,,,,,12.89,%,12.89,%,primary,,3,RESULTS AND DISCUSSION,,,"open-circuit voltage (VOC)
+of 1,197 mV, a ﬁll factor (FF) of 0.71%, and a PCE of 12.89%. The
+addition of SrCl2 mainly enhances the",extracted,,rule-based text pattern
+D001,R015,DV-text,,M1,PCE,16.07,%,,,,,,16.07,%,16.07,%,primary,,5,CONCLUSION,,,"SrCl2 with a JSC of 15.75 mA cm−2, a VOC of 1,322 mV, a
+FF of 0.77, and a PCE of 16.07% under reverse scan condition
+(Figure 5C",extracted,,rule-based text pattern
+D001,R016,DV-text,,M1,PCE,13.66,%,champion,,,,,13.66,%,13.66,%,primary,,5,CONCLUSION,,,"exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a
+FF of 0.73, and a PCE of 13.66% under reverse scan condition
+(Supplementary",extracted,,rule-based text pattern
+D001,R017,DV-text,,M1,PCE,13.83,%,,,,,,13.83,%,13.83,%,primary,,5,CONCLUSION,,,"S2). The VOC of the NiCl2-doped
+device increased to 1,245 mV, yielding a PCE of 13.83%. The
+results presented herein manifest our",extracted,,rule-based text pattern
+D001,R018,DV-text,,M1,PCE,16.07,%,,,,,,16.07,%,16.07,%,primary,,5,CONCLUSION,,,"which facilitates
+the formation of high-quality perovskite ﬁlms. A high PCE of 16.07%
+was achieved on solar cells by SrCl2 doping,",extracted,,rule-based text pattern
+D001,R019,DV-text,,M1,Jsc,15.75,mA/cm2,,,,,,15.75,mA/cm2,15.75,mA/cm2,primary,,5,CONCLUSION,,,"using 0.01 M SrCl2 with a JSC of 15.75 mA cm−2, a VOC of 1,322 mV, a
+FF of 0.77, and a",extracted,,rule-based text pattern
+D001,R020,DV-text,,M1,Jsc,15.69,mA/cm2,champion,,,,,15.69,mA/cm2,15.69,mA/cm2,primary,,5,CONCLUSION,,,"this champion device. In contrast, the best pristine
+sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a
+FF of 0.73, and a",extracted,,rule-based text pattern
+D001,R021,DV-text,,M1,FF,77,%,,,,,,0.77,fraction,77,%,primary,,5,CONCLUSION,,,"using 0.01 M SrCl2 with a JSC of 15.75 mA cm−2, a VOC of 1,322 mV, a
+FF of 0.77, and a PCE of 16.07% under reverse scan",extracted,,rule-based text pattern
+D001,R022,DV-text,,M1,FF,73,%,champion,,,,,0.73,fraction,73,%,primary,,5,CONCLUSION,,,"pristine
+sample exhibited a JSC of 15.69 mA cm−2, a VOC of 1,217 mV, a
+FF of 0.73, and a PCE of 13.66% under reverse scan",extracted,,rule-based text pattern
+D002,R001,DV1,MS1,M1,Voc,0.855,V,,,,,,0.855,V,0.855,V,primary,,5,Acknowledgements,Table 1,,NiO 0.855,extracted,,row='NiO'; column='Voc / V'; unit inferred from magnitude (V)
+D002,R002,DV1,MS1,M1,Jsc,,,,,,,,14.8,,,,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO'; column='Jsc / mA/cm2'
+D002,R003,DV1,MS1,M1,FF,61.64,%,,,,,,61.64,%,61.64,%,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO'; column='FF / %'; unit inferred from magnitude (%)
+D002,R004,DV1,MS1,M1,PCE,7.8,%,,,,,,7.8,%,7.8,%,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO'; column='PCE / %'; unit inferred from magnitude (%)
+D002,R005,DV2,MS1,M1,Voc,0.982,V,,,,,,0.982,V,0.982,V,primary,,5,Acknowledgements,Table 1,,NiO/GO 0.982,extracted,,row='NiO/GO'; column='Voc / V'; unit inferred from magnitude (V)
+D002,R006,DV2,MS1,M1,Jsc,,,,,,,,17.9,,,,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO/GO'; column='Jsc / mA/cm2'
+D002,R007,DV2,MS1,M1,FF,87.04,%,,,,,,87.04,%,87.04,%,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO/GO'; column='FF / %'; unit inferred from magnitude (%)
+D002,R008,DV2,MS1,M1,PCE,15.3,%,,,,,,15.3,%,15.3,%,primary,,5,Acknowledgements,Table 1,,Table 1 Photovoltaic properties of PSCs with different HTL,extracted,,row='NiO/GO'; column='PCE / %'; unit inferred from magnitude (%)
+D002,R009,DV-text,,M1,PCE,15.3,%,,,,,,15.3,%,15.3,%,primary,,1,INTRODUCTION,,,experimental results showed that the double hole transport layers produce better power conversion efficiency of 15.3% compared to single-layer NiO. The double,extracted,,rule-based text pattern
+D002,R010,DV-text,,M1,PCE,7.5,%,,,,,,7.5,%,7.5,%,primary,,5,Acknowledgements,,,"improves Voc of 0.127 V, Jsc of 3.1 mAcm−2, fill factor of 
+25.4%, and PCE of 7.5%. Note those equivalent PCE 
+parameters and",extracted,,rule-based text pattern
+D002,R011,DV-text,,M1,Voc,0.127,V,,,,,,0.127,V,0.127,V,primary,,5,Acknowledgements,,,"transport layer 
+(NiO). The NiO/GO as a double hole transport layer 
+improves Voc of 0.127 V, Jsc of 3.1 mAcm−2, fill factor of 
+25.4%,",extracted,,rule-based text pattern
+D002,R012,DV-text,,M1,Jsc,3.1,mA/cm2,,,,,,3.1,mA/cm2,3.1,mA/cm2,primary,,5,Acknowledgements,,,"The NiO/GO as a double hole transport layer 
+improves Voc of 0.127 V, Jsc of 3.1 mAcm−2, fill factor of 
+25.4%, and PCE of 7.5%.",extracted,,rule-based text pattern
+D002,R013,DV-text,,M1,FF,25.4,%,,,,,,25.4,%,25.4,%,primary,,5,Acknowledgements,,,"double hole transport layer 
+improves Voc of 0.127 V, Jsc of 3.1 mAcm−2, fill factor of 
+25.4%, and PCE of 7.5%. Note those equivalent",extracted,,rule-based text pattern
+D003,R001,DV-text,,M1,PCE,20.12,%,,,,,,20.12,%,20.12,%,primary,,1,INTRODUCTION,,,"sheet structure and reduced interfacial
+defects, ultimately obtaining a PCE of 20.12%.13 Huang
+et al. used TiS2 to modify the",extracted,,rule-based text pattern
+D003,R002,DV-text,,M1,PCE,21.7,%,,,,,,21.7,%,21.7,%,primary,,2,RESULTS AND DISCUSSION,,,"and an improved PCE of 21.7%.14 Agresti et al. used
+Ti3C2Tx with various",extracted,,rule-based text pattern
+D003,R003,DV-text,,M1,PCE,20.14,%,,,,,,20.14,%,20.14,%,primary,,2,RESULTS AND DISCUSSION,,,"function, engineer the perovskite/ETL interface, and
+finally achieve a PCE of 20.14%.15 In our previous work,
+the mixed-valence",extracted,,rule-based text pattern
+D003,R004,DV-text,,M1,Voc,1.14,V,,,,,,1.14,V,1.14,V,primary,,2,RESULTS AND DISCUSSION,,,"improved the PCE of
+PSCs based on Sn3O4 ETL to 23.05% with an enhanced
+open circuit voltage (VOC) of 1.14 V, an enhanced short
+circuit current density",extracted,,rule-based text pattern
+D003,R005,DV-text,,M1,FF,81.2,%,,,,,,81.2,%,81.2,%,primary,,2,RESULTS AND DISCUSSION,,,"short
+circuit current density (JSC) of 24.89 mA cm2, and an
+enhanced fill factor (FF) of 81.2%.
+2
+|
+RESULTS AND DISCUSSION
+The Sn3O4 and",extracted,,rule-based text pattern
+D003,R006,DV-text,,M1,PCE,23.05,%,,,,,,23.05,%,23.05,%,primary,,6,RESULTS AND DISCUSSION,,,"1.14 V, a JSC of
+24.89 mA/cm2, and an FF of 0.812, corresponding to a
+PCE of 23.05%, whereas the control device based on the",extracted,,rule-based text pattern
+D003,R007,DV-text,,M1,PCE,21.39,%,,,,,,21.39,%,21.39,%,primary,,6,RESULTS AND DISCUSSION,,,"23.05%, whereas the control device based on the
+undoped Sn3O4 ETL shows a PCE of 21.39% with a VOC
+of 1.11 V, a JSC of 24.23 mA",extracted,,rule-based text pattern
+D003,R008,DV-text,,M1,PCE,23.05,%,champion,,,,,23.05,%,23.05,%,primary,,6,RESULTS AND DISCUSSION,,,"at the maximum power point is 23.0%
+(Figure 5E), which is close to the efficiency of 23.05%
+obtained from the J–V test. Figure 5F shows",extracted,,rule-based text pattern
+D003,R009,DV-text,,M1,Voc,1.14,V,champion,,,,,1.14,V,1.14,V,primary,,6,RESULTS AND DISCUSSION,,,"device with and without Y doping. PSCs
+based on the Y-Sn3O4 ETL show a VOC of 1.14 V, a JSC of
+24.89 mA/cm2, and an FF of 0.812,",extracted,,rule-based text pattern
+D003,R010,DV-text,,M1,Voc,1.11,V,,,,,,1.11,V,1.11,V,primary,,6,RESULTS AND DISCUSSION,,,"control device based on the
+undoped Sn3O4 ETL shows a PCE of 21.39% with a VOC
+of 1.11 V, a JSC of 24.23 mA cm2, and an FF of 0.795.",extracted,,rule-based text pattern
+D003,R011,DV-text,,M1,FF,81.2,%,,,,,,0.812,fraction,81.2,%,primary,,6,RESULTS AND DISCUSSION,,,"on the Y-Sn3O4 ETL show a VOC of 1.14 V, a JSC of
+24.89 mA/cm2, and an FF of 0.812, corresponding to a
+PCE of 23.05%, whereas",extracted,,rule-based text pattern
+D003,R012,DV-text,,M1,FF,79.5,%,,,,,,0.795,fraction,79.5,%,primary,,6,RESULTS AND DISCUSSION,,,"shows a PCE of 21.39% with a VOC
+of 1.11 V, a JSC of 24.23 mA cm2, and an FF of 0.795.
+Based on the J-V data, the calculated Rs",extracted,,rule-based text pattern
+D004,R001,DV1,MS1,M1,Voc,0.818,V,,,,,,0.818,V,0.818,V,primary,,11,3. Results and Discussion,Table 1,,ED 0.818,extracted,,row='ED'; column='Voc (V)'
+D004,R002,DV1,MS1,M1,Jsc,9.344,mA/cm2,,,,,,9.344,mA/cm2,9.344,mA/cm2,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='ED'; column='Jsc (mA/cm2)'
+D004,R003,DV1,MS1,M1,FF,57.49,%,,,,,,57.49,%,57.49,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='ED'; column='FF (%)'
+D004,R004,DV1,MS1,M1,PCE,0.81,%,,,,,,0.81,%,0.81,%,primary,,11,3. Results and Discussion,Table 1,,ED 0.81,extracted,,row='ED'; column='η (%)'
+D004,R005,DV2,MS1,M1,Voc,1.009,V,,,,,,1.009,V,1.009,V,primary,,11,3. Results and Discussion,Table 1,,BCC-ED 1.009,extracted,,row='BCC-ED'; column='Voc (V)'
+D004,R006,DV2,MS1,M1,Jsc,19.61,mA/cm2,,,,,,19.61,mA/cm2,19.61,mA/cm2,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='BCC-ED'; column='Jsc (mA/cm2)'
+D004,R007,DV2,MS1,M1,FF,47.79,%,,,,,,47.79,%,47.79,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='BCC-ED'; column='FF (%)'
+D004,R008,DV2,MS1,M1,PCE,0.58,%,,,,,,0.58,%,0.58,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='BCC-ED'; column='η (%)'
+D004,R009,DV3,MS1,M1,Voc,0.943,V,,,,,,0.943,V,0.943,V,primary,,11,3. Results and Discussion,Table 1,,C-ED-1 0.943,extracted,,row='C-ED-1'; column='Voc (V)'
+D004,R010,DV3,MS1,M1,Jsc,19.664,mA/cm2,,,,,,19.664,mA/cm2,19.664,mA/cm2,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='C-ED-1'; column='Jsc (mA/cm2)'
+D004,R011,DV3,MS1,M1,FF,56.07,%,,,,,,56.07,%,56.07,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='C-ED-1'; column='FF (%)'
+D004,R012,DV4,MS1,M1,Voc,1.05,V,,,,,,1.05,V,1.05,V,primary,,11,3. Results and Discussion,Table 1,,C-ED-2 1.05,extracted,,row='C-ED-2'; column='Voc (V)'
+D004,R013,DV4,MS1,M1,Jsc,18.65,mA/cm2,,,,,,18.65,mA/cm2,18.65,mA/cm2,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='C-ED-2'; column='Jsc (mA/cm2)'
+D004,R014,DV4,MS1,M1,FF,58.66,%,,,,,,58.66,%,58.66,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='C-ED-2'; column='FF (%)'
+D004,R015,DV4,MS1,M1,PCE,0.66,%,,,,,,0.66,%,0.66,%,primary,,11,3. Results and Discussion,Table 1,,Table 1. Photoelectric conversion efficiency of MoS2-based PVSCs with the basic structure ,extracted,,row='C-ED-2'; column='η (%)'
+D004,R016,DV-text,,M1,PCE,11.46,%,,,,,,11.46,%,11.46,%,primary,,1,1. Introduction,,,"The results showed that MoS2 NPs as an ETL exhibited a power conversion
+efficiency (PEC) of 11.46%, a short-circuit current density of 18.65",extracted,,rule-based text pattern
+D004,R017,DV-text,,M1,Voc,1.05,V,,,,,,1.05,V,1.05,V,primary,,1,1. Introduction,,,"efficiency (PEC) of 11.46%, a short-circuit current density of 18.65 mA/cm2, an open-circuit voltage
+of 1.05 V, and a fill factor of 58.66%, at the relative",extracted,,rule-based text pattern
+D004,R018,DV-text,,M1,Jsc,18.65,mA/cm2,,,,,,18.65,mA/cm2,18.65,mA/cm2,primary,,1,1. Introduction,,,"NPs as an ETL exhibited a power conversion
+efficiency (PEC) of 11.46%, a short-circuit current density of 18.65 mA/cm2, an open-circuit voltage
+of 1.05 V, and",extracted,,rule-based text pattern
+D004,R019,DV-text,,M1,FF,58.66,%,,,,,,58.66,%,58.66,%,primary,,1,1. Introduction,,,"current density of 18.65 mA/cm2, an open-circuit voltage
+of 1.05 V, and a fill factor of 58.66%, at the relative humidity of 70 ± 10% (open-air",extracted,,rule-based text pattern
+D005,R001,DV1,MS1,M1,Jsc,25.5,mA/cm2,champion,,,,,25.50,mA/cm2,25.5,mA/cm2,primary,,6,Results,Table 2,,Spiro-OMeTAD Forward 25.50,extracted,,row='Spiro-OMeTAD Forward'; column='JSC (mA cm−2)'
+D005,R002,DV1,MS1,M1,Voc,1.13,V,champion,,,,,1.13,V,1.13,V,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Spiro-OMeTAD Forward'; column='VOC (V)'
+D005,R003,DV1,MS1,M1,FF,77.96,%,champion,,,,,77.96,%,77.96,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Spiro-OMeTAD Forward'; column='FF'; unit inferred from magnitude (%)
+D005,R004,DV1,MS1,M1,PCE,22.47,%,champion,,,,,22.47,%,22.47,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Spiro-OMeTAD Forward'; column='PCE(MAX) (%)'; unit inferred from magnitude (%)
+D005,R005,DV2,MS1,M1,Jsc,25.51,mA/cm2,champion,,,,,25.51,mA/cm2,25.51,mA/cm2,primary,,6,Results,Table 2,,Reverse 25.51,extracted,,row='Reverse'; column='JSC (mA cm−2)'
+D005,R006,DV2,MS1,M1,Voc,1.15,V,champion,,,,,1.15,V,1.15,V,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='VOC (V)'
+D005,R007,DV2,MS1,M1,FF,78.2,%,champion,,,,,78.20,%,78.2,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='FF'; unit inferred from magnitude (%)
+D005,R008,DV2,MS1,M1,PCE,22.95,%,champion,,,,,22.95,%,22.95,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='PCE(MAX) (%)'; unit inferred from magnitude (%)
+D005,R009,DV3,MS1,M1,Jsc,26.24,mA/cm2,champion,,,,,26.24,mA/cm2,26.24,mA/cm2,primary,,6,Results,Table 2,,SF-MPA-MCz Forward 26.24,extracted,,row='SF-MPA-MCz Forward'; column='JSC (mA cm−2)'
+D005,R010,DV3,MS1,M1,Voc,1.17,V,champion,,,,,1.17,V,1.17,V,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='SF-MPA-MCz Forward'; column='VOC (V)'
+D005,R011,DV3,MS1,M1,FF,79.1,%,champion,,,,,79.10,%,79.1,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='SF-MPA-MCz Forward'; column='FF'; unit inferred from magnitude (%)
+D005,R012,DV3,MS1,M1,PCE,24.28,%,champion,,,,,24.28,%,24.28,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='SF-MPA-MCz Forward'; column='PCE(MAX) (%)'; unit inferred from magnitude (%)
+D005,R013,DV2,MS1,M1,Jsc,26.24,mA/cm2,champion,,,,,26.24,mA/cm2,26.24,mA/cm2,primary,,6,Results,Table 2,,Reverse 26.24,extracted,,row='Reverse'; column='JSC (mA cm−2)'
+D005,R014,DV2,MS1,M1,Voc,1.18,V,champion,,,,,1.18,V,1.18,V,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='VOC (V)'
+D005,R015,DV2,MS1,M1,FF,79.22,%,champion,,,,,79.22,%,79.22,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='FF'; unit inferred from magnitude (%)
+D005,R016,DV2,MS1,M1,PCE,24.53,%,champion,,,,,24.53,%,24.53,%,primary,,6,Results,Table 2,,Table 2. The photovoltaic parameters of champion PSCs based on Spiro-OMeTAD and SF-MPA-MCz,extracted,,row='Reverse'; column='PCE(MAX) (%)'; unit inferred from magnitude (%)
+D005,R017,DV-text,,M1,PCE,24.53,%,,,,,,24.53,%,24.53,%,primary,,1,Introduction,,,"properties when compared to Spiro-OMeTAD, which 
+contribute to a remarkable power conversion efficiency (PCE) of 24.53% for PSCs employing SF-
+MPA-MCz with substantially",extracted,,rule-based text pattern
+D005,R018,DV-text,,M1,PCE,24.53,%,,,,,,24.53,%,24.53,%,primary,,3,Results,,,"optimized interfacial contact, all of which contribute to remark-
+ably high PCE of 24.53% [open voltage (VOC) of 1.18 V, short-
+circuit",extracted,,rule-based text pattern
+D005,R019,DV-text,,M1,FF,79.22,%,,,,,,79.22,%,79.22,%,primary,,3,Results,,,"(VOC) of 1.18 V, short-
+circuit current density (JSC) of 26.24 mA cm−2, fill factor (FF) 
+of 79.22%], outperforming the control device based",extracted,,rule-based text pattern
+D005,R020,DV-text,,M1,PCE,24.53,%,,,,,,24.53,%,24.53,%,primary,,5,Results,,,"optimization conditions, 
+the SF-MPA-MCz-based device achieved a remarkably high 
+PCE of 24.53% with JSC of 26.24 mA cm−2, VOC of 1.18 V,",extracted,,rule-based text pattern
+D005,R021,DV-text,,M1,Voc,1.18,V,,,,,,1.18,V,1.18,V,primary,,5,Results,,,"device achieved a remarkably high 
+PCE of 24.53% with JSC of 26.24 mA cm−2, VOC of 1.18 V, and 
+FF of 79.22%, showing an all-round",extracted,,rule-based text pattern
+D005,R022,DV-text,,M1,Voc,1.15,V,,,,,,1.15,V,1.15,V,primary,,5,Results,,,"compared to 22.95% PCE of Spiro-OMeTAD-
+based device (JSC of 25.51 mA cm−2, VOC of 1.15 V, and FF of 
+78.2%) (Table 2). Moreover,",extracted,,rule-based text pattern
+D005,R023,DV-text,,M1,Jsc,26.24,mA/cm2,,,,,,26.24,mA/cm2,26.24,mA/cm2,primary,,5,Results,,,"SF-MPA-MCz-based device achieved a remarkably high 
+PCE of 24.53% with JSC of 26.24 mA cm−2, VOC of 1.18 V, and 
+FF of 79.22%, showing",extracted,,rule-based text pattern
+D005,R024,DV-text,,M1,Jsc,25.51,mA/cm2,,,,,,25.51,mA/cm2,25.51,mA/cm2,primary,,5,Results,,,"voltaic parameters compared to 22.95% PCE of Spiro-OMeTAD-
+based device (JSC of 25.51 mA cm−2, VOC of 1.15 V, and FF of 
+78.2%) (Table",extracted,,rule-based text pattern
+D005,R025,DV-text,,M1,FF,79.22,%,,,,,,79.22,%,79.22,%,primary,,5,Results,,,"remarkably high 
+PCE of 24.53% with JSC of 26.24 mA cm−2, VOC of 1.18 V, and 
+FF of 79.22%, showing an all-round enhancement in photo-",extracted,,rule-based text pattern
+D005,R026,DV-text,,M1,FF,78.2,%,,,,,,78.2,%,78.2,%,primary,,5,Results,,,"of Spiro-OMeTAD-
+based device (JSC of 25.51 mA cm−2, VOC of 1.15 V, and FF of 
+78.2%) (Table 2). Moreover, SF-MPA-MCz shows a",extracted,,rule-based text pattern
+D005,R027,DV-text,,M1,PCE,24.37,%,,,,,,24.37,%,24.37,%,primary,,6,Results,,,"Wang et al. 2024 | https://doi.org/10.34133/research.0332
+6
+efficiency of 24.37%, higher than that of Spiro-OMeTAD 
+(22.36%).",extracted,,rule-based text pattern
+D005,R028,DV-text,,M1,PCE,24.53,%,,,,,,24.53,%,24.53,%,primary,,9,Materials and Methods,,,"operational stability despite using dopants. As a result, 
+an appreciably high PCE of 24.53% was achieved for SF-MPA-
+MCz-based PSC,",extracted,,rule-based text pattern
+D005,R029,DV-text,,M1,PCE,19.8,%,,,,,,19.8,%,19.8,%,primary,,11,References,,,"et al. 2024 | https://doi.org/10.34133/research.0332
+11
+solar cell with efficiency of 19.8%. Nano Energy. 2016;23: 
+138–144.
+	18.	 Xu",extracted,,rule-based text pattern
+D005,R030,DV-text,,M1,PCE,24.53,%,,,,,,24.53,%,24.53,%,primary,,12,References,,,"properties when compared to Spiro-OMeTAD, which contribute to a remarkable power conversion efficiency
+(PCE) of 24.53% for PSCs employing SF-MPA-MCz with substantially",extracted,,rule-based text pattern
+D007,R001,DV-text,,M1,PCE,22.97,%,,,,,,22.97,%,22.97,%,primary,,6,ABSTRACT,,,"to those achieved
+with spiro-OMeTAD. The V1553-based device achieved a PCE of
+22.97%, characterized by a short-circuit current",extracted,,rule-based text pattern
+D007,R002,DV-text,,M1,PCE,22.8,%,,,,,,22.8,%,22.8,%,primary,,6,ABSTRACT,,,"compares favorably to the
+spiro-OMeTAD reference device, which achieved a PCE of
+22.8%, with a JSC of 24.69 mA cm−2, a VOC of 1.14",extracted,,rule-based text pattern
+D007,R003,DV-text,,M1,PCE,19.99,%,,,,,,19.99,%,19.99,%,primary,,6,ABSTRACT,,,"As shown in Figure 8b, the V1553-based module delivered
+an impressive PCE of 19.99%, with a JSC of 2.59 mA cm−2, a VOC
+of 9.399",extracted,,rule-based text pattern
+D007,R004,DV-text,,M1,PCE,23,%,,,,,,23,%,23,%,primary,,6,ABSTRACT,,,"novel small-molecule
+hole transporting material V1553 that results PSC PCE up to
+23% in solar cells and 20% in mini-modules,",extracted,,rule-based text pattern
+D007,R005,DV-text,,M1,Voc,1.179,V,,,,,,1.179,V,1.179,V,primary,,6,ABSTRACT,,,"characterized by a short-circuit current density (JSC) of
+24.29 mA cm−2, an open-circuit voltage (VOC) of 1.179 V, and a
+fill factor (FF) of 80.2%. The result",extracted,,rule-based text pattern
+D007,R006,DV-text,,M1,Voc,1.14,V,,,,,,1.14,V,1.14,V,primary,,6,ABSTRACT,,,"device, which achieved a PCE of
+22.8%, with a JSC of 24.69 mA cm−2, a VOC of 1.14 V, and an
+FF of 81%. Additionally, almost",extracted,,rule-based text pattern
+D007,R007,DV-text,,M1,Voc,9.399,V,,,,,,9.399,V,9.399,V,primary,,6,ABSTRACT,,,"module delivered
+an impressive PCE of 19.99%, with a JSC of 2.59 mA cm−2, a VOC
+of 9.399 V, and an FF of 82.1%. This performance surpassed",extracted,,rule-based text pattern
+D007,R008,DV-text,,M1,Jsc,24.29,mA/cm2,,,,,,24.29,mA/cm2,24.29,mA/cm2,primary,,6,ABSTRACT,,,"spiro-OMeTAD. The V1553-based device achieved a PCE of
+22.97%, characterized by a short-circuit current density (JSC) of
+24.29 mA cm−2, an open-circuit voltage (VOC) of 1.179",extracted,,rule-based text pattern
+D007,R009,DV-text,,M1,Jsc,24.69,mA/cm2,,,,,,24.69,mA/cm2,24.69,mA/cm2,primary,,6,ABSTRACT,,,"the
+spiro-OMeTAD reference device, which achieved a PCE of
+22.8%, with a JSC of 24.69 mA cm−2, a VOC of 1.14 V, and an
+FF of 81%. Additionally,",extracted,,rule-based text pattern
+D007,R010,DV-text,,M1,Jsc,2.59,mA/cm2,,,,,,2.59,mA/cm2,2.59,mA/cm2,primary,,6,ABSTRACT,,,"8b, the V1553-based module delivered
+an impressive PCE of 19.99%, with a JSC of 2.59 mA cm−2, a VOC
+of 9.399 V, and an FF of 82.1%. This",extracted,,rule-based text pattern
+D007,R011,DV-text,,M1,FF,80.2,%,,,,,,80.2,%,80.2,%,primary,,6,ABSTRACT,,,"(JSC) of
+24.29 mA cm−2, an open-circuit voltage (VOC) of 1.179 V, and a
+fill factor (FF) of 80.2%. The result compares favorably to the
+spiro-OMeTAD",extracted,,rule-based text pattern
+D007,R012,DV-text,,M1,FF,81,%,,,,,,81,%,81,%,primary,,6,ABSTRACT,,,"achieved a PCE of
+22.8%, with a JSC of 24.69 mA cm−2, a VOC of 1.14 V, and an
+FF of 81%. Additionally, almost no hysteresis phenomenon",extracted,,rule-based text pattern
+D007,R013,DV-text,,M1,FF,82.1,%,,,,,,82.1,%,82.1,%,primary,,6,ABSTRACT,,,"impressive PCE of 19.99%, with a JSC of 2.59 mA cm−2, a VOC
+of 9.399 V, and an FF of 82.1%. This performance surpassed the
+PCEs of",extracted,,rule-based text pattern
+D008,R001,DV-text,,M1,PCE,18.5,%,,,,,,18.5,%,18.5,%,primary,,1,Introduction,,,"the XRD and PL analyses. The
+resulting PSC in a p–i–n structure yields a PCE of 18.5% with a cell area of 0.09 cm2. With the same",extracted,,rule-based text pattern
+D008,R002,DV-text,,M1,PCE,17.06,%,champion,,,,,17.06,%,17.06,%,primary,,2,Methodology,,,"MA-free based perov-
+skites. Furthermore, the best PSCs achieve the highest PCE of
+17.06% for 0.36 cm2. Our ndings provide an alternative",extracted,,rule-based text pattern
+D008,R003,DV-text,,M1,Voc,1.001,V,,,,,,1.001,V,1.001,V,primary,,2,Methodology,,,"cells with cell
+area of 0.09 cm2, achieving an eﬃciency of 18.5% with a Voc of
+1.001 V, a short circuit-current (Jsc) of 23.75",extracted,,rule-based text pattern
+D008,R004,DV-text,,M1,FF,78.5,%,,,,,,78.5,%,78.5,%,primary,,2,Methodology,,,"Voc of
+1.001 V, a short circuit-current (Jsc) of 23.75 mA cm−2, and a FF
+of 78.5%. These results show comparable device performance,",extracted,,rule-based text pattern
+D008,R005,DV-text,,M1,PCE,18.5,%,champion,,,,,18.5,%,18.5,%,primary,,5,Results and discussion,,,"annealed at 150 °C. The record solar cells with
+PbCl2-based PVK achieved a PCE of 18.5% in the forward bias
+scan (Voc = 1.001 V;",extracted,,rule-based text pattern
+D008,R006,DV-text,,M1,Voc,1.001,V,champion,,,,,1.001,V,1.001,V,primary,,5,Results and discussion,,,"with
+PbCl2-based PVK achieved a PCE of 18.5% in the forward bias
+scan (Voc = 1.001 V; Jsc = 23.75 mA cm2; FF = 78.5%), compared",extracted,,rule-based text pattern
+D008,R007,DV-text,,M1,Jsc,23.75,mA/cm2,champion,,,,,23.75,mA/cm2,23.75,mA/cm2,primary,,5,Results and discussion,,,"PbCl2-based PVK achieved a PCE of 18.5% in the forward bias
+scan (Voc = 1.001 V; Jsc = 23.75 mA cm2; FF = 78.5%), compared
+to 15.8% for the",extracted,,rule-based text pattern
+D008,R008,DV-text,,M1,Jsc,23.88,mA/cm2,,,,,,23.88,mA/cm2,23.88,mA/cm2,primary,,5,Results and discussion,,,"cm2; FF = 78.5%), compared
+to 15.8% for the sample w/o PbCl2 (Voc = 0.85; Jsc = 23.88 mA
+cm2; FF = 76.3%). For a more exhaustive comparison,",extracted,,rule-based text pattern
+D008,R009,DV-text,,M1,FF,78.5,%,,,,,,78.5,%,78.5,%,primary,,5,Results and discussion,,,"of 18.5% in the forward bias
+scan (Voc = 1.001 V; Jsc = 23.75 mA cm2; FF = 78.5%), compared
+to 15.8% for the sample w/o PbCl2",extracted,,rule-based text pattern
+D008,R010,DV-text,,M1,FF,76.3,%,,,,,,76.3,%,76.3,%,primary,,5,Results and discussion,,,"compared
+to 15.8% for the sample w/o PbCl2 (Voc = 0.85; Jsc = 23.88 mA
+cm2; FF = 76.3%). For a more exhaustive comparison, we report",extracted,,rule-based text pattern
+D009,R001,DV-text,,M1,PCE,17.13,%,,,,,,17.13,%,17.13,%,primary,,1,,,,"Consequently, the caesium-incorporated THP solar cells deliver an 
+excellent power conversion efficiency of 17.13% (certified 16.65%) and exhibit 
+stable operation",extracted,,rule-based text pattern
+D009,R002,DV-text,,M1,PCE,17.13,%,,,,,,17.13,%,17.13,%,primary,,2,,,,"THPSC with an optimal Cs+ molar ratio of 5% demonstrated an excellent 
+PCE of 17.13% (certified 16.65%) and exceptional shelf",extracted,,rule-based text pattern
+D009,R003,DV-text,,M1,PCE,17.13,%,champion,,,,,17.13,%,17.13,%,primary,,4,,,,"one-sun AM1.5 illumination, the champion 
+Cs5 device delivered a high PCE of 17.13% with an open-circuit voltage 
+(Voc) of 0.99",extracted,,rule-based text pattern
+D009,R004,DV-text,,M1,PCE,13.49,%,champion,,,,,13.49,%,13.49,%,primary,,4,,,,"factor (FF) of 74.83%, whereas the best Cs0 device achieved only a 
+modest PCE of 13.49% (Fig. 3b). Consistently, the Cs5 device",extracted,,rule-based text pattern
+D009,R005,DV-text,,M1,PCE,17.04,%,champion,,,,,17.04,%,17.04,%,primary,,4,,,,"13.49% (Fig. 3b). Consistently, the Cs5 device exhibited 
+a stabilized PCE of 17.04% under steady-state maximum power output",extracted,,rule-based text pattern
+D009,R006,DV-text,,M1,PCE,16.65,%,,,,,,16.65,%,16.65,%,primary,,4,,,,"5% and good device reproducibility. We 
+also demonstrated a certified PCE of 16.65% from Shanghai Institute of 
+Microsystem",extracted,,rule-based text pattern
+D009,R007,DV-text,,M1,Voc,0.99,V,champion,,,,,0.99,V,0.99,V,primary,,4,,,,"illumination, the champion 
+Cs5 device delivered a high PCE of 17.13% with an open-circuit voltage 
+(Voc) of 0.99 V, a short-circuit current density (Jsc) of",extracted,,rule-based text pattern
+D009,R008,DV-text,,M1,Jsc,23.07,mA/cm2,champion,,,,,23.07,mA/cm2,23.07,mA/cm2,primary,,4,,,,"a high PCE of 17.13% with an open-circuit voltage 
+(Voc) of 0.99 V, a short-circuit current density (Jsc) of 23.07 mA cm−2 and 
+a fill factor (FF) of 74.83%, whereas",extracted,,rule-based text pattern
+D009,R009,DV-text,,M1,Jsc,22.34,mA/cm2,,,,,,22.34,mA/cm2,22.34,mA/cm2,primary,,4,,,,"response across the visible and 
+near-infrared region, yielding an integrated Jsc of 22.34 mA cm−2 that is 
+comparable to the value extracted",extracted,,rule-based text pattern
+D009,R010,DV-text,,M1,FF,74.83,%,champion,,,,,74.83,%,74.83,%,primary,,4,,,,"0.99 V, a short-circuit current density (Jsc) of 23.07 mA cm−2 and 
+a fill factor (FF) of 74.83%, whereas the best Cs0 device achieved only",extracted,,rule-based text pattern
+D010,R001,DV1,MS1,M1,Voc,0.296,V,,,,,,296,mV,0.296,V,primary,,9,3. Results and Discussion,Table 3,,CZTSSe 296,extracted,,row='CZTSSe'; column='Voc (mV)'
+D010,R002,DV1,MS1,M1,Jsc,26.42,mA/cm2,,,,,,26.42,mA/cm2,26.42,mA/cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,row='CZTSSe'; column='Jsc (mA/cm2)'
+D010,R003,DV1,MS1,M1,Rs,30.37,Ohm*cm2,,,,,,30.37,Ohm*cm2,30.37,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,row='CZTSSe'; column='Rs (Ωcm2)'
+D010,R004,DV1,MS1,M1,Rsh,130.8,Ohm*cm2,,,,,,130.80,Ohm*cm2,130.8,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,row='CZTSSe'; column='Rsh (Ωcm2)'
+D010,R005,DV1,MS1,M1,FF,35.16,%,,,,,,35.16,%,35.16,%,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,row='CZTSSe'; column='FF (%)'
+D010,R006,DV1,MS1,M1,PCE,2.75,%,,,,,,2.75,%,2.75,%,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,row='CZTSSe'; column='PCE (%)'
+D010,R007,DV2,MS1,M1,Voc,0.338,V,,,,,,338,mV,0.338,V,primary,,9,3. Results and Discussion,Table 3,,"(Na0.1Cu0.9)2ZnSn(S,Se)4 338",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='Voc (mV)'"
+D010,R008,DV2,MS1,M1,Jsc,27.16,mA/cm2,,,,,,27.16,mA/cm2,27.16,mA/cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='Jsc (mA/cm2)'"
+D010,R009,DV2,MS1,M1,Rs,17.58,Ohm*cm2,,,,,,17.58,Ohm*cm2,17.58,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='Rs (Ωcm2)'"
+D010,R010,DV2,MS1,M1,Rsh,279.05,Ohm*cm2,,,,,,279.05,Ohm*cm2,279.05,Ohm*cm2,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='Rsh (Ωcm2)'"
+D010,R011,DV2,MS1,M1,FF,52.59,%,,,,,,52.59,%,52.59,%,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='FF (%)'"
+D010,R012,DV2,MS1,M1,PCE,4.82,%,,,,,,4.82,%,4.82,%,primary,,9,3. Results and Discussion,Table 3,,"Table 3. The parameters of CZTSSe and Na-doped Cu2ZnSn(S,Se)4 device performance.",extracted,,"row='(Na0.1Cu0.9)2ZnSn(S,Se)4'; column='PCE (%)'"
+D010,R013,,,M1,PCE,12.62,%,champion,,,,,12.62,%,12.62,%,cited,[7],1,1. Introduction,,,"(CZTS)-based solar cells are still in their infancy, with the highest reported PCE of 12.62% [7],
+which is far below the theoretical",extracted,,rule-based text pattern
+D010,R014,,,M1,PCE,32.2,%,champion,,,,,32.2,%,32.2,%,cited,[8],1,1. Introduction,,,"highest reported PCE of 12.62% [7],
+which is far below the theoretical PCE of 32.2% [8], and at the same time, it also is far",extracted,,rule-based text pattern
+D010,R015,DV-text,,M1,Voc,0.338,V,champion,,,,,338,mV,0.338,V,primary,,1,1. Introduction,,,"the best power conversion efﬁciency (PCE) of 4.82% was achieved with an
+open circuit voltage (Voc) of 338 mV, a short circuit current density (Jsc) of",extracted,,rule-based text pattern
+D010,R016,DV-text,,M1,Jsc,27.16,mA/cm2,champion,,,,,27.16,mA/cm2,27.16,mA/cm2,primary,,1,1. Introduction,,,"of 4.82% was achieved with an
+open circuit voltage (Voc) of 338 mV, a short circuit current density (Jsc) of 27.16 mA/cm2 and a ﬁll
+factor (FF) of 52.59% when the",extracted,,rule-based text pattern
+D010,R017,DV-text,,M1,PCE,2.75,%,,,,,,2.75,%,2.75,%,primary,,9,3. Results and Discussion,,,"exhibits a Voc of 296 mV, a Jsc of 26.42 mA/cm2, an FF of 35.16%, and
+a PCE of 2.75%. However, the (Na0.1Cu0.9)2ZnSn(S,Se)4 device",extracted,,rule-based text pattern
+D010,R018,DV-text,,M1,PCE,4.82,%,,,,,,4.82,%,4.82,%,primary,,9,3. Results and Discussion,,,"a PCE of 2.75%. However, the (Na0.1Cu0.9)2ZnSn(S,Se)4 device showed a PCE of 4.82%
+with Voc of 338 mV, Js of 27.16 mA/cm2,",extracted,,rule-based text pattern
+D010,R019,DV-text,,M1,Voc,0.296,V,,,,,,296,mV,0.296,V,primary,,9,3. Results and Discussion,,,"the two devices are presented in Table 3.
+The CZTSSe device exhibits a Voc of 296 mV, a Jsc of 26.42 mA/cm2, an FF of 35.16%,",extracted,,rule-based text pattern
+D010,R020,DV-text,,M1,Voc,0.338,V,,,,,,338,mV,0.338,V,primary,,9,3. Results and Discussion,,,"However, the (Na0.1Cu0.9)2ZnSn(S,Se)4 device showed a PCE of 4.82%
+with Voc of 338 mV, Js of 27.16 mA/cm2, and FF of 52.59%. The",extracted,,rule-based text pattern
+D010,R021,DV-text,,M1,Jsc,26.42,mA/cm2,,,,,,26.42,mA/cm2,26.42,mA/cm2,primary,,9,3. Results and Discussion,,,"are presented in Table 3.
+The CZTSSe device exhibits a Voc of 296 mV, a Jsc of 26.42 mA/cm2, an FF of 35.16%, and
+a PCE of 2.75%. However,",extracted,,rule-based text pattern
+D010,R022,DV-text,,M1,FF,35.16,%,,,,,,35.16,%,35.16,%,primary,,9,3. Results and Discussion,,,"The CZTSSe device exhibits a Voc of 296 mV, a Jsc of 26.42 mA/cm2, an FF of 35.16%, and
+a PCE of 2.75%. However, the (Na0.1Cu0.9)2ZnSn(S,Se)4",extracted,,rule-based text pattern
+D010,R023,DV-text,,M1,FF,52.59,%,,,,,,52.59,%,52.59,%,primary,,9,3. Results and Discussion,,,"device showed a PCE of 4.82%
+with Voc of 338 mV, Js of 27.16 mA/cm2, and FF of 52.59%. The Voc, Jsc, and FF values
+of Na-doped",extracted,,rule-based text pattern
+D010,R024,DV-text,,M1,PCE,4.82,%,,,,,,4.82,%,4.82,%,primary,,10,References,,,"regarded as the absorbed layer to
+prepare the solar cell, achieving a PCE of 4.82%. Therefore, the selenization temperature",extracted,,rule-based text pattern
+D012,R001,DV-text,,M1,Voc,0.465,V,,,,,,0.465,V,0.465,V,primary,,1,1. Introduction,,,"concentration of 20 mg/mL, had a short-circuit
+current density of 16.44 mA/cm2, an open-circuit voltage of 0.465 V, and a ﬁll factor of 64.3%,
+providing a",extracted,,rule-based text pattern
+D012,R002,DV-text,,M1,Voc,0.465,V,champion,,,,,0.465,V,0.465,V,primary,,11,3. Results and Discussion,,,"using a DIO concentration of 20 mg/mL, exhibited
+a Jsc of 16.44 mA/cm2, a Voc of 0.465 V, and a FF of 64.3%, which resulted in an",extracted,,rule-based text pattern
+D012,R003,DV-text,,M1,Jsc,16.44,mA/cm2,champion,,,,,16.44,mA/cm2,16.44,mA/cm2,primary,,11,3. Results and Discussion,,,"solar cell, prepared using a DIO concentration of 20 mg/mL, exhibited
+a Jsc of 16.44 mA/cm2, a Voc of 0.465 V, and a FF of 64.3%, which",extracted,,rule-based text pattern
+D012,R004,DV-text,,M1,FF,64.3,%,,,,,,64.3,%,64.3,%,primary,,11,3. Results and Discussion,,,"of 20 mg/mL, exhibited
+a Jsc of 16.44 mA/cm2, a Voc of 0.465 V, and a FF of 64.3%, which resulted in an energy
+conversion",extracted,,rule-based text pattern
+D012,R005,DV-text,,M1,Voc,0.465,V,,,,,,0.465,V,0.465,V,primary,,13,References,,,"16, 1659
+13 of 14
+a short-circuit current density of 16.44 mA/cm2, an open-circuit voltage of 0.465 V, and
+a FF of 64.3%, providing an energy",extracted,,rule-based text pattern
+D012,R006,DV-text,,M1,Jsc,16.44,mA/cm2,,,,,,16.44,mA/cm2,16.44,mA/cm2,primary,,13,References,,,"Materials 2023, 16, 1659
+13 of 14
+a short-circuit current density of 16.44 mA/cm2, an open-circuit voltage of 0.465 V, and",extracted,,rule-based text pattern
+D012,R007,DV-text,,M1,FF,64.3,%,,,,,,64.3,%,64.3,%,primary,,13,References,,,"current density of 16.44 mA/cm2, an open-circuit voltage of 0.465 V, and
+a FF of 64.3%, providing an energy conversion efﬁciency",extracted,,rule-based text pattern
+D013,R001,DV-text,,M1,PCE,12.1,%,champion,,,,,12.1,%,12.1,%,primary,,1,1. Introduction,,,"promisingly low Voc deficits are observed. In particular, the champion efficiency of 12.1 % obtained with 40 % Ge 
+breaks the record",extracted,,rule-based text pattern
+D013,R002,DV-text,,M1,PCE,12.1,%,champion,,,,,12.1,%,12.1,%,primary,,6,3. Results,,,"incorporated. The optimal composition appears to be 40Ge with a 
+champion efficiency of 12.1 %. The devices with Ge-richer stoichiome­",extracted,,rule-based text pattern
+D013,R003,DV-text,,M1,PCE,12.1,%,champion,,,,,12.1,%,12.1,%,primary,,9,References,,,"1.5 eV when 
+ranging from pureSn to pure-Ge stoichiometry. The champion efficiency 
+of 12.1 % obtained for 40 % Ge without ARC sets a",extracted,,rule-based text pattern
+D014,R001,DV-text,,M1,PCE,2.3,%,,,,,,2.3,%,2.3,%,primary,,1,1. INTRODUCTION,,,"thermally evaporated to
+create a Schottky junction solar cell, resulting in a PCE of
+2.3%. Townsend et al. further improved the device",extracted,,rule-based text pattern
+D014,R002,DV-text,,M1,PCE,11.4,%,champion,,,,,11.4,%,11.4,%,primary,,6,3. RESULTS AND DISCUSSION,,,"(Figure S7c,d green). Standard
+devices using this ink reached a maximum PCE of 11.4% upon
+current/light soaking with the open-circuit",extracted,,rule-based text pattern
+D015,R001,DV-text,,M1,Voc,0.841,V,,,,,,841,mV,0.841,V,primary,,2,2. Results and Discussion,,,"duration of 8 min
+resulted in better devices with an efﬁciency of 14.4%, VOC of
+841 mV, JSC of 22.1 mA cm2, and FF of 78%. The",extracted,,rule-based text pattern
+D015,R002,DV-text,,M1,FF,78,%,,,,,,78,%,78,%,primary,,2,2. Results and Discussion,,,"devices with an efﬁciency of 14.4%, VOC of
+841 mV, JSC of 22.1 mA cm2, and FF of 78%. The correspond-
+ing parameters of the reference",extracted,,rule-based text pattern
+D015,R003,DV-text,,M1,PCE,3,%,,,,,,3,%,3,%,primary,,3,2. Results and Discussion,,,"respectively, the backside and frontside illumi-
+nation. The ITO-only device has a PCE of 3% with JSC of
+7.9 mA cm2 for back illumination,",extracted,,rule-based text pattern
+D015,R004,DV-text,,M1,PCE,7.6,%,,,,,,7.6,%,7.6,%,primary,,3,2. Results and Discussion,,,"front. The device with CuxCryOz buffer showed superior per-
+formance with PCE of 7.6% and JSC of 15.8 mA cm2 when illu-
+minated",extracted,,rule-based text pattern
+D017,R001,DV1,MS1,M1,Voc,0.686,V,,,,,,0.686,V,0.686,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R1'; column='VOC (V)'
+D017,R002,DV1,MS1,M1,Jsc,35.3,mA/cm2,,,,,,35.3,mA/cm2,35.3,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R1'; column='JSC (mA cm−2)'
+D017,R003,DV1,MS1,M1,FF,77.6,%,,,,,,77.6,%,77.6,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R1'; column='FF (%)'
+D017,R004,DV1,MS1,M1,PCE,18.8,%,,,,,,18.8,%,18.8,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R1'; column='PCE (%)'
+D017,R005,DV1,MS1,M1,Voc,0.458,V,,,,,,0.458,V,0.458,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R1'; column='VOC deficit (V)'
+D017,R006,DV2,MS1,M1,Voc,0.679,V,,,,,,0.679,V,0.679,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R2'; column='VOC (V)'
+D017,R007,DV2,MS1,M1,Jsc,36.3,mA/cm2,,,,,,36.3,mA/cm2,36.3,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R2'; column='JSC (mA cm−2)'
+D017,R008,DV2,MS1,M1,FF,77.5,%,,,,,,77.5,%,77.5,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R2'; column='FF (%)'
+D017,R009,DV2,MS1,M1,PCE,19.1,%,,,,,,19.1,%,19.1,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R2'; column='PCE (%)'
+D017,R010,DV2,MS1,M1,Voc,0.463,V,,,,,,0.463,V,0.463,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='R2'; column='VOC deficit (V)'
+D017,R011,DV3,MS1,M1,Voc,0.687,V,,,,,,0.687,V,0.687,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G1'; column='VOC (V)'
+D017,R012,DV3,MS1,M1,Jsc,35.2,mA/cm2,,,,,,35.2,mA/cm2,35.2,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G1'; column='JSC (mA cm−2)'
+D017,R013,DV3,MS1,M1,FF,77.1,%,,,,,,77.1,%,77.1,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G1'; column='FF (%)'
+D017,R014,DV3,MS1,M1,PCE,18.7,%,,,,,,18.7,%,18.7,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G1'; column='PCE (%)'
+D017,R015,DV3,MS1,M1,Voc,0.451,V,,,,,,0.451,V,0.451,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G1'; column='VOC deficit (V)'
+D017,R016,DV4,MS1,M1,Voc,0.695,V,,,,,,0.695,V,0.695,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G2'; column='VOC (V)'
+D017,R017,DV4,MS1,M1,Jsc,35.6,mA/cm2,,,,,,35.6,mA/cm2,35.6,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G2'; column='JSC (mA cm−2)'
+D017,R018,DV4,MS1,M1,FF,76.9,%,,,,,,76.9,%,76.9,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G2'; column='FF (%)'
+D017,R019,DV4,MS1,M1,PCE,19,%,,,,,,19.0,%,19,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G2'; column='PCE (%)'
+D017,R020,DV4,MS1,M1,Voc,0.445,V,,,,,,0.445,V,0.445,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='G2'; column='VOC deficit (V)'
+D017,R021,DV5,MS1,M1,Voc,0.703,V,,,,,,0.703,V,0.703,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I1'; column='VOC (V)'
+D017,R022,DV5,MS1,M1,Jsc,35,mA/cm2,,,,,,35.0,mA/cm2,35,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I1'; column='JSC (mA cm−2)'
+D017,R023,DV5,MS1,M1,FF,76.8,%,,,,,,76.8,%,76.8,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I1'; column='FF (%)'
+D017,R024,DV5,MS1,M1,PCE,19,%,,,,,,19.0,%,19,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I1'; column='PCE (%)'
+D017,R025,DV5,MS1,M1,Voc,0.444,V,,,,,,0.444,V,0.444,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I1'; column='VOC deficit (V)'
+D017,R026,DV6,MS1,M1,Voc,0.693,V,,,,,,0.693,V,0.693,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I2'; column='VOC (V)'
+D017,R027,DV6,MS1,M1,Jsc,35.6,mA/cm2,,,,,,35.6,mA/cm2,35.6,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I2'; column='JSC (mA cm−2)'
+D017,R028,DV6,MS1,M1,FF,77.1,%,,,,,,77.1,%,77.1,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I2'; column='FF (%)'
+D017,R029,DV6,MS1,M1,PCE,19,%,,,,,,19.0,%,19,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I2'; column='PCE (%)'
+D017,R030,DV6,MS1,M1,Voc,0.444,V,,,,,,0.444,V,0.444,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I2'; column='VOC deficit (V)'
+D017,R031,DV7,MS1,M1,Voc,0.697,V,,,,,,0.697,V,0.697,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I3'; column='VOC (V)'
+D017,R032,DV7,MS1,M1,Jsc,35.8,mA/cm2,,,,,,35.8,mA/cm2,35.8,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I3'; column='JSC (mA cm−2)'
+D017,R033,DV7,MS1,M1,FF,76.4,%,,,,,,76.4,%,76.4,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I3'; column='FF (%)'
+D017,R034,DV7,MS1,M1,PCE,19.1,%,,,,,,19.1,%,19.1,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I3'; column='PCE (%)'
+D017,R035,DV7,MS1,M1,Voc,0.429,V,,,,,,0.429,V,0.429,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I3'; column='VOC deficit (V)'
+D017,R036,DV8,MS1,M1,Voc,0.685,V,,,,,,0.685,V,0.685,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I4'; column='VOC (V)'
+D017,R037,DV8,MS1,M1,Jsc,36.7,mA/cm2,,,,,,36.7,mA/cm2,36.7,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I4'; column='JSC (mA cm−2)'
+D017,R038,DV8,MS1,M1,FF,77.4,%,,,,,,77.4,%,77.4,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I4'; column='FF (%)'
+D017,R039,DV8,MS1,M1,PCE,19.5,%,,,,,,19.5,%,19.5,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I4'; column='PCE (%)'
+D017,R040,DV8,MS1,M1,Voc,0.436,V,,,,,,0.436,V,0.436,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='I4'; column='VOC deficit (V)'
+D017,R041,DV9,MS1,M1,Voc,0.707,V,,,,,,0.707,V,0.707,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O1'; column='VOC (V)'
+D017,R042,DV9,MS1,M1,Jsc,36,mA/cm2,,,,,,36.0,mA/cm2,36,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O1'; column='JSC (mA cm−2)'
+D017,R043,DV9,MS1,M1,FF,77,%,,,,,,77.0,%,77,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O1'; column='FF (%)'
+D017,R044,DV9,MS1,M1,PCE,19.6,%,,,,,,19.6,%,19.6,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O1'; column='PCE (%)'
+D017,R045,DV9,MS1,M1,Voc,0.425,V,,,,,,0.425,V,0.425,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O1'; column='VOC deficit (V)'
+D017,R046,DV10,MS1,M1,Voc,0.723,V,,,,,,0.723,V,0.723,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O2'; column='VOC (V)'
+D017,R047,DV10,MS1,M1,Jsc,35.2,mA/cm2,,,,,,35.2,mA/cm2,35.2,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O2'; column='JSC (mA cm−2)'
+D017,R048,DV10,MS1,M1,FF,77.5,%,,,,,,77.5,%,77.5,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O2'; column='FF (%)'
+D017,R049,DV10,MS1,M1,PCE,19.7,%,,,,,,19.7,%,19.7,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O2'; column='PCE (%)'
+D017,R050,DV10,MS1,M1,Voc,0.427,V,,,,,,0.427,V,0.427,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O2'; column='VOC deficit (V)'
+D017,R051,DV11,MS1,M1,Voc,0.716,V,,,,,,0.716,V,0.716,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O3'; column='VOC (V)'
+D017,R052,DV11,MS1,M1,Jsc,35.4,mA/cm2,,,,,,35.4,mA/cm2,35.4,mA/cm2,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O3'; column='JSC (mA cm−2)'
+D017,R053,DV11,MS1,M1,FF,76.2,%,,,,,,76.2,%,76.2,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O3'; column='FF (%)'
+D017,R054,DV11,MS1,M1,PCE,19.3,%,,,,,,19.3,%,19.3,%,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O3'; column='PCE (%)'
+D017,R055,DV11,MS1,M1,Voc,0.419,V,,,,,,0.419,V,0.419,V,primary,,4,RESULTS AND DISCUSSION,Table 1,,TABLE 1 Composition of CIGS absorbers with different ΔGGI and the corresponding J-V parame,extracted,,row='O3'; column='VOC deficit (V)'
+D017,R056,DV-text,,M1,Voc,0,V,,,,,,0,mV,0,V,primary,,6,RESULTS AND DISCUSSION,,,"absorber with a ΔGGI of 0.20 was
+chosen as the reference providing a ΔVOC of 0 mV.
+Vnon-rad
+OC;def = Vrad
+OC −VOC = −kT
+q",extracted,,rule-based text pattern
+D018,R001,DV-text,,M1,PCE,10.4,%,,,,,,10.4,%,10.4,%,primary,,6,RESULTS AND DISCUSSION,,,"curves of the CIGS solar
+cells with and without Cs-ST. A solar cell with an efficiency (ɳ) of
+10.4% was obtained after the Cs-ST treatment.",extracted,,rule-based text pattern
+D018,R002,DV-text,,M1,PCE,23.35,%,champion,,,,,23.35,%,23.35,%,primary,,8,CONCLUSION,,,"Sugimoto H.
+Cd-free Cu (In,Ga)(Se,S)2 thin-film solar cell with record efficiency of
+23.35%.
+IEEE
+J
+Photovolt.
+2019;9(6):1863-1867.",extracted,,rule-based text pattern
+D019,R001,DV1,MS1,M1,Voc,0.20297,V,,,,,,0.20297,V,0.20297,V,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='Mo'; column='VOC [V]'
+D019,R002,DV1,MS1,M1,Jsc,8.4189,mA/cm2,,,,,,8.4189,mA/cm2,8.4189,mA/cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='Mo'; column='JSC [mA cm 2]'
+D019,R003,DV1,MS1,M1,FF,27.2369,%,,,,,,27.2369,%,27.2369,%,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='Mo'; column='FF [%]'
+D019,R004,DV1,MS1,M1,Rs,18.105,Ohm*cm2,,,,,,18.105,Ohm*cm2,18.105,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='Mo'; column='Rs [O cm2]'
+D019,R005,DV1,MS1,M1,Rsh,26.703,Ohm*cm2,,,,,,26.703,Ohm*cm2,26.703,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='Mo'; column='Rsh [O cm2]'
+D019,R006,DV2,MS1,M1,Voc,0.43951,V,,,,,,0.43951,V,0.43951,V,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='VOC [V]'
+D019,R007,DV2,MS1,M1,Jsc,21.1832,mA/cm2,,,,,,21.1832,mA/cm2,21.1832,mA/cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='JSC [mA cm 2]'
+D019,R008,DV2,MS1,M1,FF,36.0716,%,,,,,,36.0716,%,36.0716,%,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='FF [%]'
+D019,R009,DV2,MS1,M1,Rs,9.847,Ohm*cm2,,,,,,9.847,Ohm*cm2,9.847,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='Rs [O cm2]'
+D019,R010,DV2,MS1,M1,Rsh,51.383,Ohm*cm2,,,,,,51.383,Ohm*cm2,51.383,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='Rsh [O cm2]'
+D019,R011,DV2,MS1,M1,Voc,0.44999,V,,,,,,0.44999,V,0.44999,V,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='VOC [V]'
+D019,R012,DV2,MS1,M1,Jsc,23.6606,mA/cm2,,,,,,23.6606,mA/cm2,23.6606,mA/cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='JSC [mA cm 2]'
+D019,R013,DV2,MS1,M1,FF,40.2727,%,,,,,,40.2727,%,40.2727,%,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='FF [%]'
+D019,R014,DV2,MS1,M1,Rs,8.488,Ohm*cm2,,,,,,8.488,Ohm*cm2,8.488,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='Rs [O cm2]'
+D019,R015,DV2,MS1,M1,Rsh,70.319,Ohm*cm2,,,,,,70.319,Ohm*cm2,70.319,Ohm*cm2,primary,,6,Results and discussion,Table 1,,Table 1 Photovoltaic characteristics of the Sb2Se3 solar cells using MoSe2/Mo substrates a,extracted,,row='MoSe2/Mo'; column='Rsh [O cm2]'
+D019,R016,DV3,MS1,M1,FF,43.99,%,,,,,,43.99,%,43.99,%,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='FF'; unit inferred from magnitude (%)
+D019,R017,DV3,MS1,M1,Rs,,,,,,,,5.48,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rs'
+D019,R018,DV3,MS1,M1,Rsh,,,,,,,,67.59,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rsh'
+D019,R019,DV3,MS1,M1,FF,47.35,%,,,,,,47.35,%,47.35,%,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='FF'; unit inferred from magnitude (%)
+D019,R020,DV3,MS1,M1,Rs,,,,,,,,5.89,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rs'
+D019,R021,DV3,MS1,M1,Rsh,,,,,,,,118.26,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rsh'
+D019,R022,DV3,MS1,M1,FF,44.47,%,,,,,,44.47,%,44.47,%,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='FF'; unit inferred from magnitude (%)
+D019,R023,DV3,MS1,M1,Rs,,,,,,,,6.04,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rs'
+D019,R024,DV3,MS1,M1,Rsh,,,,,,,,80.89,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rsh'
+D019,R025,DV3,MS1,M1,FF,40.27,%,,,,,,40.27,%,40.27,%,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='FF'; unit inferred from magnitude (%)
+D019,R026,DV3,MS1,M1,Rs,,,,,,,,8.49,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rs'
+D019,R027,DV3,MS1,M1,Rsh,,,,,,,,70.32,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='MoSe2'; column='Rsh'
+D019,R028,DV1,MS1,M1,FF,47.11,%,,,,,,47.11,%,47.11,%,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='Mo'; column='FF'; unit inferred from magnitude (%)
+D019,R029,DV1,MS1,M1,Rs,,,,,,,,5.69,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='Mo'; column='Rs'
+D019,R030,DV1,MS1,M1,Rsh,,,,,,,,112.25,,,,primary,,7,Results and discussion,Table 2,,Table 2 Photovoltaic characteristics of the Sb2Se3 solar cells using,extracted,,row='Mo'; column='Rsh'
+D019,R031,DV-text,,M1,PCE,5.637,%,,,,,,5.637,%,5.637,%,primary,,2,Introduction,,,"ordered and (hk1) preferentially oriented Sb2Se3
+nanorod array showed a power conversion efficiency of 5.637%. Therefore, by including a MoSe2 inter-",extracted,,rule-based text pattern
+D019,R032,DV-text,,M1,PCE,5.637,%,,,,,,5.637,%,5.637,%,primary,,7,Results and discussion,,,"mapping images of the
+Sb2Se3 solar cell device with a nanorod array with a PCE of
+5.637% (Table 2). The Sb2Se3 solar cell using a",extracted,,rule-based text pattern
+D019,R033,DV-text,,M1,PCE,5.637,%,,,,,,5.637,%,5.637,%,primary,,7,Results and discussion,,,"Fig. 7
+STEM-EDS mapping images of Sb2Se3 nanorod array solar cell with
+PCE of 5.637%.
+Paper
+Materials Advances",extracted,,rule-based text pattern
+D019,R034,DV-text,,M1,PCE,5.484,%,,,,,,5.484,%,5.484,%,primary,,8,Acknowledgements,,,"and external quantum efficiency
+data (Fig. 8b) showed similar results (PCE of 5.484%) to our lab-
+scale photovoltaic measurements.",extracted,,rule-based text pattern
+D019,R035,DV-text,,M1,PCE,5.637,%,,,,,,5.637,%,5.637,%,primary,,8,Acknowledgements,,,"ordered and (hk1) preferentially oriented Sb2Se3 nanorods array
+showed a PCE of 5.637%.
+Conflicts of interest
+There are no conflicts",extracted,,rule-based text pattern
+D020,R001,DV-text,,M1,PCE,2.76,%,,,,,,2.76,%,2.76,%,primary,,2,2. Results and Discussion,,,"solar cells. The carbon-based
+Sb2(S, Se)3 solar cells could achieve a PCE of 2.76%. Furthermore, by inserting a P3HT
+layer",extracted,,rule-based text pattern
+D020,R002,DV-text,,M1,PCE,2.61,%,champion,,,,,2.61,%,2.61,%,primary,,4,2. Results and Discussion,,,"[21,22]. The Sb2S3/Sb2(S, Se)3 solar cells exhibited the highest average
+PCE of 2.61% among 3 kinds of materials, with a VOC of",extracted,,rule-based text pattern
+D020,R003,DV-text,,M1,Voc,0.519,V,mean,,,,,0.519,V,0.519,V,primary,,4,2. Results and Discussion,,,"Sb2S3 solar
+cells displayed a low average PCE (0.65%), with an average open circuit voltage (VOC) of
+0.519 V, short circuit current density (JSC) of",extracted,,rule-based text pattern
+D020,R004,DV-text,,M1,Voc,0.492,V,champion,,,,,0.492,V,0.492,V,primary,,4,2. Results and Discussion,,,"exhibited the highest average
+PCE of 2.61% among 3 kinds of materials, with a VOC of 0.492 V, JSC of 12.28 mA·cm−2
+and FF of 0.432. The",extracted,,rule-based text pattern
+D020,R005,DV-text,,M1,FF,43.2,%,champion,,,,,0.432,fraction,43.2,%,primary,,4,2. Results and Discussion,,,"3 kinds of materials, with a VOC of 0.492 V, JSC of 12.28 mA·cm−2
+and FF of 0.432. The improved PCE is mainly beneﬁted from",extracted,,rule-based text pattern
+D020,R006,DV-text,,M1,PCE,4.15,%,champion,,,,,4.15,%,4.15,%,primary,,6,2. Results and Discussion,,,"the J–V curves showed that the solar cell with P3HT showed a champion
+PCE of 4.15%, with a VOC of 0.536 V, JSC of 15.37 mA·cm−2,",extracted,,rule-based text pattern
+D020,R007,DV-text,,M1,PCE,2.76,%,,,,,,2.76,%,2.76,%,primary,,6,2. Results and Discussion,,,"and FF of 0.504, while the
+solar cell without P3HT showed a much lower PCE of 2.76%, with a VOC of 0.467 V, JSC of
+13.24 mA·cm−2",extracted,,rule-based text pattern
+D020,R008,DV-text,,M1,Voc,0.536,V,champion,,,,,0.536,V,0.536,V,primary,,6,2. Results and Discussion,,,"showed that the solar cell with P3HT showed a champion
+PCE of 4.15%, with a VOC of 0.536 V, JSC of 15.37 mA·cm−2, and FF of 0.504,",extracted,,rule-based text pattern
+D020,R009,DV-text,,M1,Voc,0.467,V,,,,,,0.467,V,0.467,V,primary,,6,2. Results and Discussion,,,"while the
+solar cell without P3HT showed a much lower PCE of 2.76%, with a VOC of 0.467 V, JSC of
+13.24 mA·cm−2 and FF of 0.447. The",extracted,,rule-based text pattern
+D020,R010,DV-text,,M1,FF,50.4,%,champion,,,,,0.504,fraction,50.4,%,primary,,6,2. Results and Discussion,,,"champion
+PCE of 4.15%, with a VOC of 0.536 V, JSC of 15.37 mA·cm−2, and FF of 0.504, while the
+solar cell without P3HT showed",extracted,,rule-based text pattern
+D020,R011,DV-text,,M1,FF,44.7,%,,,,,,0.447,fraction,44.7,%,primary,,6,2. Results and Discussion,,,"much lower PCE of 2.76%, with a VOC of 0.467 V, JSC of
+13.24 mA·cm−2 and FF of 0.447. The energy alignments of the solar cells",extracted,,rule-based text pattern
+D020,R012,DV-text,,M1,PCE,2.76,%,,,,,,2.76,%,2.76,%,primary,,9,References,,,"using such ﬁlms in carbon-
+based Sb2(S, Se)3 solar cells without HTMs, a PCE of 2.76% was achieved. After employing
+P3HT as the",extracted,,rule-based text pattern
+D021,R001,DV-text,,M1,PCE,5.25,%,champion,,,,,5.25,%,5.25,%,primary,,1,1. Introduction,,,"PED and RFMS. The optimized
+Sb2Se3 bilayer solar cell achieved a maximum efficiency of 5.25%.
+Keywords: pulsed electron deposition; RF",extracted,,rule-based text pattern
+D021,R002,,,M1,PCE,47.1,%,champion,,,,,47.1,%,47.1,%,cited,[1],1,1. Introduction,,,"warming. Currently, the most efficient solar cells, boasting a record
+efficiency of 47.1% [1], are based on multi-junctions of AlGaInP/AlGaAs/GaAs/GaInAs.",extracted,,rule-based text pattern
+D021,R003,DV-text,,M1,PCE,31.7,%,,,,,,31.7,%,31.7,%,primary,,2,1. Introduction,,,"solar cells present great
+room for improvement since their theoretical efficiency of 31.7%, according to Shockley
+and Queisser [8],",extracted,,rule-based text pattern
+D021,R004,DV-text,,M1,PCE,10.57,%,champion,,,,,10.57,%,10.57,%,primary,,2,1. Introduction,,,"and Queisser [8], is significantly higher than the highest experimental efficiency of 10.57%
+demonstrated up to now [9]. The main reasons",extracted,,rule-based text pattern
+D021,R005,DV-text,,M1,PCE,10.57,%,champion,,,,,10.57,%,10.57,%,primary,,2,1. Introduction,,,"conversion efficiencies of 9.2% and 10.12%, respectively,
+while the record efficiency of 10.57% was obtained via additive-assisted chemical",extracted,,rule-based text pattern
+D021,R006,DV-text,,M1,PCE,5.25,%,,,,,,5.25,%,5.25,%,primary,,3,2. Materials and Methods,,,"architecture in
+the substrate configuration exhibited a promising conversion efficiency of 5.25%.
+2. Materials and Methods
+Sb2Se3 and NaF",extracted,,rule-based text pattern
+D021,R007,DV-text,,M1,PCE,0.73,%,champion,,,,,0.73,%,0.73,%,primary,,11,3. Results,,,"A- and B-series cells with
+similar thicknesses (i.e., A6, with a record PCE = 0.73% with B2, with PCE = 1.41%, or
+A2, with PCE",extracted,,rule-based text pattern
+D021,R008,DV-text,,M1,PCE,1.41,%,champion,,,,,1.41,%,1.41,%,primary,,11,3. Results,,,"similar thicknesses (i.e., A6, with a record PCE = 0.73% with B2, with PCE = 1.41%, or
+A2, with PCE = 2.04%, with B4, with",extracted,,rule-based text pattern
+D021,R009,DV-text,,M1,PCE,2.04,%,champion,,,,,2.04,%,2.04,%,primary,,11,3. Results,,,"(i.e., A6, with a record PCE = 0.73% with B2, with PCE = 1.41%, or
+A2, with PCE = 2.04%, with B4, with PCE = 3.85%, or also A3 with",extracted,,rule-based text pattern
+D021,R010,DV-text,,M1,PCE,3.85,%,champion,,,,,3.85,%,3.85,%,primary,,11,3. Results,,,"0.73% with B2, with PCE = 1.41%, or
+A2, with PCE = 2.04%, with B4, with PCE = 3.85%, or also A3 with B3), reveals that the
+B-series",extracted,,rule-based text pattern
+D021,R011,DV-text,,M1,PCE,5.25,%,,,,,,5.25,%,5.25,%,primary,,13,4. Conclusions,,,"PED grown layer is 100 nm and the
+sputtering layer is 1100 nm, exhibited PCE = 5.25%, VOC = 343 mV, JSC = 31.4 mA/cm2
+and FF",extracted,,rule-based text pattern
+D021,R012,DV-text,,M1,PCE,5.25,%,,,,,,5.25,%,5.25,%,primary,,13,4. Conclusions,,,"VOC, thanks to the thin Cu:Sb2Se3 layer grown via PED. The
+remarkable PCE = 5.25% achieved by the bilayer cell beats previous",extracted,,rule-based text pattern
+D021,R013,DV-text,,M1,Voc,0.343,V,,,,,,343,mV,0.343,V,primary,,13,4. Conclusions,,,"is 100 nm and the
+sputtering layer is 1100 nm, exhibited PCE = 5.25%, VOC = 343 mV, JSC = 31.4 mA/cm2
+and FF = 0.49 (red line).",extracted,,rule-based text pattern
+D021,R014,DV-text,,M1,Jsc,31.4,mA/cm2,,,,,,31.4,mA/cm2,31.4,mA/cm2,primary,,13,4. Conclusions,,,"the
+sputtering layer is 1100 nm, exhibited PCE = 5.25%, VOC = 343 mV, JSC = 31.4 mA/cm2
+and FF = 0.49 (red line). All the key electrical",extracted,,rule-based text pattern
+D021,R015,DV-text,,M1,FF,49,%,,,,,,0.49,fraction,49,%,primary,,13,4. Conclusions,,,"is 1100 nm, exhibited PCE = 5.25%, VOC = 343 mV, JSC = 31.4 mA/cm2
+and FF = 0.49 (red line). All the key electrical parameters",extracted,,rule-based text pattern
+D022,R001,DV1,MS1,M1,Voc,0.29,V,,,,,,0.29,V,0.29,V,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='Voc [V]'
+D022,R002,DV1,MS1,M1,Jsc,,,,,,,,1.85,,,,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='2] Jsc [mA cm'
+D022,R003,DV1,MS1,M1,FF,31,%,,,,,,31.0,%,31,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='FF [%]'
+D022,R004,DV1,MS1,M1,PCE,0.21,%,,,,,,0.21,%,0.21,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='PCE [%]'
+D022,R005,DV1,MS1,M1,Voc,0.41,V,,,,,,0.41,V,0.41,V,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='Voc [V]'
+D022,R006,DV1,MS1,M1,Jsc,,,,,,,,3.09,,,,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='2] Jsc [mA cm'
+D022,R007,DV1,MS1,M1,FF,41.4,%,,,,,,41.4,%,41.4,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='FF [%]'
+D022,R008,DV1,MS1,M1,PCE,0.51,%,,,,,,0.51,%,0.51,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='PCE [%]'
+D022,R009,DV1,MS1,M1,Voc,0.33,V,,,,,,0.33,V,0.33,V,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='Voc [V]'
+D022,R010,DV1,MS1,M1,Jsc,,,,,,,,1.86,,,,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='2] Jsc [mA cm'
+D022,R011,DV1,MS1,M1,FF,30.8,%,,,,,,30.8,%,30.8,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='FF [%]'
+D022,R012,DV1,MS1,M1,PCE,0.22,%,,,,,,0.22,%,0.22,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='PCE [%]'
+D022,R013,DV1,MS1,M1,Voc,0.46,V,,,,,,0.46,V,0.46,V,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='Voc [V]'
+D022,R014,DV1,MS1,M1,Jsc,,,,,,,,3.50,,,,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='2] Jsc [mA cm'
+D022,R015,DV1,MS1,M1,FF,33.4,%,,,,,,33.4,%,33.4,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='FF [%]'
+D022,R016,DV1,MS1,M1,PCE,0.52,%,,,,,,0.52,%,0.52,%,primary,,4,2. Results and Discussion,Table 1,,Table 1. Summary of device parameters of absorber thickness variation,extracted,,row='(50'; column='PCE [%]'

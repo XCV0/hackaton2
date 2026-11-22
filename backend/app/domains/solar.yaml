@@ -74,3 +74,12 @@ rules:
   champion_vs_mean: {check: champion_vs_mean}
   ranges: {check: range, PCE: [0, 35], FF: [0, 92], Voc: [0, 2.0], Jsc: [0, 50]}
 comparability_keys: [material_class, device_type, spectrum, light_intensity, area_bin, aggregation, scan_direction, certified, measurement_type]
+
+# links between entity tables (checked and remapped by the core; dangling links are cleared with a note)
+entity_links:
+  devices.absorber_material_id: materials
+  layers.device_id: devices
+  measurements.device_id: devices      # may hold several ids separated by ';'
+# fields the official checker requires to be numeric; non-numeric printed text goes verbatim to note
+numeric_fields: [devices.active_area, materials.bandgap_value, layers.layer_order, layers.layer_thickness]
+integer_fields: [layers.layer_order]

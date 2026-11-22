@@ -1,0 +1,60 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain2_rag/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/rag_dev_checked /Users/artemshelkunov/hackaton2/data/domain2_rag/dev --json-report /Users/artemshelkunov/hackaton2/runs/export/rag_dev_checked/check_report.json",
+ "exit_code": 2,
+ "stdout_tail": " the image\nREVIEW: results:3645: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3646: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3647: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3648: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3649: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3650: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3651: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3652: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3653: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3654: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3655: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3656: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3657: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3658: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3659: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3660: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: results:3661: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3662: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3663: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3664: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3665: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3666: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3667: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3668: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3669: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3670: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3671: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3672: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3673: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3674: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3675: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3676: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3677: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3678: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3679: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3680: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3681: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3682: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3683: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3684: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3685: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3686: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3687: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3688: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3689: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3690: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3691: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3692: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3693: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3694: table/figure locator only: visual evidence requires manual review\nREVIEW: results:3947: quote not found on declared page\nREVIEW: results:3950: quote not found on declared page\nREVIEW: results:4190: quote not found on declared page\nREVIEW: results:4321: quote not found on declared page\nREVIEW: results:4840: quote not found on declared page\nREVIEW: results:4841: quote not found on declared page\nREVIEW: issues:48: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:909: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:910: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\n{\"rows\": {\"publications\": 21, \"configurations\": 819, \"datasets\": 237, \"tasks\": 262, \"experiments\": 395, \"results\": 5255, \"issues\": 1467}, \"quotes\": {\"requested\": 5382, \"matched\": 4807, \"unresolved\": 575}, \"semantic_completeness_certified\": false, \"exit_code\": 2, \"source_text_mode\": \"native PDF text only\"}\nErrors: 0; review items: 2040\n",
+ "stderr_tail": "Multiple definitions in dictionary at byte 0x4bae for key /Group\nMultiple definitions in dictionary at byte 0x2f241 for key /Group\nMultiple definitions in dictionary at byte 0x5930 for key /Group\nMultiple definitions in dictionary at byte 0x7e37 for key /Group\nMultiple definitions in dictionary at byte 0x57428 for key /Group\nMultiple definitions in dictionary at byte 0x5b3aa for key /Group\nMultiple definitions in dictionary at byte 0x864b1 for key /Group\nMultiple definitions in dictionary at byte 0xa469b for key /Group\nMultiple definitions in dictionary at byte 0x11e4d0 for key /Group\nMultiple definitions in dictionary at byte 0x1359c4 for key /Group\nMultiple definitions in dictionary at byte 0x1f4a for key /Group\n",
+ "report": {
+  "rows": {
+   "publications": 21,
+   "configurations": 819,
+   "datasets": 237,
+   "tasks": 262,
+   "experiments": 395,
+   "results": 5255,
+   "issues": 1467
+  },
+  "quotes": {
+   "requested": 5382,
+   "matched": 4807,
+   "unresolved": 575
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native PDF text only"
+ },
+ "n_errors": 0,
+ "n_warnings": 2040,
+ "errors_head": [],
+ "warnings_head": [
+  "results:4: primary result without dataset_id",
+  "results:6: primary result without dataset_id",
+  "results:296: primary result without dataset_id",
+  "results:297: primary result without dataset_id",
+  "results:298: extracted result without numeric metric_value",
+  "results:298: primary result without dataset_id",
+  "results:311: extracted result without numeric metric_value",
+  "results:311: primary result without dataset_id",
+  "results:373: primary result without config_id",
+  "results:378: primary result without dataset_id",
+  "results:439: primary result without config_id",
+  "results:439: primary result without dataset_id",
+  "results:460: extracted result without numeric metric_value",
+  "results:461: extracted result without numeric metric_value",
+  "results:462: extracted result without numeric metric_value",
+  "results:463: extracted result without numeric metric_value",
+  "results:464: extracted result without numeric metric_value",
+  "results:468: extracted result without numeric metric_value",
+  "results:469: extracted result without numeric metric_value",
+  "results:470: extracted result without numeric metric_value",
+  "results:471: extracted result without numeric metric_value",
+  "results:474: extracted result without numeric metric_value",
+  "results:475: extracted result without numeric metric_value",
+  "results:476: extracted result without numeric metric_value",
+  "results:477: extracted result without numeric metric_value",
+  "results:478: extracted result without numeric metric_value",
+  "results:483: extracted result without numeric metric_value",
+  "results:497: extracted result without numeric metric_value",
+  "results:498: extracted result without numeric metric_value",
+  "results:541: extracted result without numeric metric_value"
+ ]
+}

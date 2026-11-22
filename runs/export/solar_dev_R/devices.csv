@@ -1,0 +1,57 @@
+publication_id,device_id,absorber_material_id,device_label,device_role,device_type,architecture,substrate_type,active_area,area_unit,area_definition,encapsulation,note
+D001,DV1,M1,0.001,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+D001,DV2,M1,0.005,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+D001,DV3,M1,0.05,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+D001,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D002,DV1,M1,NiO,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+D002,DV2,M1,NiO/GO,,cell,,,,,,,row label of Table 1 p.5 (rule-based)
+D002,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D003,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D004,DV1,M1,ED,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV2,M1,BCC-ED,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV3,M1,C-ED-1,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV4,M1,C-ED-2,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV5,M1,Microwave irradiation.,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV6,M1,12.12,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV7,M1,16.17,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV8,M1,3.36,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV9,M1,4.3,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV10,M1,10.1,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV11,M1,11.46,,cell,,,,,,,row label of Table 1 p.11 (rule-based)
+D004,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D005,DV1,M1,Spiro-OMeTAD Forward,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,DV2,M1,Reverse,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,DV3,M1,SF-MPA-MCz Forward,,cell,,,,,,,row label of Table 2 p.6 (rule-based)
+D005,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D007,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D008,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D009,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D010,DV1,M1,CZTSSe,,cell,,,,,,,row label of Table 3 p.9 (rule-based)
+D010,DV2,M1,"(Na0.1Cu0.9)2ZnSn(S,Se)4",,cell,,,,,,,row label of Table 3 p.9 (rule-based)
+D010,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D012,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D013,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D014,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D015,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D017,DV1,M1,R1,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV2,M1,R2,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV3,M1,G1,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV4,M1,G2,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV5,M1,I1,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV6,M1,I2,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV7,M1,I3,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV8,M1,I4,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV9,M1,O1,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV10,M1,O2,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV11,M1,O3,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D017,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D018,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D019,DV1,M1,Mo,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+D019,DV2,M1,MoSe2/Mo,,cell,,,,,,,row label of Table 1 p.6 (rule-based)
+D019,DV3,M1,MoSe2,,cell,,,,,,,row label of Table 2 p.7 (rule-based)
+D019,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D020,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D021,DV-text,M1,device described in text,,cell,,,,,,,rule-based placeholder: the sentence does not let the rules resolve which device; requires review
+D022,DV1,M1,(50,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D022,DV2,M1,(15,,cell,,,,,,,row label of Table 1 p.4 (rule-based)
+D022,DV3,M1,(30,,cell,,,,,,,row label of Table 1 p.4 (rule-based)

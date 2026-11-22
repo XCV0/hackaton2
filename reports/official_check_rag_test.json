@@ -1,0 +1,60 @@
+{
+ "cmd": "/Users/artemshelkunov/hackaton2/.venv/bin/python3.14 /Users/artemshelkunov/hackaton2/data/domain2_rag/tools/check_submission.py /Users/artemshelkunov/hackaton2/runs/export/rag_test_checked /Users/artemshelkunov/hackaton2/data/domain2_rag/test --json-report /Users/artemshelkunov/hackaton2/runs/export/rag_test_checked/check_report.json",
+ "exit_code": 2,
+ "stdout_tail": "OCR text on this page: use --ocr or review the image\nREVIEW: issues:154: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:155: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:156: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:157: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:158: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:159: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:160: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:161: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:177: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:178: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:179: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:180: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:181: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:182: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:183: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:184: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:185: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:186: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:187: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:188: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:189: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:190: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:191: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:192: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:193: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:194: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:253: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: issues:254: quote not found on declared page; no text layer/OCR text on this page: use --ocr or review the image\nREVIEW: P007: in-scope publication has no results; completeness has not been established\nREVIEW: P010: in-scope publication has no results; completeness has not been established\nREVIEW: P011: in-scope publication has no results; completeness has not been established\nREVIEW: P017: in-scope publication has no results; completeness has not been established\nREVIEW: P018: in-scope publication has no results; completeness has not been established\nREVIEW: P020: in-scope publication has no results; completeness has not been established\nREVIEW: P024: in-scope publication has no results; completeness has not been established\nREVIEW: P029: in-scope publication has no results; completeness has not been established\nREVIEW: P033: in-scope publication has no results; completeness has not been established\nREVIEW: P036: in-scope publication has no results; completeness has not been established\nREVIEW: P037: in-scope publication has no results; completeness has not been established\nREVIEW: P038: in-scope publication has no results; completeness has not been established\nREVIEW: P039: in-scope publication has no results; completeness has not been established\nREVIEW: P044: in-scope publication has no results; completeness has not been established\nREVIEW: P050: in-scope publication has no results; completeness has not been established\nREVIEW: P051: in-scope publication has no results; completeness has not been established\nREVIEW: P056: in-scope publication has no results; completeness has not been established\nREVIEW: P065: in-scope publication has no results; completeness has not been established\nREVIEW: P070: in-scope publication has no results; completeness has not been established\nREVIEW: P071: in-scope publication has no results; completeness has not been established\nREVIEW: P072: in-scope publication has no results; completeness has not been established\nREVIEW: P078: in-scope publication has no results; completeness has not been established\nREVIEW: P079: in-scope publication has no results; completeness has not been established\nREVIEW: P081: in-scope publication has no results; completeness has not been established\nREVIEW: P082: in-scope publication has no results; completeness has not been established\n{\"rows\": {\"publications\": 90, \"configurations\": 790, \"datasets\": 121, \"tasks\": 90, \"experiments\": 177, \"results\": 5994, \"issues\": 660}, \"quotes\": {\"requested\": 6242, \"matched\": 5834, \"unresolved\": 408}, \"semantic_completeness_certified\": false, \"exit_code\": 2, \"source_text_mode\": \"native PDF text only\"}\nErrors: 0; review items: 661\n",
+ "stderr_tail": "Multiple definitions in dictionary at byte 0x804f for key /Group\nMultiple definitions in dictionary at byte 0x35067 for key /Group\nMultiple definitions in dictionary at byte 0x28a for key /Group\nMultiple definitions in dictionary at byte 0x28e66 for key /Group\nMultiple definitions in dictionary at byte 0xf2450 for key /Group\nMultiple definitions in dictionary at byte 0x29e for key /Group\nMultiple definitions in dictionary at byte 0x6eb97 for key /Group\nMultiple definitions in dictionary at byte 0x277 for key /Group\nMultiple definitions in dictionary at byte 0x16e89 for key /Group\nMultiple definitions in dictionary at byte 0x5063e for key /Group\nMultiple definitions in dictionary at byte 0x1180a6 for key /Group\nMultiple definitions in dictionary at byte 0x2a2 for key /Group\nMultiple definitions in dictionary at byte 0x277 for key /Group\nMultiple definitions in dictionary at byte 0x47947 for key /Group\nMultiple definitions in dictionary at byte 0x95c17 for key /Group\nMultiple definitions in dictionary at byte 0x278 for key /Group\nMultiple definitions in dictionary at byte 0x732f0 for key /Group\nMultiple definitions in dictionary at byte 0x4c1584 for key /Group\nMultiple definitions in dictionary at byte 0x51bc31 for key /Group\nMultiple definitions in dictionary at byte 0x274 for key /Group\n",
+ "report": {
+  "rows": {
+   "publications": 90,
+   "configurations": 790,
+   "datasets": 121,
+   "tasks": 90,
+   "experiments": 177,
+   "results": 5994,
+   "issues": 660
+  },
+  "quotes": {
+   "requested": 6242,
+   "matched": 5834,
+   "unresolved": 408
+  },
+  "semantic_completeness_certified": false,
+  "exit_code": 2,
+  "source_text_mode": "native PDF text only"
+ },
+ "n_errors": 0,
+ "n_warnings": 661,
+ "errors_head": [],
+ "warnings_head": [
+  "results:103: @k metric without metric_k",
+  "results:104: @k metric without metric_k",
+  "results:109: @k metric without metric_k",
+  "results:110: @k metric without metric_k",
+  "results:115: @k metric without metric_k",
+  "results:116: @k metric without metric_k",
+  "results:121: @k metric without metric_k",
+  "results:122: @k metric without metric_k",
+  "results:127: @k metric without metric_k",
+  "results:128: @k metric without metric_k",
+  "results:133: @k metric without metric_k",
+  "results:134: @k metric without metric_k",
+  "results:139: @k metric without metric_k",
+  "results:140: @k metric without metric_k",
+  "results:145: @k metric without metric_k",
+  "results:146: @k metric without metric_k",
+  "results:151: @k metric without metric_k",
+  "results:152: @k metric without metric_k",
+  "results:157: @k metric without metric_k",
+  "results:158: @k metric without metric_k",
+  "results:163: @k metric without metric_k",
+  "results:164: @k metric without metric_k",
+  "results:169: @k metric without metric_k",
+  "results:170: @k metric without metric_k",
+  "results:2538: @k metric without metric_k",
+  "results:2539: @k metric without metric_k",
+  "results:2540: @k metric without metric_k",
+  "results:2541: @k metric without metric_k",
+  "results:2542: @k metric without metric_k",
+  "results:2543: @k metric without metric_k"
+ ]
+}

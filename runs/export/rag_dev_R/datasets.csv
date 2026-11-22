@@ -1,0 +1,31 @@
+publication_id,dataset_id,dataset_name,dataset_version,language,data_split,scientific_domain,note
+D001,DS1,HotpotQA,,,,,from table header
+D001,DS2,2Wiki,,,,,from table header
+D001,DS3,MuSiQue,,,,,from table header
+D001,DS4,,,,,,dataset not identifiable from table header
+D004,DS1,CRAG,,,,,from text
+D004,DS2,HotpotQA,,,,,from text
+D005,DS1,,,,,,dataset not identifiable from table header
+D006,DS1,BEIR,,,,,from text
+D007,DS1,,,,,,dataset not identifiable from table header
+D007,DS2,SQuAD,,,,,from table header
+D007,DS3,Natural Questions,,,,,from table header
+D007,DS4,TriviaQA,,,,,from table header
+D009,DS1,PopQA,,,,,from table header
+D009,DS2,HotpotQA,,,,,from table header
+D009,DS3,,,,,,dataset not identifiable from table header
+D009,DS4,Bamboogle,,,,,from table header
+D009,DS5,MuSiQue,,,,,from table header
+D009,DS6,2WikiMultihopQA,,,,,from table header
+D010,DS1,,,,,,dataset not identifiable from table header
+D010,DS2,MMLU,,,,,from text
+D013,DS1,,,,,,dataset not identifiable from table header
+D013,DS2,HotpotQA,,,,,from text
+D014,DS1,,,,,,dataset not identifiable from table header
+D015,DS1,,,,,,dataset not identifiable from table header
+D017,DS1,,,,,,dataset not identifiable from table header
+D019,DS1,Natural Questions,,,,,from table header
+D019,DS2,,,,,,dataset not identifiable from table header
+D019,DS3,Wikipedia,,,,,from text
+D019,DS4,NQ,,,,,from text
+D020,DS1,,,,,,dataset not identifiable from table header

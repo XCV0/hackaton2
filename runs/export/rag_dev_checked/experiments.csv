@@ -1,0 +1,396 @@
+publication_id,experiment_id,evaluation_protocol,baseline_name,hardware,latency_ms,tokens_per_query,sample_size,note
+D001,E1,Experiments on three multi-hop QA benchmarks,text-centric methods,,,,,HotpotQA EM comparison.
+D001,E2,Multi-hop QA benchmark evaluation,KnowTrace,,,,,
+D001,E3,Graph representation evaluations,traditional global graphs,,,,,
+D001,E4,Knowledge representation modality evaluation,,,,,,
+D001,E5,Main results of multi-hop QA datasets,,4 NVIDIA A6000 GPUs,,,,The retrieval corpus aggregates all supporting and distractor passages. EM measures absolute correctness and F1 measures token-level overlap; standard text normalization is applied to predictions and ground-truth answers.
+D001,E6,"Ablation study of the STM (SN, STG) and EDP modules across three datasets.",,,,,,
+D001,E7,Inference Performance Comparison (GPT-4o mini),KnowTrace,,,,,
+D001,E8,token consumption across 100 randomly sampled queries per dataset using the tiktoken library (GPT-4o-mini standard),LightRAG; KnowTrace,,,,100,"Construction (Const.), inference (Inf.), and total token costs."
+D001,E9,hyperparameter analysis on the HotpotQA dataset using the GPT-4o-mini model,,,,,,"Variables are initial anchors, retrieved documents, reasoning iterations, and energy pruning threshold (ϵ)."
+D001,E10,Hyperparameter sensitivity analysis on the HotpotQA dataset using the GPT-4o-mini model.,,,,,,"Panels vary anchors (1, 2, 3, 4, 5, 6, 7), retrieved documents (1, 2, 3, 4, 5, 6, 7, 8, 9), iteration count (1, 2, 3, 4, 5, 6, 7), and threshold (0.001, 0.003, 0.006, 0.01, 0.02, 0.05, 0.1)."
+D001,E11,Performance comparison of EM scores using different underlying graph representations.,GraphRAG*,,,,,"All other components, including retrieval indices and prompting templates, are kept strictly identical."
+D001,E12,Performance comparison of various knowledge representation strategies.,KG-Triplets,,,,,"The text lists the strategies as KG-Triplets, KG-Paths, KG-Texts, and STG-Paths."
+D001,E13,Evaluation across three standard benchmarks,,,,,,"Experiments use HotpotQA, 2WikiMultihopQA, and MuSiQue. HotpotQA is evaluated under a realistic open-domain setting in which golden contexts are not provided a priori."
+D001,E14,Controlled Graph-Free ablation in terms of Exact Match (EM),ThreadRAG,,,,,Graph-Free preserves retrieval and iterative reasoning while removing graph construction and EDP.
+D001,E15,Comparison of evidence selection strategies on MuSiQue using LLaMA3-8B-Instruct,EDP,,,,,All methods use the same candidate graph and evidence budget; only the evidence selection strategy is changed.
+D001,E16,Comparison of evidence selection strategies,EDP,,,,,All strategies use the same candidate graph and evidence budget.
+D001,E17,Intrinsic evaluation of the semantic boundary predictor,,,,,50,"Evaluation uses 50 held-out Wikipedia documents disjoint from the 100 training documents, with 719 reference boundaries in total."
+D001,E18,Randomly sampled incorrect prediction cases from the evaluation pool and manually scrutinized their underlying reasoning traces.,,,,,200,"Failures were classified as Retrieval Failure, LLM Analysis Error, or Pathfinding Error."
+D001,RE1,Table 1: Main results of multi-hop QA datasets. Best results are in bold and second best are underlined.,,,,,,"Table 1, page 6 (rule-based: protocol = caption text)"
+D001,RE2,Table 7: Comparison of evidence selection strategies on,,,,,,"Table 7, page 14 (rule-based: protocol = caption text)"
+D001,RET,values stated in running text,,,,,,rule-based: textual statements
+D002,E1,evaluated against other state-of-the-art LLMs on 600 cybersecurity specific questions,GPT-4 and Mixtral 7x8,,,,600,
+D002,E2,data breaches over three years,,,,,,Background statistic attributed to the page footnote.
+D002,E3,Two experts validated the ground truth of the questions; agreement was measured with Cohen’s Kappa,,,,,600,Questions were classified based on the Diamond Model.
+D002,E4,"Comparative analysis of MoRSE with commercial, well-known LLMs on General Cybersecurity questions",GPT-4; GEMINI; MIXTRAL; HACKERGPT,,,,150,
+D002,E5,"Comparative analysis of MoRSE with commercial, well-known LLMs on Multi-Hop Cybersecurity questions",GPT-4; GEMINI; MIXTRAL; HACKERGPT,,,,150,
+D002,E6,"Comparative analysis of MoRSE with commercial, well-known LLMs on CVE questions",GPT-4; GEMINI; MIXTRAL; HACKERGPT,,,,300,
+D002,E7,Accuracy comparison of MoRSE with GPT-4 on CVE questions,GPT-4,,,,300,
+D002,E8,Comparison of MoRSE real-time cybersecurity keyword detection capability with GPT-4,GPT-4,,,,,
+D002,E9,RAGAS framework evaluation against a ground truth using a set of metrics,,,,,,
+D002,E10,Elo Ratings computed by reference-guided pairwise comparison using GPT-4 0125-Preview as a judge,,,,,,Compares MoRSE with competing models.
+D002,E11,Similarity-result testing for selection of the Filtration Stage semantic threshold,,,,,156,The samples are queries; the threshold of 0.6 was set to the third quartile (Q3).
+D002,E12,RAGAS framework assessment of General Cybersecurity Questions,GPT-4 0125-Preview; MIXTRAL 7X8; HACKERGPT; GEMINI 1.0 Pro,,,,156,"TABLE II caption states 156 General questions, while the body states 150. GPT-4 0125-Preview was used for all RAGAS calculations. Answer Relevance uses N equal to 3; Answer Correctness weights are 0.75 and 0.25. Raw OCR tokens are retained without normalization."
+D002,E13,RAGAS framework assessment of Multi-Hop Cybersecurity Questions,GPT-4 0125-Preview; MIXTRAL 7X8; HACKERGPT; GEMINI 1.0 Pro,,,,150,GPT-4 0125-Preview was used for all RAGAS calculations. Answer Relevance uses N equal to 3; Answer Correctness weights are 0.75 and 0.25. Raw OCR tokens are retained without normalization.
+D002,E14,MoRSE answer generation for all three evaluation test suites,,NVIDIA A100 80GB GPU,,,,Applies only to C1 (MoRSE).
+D002,E15,Cohen’s Kappa agreement evaluation between two experts,,,,,,"The experts validated the ground truth and categorized answers as [Correct], [Incorrect], or [Partially _Correct]."
+D002,E16,Common Vulnerability Exposure (CVE) question evaluation category,,,,,300,
+D002,E17,Zheng et al. [24] response rating with GPT-4 0125-Preview,,,,,,"Responses are rated against ground-truth references on a scale of 1 to 5, with 5 as the highest default score."
+D002,E18,Performance Analysis on General and Multi-Hop Questions,GPT-4 0125-Preview; MIXTRAL,,,,,Results extracted on this page are for Multi-Hop Cybersecurity Questions.
+D002,E19,Performance Analysis on CVE Questions,GPT-4 0125-Preview,,,,300,
+D002,E20,Retrievers Impact analysis,,,,,600,"The analysis used 150 general questions, 150 multi-hop questions and 300 CVE questions."
+D002,E21,GPT-4 0125-Preview pairwise comparison of all possible battles,,,,,,"Given a query and corresponding reference response, GPT-4 0125-Preview chooses the best response between Model A and Model B. Elo K’ is 4; bootstrap confidence intervals use median, 2.5%, and 97.5% percentiles."
+D002,E22,GPT-4 agreement with human judgment,,,,,,Result attributed to Zheng et al. [24].
+D002,E23,Performances on Multi-Hop Cybersecurity Questions,,,,,150,"Elo, MLE Elo, and bootstrap scores for Multi-Hop queries."
+D002,E24,Complete Questions Insights,,,,,,sample_size as printed: 156 General Questions and 150 Multi-Hop Questions
+D002,E25,LLM as Judge with Five-Level Judgment Criteria Based on Top-Scoring References,,,,,,GPT-4 0125-Preview assigns integer scores between 1 and 5; the reference answer is given a score of 5.
+D002,E26,Analysis of the performance of Structured Retrievers,,GPU,,,100,Dense retriever size evaluation.
+D002,E27,Analysis of the Performances of Unstructured RAG Components,,GPU,,,100,Data size evaluation.
+D002,E28,Fraction of Wins (No Ties) of Each Combination of Models for General Cybersecurity Questions and Multi-Hop Cybersecurity Questions,,,,,,
+D002,E29,"Elo Ratings, MLE Ratings, and Bootstrap Ratings for each competing Models",,,,,,
+D002,E30,Scores Across All Cybersecurity Questions types,,,,,,
+D002,E31,Structured Retrievers Failure Rate Analysis,,,,,,The retrievers’ failure rates were individually multiplied; reliability used a 95% confidence interval and a z-score of 1.96.
+D002,E32,Srivastava et al. [66] entity-recognition evaluation,,,,,,
+D002,E33,Li et al. [68] NEDetector evaluation,,,,,,
+D002,E34,Performance summary of Structured and Unstructured RAG components tested on CPU and GPU,,CPU and GPU (NVIDIA A100 80GB),,,100,Component: Malware Retriever.
+D002,E35,identifying malicious scripts,,,,,,
+D002,E36,"convert over 29k cybersecurity reports into 113,543 actionable Cyber Threat Intelligence (CTI) points",,,,,,
+D002,E37,feature classification,,,,,,Accuracy before and after optimizing the hyperparameters.
+D002,E38,all validations,,,,,,Robustness evaluation reported by Ameri et al. [91].
+D002,E39,two additional test suites that adhere to the LLM as a Judge paradigm,other renowned commercial Large Language Models (LLMs),,,,,questions related to vulnerabilities
+D003,E1,QuaLITY reading comprehension comparison against RAG,RAG,,,,,Only relative outcomes are printed on this page.
+D003,E2,"Across models and benchmarks (QuaLITY, LongHealth, FinanceBench)",RAG,,,,,Six model-benchmark settings are mentioned; this is not an evaluation sample size.
+D003,E3,QuaLITY multiple-choice QA with a zero-shot instruction requesting a short explanation followed by the final answer; each setup is evaluated eight times and average results are reported.,Llama 3.1 8B Instruct RAG,,,,,"Llama 3.1 8B Instruct is trained on synthetic data derived from QuaLITY while varying the synthetic-data generation method and scaling to 700M tokens. The learning-rate search uses 5e-6, 1e-6, and 5e-5, with best accuracy reported. FineWeb replay data are mixed at 10%. Figure 1 states that 8B and 70B generators are evaluated."
+D003,E4,"Generalization evaluation using Qwen3 models ranging from 1.7B to 14B parameters across QuaLITY, LongHealth, and FinanceBench.",vanilla RAG,,,,,The page summarizes six model-benchmark setups.
+D003,E5,QuaLITY accuracy as a function of the number of synthetic training tokens,,,,,8,"Shaded areas indicate the 95% confidence interval, estimated from n = 8 inference runs. Synthetic QA was scaled up to 350M tokens."
+D003,E6,Scaling the generator to 70B for synthetic QA at 88M tokens,Synth QA only (8B gen),,,,8,
+D003,E7,Scaling the generator to 70B for document-based methods,8B-generator document-based methods,,,,8,The reported gain is averaged across document-based methods.
+D003,E8,QuaLITY Accuracy (%),RAG,,,,,Figure 3 compares synthetic-training configurations with RAG and Original.
+D003,E9,QuaLITY relative accuracy gain over RAG,RAG,,,,,The evaluated configuration is identified only as 'our trained 8B model' in the reporting sentence.
+D003,E10,Mixing different types of synth documents,,,,,,"Figure 4 compares AR, EG, WRAP, and AR+EG+WRAP synthetic-document training configurations."
+D003,E11,Synthetic Mixed Training using 70B-generated QA and AR documents,RAG,,,,,QAs and AR documents are mixed at a 1:1 ratio; scaling is described up to 700M training tokens.
+D003,E12,Mixing LongHealth synthetic QAs with QuaLITY synthetic AR documents,QuaLITY synthetic AR documents only,,,,,Also compared with mixing both synthetic QAs and synthetic AR documents from QuaLITY.
+D003,E13,Synthetic Mixed Training with mixture of domains,,,,,,"Compares different-domain synthetic QA mixing, target-domain QA mixing, and AR-only synthetic documents."
+D003,E14,Scaling synthetic document generation with Focal Rewriting,,,,,,"Data are generated using a 70B model. The text identifies extensive scaling as beyond 175M tokens, 100× more tokens than the original data."
+D003,E15,Testing on different model and benchmarks,,,,,,Uses Qwen3 8B and the additional LongHealth and FinanceBench benchmarks.
+D003,E16,QuaLITY MCQA evaluation,,,,,4609,Sample size is the printed #eval count of QA sets.
+D003,E17,LongHealth MCQA evaluation,,,,,400,Sample size is the printed #eval count of QA sets.
+D003,E18,FinanceBench free-form evaluation; Qwen3-14B judge using gold answer as a reference,,,,,150,Sample size is the printed #eval count of QA sets.
+D003,E19,"QuaLITY, LongHealth, and FinanceBench evaluation",RAG,,,,,
+D003,E20,Fitted log-linear curve for synthetic tokens needed to achieve RAG-level performance,RAG-level performance,,,,,Four Qwen3 sizes were studied with tokens scaled up to 88M.
+D003,E21,Comparison of RAG with trained models against vanilla RAG baselines,RAG,,,,,
+D003,E22,Training different-sized models from the Qwen3 family on the synthetic QuaLITY dataset.,RAG,,,,,"Mixed Synthetic Training with synthetic QAs and Focal Rewriting AR documents, using 70B generator."
+D003,E23,Our training complements retrieval augmentation.,Vanilla RAG,,,,,"“Ours” denotes the trained model without RAG, “Ours + RAG” denotes the same trained model with RAG, and “Vanilla RAG” denotes the RAG baseline."
+D003,E24,"temperature=0.1, top-p=0.95, maximum length=512; eight responses per question (n=8), reporting average accuracy",Yang et al. (2025b),,,,,The QuaLITY MCQA prompt is in Table 4.
+D003,E25,QuaLITY performance reported by Yang et al. (2025b),Yang et al. (2025b),,,,,
+D003,E26,"FLOP approximation: 2ND for the forward pass, 4ND for the backward pass, and C ≈ 2MD + 6ND total compute",,H100 (1979 TFLOPS),,,,The H100-hour estimate assumes no other overhead.
+D003,E27,Synthetic data scaling results,,,,,,"Figure 8 evaluates Qwen3 8B and Llama 3.1 8B Instruct on QuaLITY, LongHealth, and FinanceBench. Scaling axes are #synth tokens / #original tokens and number of synth training data tokens (million). Evaluation uses temperature=0.1, top-p=0.95, maximum length 512, eight responses per question (n=8), and average accuracy."
+D003,E28,intra- and inter-set gradient-embedding similarity,,,,,,"Uses synthetic QAs and synthetic documents (AR) from QuaLITY and LongHealth, next-token prediction loss, Qwen3 0.6B, a Johnson-Lindenstrauss transform, and sequence length 2048. All synthetic datasets are generated using a 70B generator.; sample_size as printed: 16 batches per data type"
+D003,E29,We compute gradient embeddings for each data point and use cosine similarity between embeddings to measure the similarity of gradients across datasets.,,,,,,Average gradient similarity between datasets.
+D003,E30,Llama 8B model trained on QuaLITY,Caccia et al. (2025),,,,,
+D003,E31,How data diversity changes with different synthetic document generation methods.,,,,,,
+D003,E32,Synthetic mixed training with different synthetic QA-document mixing ratios,Original,,,,,The remaining 10% is used for replay with FineWeb.
+D004,E1,Wasserstein distance to corpus-level sentiment distributions,,,,,,Evaluation across e-commerce seller forums and public hotel reviews.
+D004,E2,human evaluators preferred its responses,,,,,,Evaluation across e-commerce seller forums and public hotel reviews.
+D004,E3,36 major RAG benchmarks surveyed,,,,,36,Table 1 presents 9 representative datasets from the survey.
+D004,E4,PIR,current retrievers,,,,,
+D004,E5,BERDS,current retrievers,,,,,
+D004,E6,Evaluation across two domains spanning 19 diverse entities and 105 manually curated questions,Raw KB,,,,105,Opinion-Enriched KB compared against a Raw KB using identical source content.
+D004,E7,"Diversity metrics at k=20 (hybrid retrieval, forums dataset); Wilcoxon signed-rank test",Raw KB,,,,48,Questions cover four selected forums entities.
+D004,E8,"Empirical W1 between corpus-level and retrieved sentiment distributions at k=20, Forums",Raw KB,,,,48,The 57 questions are across the three properties and 15 entities; per-property sample sizes are not stated.
+D004,E9,Cross-domain empirical W1 comparison at k=20,Raw KB,,,,,
+D004,E10,"Forums empirical W1 significance at k=10, 40, 60",Raw KB,,,,48,
+D004,E11,human evaluation via blind pairwise comparison on the forums dataset,Raw KB,,,,48,5 annotators and 48 question-response pairs.
+D004,E12,OpinioBank results (public hotel reviews). Entity match improvement and sentiment-intensity σ change vs. Raw KB.,Raw KB,,,,,
+D004,E13,Demographic coverage when comparing only documents that mention the queried entity,Raw KB,,,,,
+D004,E14,Cross-domain generalization on public OpinioBank data,Raw KB,,,,,
+D004,E15,Cross-model consistency of Full O-RAG improvement over Raw KB,Raw KB,,,,,
+D004,E16,Entity splitting vs. full O-RAG ablation with Mistral Large,Entity-Split-Only,,,,,
+D004,E17,Entity splitting vs. full O-RAG ablation with Sonnet 4.5,Entity-Split-Only,,,,,
+D004,E18,Question type variation under opinion enrichment,,,,,,
+D004,E19,Hybrid retrieval vs. semantic-only search,,,,,,
+D004,E20,Sent-Int σ across varying retrieval depths (10-60),,,,,,
+D004,E21,Retrieved sentiment distribution distance from corpus truth at k=20,Enriched KB,,,,,
+D004,E22,Human evaluator preference for enriched responses,Raw KB,,,,,
+D004,E23,retrieval diversity,,,,,,
+D004,E24,blind pairwise preference,,,,,,Conducted on a single domain.; sample_size as printed: 5 annotators over 48 question-response pairs
+D004,E25,evaluation on two English-language domains,,,,,,Entity selection was restricted to those with sentiment entropy H(e) ≥0.6.; sample_size as printed: 105 curated questions and 19 high-entropy entities
+D004,E26,inter-annotator agreement,,,,,,Annotators produced the opinion labels.; sample_size as printed: three annotators
+D004,E27,cross-model consistency,,,,,,sample_size as printed: three extraction models
+D004,E28,cross-domain evaluation,,,,,,Uses the OpinioBank hotel-review data.
+D004,E29,single run,,,,,,"Outputs are effectively deterministic given fixed inputs because temperature is 0. Entity and question counts reported in Section 5 refer to the 3-property OpinioBank sample, not the full dataset.; sample_size as printed: 3 properties"
+D004,E30,"Total inference cost across all extraction, generation, and ablation runs",,Amazon Bedrock (API-hosted); no local GPU compute,,,,
+D004,E31,"Retrieval diversity improvements (∆vs. Raw KB) across opinion extraction LLMs (k=20, hybrid)",Raw KB,Amazon Bedrock (API-hosted); no local GPU compute,,,,All configurations use hybrid search at k=20.; sample_size as printed: 3 properties
+D004,E32,Manual annotation of forum posts by independent annotators,,,,,,Three independent annotators.; sample_size as printed: 129 forum posts
+D004,E33,Entity-Split-Only ablation at k=20 (Sonnet 4.5),Entity-Split,Amazon Bedrock (API-hosted); no local GPU compute,,,,Bold denotes the highest value per metric.; sample_size as printed: 3 properties
+D004,E34,Diversity metrics at different retrieval depths (k) using hybrid retrieval,,,,,,"Bold = p<0.05, * = p<0.001."
+D004,E35,Sentiment-Intensity σ by question type (k=20),Raw,,,,,Largest gains for Business Impact and Emotional queries; Experience queries benefit least.
+D004,E36,Semantic-only vs. hybrid retrieval at k=20,Raw,,,,,"Bold = p<0.05, * = p<0.001."
+D004,E37,Entity-Matched Document Analysis,Raw,,,,960,"960 is the denominator printed in ""Matched Docs (of 960)""."
+D004,E38,Extended Benchmark Analysis,,,,,36,Table 13 is introduced as covering 36 major evaluation datasets.
+D005,E1,Evaluated across 12 open-book RAG QA benchmarks spanning diverse application domains and scenarios,state-of-the-art solutions,,,,,
+D005,E2,"On CRAG, increase retrieval pages from 0 to 50",Baseline,,,,,Factuality is computed by accuracy minus hallucination rate; the text also compares 5 versus 50 context webpages.
+D005,E3,comprehensive empirical study on 12 benchmarks,baseline,,,,,
+D005,E4,evaluation prompt to assess the effectiveness of the generated distractor passages on a scale of 1 to 5,,,,,,"Used to assess whether distractors are relevant, confusing, and well-formatted."
+D005,E5,Breakdown of the final training data mix.,,,,,,
+D005,E6,iterative synthetic CoT generation process,,,,,,"Thought Evaluation and Answer Evaluation use scores from 1 to 4; Thought Evaluation scores below 4 require further iterations. The process has a budget of 10 attempts, using stochastic thought regeneration for the first 6 and critique-based revision for the rest."
+D005,E7,web portion of the CRAG dataset,,,,,643,False-premise questions were filtered out; BGE embedding ranked references by semantic relevance to the question.
+D005,E8,pre-processed data from RAGBench,,,,,100,Each of the remaining 11 benchmarks was down-sampled to 100 samples.
+D005,E9,factuality score,,,,,,"Responses are classified as accurate, hallucinated, or missing. Factuality score is the accuracy rate minus the hallucination rate; hallucinated answers are penalized twice as much as missing answers."
+D005,E10,LLM-as-judge,,,,,,"Used for CRAG, HotpotQA, MS Marco, FinQA, TAT-QA, HAGRID, and ExpertQA to compare ground-truth and candidate answers."
+D005,E11,fact-checking tool similar to VeriScore,,,,,,"Used for the other benchmarks, particularly long-form answers or scenarios with multiple potential answers."
+D005,E12,Comparison of RAG QA factuality scores for different approaches,Baseline,,,,,"The same seed data and dataset size were used, while the train-data generation logic of comparison methods was re-implemented."
+D005,E13,Inference cost of producing the final synthetic train data,,,,,,The iterative distractor and CoT data process used an internal inference API.
+D005,E14,Cost of SFT training,,cluster of 64 NVIDIA H100 GPUs,,,,Post-training of the final model.
+D005,E15,Sensitivity to references,Baseline,,,,,CRAG experiment limiting the number of references; no numeric Figure 1 values are printed on this page.
+D005,E16,Ablation study,,,,,,Examines distractor resilience and dynamic strategization; Table 3 is referenced.
+D005,E17,Ablation study using the CRAG dataset,Baseline,,,,,
+D005,E18,Sensitivity to CoT Instructions,,,,,,"The base instructions are the same, with differences in the CoT step instructions."
+D005,E19,Breakdown of factuality benchmark results,Baseline,,,,,
+D005,E20,Evaluation on Closed-Book QA,,,,,,"The benchmarks contain short answers and do not have access to retrieved documents. Metrics are accuracy, missing, hallucination, and factuality score."
+D005,E21,Closed-book factuality benchmark,Baseline,,,,,
+D006,E1,NDCG@5 on BEIR and TREC with BM25 and Contriever retrievers,,,,,,abstract-level claim; no per-dataset numbers printed on this page
+D006,E2,,,,,,,Contribution summary: consistent performance improvements across diverse retrievers and rerankers on BEIR and TREC benchmarks.
+D006,E3,"NDCG@5 with BM25 initial retriever and various rerankers, with/without LCR",,,,,,"Table 2; best performance after tuning Tquery, Tupper, Tlower"
+D006,E4,"NDCG@5 with Contriever initial retriever and various rerankers, with/without LCR",,,,,,Table 3
+D006,E5,"NDCG@5, query threshold sweep",w/o LCR (QT=0),,,,,Figure 3(a) Retriever-Only
+D006,E6,NDCG@5 improvement (%),,,,,,"Figure 5, LLM comparison, BM25 + RankGPT"
+D006,E7,NDCG@5 improvement over retriever-only baseline,Retriever-Only,,,,,"Figure 4 heatmap, BM25 + RankGPT, no query threshold"
+D006,E8,"NDCG@5 improvement (%) over Retriever-Only, BM25 initial retriever",,,,,,Figure 6(a)
+D006,E9,"NDCG@5 improvement (%) over Retriever-Only, Contriever initial retriever",,,,,,Figure 6(b)
+D006,E10,Confidence-relevance calibration (MSCP confidence bins vs. proportion of relevant samples),LCR,,,,,Figure 7; BM25 retriever and Qwen7B model
+D006,RET,values stated in running text,,,,,,rule-based: textual statements
+D007,E1,,,,,,,Averaged results on a collection of benchmark datasets for open-domain question answering including the single-hop and multi-hop queries
+D007,E2,"Table 2, FLAN-T5-XL (3B) as LLM",,,,,,Step and Time columns are efficiency measures; units not printed
+D007,E3,exact elapsed time per query and percentage of predicted labels over all samples,,,,,,Table 3; time printed in Sec. (not converted to latency_ms)
+D007,E4,"QA F1, step count and classifier accuracy under varying classifier training data strategies",,,,,,Table 4; dataset not named on this page
+D007,E5,Case study (qualitative comparison),Adaptive Retrieval,,,,,Table 5; no numeric results reported
+D007,E6,Classifier accuracy and F1 with varying classifier sizes,,,,,,"Table 6; columns: Sizes, F1, Step, All, No, One, Multi"
+D007,RE1,Table 1: Averaged results on a collection of benchmark datasets for open-domain question answering including the single-hop,,,,,,"Table 1, page 6 (rule-based: protocol = caption text)"
+D007,RE2,Table 2: Results on each of a collection of datasets with FLAN-T5-XL (3B) as the LLM. We emphasize our results in bold.,,,,,,"Table 2, page 7 (rule-based: protocol = caption text)"
+D007,RE3,Table 3: The exact elapsed time per query and the percentage Table 4: Results on QA and complexity classification with,,,,,,"Table 3, page 8 (rule-based: protocol = caption text)"
+D007,RE4,"Table 5: Case study with GPT-3.5 (Turbo), where we represent the factual error in red and the accurate information in blue.",,,,,,"Table 5, page 9 (rule-based: protocol = caption text)"
+D007,RE5,Table 7: Results on each of a collection of datasets with FLAN-T5-XXL (11B) as the LLM. We emphasize our results in bold.,,,,,,"Table 7, page 15 (rule-based: protocol = caption text)"
+D008,E1,ConR on CoFaithfulQA subsets under the same RAG setting,,,,,,Table 1
+D008,E2,pairwise comparison judged by GPT-4o,ReDeEP vs Base; CoDA vs ReDeEP,,,,,"Figure 5, RAGTruth and Dolly (AC)"
+D008,E3,MemR comparison across six CoFaithfulQA subsets,,,,,,Figure 6
+D008,E4,"end-to-end single-sample latency, identical retrieval results, model configurations and hardware",Baseline (no CoDA),,,,,"Table 2, RAGTruth and Dolly (AC)"
+D008,RE1,Table 4: Inference latency under different prompt,,,,,,"Table 4, page 14 (rule-based: protocol = caption text)"
+D009,E1,FlashRAG evaluation framework; EM and F1; two-sided paired t-test for significance,"Direct, Standard RAG, FLARE, Self-RAG, IRCoT, Search-o1, AutoRAG, Search-R1, ReasonRAG, StepSearch, PRO-STEP",,,,,"Retrieval over 2018 Wikipedia dump (5.9M documents), k=3"
+D009,E2,Component ablation study,,,,,,
+D009,E3,Impact of different optimization strategies,,,,,,
+D009,E4,"trajectory reranking, 128 trajectories per question, 500 instances per dataset",Majority Voting; WMV; BoN; VersaPRM; Qwen-Math-PRM,,,,500,"Figure 3; values only in plots, not extracted"
+D009,E5,average over datasets,PRO-STEP without PRM,,,,,Table 2 ablation
+D009,E6,token-level F1,,,,,,Figure 4 top-k retrieval
+D009,E7,cumulative F1 and data coverage,,,,,,Figure 5 retrieval steps
+D009,E8,F1 with WMV/BoN at K=128,,,,,,PRM comparison
+D009,E9,EM / F1,,,,,,Table 4 backbone generalization
+D009,E10,EM and F1 on five QA benchmarks,,,,,,Table 4 backbone generalization
+D009,E11,Final EM on recovered trajectories,,,,,,Table 5; n given as Search-R1 / PRO-STEP
+D009,E12,,,,,,,Ablation of the VTS branching configuration
+D009,E13,,,,,,,Performance comparison across different Process Reward Model (PRM) weight (α) values
+D009,E14,,,,,,,Table 17: Results at the 3B scale
+D009,E15,,,,,,,Table 18: Intermediate-Flawed-But-Correct (IFBC) rate
+D009,E16,,,,,,,Table 19: Token-level F1 on recovered trajectories
+D009,E17,,,,,,,Table 20: Final EM on 2WikiMulti by recovery depth k
+D009,E18,final EM when initial retrieval already succeeds,Search-R1,,,,,"subset sizes ours / Search-R1, row order HotpotQA; sample_size as printed: 3136 / 3434"
+D009,E19,DPO training metrics,,,,,,"Table 22, identical DPO hyperparameters β=0.1"
+D009,E20,downstream evaluation after DPO training,,,,,,Table 23 averages reported in text
+D009,E21,downstream evaluation on five benchmarks,,,,,,Table 23; each cell printed as 'x / y'
+D009,RE1,Table 1: Comparison of different RAG methods across 5 benchmarks using EM and F1 metrics. Bold denotes,,,,,,"Table 1, page 5 (rule-based: protocol = caption text)"
+D009,RE2,Table 2: Component ablation study evaluating the impact of the Process Reward Model (PRM). The table reports,,,,,,"Table 2, page 6 (rule-based: protocol = caption text)"
+D009,RE3,Table 3: Impact of different optimization strategies on PRO-STEP’s effectiveness across five benchmarks. Bold,,,,,,"Table 3, page 6 (rule-based: protocol = caption text)"
+D009,RE4,Table 4: Generalization of PRO-STEP across different policy backbones. Results are reported using EM and F1.,,,,,,"Table 4, page 9 (rule-based: protocol = caption text)"
+D009,RE5,Table 5: Final EM on recovered trajectories. n is given subsets are consistently smaller because it fails less,,,,,,"Table 5, page 9 (rule-based: protocol = caption text)"
+D009,RE6,Table 10: Ablation of the VTS branching configuration. The main configuration improves average performance by,,,,,,"Table 10, page 18 (rule-based: protocol = caption text)"
+D009,RE7,Table 11: Performance comparison across different Process Reward Model (PRM) weight (α) values. The table,,,,,,"Table 11, page 18 (rule-based: protocol = caption text)"
+D009,RE8,Table 15: Macro-AVG bootstrap 95% confidence inter-,,,,,,"Table 15, page 18 (rule-based: protocol = caption text)"
+D009,RE9,"Table 17: Results at the 3B scale (EM / F1, %). Bold Table 19: Token-level F1 on recovered trajectories.",,,,,,"Table 17, page 19 (rule-based: protocol = caption text)"
+D009,RE10,Table 21: Final EM when the initial retrieval already we applied the same outcome-margin filter (chosen,,,,,,"Table 21, page 20 (rule-based: protocol = caption text)"
+D009,RET,values stated in running text,,,,,,rule-based: textual statements
+D010,E1,across three benchmarks,querying all sources,,,,,
+D010,E2,"Evaluation of RAGRoute on MIRAGE, MMLU and FeB4RAG",querying all data sources,,,,,The page reports up-to results across three benchmarks without identifying which benchmark produced each maximum.
+D010,E3,A corpus is considered relevant if at least one document originating from that corpus appears in the top-15 retrieved results.,,,,,,Data source relevance analysis using corpora and questions from the MIRAGE benchmark.
+D010,E4,Router cross-validation and validation-set model selection,logistic regression; random forests,,,,,"Architectures with varying numbers of layers and hidden dimensions are evaluated on the validation set. Training data are split by question into 30%/10%/60% train/validation/test partitions, input features are standardized using StandardScaler, and the best model is selected based on validation accuracy. The shallow NN is reported to perform best overall."
+D010,E5,RAGRoute evaluation on MIRAGE using the MedRAG toolkit,,,,,,Ground-truth relevance labels are constructed using the rerank based approach.
+D010,E6,RAGRoute evaluation on eight subject-specific subsets of MMLU,,,,,,A Wikipedia knowledge source is clustered into ten groups to simulate different data sources.; sample_size as printed: 2803 questions
+D010,E7,"FeB4RAG automated evaluation over all user queries, sent one by one to the RAGRoute system via HTTP; the script waits for each response before proceeding.",,NVIDIA A100 GPU for LLM answer generation; 500 GB of main memory,,,790,Answer correctness is verified against the ground-truth answer only if applicable; FeB4RAG does not provide verifiable ground-truth answers.
+D010,E8,Classification performance of the RAGRoute router on the test set (averages),,,,,,"Accuracy reflects the router's binary predictions, not end-to-end LLM answer accuracy."
+D010,E9,Number of data sources contacted,all,,,,,Total contacts across all queries and average contacts per query.
+D010,E10,Communication volume,all,,,,,"Total communication volume for the routing strategies all, RAGRoute, and random."
+D010,E11,average end-to-end accuracy,,,,,,
+D010,E12,End-to-end RAG accuracy,,,,,,
+D010,E13,time breakdown when answering a user query,,,,,,"Five components are measured: Source Selection, Embedding, Doc Selection, Rerank, and Generate. For FeB4RAG, Generate is omitted."
+D010,E14,Ablation study of router’s input features on the MIRAGE and FeB4RAG benchmarks,,,,,,
+D010,E15,Standalone inference measurements with a batch size of 32,,NVIDIA A100 GPU,0.4,,,Batch size: 32.
+D010,E16,"Evaluations on MIRAGE, MMLU, and FeB4RAG",,,,,,The conclusion reports up-to reductions without identifying which dataset produced each maximum.
+D011,E1,watermark recovery across various datasets and RAG configurations,,,,,,
+D011,E2,watermark texts surpass the baselines in quality and stealthiness,baselines,,,,,
+D011,E3,current methods encode only 1 bit of information,current methods,,,,,
+D011,E4,Experimental Settings,WARD; RAG-WM; KMW(1); ORI,,,,,"Metrics are grouped into Validity, Quality, and Performance."
+D011,E5,Watermark Verification,,,,,,"Each RAG is queried using all questions generated by WTI.; sample_size as printed: approximately 1,800 questions"
+D011,E6,Watermarked Knowledge Quality,,,,,,"KCR and RSavg are evaluated by Gemini. Watermark texts retrieve relevant texts from ORI, and an LLM based on those texts evaluates correctness and rationality."
+D011,E7,Impact on Main Task,,,,,,CIRA measures consistency of retrieved texts and CDPA measures consistency of generated responses for clean queries before and after watermarking. CDPA and WDPV are evaluated by Gemini.
+D011,E8,Overhead,,,,,,"Covers sampling approximately 2,000 original texts for watermark-prefix construction and linearly generating 600 watermark texts."
+D011,E9,"Result of Effectiveness Evaluation across Datasets, LLMs, and Baselines",,,,,,
+D011,E10,Average PPL of original datasets,,,,,,
+D011,E11,Time Overhead of Watermarking,,,,,,
+D011,E12,Random subset sampling knowledge selection attack on watermarked NFCorpus,,,,,,
+D011,E13,Filter irrelevant content during retrieval for watermark removal on watermarked NFCorpus,,,,,,
+D011,E14,Paraphrasing attack under sentence embedding preservation on watermarked NFCorpus,,,,,,
+D011,E15,Synonym substitution attack on the responses on watermarked NFCorpus,,,,,,
+D011,E16,Inject 20% to 100% new content into the stolen knowledge base,,,,,,
+D011,E17,"Retrieve more unwatermarked documents during LLM generation with top-K 5, 10, 15, and 20",,,,,,
+D011,E18,Context summarization and stronger system prompts on watermarked NFCorpus,,,,,,
+D011,E19,RAG Setting Restrictions,,,,,,Context summarization and style control are re-tested after reducing watermark capacity.
+D011,E20,Duplicate Content Removal Attack,,,,,,"Contextual retrieval uses top-K 20, with SimHash for deduplication."
+D011,E21,PPL Filter,,,,,,The filtering threshold is µ + 3σ based on the original documents’ PPL distribution.
+D011,E22,Human Identification,random chance,,,,,Each multiple-choice item contains four texts: one watermarked text and three clean texts.
+D011,E23,Impact of WTI and Query Quota,directly constructed questions,,,,,"The RAG is queried 50, 100, 200, 300, 400, and 500 times using either WTI-generated queries or directly constructed questions."
+D011,E24,Impact of Retriever,BGE-m3,,,,,"BGE-m3 is replaced with Contriever, Contriever-ms, and ANCE; WRR and WTRR are evaluated."
+D011,E25,Impact of Similarity Metrics,,,,,,"CosSim, IP, and L2 are assessed during retrieval."
+D011,E26,"Combined Impact of Watermark Capacity, Infusion Volume, and Query Quota",,,,,,"WRR is evaluated across watermark capacities and text infusion volumes under alteration, summarization, and expansion attacks; watermark capacity and query quota are also jointly investigated. A 32-bit watermark-capacity setting begins at the page break."
+D011,E27,Results of Query Quota and Watermark Capacity Impact,,,,,,Restrictive query quota of 100 queries
+D011,E28,Prompt for RSavg,,,,,,The prompt asks the evaluator to remove incoherent or unrelated texts from retrieved_context_list and return the removed texts as a list.
+D011,E29,Prompt for CDPAavg,,,,,,The prompt requests a yes/no judgment of whether generated_answer_clean and generated_answer_wm convey the same meaning.
+D011,E30,Prompt for WDPV,,,,,,The prompt requests a yes/no judgment of whether generated_answer accurately answers the question strictly according to related_text.
+D011,E31,experiments not involving text generation,,Intel Core i7-12700 CPU @ 2.10 GHz; Windows 11; 16GB memory; Python 3.12,,,,
+D011,E32,Watermarked text generation,,64 CPUs (Intel(R) Xeon(R) Gold 6426Y); 512GB memory; NVIDIA H100-NVLink GPU (80GB memory); Ubuntu 22.04; CUDA 11.8; Python 3.12,,,,
+D011,E33,perplexity (PPL) of generated content,,,,,,OPT-1.3B was used to assess perplexity.
+D011,E34,retrievability of watermark texts,,,,,,"Unless otherwise specified, the top-1 text was retrieved. Retrieval of more texts was also assessed in knowledge expansion attacks."
+D011,E35,Query Quotas for Reliable Detection,,,,,,Each experimental metric was run ten times to ensure the stability of the results.
+D011,E36,Human Evaluation,,,,,,"Ten test subjects evaluated fluency, correctness, and rationality; the score range was [0,10].; sample_size as printed: 30 clean texts and 10 watermarked texts"
+D011,E37,Examples of RAG-WM Watermark Texts,,,,,,Several high perplexity texts were selected from texts generated by RAG-WM.
+D011,E38,Unrelated Content Removal Attack,,,,,,
+D011,E39,Synonym Substitution attack,,,,,,
+D011,E40,Knowledge Injection Attack,,,,,,"Injection Rate conditions: 20%, 40%, 60%, 80%, and 100%."
+D011,E41,contextual summarization system prompt,default configuration,,,,,
+D011,E42,style-control system prompt,default configuration,,,,,
+D011,E43,RAG Setting Restrictions on low-capacity KMW Setting.,,,,,,
+D012,E1,mechanism-matched comparisons,,,,,,
+D012,E2,50-document comparisons,,,,,,Comparison under larger candidate pools.
+D012,E3,metadata-noise tests,,,,,,Characterizes dependencies on upstream metadata.
+D012,E4,human audits,,,,,,Characterizes dependencies on evaluator choice.
+D012,E5,governance-aware LLM judge based on DeepSeek-V3 for binary evaluation,,,,,,"All generator models are evaluated on the same test instances, candidate documents, and evaluation criteria with sampling temperature 0.1. Failure rates use 95% confidence intervals with 10,000 bootstrap resamples, and paired McNemar tests are used for key comparisons. Judge identifier: deepseek-ai/DeepSeek-V3."
+D012,E6,200-response audit,,,,,200,"Human annotations are reference labels; the same responses are also evaluated with Qwen-Max and GLM-4-32B-0414 as alternative judges using the same inputs, judge prompt, sampling temperature, and post-processing."
+D012,E7,recall-controlled 50-document pools,,,,,100,"The enlarged-pool evaluation uses 100 SOURCE_ANCHORED instances, retaining two gold documents and adding 24 BM25-selected distractor pairs."
+D012,E8,Main failure reduction,,,,,,
+D012,E9,Governance and LLM-based baselines on TEMPLATE,,,,,,
+D012,E10,Temporal heuristic stress on RECENCY-TRAP,,,,,,
+D012,E11,Component ablations,,,,,,TEMPLATE setting; Range reports the minimum–maximum failure rate across the three evaluated LLMs.
+D012,E12,Adversarial inadmissible evidence,,,,,,PROMPT-INJECTION setting; Avg. reports the macro-average across the three evaluated LLMs.
+D012,E13,Evaluation with Larger Candidate Pools,,,,,100,Candidate pools were expanded to 50 documents while holding retrieval of the target evidence fixed. Table 4 reports results macro-averaged across the three generator LLMs.
+D012,E14,Robustness checks,,,,,,"Values are percentages; ranges are across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,E15,Utility diagnostics,Naive RAG,,,,,"Values are percentages; ranges are across Qwen-Max, DeepSeek-V3, and GLM-4-32B-0414."
+D012,E16,Cohen’s κ between one automatic judge and human labels for the three failure types,,,,,,
+D012,E17,Final-response results with 50-document candidate pools,,,,,100,Results are macro-averaged across three LLMs; all values are percentages.
+D012,E18,exact McNemar,Metadata-Aware RAG,,,,100,Comparison of unsupported answers under enlarged candidate pools.
+D012,E19,TrustRAG component ablations,,,,,,Numerical ranges are reported in the text discussing Table 2.
+D012,E20,Valid-answer-rate and over-refusal-rate evaluation on answerable cases,,,,,,
+D012,E21,Cohen’s κ agreement with human annotations across three judges on human-audited responses,,,,,200,
+D012,E22,Metadata noise stress test with endpoint risks reported at 30% metadata noise,,,,,,
+D012,E23,Routing-level risks under 30% mixed metadata noise,,,,,,Lower is better.
+D012,E24,TEMPLATE,,,,,400,"Main set covering access, supersession, conflict, and combined cases."
+D012,E25,FRESH_STRESS,,,,,400,Stale-citation stress where supersession is specified only by metadata.
+D012,E26,SOURCE_ANCHORED,,,,,100,Semi-realistic policy-text robustness set.
+D012,E27,SF_HELDOUT,,,,,40,Small non-Qwen-generated check for generator-bias concerns.
+D012,E28,RECENCY_TRAP,,,,,400,Tests timestamp recency against explicit supersession.
+D012,E29,PROMPT_INJECTION,,,,,200,Adversarial instructions inserted into inadmissible evidence.
+D012,E30,"Failure rates are reported with 95% bootstrap confidence intervals over 10,000 resamples. Paired McNemar tests compare Naive RAG and TrustRAG on the same examples.",Naive RAG,,,,,All-zero non-target rows are omitted for compactness.
+D012,E31,inaccessible-superseder condition,Naive RAG,,,,,"Table B4 evaluates routing behavior under multi-hop supersession chains, inaccessible superseding documents, unresolved supersession relations, and parallel active conflicts."
+D012,E32,manually inspected a stratified sample,,,,,20,Before running the experiment; all inspected instances satisfied the construction criteria for the 50-document candidate pools.
+D012,E33,Large Candidate-Pool Error Analysis,,,,,,Evaluation used 50-document candidate pools.
+D012,E34,Retrieval-miss boundary for explicit supersession,,,,,,
+D012,E35,Governance on SOURCE,,,,,,Governance rows report macro-averaged failure rates over the three evaluated LLMs on SOURCE.
+D012,E36,Retrieval on TEMPLATE,,,,,,Retrieval rows report one end-to-end retrieval-pipeline run on TEMPLATE slices.
+D012,E37,Access-filter ablation on TEMPLATE,,,,,,
+D012,E38,Supersession-filter ablation on FRESH-STRESS,,,,,,
+D012,E39,Conflict-reporting ablation on TEMPLATE,,,,,,
+D012,E40,Prompt-injection stress,,,,,,
+D012,E41,Multi-version and conflict routing diagnostics,,,,,,"Unresolved relations/conflicts aggregates missing intermediate supersession links, missing latest supersession links, incorrect supersession pointers, and parallel active conflicts, with 40 instances per condition."
+D012,E42,Metadata noise endpoint at 30%,,,,,1200,"Access-label, missing-link, wrong-link, and mixed denote access-label noise, missing supersession links, incorrect supersession links, and mixed metadata noise, respectively."
+D012,E43,Top-k retrieval-recall boundary,,,,,400,"Stale-boundary risk is computed over the Nsup instances containing explicit supersession, whereas empty-context rate is computed over all N instances."
+D012,E44,confusion-matrix statistics between the primary DeepSeek-V3 judge and human labels,human labels,,,,200,
+D012,E45,Judge reliability on the same 200 human-audited responses,human labels,,,,200,DeepSeek-V3
+D012,E46,Primary-judge agreement stratified by generator,human labels,,,,200,primary DeepSeek-V3 judge
+D013,E1,step-level pooled Pearson correlation between process metrics and validation drawdown,,,,,,future VDD at 10/20/30 training steps
+D013,E2,"Exact-match percentages, mean (sample SD) over two runs (n = 2)",,,,,2,Top-k = 2
+D013,E3,mean (sample SD) over two runs,Search-R1 PPO,,,,,"main 3B comparison, Table 2; sample_size as printed: 2 runs"
+D013,E4,"three-way label accuracy at steps 25, 50, 75",PPO,,,,,"FEVER, Qwen2.5-1.5B-Instruct, Table 5"
+D013,E5,"Exact-match percentages, mean over two runs (n=2), SD in parentheses",,,,,2,"Table 3, Qwen2.5-1.5B-Instruct"
+D013,E6,process metrics nVDD/ATE/OAGC,,,,,,"Table 4, Qwen2.5-3B, Top-3"
+D013,E7,"search-on three-way label accuracy / nVDD at steps 25, 50, 75",,,,,,"Table 5, FEVER, Qwen2.5-1.5B-Instruct, fixed Top-3"
+D013,E8,,,,,,,Time-aligned training diagnostics at step 175 and 250
+D013,E9,"exact match (EM); training dynamics measured by nVDD, ATE, AUS, OAGC; each setting run twice, ~250 training steps per run; reported values are means over two runs",,"one node with 8 H20 GPUs per run; Ray, vLLM rollout, FSDP training",,,2,"3B main settings: 72; 3B ablation/process settings: 6; 1.5B main-text settings: 72; 3B run ~10 hours, 1.5B run ~6 hours; total ~19,400 H20 GPU-hours"
+D013,E10,"matched computational overhead comparison, average step time over 250 training steps",Search-R1 PPO,four NVIDIA H20 GPUs,,,,Table 8; total training time includes scheduled validation and checkpoint operations
+D013,RE1,Table 9: One-at-a-time OAS coefficient,,,,,,"Table 9, page 20 (rule-based: protocol = caption text)"
+D013,RET,values stated in running text,,,,,,rule-based: textual statements
+D014,E1,WoW response generation benchmark,,,,,,Table 1
+D014,E2,HotpotQA answer generation benchmark,,,,,,Table 2
+D014,E3,"meta-experiment, each data point a full experiment on the entire sampled dataset",,,,,,Figure 2 scatter of response/answer F1 vs knowledge precision and recall
+D014,E4,"zero-shot generation, temperature 0",,,,,500,HotpotQA first 500 training examples
+D014,E5,"single candidate knowledge sentence fed to GPT-4o-mini, answer F1 measured",,,,,,noisiness analysis of WoW vs HotpotQA
+D014,RE1,Table 1: WoW response generation performance bench-,,,,,,"Table 1, page 4 (rule-based: protocol = caption text)"
+D014,RE2,Table 2: HotpotQA answer generation performance and the overall observed trends are significant.,,,,,,"Table 2, page 4 (rule-based: protocol = caption text)"
+D015,E1,English monolingual RAG setting,,,,,,GPT-4o accuracy reported in Table 4
+D015,E2,no retrieval,,,,,,GPT-4o accuracy reported in Table 3
+D015,E3,"LLM-as-a-Judge with panel of three LLM judges (GPT-4o, Claude Sonnet-3.5, Mistral-large), majority vote",,,,,,benchmarking five models on XRAG
+D015,E4,"LLM-as-a-Judge panel of three judges (GPT-4o, Claude Sonnet-3.5, Mistral-large), majority vote, plus language correctness",No Retrieval / Oracle Retrieval,,,,,Table 3; human upper bound 85% on 200 English questions; Cohen's kappa 0.71 vs human judges
+D015,E5,LLM judge panel,,,,,,"Table 5, multilingual retrieval setting"
+D015,E6,"controlled analysis, replacing questions/supporting/distracting articles with English counterparts",XRAG-MultiR,,,,,"Table 6, GPT-4o"
+D015,E7,Claude 3.5 Sonnet judges whether search results contain sufficient information for a satisfactory answer,,,,,,"Table 7; user locales Germany, Japan, Spain"
+D015,E8,human verification of generated Q&A pairs,,,,,2950,"2,950 raw cross-document Q&A pairs generated from English article pairs"
+D015,E9,"human annotation of 200 sampled Q&A pairs, majority vote of three LLM-as-a-Judge",,,,,200,30 failed cases manually reviewed
+D015,E10,"LLM-as-a-Judge with three judges (GPT-4o-2024-08-06, Claude Sonnet-3.5 (2024-06-20), Mistral-Large-Instruct-2407), majority vote; lingua language detection",,,,,,judging protocol for XRAG benchmark
+D015,E11,"LLM-as-a-Judge panel (GPT-4o-2024-08-06, Claude Sonnet-3.5, Mistral-Large-Instruct-2407), majority vote, with language detection",,,,,,"Tables 9-11; judge panel reliability Cohen's kappa 0.71 on 1,500 responses"
+D015,E12,"LLM-as-a-Judge, single-judge (GPT-4) setup",,,,,,Comparison of default and Chain-of-Thought prompting on XRAG Task 1 (Table 12); non-English queries with English documents
+D015,RE1,Table 4: LLM QA accuracy in the XRAG monolingual,,,,,,"Table 4, page 7 (rule-based: protocol = caption text)"
+D015,RE2,"Table 5: LLM QA accuracy in the XRAG multilingual retrieval setting, which for each language X consists of a set",,,,,,"Table 5, page 8 (rule-based: protocol = caption text)"
+D016,E1,compare SMART-SLIC with RAG vs without RAG using GPT-4-instruct,no RAG (GPT-4-instruct),two AMD EPYC 9454 48-Core Processors (192 logical CPUs),,,,"tensor decomposition executed with T-ELF, ~2 hours"
+D016,E2,"200 questions, document-specific and topic-specific, zero-shot",GPT-4-instruct without RAG,,,,200,Figure 7 values printed as data labels
+D016,E3,Qualitative SME evaluation: same questions answered by SMART-SLIC RAG and by GPT-4-instruct without RAG; correctness of answers and agreement of agent-selected DOIs with SME choices compared,GPT-4-instruct without RAG,,,,,"No numeric metrics, latency, tokens_per_query or sample_size printed on this page; remainder of page is conclusion and references."
+D017,E1,official DocBench LLM-based scoring,GPT-4o-mini,,,,,"Table 2, DocBench accuracy"
+D017,E2,MMLongBench-Doc official rule-based accuracy (Acc) and LLM-based GPT-Score,GPT-4o-mini,,,,,Table 3
+D017,E3,MMLongBench-Doc retrieval recall,Vector Retrieval,,,,,Table 4
+D017,E4,ablation study on Bayesian components,,,,,,Table 5; manual analysis on 100 failure cases
+D017,E5,retrieval recall evaluation,,,,,,Recall@K on MMLongBench-Doc page-level evidence annotations
+D017,E6,retrieval effective recall,,,,,,"Table 4, cited in Limitations"
+D017,E7,human verification study on stratified sample of 200 instances; Qwen3-32B automated judge,,NVIDIA Tesla A800 80GB GPUs and a 12-core CPU,,,200,agreement rate between Qwen3-32B judge and expert human annotators
+D017,E8,average time cost per query breakdown on MMLongBench-Doc,,NVIDIA Tesla A800 80GB GPUs and a 12-core CPU,,,,"latency breakdown by module, Table 6"
+D017,E9,MMLongBench-Doc performance comparison with different generator models,RAGAnything,,,,,Table 7
+D017,E10,DocBench performance comparison with different generators,RAGAnything,,,,,Table 8
+D017,RE1,Table 3: Accuracy (%) and GPT-Score (%) on MMLongBench-Doc across different domains and overall perfor-,,,,,,"Table 3, page 5 (rule-based: protocol = caption text)"
+D018,E1,Collection of Base Documents,,,,,,
+D018,E2,Synthesizing Documents with LLM,,,,,,
+D018,E3,"Dataset statistics: number of documents, number of QA pairs, and minimum, median, and maximum document lengths in characters.",,,,,,
+D018,E4,Number of examples and percentages by question type.,,,,,,"A single question can belong to multiple types, so percentages for a dataset are not necessarily 100%."
+D018,E5,"Naive RAG generation evaluated by LLM-as-a-judge using a binary match or no-match judgment, conducted three times.",,,,,,Evaluation LLM: OpenAI's GPT-4o-20240806.
+D018,E6,Accuracy based on whether the LLM response matched the correct answer; final match judgment determined by majority vote.,,,,,,The number in brackets in Table 3 is the number of QAs.
+D018,E7,Performance of each model when no retrieval results were provided.,,,,,561,
+D019,E1,one-shot setting,,,,,,Natural Questions English benchmark using Llama3.3-70B as the reader LLM.
+D019,E2,"Natural Questions test set evaluation with normalized exact match (EM), word-level F1-score, Precision, and Recall.",,,,,,
+D019,E3,Huatuo-26M test set evaluation with ROUGE and BLEU scores.,,,,,,
+D019,E4,LLM-as-a-Judge context recall evaluation with DeepSeek-V3,,,,,256,Randomly sampled data from the NQ validation set.
+D019,E5,Text chunk statistics about the knowledge bases across different datasets.,,,,,,
+D019,E6,Main Results comparison with the current state-of-the-art on general and medical QA benchmarks,current state-of-the-art,,,,,The specific state-of-the-art system is not named in the result sentence.
+D019,E7,Main Results comparison with the standard RAG pipeline when sourcing from Wikipedia under the same retrieval budget,standard RAG pipeline sourcing from Wikipedia,,,,,
+D019,E8,Main Results comparison with the standard RAG pipeline when sourcing from QA pairs under the same retrieval budget,standard RAG pipeline sourcing from QA pairs,,,,,
+D019,E9,Main Results comparison after replacing Wikipedia with QA pair retrieval,Wikipedia retrieval,,,,,
+D019,E10,Main Results comparison with naive 2-way retrieval methods,naive 2-way retrieval methods,,,,,
+D019,E11,Main Results evaluation with a merged knowledge base comprising Wikipedia passages and QA pairs,,,,,,
+D019,E12,Context recall under 2-way retrieval and missing knowledge retrieval settings,2-way retrieval,,,,,"For 2-way retrieval, two passages are drawn from Wikipedia and two from QA pairs; the retrieved-text-chunk count is identical for evaluation."
+D019,E13,Evaluation on the retrieved contexts utilizing original query and the missing knowledge queries with recall scores across different datasets.,OrigQ,,,,,The original and missing knowledge queries use the same number of retrieved text chunks.
+D019,E14,Ablation results on reasoning content of missing knowledge RAG framework.,w/o reasoning,,,,,
+D019,E15,Classification Results,,,,,,Figure 7: An illustrative example of context classification
+D020,E1,We evaluate W-RAC using RAG-MULTI-CORPUS.,,,,,,
+D020,E2,Composition of the RAG-Multi-Corpus benchmark across enterprises and domains.,,,,,,
+D020,E3,Distribution of query categories in the RAG-Multi-Corpus benchmark.,,,,,,
+D020,E4,Token and Runtime Metrics by Organization,Agentic Chunking,,,,,All experiments were performed using LLM version 4.1.; sample_size as printed: 236 files
+D020,E5,Aggregate Efficiency Summary,,,,,236,
+D020,E6,Cost Analysis,,,,,236,"Cost analysis uses GPT 4.1 LLM pricing: $0.000002 per input token, $0.000008 per output token, and $0.0000005 per cache token. The complete pipeline includes both direct LLM chunking and referenced chunking."
+D020,E7,Efficiency Improvements,,,,,236,
+D020,E8,Retrieval Performance by Organization,Baseline,,,,,"Recall@K, Precision@K, Mean Reciprocal Rank (MRR), and Normalized Discounted Cumulative Gain (NDCG@K) at cut-off values of K = 3 and K = 6."
+D020,E9,Retrieval Performance by Query Type,Baseline,,,,,"Recall@K, Precision@K, Mean Reciprocal Rank (MRR), and Normalized Discounted Cumulative Gain (NDCG@K) at cut-off values of K = 3 and K = 6."
+D020,E10,Aggregate Retrieval Performance,Baseline,,,,786,
+D020,E11,Extensive evaluation on the RAG-Multi-Corpus benchmark,agentic chunking,,,,,

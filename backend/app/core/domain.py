@@ -60,4 +60,10 @@ def canonical_metric(domain: str, name: str) -> tuple[str, int | None]:
         k = int(m.group(1))
     base = re.sub(r"@\s*\d+(\.\d+)?", "", name).strip().lower()
     base = re.sub(r"[\s_]+", " ", base)
-    return cfg["metric_alias"].get(base, cfg["metric_alias"].get(base.replace("-", " "), name.strip())), k
+    hit = cfg["metric_alias"].get(base, cfg["metric_alias"].get(base.replace("-", " ")))
+    if hit:
+        return hit, k
+    # a longer printed name that contains exactly one metric alias as a whole word ("PubMedQA accuracy", "strict accuracy")
+    found = {canon for alias, canon in cfg["metric_alias"].items()
+             if len(alias) > 1 and re.search(r"(?<![a-z0-9])" + re.escape(alias) + r"(?![a-z0-9])", base)}
+    return (found.pop() if len(found) == 1 else name.strip()), k

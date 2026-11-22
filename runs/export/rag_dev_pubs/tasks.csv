@@ -1,0 +1,9 @@
+publication_id,task_id,task_type,note
+D001,T1,multi-hop question answering,Failure-mode analysis of incorrect predictions.
+D001,T2,multi-hop QA,
+D001,T3,answer synthesis,Input: question q; Output: linearized context C; final answer a
+D001,T4,open-domain multi-hop QA,
+D001,T5,complex multi-hop reasoning,Exact Match (EM) is the reported evaluation metric.
+D001,T6,multi-hop reasoning,Knowledge-intensive question answering across multiple pieces of information.
+D001,T7,Semantic Node Partitioning,Teacher models split texts along natural narrative breaks to generate binary boundary supervision signals.
+D001,T8,semantic boundary prediction,
